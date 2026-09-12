@@ -1,6 +1,6 @@
 {
   "archive_crc_passed": true,
-  "created_utc": "2026-09-11T18:40:14.150493+00:00",
+  "created_utc": "2026-09-12T21:56:17.154322+00:00",
   "note": "Model and prediction redistribution terms unverified; local artifacts are not included in public source.",
   "private_local_artifacts": {
     "file": "dist/prc-2026-local-artifacts.zip",
@@ -8,9 +8,9 @@
   },
   "public_source": {
     "file": "dist/prc-2026-source.zip",
-    "sha256": "7f046022622f0d2dd863bd1696887783cebf0893156547165fab530dba76e0f1"
+    "sha256": "640d853e3f7c7347b75b8b47daa20935f7d0426b433770edf7f1e7e6a8f3b247"
   },
   "raw_data_included": false,
-  "source_members": 94,
+  "source_members": 97,
   "uploaded": false
 }

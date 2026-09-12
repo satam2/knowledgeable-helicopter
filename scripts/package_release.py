@@ -17,7 +17,7 @@ def main():
     dist = ROOT / "dist"
     dist.mkdir(exist_ok=True)
     source_paths = [ROOT / name for name in ["README.md", "LICENSE", "THIRD_PARTY.md", "pyproject.toml", "requirements.lock.txt", ".gitignore", ".gitattributes"]]
-    source_paths += [p for folder in ["src", "configs", "tests", "scripts", "reports"] for p in (ROOT / folder).rglob("*")
+    source_paths += [p for folder in ["src", "configs", "tests", "scripts", "reports", "docs"] for p in (ROOT / folder).rglob("*")
                      if p.is_file() and p.name != "package_validation.json" and p.suffix in {".py", ".yaml", ".md", ".json", ".csv", ".png", ".pdf"} and "__pycache__" not in p.parts and "runs" not in p.parts]
     source = dist / "prc-2026-source.zip"
     with zipfile.ZipFile(source, "w", compression=zipfile.ZIP_DEFLATED) as archive:
