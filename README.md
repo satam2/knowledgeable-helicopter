@@ -47,7 +47,6 @@ See the [guide](docs/REPRODUCING.md#install) for platform and resource details.
 |-- data/                    # Private raw inputs and generated caches
 |-- docs/REPRODUCING.md       # Detailed usage and reproduction guide
 |-- models/                  # Local fitted models and run manifests
-|-- notebooks/               # Reserved for exploration; currently a placeholder
 |-- reports/                 # Aggregate results, model card and verification
 |-- scripts/                 # Experiment and local release utilities
 |-- src/taxiout/              # Python package and command-line interface
@@ -62,10 +61,19 @@ See the [guide](docs/REPRODUCING.md#install) for platform and resource details.
 Raw data, fitted models, caches and individual predictions are excluded from Git.
 The public repository contains the source, configuration and aggregate evidence
 needed to reproduce the result with your own authorized data copy.
+The `data/`, `models/` and `submissions/` directories are local working directories:
+create the raw-input folder when adding data; generated directories are created
+by the pipeline as needed.
 
 ## Prepare the dataset
 
 Obtain the challenge files through the [official data instructions](https://prc-data-challenge-2026.netlify.app/data.html).
+Create the local input folder:
+
+```powershell
+New-Item -ItemType Directory -Force data/raw/prc
+```
+
 Place all twelve monthly 2025 training files, `ranking.parquet` and
 `submitting.parquet` in `data/raw/prc/`:
 
@@ -167,11 +175,10 @@ in an earlier diagnostic and is not an independent holdout. Rare extreme labels
 and missing NM observations remain major limitations. See the
 [validation details](docs/REPRODUCING.md#validation-and-results).
 
-## Development and notebooks
+## Development
 
-The supported workflow uses `.py` modules and command-line scripts. There are
-currently no `.ipynb` notebooks; `notebooks/` is a placeholder. Jupyter is not
-required for training, inference or reproduction.
+The supported workflow uses `.py` modules and command-line scripts. Jupyter is
+not required for training, inference or reproduction.
 
 Use `python -m taxiout.cli --help` with the installed environment for the command
 list. `scripts/develop.py` runs sequential, resumable experiments;

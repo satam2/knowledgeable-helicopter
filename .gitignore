@@ -1,23 +1,18 @@
 # Competition and external data
-data/raw/*
-!data/raw/external/
-data/raw/external/*
-!data/raw/external/.gitkeep
-data/interim/*
-!data/interim/.gitkeep
-data/processed/*
-!data/processed/.gitkeep
+data/
 
 # Generated artifacts
 *.parquet
 *.parquet.tmp
 *.cbm
-models/*
-!models/.gitkeep
-submissions/*
-!submissions/.gitkeep
-reports/figures/*
-!reports/figures/.gitkeep
+models/
+submissions/
+reports/figures/
+reports/active_experiment.json
+reports/development_progress.json
+reports/project_status.md
+reports/anytime_candidate.json
+reports/comparisons/
 
 # Python
 __pycache__/

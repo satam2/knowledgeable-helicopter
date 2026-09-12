@@ -1,9 +1,9 @@
 """Build local source/artifact packages without raw challenge data or external writes."""
 import json
+import subprocess
 import zipfile
-from pathlib import Path
 
-from taxiout.artifacts import object_hash, read_json, sha256, source_hashes, utc_now, write_json
+from taxiout.artifacts import read_json, sha256, utc_now, write_json
 from taxiout.config import ROOT
 from taxiout.submission import validate_submission
 
@@ -16,9 +16,13 @@ def main():
         raise ValueError("Release submission checksum mismatch")
     dist = ROOT / "dist"
     dist.mkdir(exist_ok=True)
-    source_paths = [ROOT / name for name in ["README.md", "LICENSE", "THIRD_PARTY.md", "pyproject.toml", "requirements.lock.txt", ".gitignore", ".gitattributes"]]
-    source_paths += [p for folder in ["src", "configs", "tests", "scripts", "reports", "docs"] for p in (ROOT / folder).rglob("*")
-                     if p.is_file() and p.name != "package_validation.json" and p.suffix in {".py", ".yaml", ".md", ".json", ".csv", ".png", ".pdf"} and "__pycache__" not in p.parts and "runs" not in p.parts]
+    tracked = subprocess.run(
+        ["git", "ls-files", "-z", "--", "README.md", "LICENSE", "THIRD_PARTY.md", "pyproject.toml",
+         "requirements.lock.txt", ".gitignore", ".gitattributes", "src", "configs", "tests", "scripts", "reports", "docs"],
+        cwd=ROOT, check=True, capture_output=True, text=True,
+    )
+    source_paths = [ROOT / name for name in tracked.stdout.split("\0")
+                    if name and (ROOT / name).is_file() and name != "reports/package_validation.json"]
     source = dist / "prc-2026-source.zip"
     with zipfile.ZipFile(source, "w", compression=zipfile.ZIP_DEFLATED) as archive:
         for file in sorted(set(source_paths)):

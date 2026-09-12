@@ -317,7 +317,7 @@ the virtual environment is active.
 | `tests/` | Synthetic contract and model tests |
 | `scripts/` | Development orchestration, summaries, figures and local release utilities |
 | `reports/` | Public aggregate metrics, hashes, model card and reproduction evidence |
-| `data/`, `models/`, `submissions/`, `dist/` | Local inputs and generated artifacts, excluded from Git except placeholders |
+| `data/`, `models/`, `submissions/`, `dist/` | Local inputs and generated artifacts, excluded from Git; output directories are created as needed |
 
 `scripts/finalize.py --run-id RUN_ID` records local final-model inference parity
 and submission evidence. `scripts/plot_validation.py` and
@@ -371,9 +371,16 @@ report; rerunning the frozen audit reconstructs those details locally. Review
 regenerated reports before staging or packaging them because they can contain
 individual raw records. Never force-add private artifacts.
 
+Transient development progress files, the anytime fallback receipt and new
+comparison snapshots also remain local. The retained comparison history contains
+distinct experiment evidence; the final comparison is `reports/comparison.json`.
+
 `scripts/package_release.py` builds `dist/prc-2026-source.zip` and a separate
-`dist/prc-2026-local-artifacts.zip` from a completed local release. The latter
-contains models and predictions and is for local use. These archives and their
+`dist/prc-2026-local-artifacts.zip` from a completed local release in a Git checkout.
+The source archive includes only tracked source and report files; stage intended
+new files before packaging. Generated progress logs and caches stay excluded.
+The local artifacts archive contains models and predictions and is for local use.
+These archives and their
 historical checksums in [package_validation.json](../reports/package_validation.json)
 are separate from the GitHub commit. Regenerate packages after documentation
 changes, inspect their contents, and keep raw records excluded before publishing
