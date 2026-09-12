@@ -1,0 +1,4 @@
+extends: base.yaml
+candidate: direct_robust
+loss: Huber:delta=300
+leaf_estimation_method: Gradient

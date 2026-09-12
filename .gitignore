@@ -1,5 +1,6 @@
 # Competition and external data
-data/raw/prc/
+data/raw/*
+!data/raw/external/
 data/raw/external/*
 !data/raw/external/.gitkeep
 data/interim/*
@@ -8,6 +9,9 @@ data/processed/*
 !data/processed/.gitkeep
 
 # Generated artifacts
+*.parquet
+*.parquet.tmp
+*.cbm
 models/*
 !models/.gitkeep
 submissions/*
@@ -26,6 +30,11 @@ __pycache__/
 htmlcov/
 .venv/
 venv/
+.venv-verify/
+dist/
+build/
+reports/runs/
+reports/rules/*.html
 
 # Jupyter
 .ipynb_checkpoints/
@@ -42,4 +51,3 @@ venv/
 .DS_Store
 Thumbs.db
 desktop.ini
-

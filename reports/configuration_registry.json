@@ -1,0 +1,726 @@
+{
+  "17d7c712509eef7ed6ce8457141fc1520939c83f0d3719fa9cff2155af5c307e": {
+    "config": {
+      "candidate": "benchmark",
+      "coverage": "continuous-audit-only",
+      "depth": 6,
+      "early_stopping_rounds": 40,
+      "features": {
+        "clocks": true,
+        "legacy": true,
+        "local_calendar": false,
+        "quality": false,
+        "traffic": true
+      },
+      "hierarchy_alpha": 30,
+      "iterations": 180,
+      "l2_leaf_reg": 8,
+      "learning_rate": 0.075,
+      "loss": "RMSE",
+      "max_run_minutes": 30,
+      "memory_reserve_gb": 2,
+      "proxy_max": 7200,
+      "proxy_min": 0,
+      "raw_dir": "data/raw/prc",
+      "rounding": "nearest-even-int32",
+      "seed": 20260910,
+      "threads": 4,
+      "train_sample": 100000
+    },
+    "runs": [
+      {
+        "fold": null,
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "note": "Incomplete artifact, not eligible for scoring or release. See search_protocol.md for timeout/interruption context.",
+        "run_id": "benchmark-20260910T174750303288-17d7c712",
+        "runtime_sec": null,
+        "status": "incomplete",
+        "training_rows": null
+      },
+      {
+        "fold": "legacy_Nov_Dec",
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "run_id": "benchmark-20260910T175519383913-17d7c712",
+        "runtime_sec": 642.4220000000005,
+        "status": "complete",
+        "training_rows": 100000
+      }
+    ]
+  },
+  "271152c661fdec86d2031d39ce5c3217f8e2ec84dc5a1eb4323a865389681a20": {
+    "config": {
+      "candidate": "direct_robust",
+      "coverage": "month-isolated",
+      "depth": 6,
+      "early_stopping_rounds": 40,
+      "features": {
+        "clocks": true,
+        "legacy": false,
+        "local_calendar": false,
+        "quality": false,
+        "traffic": true
+      },
+      "hierarchy_alpha": 30,
+      "iterations": 180,
+      "l2_leaf_reg": 8,
+      "learning_rate": 0.075,
+      "loss": "Huber:delta=300",
+      "max_run_minutes": 30,
+      "memory_reserve_gb": 2,
+      "proxy_max": 7200,
+      "proxy_min": 0,
+      "raw_dir": "data/raw/prc",
+      "rounding": "nearest-even-int32",
+      "seed": 20260910,
+      "threads": 4,
+      "train_sample": 250000
+    },
+    "runs": [
+      {
+        "fold": "F1",
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "run_id": "direct_robust-F1-20260911T033823953412-271152c6",
+        "runtime_sec": 56.95300000000134,
+        "status": "complete",
+        "training_rows": 250000
+      },
+      {
+        "fold": "F3",
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "run_id": "direct_robust-F3-20260911T033926727249-271152c6",
+        "runtime_sec": 59.75,
+        "status": "complete",
+        "training_rows": 250000
+      }
+    ]
+  },
+  "3b674828eee93a34a92d7caff76aab666fc2b8ffd423ff9b6d195dae1e6ddf42": {
+    "config": {
+      "candidate": "direct_quality",
+      "coverage": "month-isolated",
+      "depth": 6,
+      "early_stopping_rounds": 40,
+      "features": {
+        "clocks": true,
+        "legacy": false,
+        "local_calendar": true,
+        "quality": true,
+        "traffic": true
+      },
+      "hierarchy_alpha": 30,
+      "iterations": 180,
+      "l2_leaf_reg": 8,
+      "learning_rate": 0.075,
+      "loss": "RMSE",
+      "max_run_minutes": 30,
+      "memory_reserve_gb": 2,
+      "proxy_max": 7200,
+      "proxy_min": 0,
+      "raw_dir": "data/raw/prc",
+      "rounding": "nearest-even-int32",
+      "seed": 20260910,
+      "threads": 4,
+      "train_sample": 250000
+    },
+    "runs": [
+      {
+        "fold": "F1",
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "run_id": "direct_quality-F1-20260911T034033213022-3b674828",
+        "runtime_sec": 271.85899999999674,
+        "status": "complete",
+        "training_rows": 250000
+      },
+      {
+        "fold": "F3",
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "run_id": "direct_quality-F3-20260911T035016061498-3b674828",
+        "runtime_sec": 138.95300000000134,
+        "status": "complete",
+        "training_rows": 250000
+      }
+    ]
+  },
+  "4f86b444d2e81aa98c0d55eb9ec92c2bbb490f953c781b07ef772ca76254503c": {
+    "config": {
+      "candidate": "residual_all_finite",
+      "coverage": "month-isolated",
+      "depth": 6,
+      "early_stopping_rounds": 40,
+      "features": {
+        "clocks": true,
+        "legacy": false,
+        "local_calendar": false,
+        "quality": false,
+        "traffic": true
+      },
+      "hierarchy_alpha": 30,
+      "iterations": 180,
+      "l2_leaf_reg": 8,
+      "learning_rate": 0.075,
+      "loss": "RMSE",
+      "max_run_minutes": 30,
+      "memory_reserve_gb": 2,
+      "proxy_max": 1000000000000,
+      "proxy_min": -1000000000000,
+      "raw_dir": "data/raw/prc",
+      "rounding": "nearest-even-int32",
+      "seed": 20260910,
+      "threads": 4,
+      "train_sample": 250000
+    },
+    "runs": [
+      {
+        "fold": "F1",
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "run_id": "residual_all_finite-F1-20260910T223910659083-4f86b444",
+        "runtime_sec": 245.65700000000288,
+        "status": "complete",
+        "training_rows": 250000
+      },
+      {
+        "fold": "F2",
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "run_id": "residual_all_finite-F2-20260910T224321583915-4f86b444",
+        "runtime_sec": 250.81299999999828,
+        "status": "complete",
+        "training_rows": 250000
+      },
+      {
+        "fold": "F3",
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "run_id": "residual_all_finite-F3-20260910T224738347628-4f86b444",
+        "runtime_sec": 226.84400000000096,
+        "status": "complete",
+        "training_rows": 250000
+      }
+    ]
+  },
+  "5b9509022759f198327bd716a06ba830d3c0ac4b8395bd9272f9176aa4ec2700": {
+    "config": {
+      "candidate": "residual_all_finite_specialist",
+      "coverage": "month-isolated",
+      "depth": 6,
+      "early_stopping_rounds": 40,
+      "features": {
+        "clocks": true,
+        "legacy": false,
+        "local_calendar": false,
+        "quality": false,
+        "traffic": true
+      },
+      "hierarchy_alpha": 30,
+      "iterations": 180,
+      "l2_leaf_reg": 8,
+      "learning_rate": 0.075,
+      "loss": "RMSE",
+      "max_run_minutes": 30,
+      "memory_reserve_gb": 2,
+      "missing_specialist": true,
+      "proxy_max": 1000000000000,
+      "proxy_min": -1000000000000,
+      "raw_dir": "data/raw/prc",
+      "rounding": "nearest-even-int32",
+      "seed": 20260910,
+      "threads": 4,
+      "train_sample": 250000
+    },
+    "runs": [
+      {
+        "fold": "F1",
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "run_id": "residual_all_finite_specialist-F1-20260910T225131876296-5b950902",
+        "runtime_sec": 55.48500000000058,
+        "status": "complete",
+        "training_rows": 250000
+      },
+      {
+        "fold": "F2",
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "run_id": "residual_all_finite_specialist-F2-20260910T225232871835-5b950902",
+        "runtime_sec": 57.26599999999962,
+        "status": "complete",
+        "training_rows": 250000
+      },
+      {
+        "fold": "F3",
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "run_id": "residual_all_finite_specialist-F3-20260910T225334937813-5b950902",
+        "runtime_sec": 56.75,
+        "status": "complete",
+        "training_rows": 250000
+      },
+      {
+        "fold": "G1",
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "run_id": "residual_all_finite_specialist-G1-20260911T033038952596-5b950902",
+        "runtime_sec": 162.70300000000134,
+        "status": "complete",
+        "training_rows": 250000
+      }
+    ]
+  },
+  "6c34f3bedf259006f319d324a9537c0ed45fb58b59d8ebf0eccc41c2638ac3b8": {
+    "config": {
+      "candidate": "residual_long_proxy_specialist",
+      "coverage": "month-isolated",
+      "depth": 6,
+      "early_stopping_rounds": 40,
+      "features": {
+        "clocks": true,
+        "legacy": false,
+        "local_calendar": false,
+        "quality": false,
+        "traffic": true
+      },
+      "hierarchy_alpha": 30,
+      "iterations": 180,
+      "l2_leaf_reg": 8,
+      "learning_rate": 0.075,
+      "long_proxy_correction": true,
+      "loss": "RMSE",
+      "max_run_minutes": 30,
+      "memory_reserve_gb": 2,
+      "missing_specialist": true,
+      "proxy_max": 7200,
+      "proxy_min": 0,
+      "raw_dir": "data/raw/prc",
+      "rounding": "nearest-even-int32",
+      "seed": 20260910,
+      "threads": 4,
+      "train_sample": 250000
+    },
+    "runs": [
+      {
+        "fold": "final",
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "run_id": "release-20260911T182332345949-6c34f3be",
+        "runtime_sec": 95.40600000000268,
+        "status": "complete",
+        "training_rows": 250000
+      },
+      {
+        "fold": "C1",
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "run_id": "residual_long_proxy_specialist-C1-20260911T062153458353-6c34f3be",
+        "runtime_sec": 378.75,
+        "status": "complete",
+        "training_rows": 250000
+      },
+      {
+        "fold": "F1",
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "run_id": "residual_long_proxy_specialist-F1-20260911T033403603272-6c34f3be",
+        "runtime_sec": 53.81300000000192,
+        "status": "complete",
+        "training_rows": 250000
+      },
+      {
+        "fold": "F2",
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "run_id": "residual_long_proxy_specialist-F2-20260911T033504103868-6c34f3be",
+        "runtime_sec": 49.125,
+        "status": "complete",
+        "training_rows": 250000
+      },
+      {
+        "fold": "F3",
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "run_id": "residual_long_proxy_specialist-F3-20260911T033559842712-6c34f3be",
+        "runtime_sec": 48.546000000002095,
+        "status": "complete",
+        "training_rows": 250000
+      },
+      {
+        "fold": "G1",
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "run_id": "residual_long_proxy_specialist-G1-20260911T033657725286-6c34f3be",
+        "runtime_sec": 42.06199999999808,
+        "status": "complete",
+        "training_rows": 250000
+      }
+    ]
+  },
+  "87c291c8a850747f6e8f33156c6f51f67b188a539331e4c5a5b1fe1c9a5107c7": {
+    "config": {
+      "candidate": "direct",
+      "coverage": "month-isolated",
+      "depth": 6,
+      "early_stopping_rounds": 40,
+      "features": {
+        "clocks": true,
+        "legacy": false,
+        "local_calendar": false,
+        "quality": false,
+        "traffic": true
+      },
+      "hierarchy_alpha": 30,
+      "iterations": 180,
+      "l2_leaf_reg": 8,
+      "learning_rate": 0.075,
+      "loss": "RMSE",
+      "max_run_minutes": 30,
+      "memory_reserve_gb": 2,
+      "proxy_max": 7200,
+      "proxy_min": 0,
+      "raw_dir": "data/raw/prc",
+      "rounding": "nearest-even-int32",
+      "seed": 20260910,
+      "threads": 4,
+      "train_sample": 250000
+    },
+    "runs": [
+      {
+        "fold": "F1",
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "run_id": "direct-F1-20260910T215011113423-87c291c8",
+        "runtime_sec": 840.280999999999,
+        "status": "complete",
+        "training_rows": 250000
+      },
+      {
+        "fold": "F2",
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "run_id": "direct-F2-20260910T220419863865-87c291c8",
+        "runtime_sec": 286.29699999999866,
+        "status": "complete",
+        "training_rows": 250000
+      },
+      {
+        "fold": "F3",
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "run_id": "direct-F3-20260910T220912325526-87c291c8",
+        "runtime_sec": 318.9840000000004,
+        "status": "complete",
+        "training_rows": 250000
+      },
+      {
+        "fold": "G1",
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "run_id": "direct-G1-20260910T225531680269-87c291c8",
+        "runtime_sec": 182.09299999999712,
+        "status": "complete",
+        "training_rows": 250000
+      }
+    ]
+  },
+  "a00edc979187f156a19dafa36ce51cf4312fd9d7c3f4bb336b4917a824dbc81c": {
+    "config": {
+      "candidate": "direct_robust",
+      "coverage": "month-isolated",
+      "depth": 6,
+      "early_stopping_rounds": 40,
+      "features": {
+        "clocks": true,
+        "legacy": false,
+        "local_calendar": false,
+        "quality": false,
+        "traffic": true
+      },
+      "hierarchy_alpha": 30,
+      "iterations": 180,
+      "l2_leaf_reg": 8,
+      "leaf_estimation_method": "Gradient",
+      "learning_rate": 0.075,
+      "loss": "Huber:delta=300",
+      "max_run_minutes": 30,
+      "memory_reserve_gb": 2,
+      "proxy_max": 7200,
+      "proxy_min": 0,
+      "raw_dir": "data/raw/prc",
+      "rounding": "nearest-even-int32",
+      "seed": 20260910,
+      "threads": 4,
+      "train_sample": 250000
+    },
+    "runs": [
+      {
+        "fold": "F1",
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "run_id": "direct_robust-F1-20260911T035338559270-a00edc97",
+        "runtime_sec": 130.93800000000192,
+        "status": "complete",
+        "training_rows": 250000
+      },
+      {
+        "fold": "F3",
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "run_id": "direct_robust-F3-20260911T035555404306-a00edc97",
+        "runtime_sec": 150.17199999999866,
+        "status": "complete",
+        "training_rows": 250000
+      }
+    ]
+  },
+  "ac2b1e30519093bc70037dfc56ab3382bded399d88e44afa8c494a0cde6ceed4": {
+    "config": {
+      "candidate": "direct_specialist",
+      "coverage": "month-isolated",
+      "depth": 6,
+      "early_stopping_rounds": 40,
+      "features": {
+        "clocks": true,
+        "legacy": false,
+        "local_calendar": false,
+        "quality": false,
+        "traffic": true
+      },
+      "hierarchy_alpha": 30,
+      "iterations": 180,
+      "l2_leaf_reg": 8,
+      "learning_rate": 0.075,
+      "loss": "RMSE",
+      "max_run_minutes": 30,
+      "memory_reserve_gb": 2,
+      "proxy_max": 7200,
+      "proxy_min": 0,
+      "raw_dir": "data/raw/prc",
+      "rounding": "nearest-even-int32",
+      "seed": 20260910,
+      "threads": 4,
+      "train_sample": 250000
+    },
+    "runs": [
+      {
+        "fold": "F1",
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "run_id": "direct_specialist-F1-20260910T222959571544-ac2b1e30",
+        "runtime_sec": 128.3279999999977,
+        "status": "complete",
+        "training_rows": 250000
+      },
+      {
+        "fold": "F2",
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "run_id": "direct_specialist-F2-20260910T223217162451-ac2b1e30",
+        "runtime_sec": 87.18700000000172,
+        "status": "complete",
+        "training_rows": 250000
+      },
+      {
+        "fold": "F3",
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "run_id": "direct_specialist-F3-20260910T223350573232-ac2b1e30",
+        "runtime_sec": 97.53099999999904,
+        "status": "complete",
+        "training_rows": 250000
+      }
+    ]
+  },
+  "df67b7e4a9050c0d7567c136338037ba66e7ae6e9b2b1fbd8701880e052ac811": {
+    "config": {
+      "candidate": "residual",
+      "coverage": "month-isolated",
+      "depth": 6,
+      "early_stopping_rounds": 40,
+      "features": {
+        "clocks": true,
+        "legacy": false,
+        "local_calendar": false,
+        "quality": false,
+        "traffic": true
+      },
+      "hierarchy_alpha": 30,
+      "iterations": 180,
+      "l2_leaf_reg": 8,
+      "learning_rate": 0.075,
+      "loss": "RMSE",
+      "max_run_minutes": 30,
+      "memory_reserve_gb": 2,
+      "proxy_max": 7200,
+      "proxy_min": 0,
+      "raw_dir": "data/raw/prc",
+      "rounding": "nearest-even-int32",
+      "seed": 20260910,
+      "threads": 4,
+      "train_sample": 250000
+    },
+    "runs": [
+      {
+        "fold": "F1",
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "run_id": "residual-F1-20260910T221438668221-df67b7e4",
+        "runtime_sec": 316.5149999999994,
+        "status": "complete",
+        "training_rows": 250000
+      },
+      {
+        "fold": "F2",
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "run_id": "residual-F2-20260910T222002193696-df67b7e4",
+        "runtime_sec": 252.25,
+        "status": "complete",
+        "training_rows": 250000
+      },
+      {
+        "fold": "F3",
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "run_id": "residual-F3-20260910T222419588814-df67b7e4",
+        "runtime_sec": 329.9529999999977,
+        "status": "complete",
+        "training_rows": 250000
+      }
+    ]
+  },
+  "e5952f02e526b8b82b7509633105214020411120a12fd9b14a20364991d9661b": {
+    "config": {
+      "candidate": "residual_specialist",
+      "coverage": "month-isolated",
+      "depth": 6,
+      "early_stopping_rounds": 40,
+      "features": {
+        "clocks": true,
+        "legacy": false,
+        "local_calendar": false,
+        "quality": false,
+        "traffic": true
+      },
+      "hierarchy_alpha": 30,
+      "iterations": 180,
+      "l2_leaf_reg": 8,
+      "learning_rate": 0.075,
+      "loss": "RMSE",
+      "max_run_minutes": 30,
+      "memory_reserve_gb": 2,
+      "missing_specialist": true,
+      "proxy_max": 7200,
+      "proxy_min": 0,
+      "raw_dir": "data/raw/prc",
+      "rounding": "nearest-even-int32",
+      "seed": 20260910,
+      "threads": 4,
+      "train_sample": 250000
+    },
+    "runs": [
+      {
+        "fold": "F1",
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "run_id": "residual_specialist-F1-20260910T223618853935-e5952f02",
+        "runtime_sec": 51.20300000000134,
+        "status": "complete",
+        "training_rows": 250000
+      },
+      {
+        "fold": "F2",
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "run_id": "residual_specialist-F2-20260910T223715150513-e5952f02",
+        "runtime_sec": 53.03100000000268,
+        "status": "complete",
+        "training_rows": 250000
+      },
+      {
+        "fold": "F3",
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "run_id": "residual_specialist-F3-20260910T223813126723-e5952f02",
+        "runtime_sec": 49.90599999999904,
+        "status": "complete",
+        "training_rows": 250000
+      },
+      {
+        "fold": "G1",
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "run_id": "residual_specialist-G1-20260910T225840376544-e5952f02",
+        "runtime_sec": 292.6090000000004,
+        "status": "complete",
+        "training_rows": 250000
+      }
+    ]
+  },
+  "e70dec2a30c7acef2fb75a16532935c3c53626ee999a3f2fbb379494019c870f": {
+    "config": {
+      "candidate": "residual_long_proxy_specialist_no_traffic",
+      "coverage": "month-isolated",
+      "depth": 6,
+      "early_stopping_rounds": 40,
+      "features": {
+        "clocks": true,
+        "legacy": false,
+        "local_calendar": false,
+        "quality": false,
+        "traffic": false
+      },
+      "hierarchy_alpha": 30,
+      "iterations": 180,
+      "l2_leaf_reg": 8,
+      "learning_rate": 0.075,
+      "long_proxy_correction": true,
+      "loss": "RMSE",
+      "max_run_minutes": 30,
+      "memory_reserve_gb": 2,
+      "missing_specialist": true,
+      "proxy_max": 7200,
+      "proxy_min": 0,
+      "raw_dir": "data/raw/prc",
+      "rounding": "nearest-even-int32",
+      "seed": 20260910,
+      "threads": 4,
+      "train_sample": 250000
+    },
+    "runs": [
+      {
+        "fold": "F1",
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "run_id": "residual_long_proxy_specialist_no_traffic-F1-20260911T035832315478-e70dec2a",
+        "runtime_sec": 325.8130000000019,
+        "status": "complete",
+        "training_rows": 250000
+      },
+      {
+        "fold": "F3",
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "run_id": "residual_long_proxy_specialist_no_traffic-F3-20260911T040404592074-e70dec2a",
+        "runtime_sec": 262.0,
+        "status": "complete",
+        "training_rows": 250000
+      }
+    ]
+  },
+  "fb902d894a253ade4610b00c885bc60f845e309be5f99cd6143a98d97e372775": {
+    "config": {
+      "candidate": "direct",
+      "coverage": "month-isolated",
+      "depth": 6,
+      "early_stopping_rounds": 40,
+      "features": {
+        "clocks": true,
+        "legacy": false,
+        "local_calendar": false,
+        "quality": false,
+        "traffic": true
+      },
+      "hierarchy_alpha": 30,
+      "iterations": 240,
+      "l2_leaf_reg": 8,
+      "learning_rate": 0.075,
+      "loss": "RMSE",
+      "max_run_minutes": 30,
+      "memory_reserve_gb": 2,
+      "proxy_max": 7200,
+      "proxy_min": 0,
+      "raw_dir": "data/raw/prc",
+      "rounding": "nearest-even-int32",
+      "seed": 20260910,
+      "threads": 4,
+      "train_sample": null
+    },
+    "runs": [
+      {
+        "fold": null,
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "run_id": "anytime-airport-mean-20260910T175143560039-fb902d89",
+        "runtime_sec": 4.235000000000582,
+        "status": "complete",
+        "training_rows": 2085047
+      },
+      {
+        "fold": "F1",
+        "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+        "note": "Incomplete artifact, not eligible for scoring or release. See search_protocol.md for timeout/interruption context.",
+        "run_id": "direct-F1-20260910T180638084531-fb902d89",
+        "runtime_sec": null,
+        "status": "incomplete",
+        "training_rows": null
+      }
+    ]
+  }
+}

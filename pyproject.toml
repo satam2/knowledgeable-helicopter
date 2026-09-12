@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools==80.9.0", "wheel==0.45.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prc-taxiout"
+version = "0.1.0"
+description = "Reproducible retrospective PRC 2026 taxi-out estimation"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = "GPL-3.0-only"
+dependencies = [
+  "numpy==1.26.4", "pandas==2.3.3", "pyarrow==14.0.2",
+  "catboost==1.2.10", "scikit-learn==1.7.2", "PyYAML==6.0.2",
+  "psutil==7.0.0", "tzdata==2025.2",
+]
+
+[project.scripts]
+taxiout = "taxiout.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

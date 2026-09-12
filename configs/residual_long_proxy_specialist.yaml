@@ -1,0 +1,3 @@
+extends: residual_specialist.yaml
+candidate: residual_long_proxy_specialist
+long_proxy_correction: true

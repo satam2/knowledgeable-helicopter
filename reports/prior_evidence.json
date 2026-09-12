@@ -1,0 +1,17 @@
+{
+  "checked_date": "2026-09-10",
+  "source": "User-supplied PRC_2026_Challenge_Strategy evidence; provenance only, never an execution dependency",
+  "files": {
+    "PRC_2026_Agent_Execution_Plan.md": "4b707f5afd1e209e38a4e9df79b47bdd9f7d90b9693e5a66489954a37a76521f",
+    "analysis_2026_09_10/analyze_prc.py": "8363647d8b9d39820b7117095e8954af244f0764c2a5792bf3c0139c703e043d",
+    "analysis_2026_09_10/benchmark.json": "e08da553cb15ede6fa6bb4a7460ffe2f566612d0dabf3cd18a7a80b0b180e3c5"
+  },
+  "prior_rounded_rmse_seconds": {
+    "global_mean": 523.38,
+    "airport_mean": 496.55,
+    "raw_proxy_with_fallback": 491.04,
+    "operational_context": 443.97,
+    "with_clocks": 339.05
+  },
+  "reproduction_policy": "Read source without importing; reproduce file ordering, RNG sample, 27 columns, category/missing conversion and continuous windows. Production uses separate month-isolated policy."
+}

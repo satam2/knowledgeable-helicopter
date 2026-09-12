@@ -1,0 +1,665 @@
+{
+  "accepted": false,
+  "candidate": "residual_long_proxy_specialist",
+  "clean_verification": {
+    "commands": [
+      [
+        "C:\\Users\\hurri\\PRC\\.venv-verify\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      [
+        "C:\\Users\\hurri\\PRC\\.venv-verify\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "install",
+        "--no-build-isolation",
+        "--no-deps",
+        "--force-reinstall",
+        "C:\\Users\\hurri\\PRC\\data\\interim\\clean-reproduction-20260911T183003"
+      ],
+      [
+        "C:\\Users\\hurri\\PRC\\.venv-verify\\Scripts\\python.exe",
+        "-m",
+        "pytest"
+      ],
+      [
+        "C:\\Users\\hurri\\PRC\\.venv-verify\\Scripts\\python.exe",
+        "-m",
+        "taxiout.cli",
+        "reproduce",
+        "--config",
+        "configs/release.yaml",
+        "--offline"
+      ]
+    ],
+    "initial_audit_cache_present": false,
+    "initial_feature_cache_present": false,
+    "isolated_tree": "data/interim/clean-reproduction-20260911T183003",
+    "lock_sha256": "75ca3d46e1d17d5d561ff3c43523a84db39e270ad796131b3bb34dc829246dc3",
+    "logs": {
+      "step-1.log": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+      "step-2.log": "a99c0b779e59ab2f68dd16612c59175be76ca52658f35d32a2fbdac47db77535",
+      "step-3.log": "6324958f51669bda0c91aa0f4090d9a3446685f78858cf8105986de3ef453101",
+      "step-4.log": "5da75c6feb8ca1b309f482f271ae3f34cf583a7a4cc36983e967f51fb83937ab"
+    },
+    "raw_files": "local hardlinks; raw pack hashes revalidated",
+    "reproduction": {
+      "byte_hash_equal_reference": true,
+      "offline": true,
+      "run_id": "reproduction-20260911T183112968184-6c34f3be",
+      "serialized_values_equal_reference": true,
+      "status": "complete",
+      "validation": {
+        "maximum_sec": 87035,
+        "minimum_sec": -268,
+        "passed": true,
+        "rounding": "numpy.rint, nearest even; no clipping",
+        "rows": 344841,
+        "schema": "MVT_ID_mvt: double\nTAXITIME_SEC_mvt: int32",
+        "sha256": "823408382b15b41a5b353b219ef7e5ebbfb07e81e8c3c833f3ebf66295c88e13",
+        "template_sha256": "0d383408ed5ac27bfcfd12d6b961cee77c8a6364b10dad9fe3ec81115c79652b"
+      }
+    },
+    "status": "complete"
+  },
+  "configuration_hash": "6c34f3bedf259006f319d324a9537c0ed45fb58b59d8ebf0eccc41c2638ac3b8",
+  "confirmation": {
+    "accepted": true,
+    "baseline_rmse_limit": 447.8215557678632,
+    "config_hash": "6c34f3bedf259006f319d324a9537c0ed45fb58b59d8ebf0eccc41c2638ac3b8",
+    "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+    "metrics": {
+      "overall": {
+        "bias_sec": -6.641001651905101,
+        "coverage": 1.0,
+        "mae_sec": 162.45952489204004,
+        "n": 165677,
+        "p95_abs_error_sec": 445.03119402895163,
+        "rmse_sec": 266.4064716260171,
+        "sse": 11758495660.797035
+      },
+      "serialized": {
+        "bias_sec": -6.641302051582295,
+        "coverage": 1.0,
+        "mae_sec": 162.459719816269,
+        "n": 165677,
+        "p95_abs_error_sec": 445.0,
+        "rmse_sec": 266.4067579611327,
+        "sse": 11758520937.0
+      },
+      "slices": {
+        "ADEP_mvt": {
+          "EDDF": {
+            "bias_sec": -10.029338733074251,
+            "coverage": 1.0,
+            "mae_sec": 140.33509924422378,
+            "n": 17324,
+            "p95_abs_error_sec": 379.7525417641085,
+            "rmse_sec": 199.8581869201522,
+            "sse": 691977640.4839779,
+            "sse_share": 0.05884916408066039
+          },
+          "EDDM": {
+            "bias_sec": -44.002997511156785,
+            "coverage": 1.0,
+            "mae_sec": 166.18267700405474,
+            "n": 12035,
+            "p95_abs_error_sec": 505.20018689274957,
+            "rmse_sec": 275.39560571450767,
+            "sse": 912767371.649967,
+            "sse_share": 0.07762620304339987
+          },
+          "EGLL": {
+            "bias_sec": -4.0940228393651505,
+            "coverage": 1.0,
+            "mae_sec": 181.09481558667733,
+            "n": 20000,
+            "p95_abs_error_sec": 464.63313250697274,
+            "rmse_sec": 255.72602032235173,
+            "sse": 1307915949.3981571,
+            "sse_share": 0.1112315713785365
+          },
+          "EHAM": {
+            "bias_sec": -13.186080454303118,
+            "coverage": 1.0,
+            "mae_sec": 127.79804684973664,
+            "n": 19458,
+            "p95_abs_error_sec": 354.66765497261895,
+            "rmse_sec": 183.47997296110336,
+            "sse": 655051633.4971728,
+            "sse_share": 0.05570879578423648
+          },
+          "LEBL": {
+            "bias_sec": 4.118094683750905,
+            "coverage": 1.0,
+            "mae_sec": 146.23376641092403,
+            "n": 13835,
+            "p95_abs_error_sec": 397.49194410153365,
+            "rmse_sec": 211.77360902917377,
+            "sse": 620472930.5929742,
+            "sse_share": 0.0527680537112956
+          },
+          "LEMD": {
+            "bias_sec": -0.6248022811586683,
+            "coverage": 1.0,
+            "mae_sec": 134.6264972018705,
+            "n": 17985,
+            "p95_abs_error_sec": 361.1694603614448,
+            "rmse_sec": 194.1140024463414,
+            "sse": 677679223.3341022,
+            "sse_share": 0.05763315673054103
+          },
+          "LFPG": {
+            "bias_sec": -3.3897014075323644,
+            "coverage": 1.0,
+            "mae_sec": 180.87136596649108,
+            "n": 19778,
+            "p95_abs_error_sec": 502.66674694975137,
+            "rmse_sec": 289.0710263573896,
+            "sse": 1652690388.6482844,
+            "sse_share": 0.14055287651790135
+          },
+          "LIRF": {
+            "bias_sec": -3.7092585499652486,
+            "coverage": 1.0,
+            "mae_sec": 241.3142530614911,
+            "n": 12068,
+            "p95_abs_error_sec": 618.5966632789448,
+            "rmse_sec": 521.7865788020473,
+            "sse": 3285648569.714962,
+            "sse_share": 0.2794276295622878
+          },
+          "LSZH": {
+            "bias_sec": -19.860580407837382,
+            "coverage": 1.0,
+            "mae_sec": 135.98206901406488,
+            "n": 10585,
+            "p95_abs_error_sec": 367.90965032665275,
+            "rmse_sec": 187.60370037127836,
+            "sse": 372540645.73986673,
+            "sse_share": 0.0316826791867536
+          },
+          "LTFM": {
+            "bias_sec": 9.633802386485973,
+            "coverage": 1.0,
+            "mae_sec": 177.0452487122863,
+            "n": 22609,
+            "p95_abs_error_sec": 476.1798592433391,
+            "rmse_sec": 264.5016735079296,
+            "sse": 1581751307.7375917,
+            "sse_share": 0.1345198700043892
+          }
+        },
+        "label_bin": {
+          "0-30m": {
+            "bias_sec": 15.385739712938035,
+            "coverage": 1.0,
+            "mae_sec": 144.42381132576634,
+            "n": 159066,
+            "p95_abs_error_sec": 388.2548761845752,
+            "rmse_sec": 198.14713372628296,
+            "sse": 6245294880.9425535,
+            "sse_share": 0.5311304320810731
+          },
+          "30-60m": {
+            "bias_sec": -479.52521381079714,
+            "coverage": 1.0,
+            "mae_sec": 523.2500766004453,
+            "n": 6329,
+            "p95_abs_error_sec": 1282.651609472289,
+            "rmse_sec": 659.0053814394872,
+            "sse": 2748609339.1173053,
+            "sse_share": 0.23375518590198588
+          },
+          "60-120m": {
+            "bias_sec": -1797.5927789773332,
+            "coverage": 1.0,
+            "mae_sec": 1945.3687380612523,
+            "n": 223,
+            "p95_abs_error_sec": 3803.5844203611664,
+            "rmse_sec": 2260.711633430144,
+            "sse": 1139712210.964385,
+            "sse_share": 0.09692670251724454
+          },
+          "<0": {
+            "bias_sec": 349.10134193221245,
+            "coverage": 1.0,
+            "mae_sec": 349.10134193221245,
+            "n": 21,
+            "p95_abs_error_sec": 815.1903500354011,
+            "rmse_sec": 440.55811112917837,
+            "sse": 4075920.4349158993,
+            "sse_share": 0.00034663621542210257
+          },
+          ">120m": {
+            "bias_sec": -3135.8464242362884,
+            "coverage": 1.0,
+            "mae_sec": 5002.385305834838,
+            "n": 38,
+            "p95_abs_error_sec": 12039.298266296712,
+            "rmse_sec": 6530.904888818013,
+            "sse": 1620803309.3379068,
+            "sse_share": 0.13784104328427696
+          }
+        },
+        "month": {
+          "2025-12": {
+            "bias_sec": -6.641001651905101,
+            "coverage": 1.0,
+            "mae_sec": 162.45952489204004,
+            "n": 165677,
+            "p95_abs_error_sec": 445.03119402895163,
+            "rmse_sec": 266.4064716260171,
+            "sse": 11758495660.797035,
+            "sse_share": 1.0
+          }
+        },
+        "new_category": {
+          "False": {
+            "bias_sec": -6.345629513766643,
+            "coverage": 1.0,
+            "mae_sec": 162.2521907241725,
+            "n": 164966,
+            "p95_abs_error_sec": 444.6515378189264,
+            "rmse_sec": 265.6410111196728,
+            "sse": 11640850005.141731,
+            "sse_share": 0.9899948378560417
+          },
+          "True": {
+            "bias_sec": -75.17315374775399,
+            "coverage": 1.0,
+            "mae_sec": 210.5651343666498,
+            "n": 711,
+            "p95_abs_error_sec": 567.8607593900624,
+            "rmse_sec": 406.7739632528848,
+            "sse": 117645655.65530655,
+            "sse_share": 0.01000516214395848
+          }
+        },
+        "proxy_status": {
+          "invalid": {
+            "bias_sec": 67.88118701732415,
+            "coverage": 1.0,
+            "mae_sec": 340.4404933064353,
+            "n": 86,
+            "p95_abs_error_sec": 961.8047276558686,
+            "rmse_sec": 496.4448920848479,
+            "sse": 21195347.655433718,
+            "sse_share": 0.0018025560638763732
+          },
+          "missing": {
+            "bias_sec": -105.82935206950084,
+            "coverage": 1.0,
+            "mae_sec": 498.69252082886686,
+            "n": 1649,
+            "p95_abs_error_sec": 1967.1020781246123,
+            "rmse_sec": 1222.068449052976,
+            "sse": 2462701184.08756,
+            "sse_share": 0.20944015757885043
+          },
+          "present": {
+            "bias_sec": -5.682414580788108,
+            "coverage": 1.0,
+            "mae_sec": 158.98418255399693,
+            "n": 163942,
+            "p95_abs_error_sec": 438.0677419773836,
+            "rmse_sec": 237.8496185417452,
+            "sse": 9274599129.05406,
+            "sse_share": 0.7887572863572748
+          }
+        },
+        "route": {
+          "direct_invalid": {
+            "bias_sec": 67.88118701732415,
+            "coverage": 1.0,
+            "mae_sec": 340.4404933064353,
+            "n": 86,
+            "p95_abs_error_sec": 961.8047276558686,
+            "rmse_sec": 496.4448920848479,
+            "sse": 21195347.655433718,
+            "sse_share": 0.0018025560638763732
+          },
+          "residual": {
+            "bias_sec": -5.682414580788108,
+            "coverage": 1.0,
+            "mae_sec": 158.98418255399693,
+            "n": 163942,
+            "p95_abs_error_sec": 438.0677419773836,
+            "rmse_sec": 237.8496185417452,
+            "sse": 9274599129.05406,
+            "sse_share": 0.7887572863572748
+          },
+          "specialist_missing": {
+            "bias_sec": -105.82935206950084,
+            "coverage": 1.0,
+            "mae_sec": 498.69252082886686,
+            "n": 1649,
+            "p95_abs_error_sec": 1967.1020781246123,
+            "rmse_sec": 1222.068449052976,
+            "sse": 2462701184.08756,
+            "sse_share": 0.20944015757885043
+          }
+        }
+      }
+    },
+    "missing_proxy_rmse_limit": 3138.7344208247246,
+    "run_id": "residual_long_proxy_specialist-C1-20260911T062153458353-6c34f3be",
+    "status": "complete"
+  },
+  "created_utc": "2026-09-11T18:26:25.405616+00:00",
+  "external_data": [],
+  "freeze": {
+    "config_hash": "6c34f3bedf259006f319d324a9537c0ed45fb58b59d8ebf0eccc41c2638ac3b8",
+    "configuration": {
+      "candidate": "residual_long_proxy_specialist",
+      "coverage": "month-isolated",
+      "depth": 6,
+      "early_stopping_rounds": 40,
+      "features": {
+        "clocks": true,
+        "legacy": false,
+        "local_calendar": false,
+        "quality": false,
+        "traffic": true
+      },
+      "hierarchy_alpha": 30,
+      "iterations": 180,
+      "l2_leaf_reg": 8,
+      "learning_rate": 0.075,
+      "long_proxy_correction": true,
+      "loss": "RMSE",
+      "max_run_minutes": 30,
+      "memory_reserve_gb": 2,
+      "missing_specialist": true,
+      "proxy_max": 7200,
+      "proxy_min": 0,
+      "raw_dir": "data/raw/prc",
+      "rounding": "nearest-even-int32",
+      "seed": 20260910,
+      "threads": 4,
+      "train_sample": 250000
+    },
+    "confirmation_acceptance": {
+      "beat_best_baseline": [
+        "airport_mean",
+        "hierarchical_mean",
+        "raw_proxy"
+      ],
+      "failure_action": "Stop final release; document investigation without silently tuning on December.",
+      "missing_proxy_rmse_max_relative_to_airport_mean": 1.0,
+      "require_complete_reload_parity": true
+    },
+    "confirmation_rule": "One C1 run; November tunes iterations under frozen rule, December only scores; reused confirmation previously exposed in diagnostic.",
+    "development_runs": [
+      "residual_long_proxy_specialist-F1-20260911T033403603272-6c34f3be",
+      "residual_long_proxy_specialist-F2-20260911T033504103868-6c34f3be",
+      "residual_long_proxy_specialist-F3-20260911T033559842712-6c34f3be",
+      "residual_long_proxy_specialist-G1-20260911T033657725286-6c34f3be"
+    ],
+    "final_iterations": {
+      "direct": 178,
+      "missing": 131,
+      "residual": 180
+    },
+    "frozen_utc": "2026-09-11T06:19:55.827214+00:00",
+    "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+    "iteration_rule": "Per-component median of F1/F2/F3 chosen iterations; fixed before C1",
+    "source_hashes": {
+      "configs/base.yaml": "8bc76055896116c4a31a6dd9419e96531863a59e2b2c806fa499a03ee95e5726",
+      "configs/baseline_reproduction.yaml": "17cd202bfe4b6e8bbe11f4ca973da765994b00157b941286dd11ff28b6b25763",
+      "configs/direct.yaml": "d310f67478ba16c491217ea80dd9955193fe5c54e04d89758a3e9ce3e2169fe7",
+      "configs/folds.yaml": "b71474d975157b36bdbb39e7d4b2992372f1a6d7e97a0a3bb2e0df5cf3dca59c",
+      "configs/no_clocks.yaml": "0f0978b5fa10272b204e7359c3ccbe66e86788372ff01e45d9e73c9ef207fd5e",
+      "configs/no_traffic.yaml": "e646b6aeb8f88a76183a51dbf55f4002e0434c62adcb3944323dc1253f984486",
+      "configs/quality.yaml": "a29ae729ccef490429fd4c02dd65ec2f1e5c9c3ff6281a5b20e7a71e2c258ab5",
+      "configs/residual.yaml": "4c21cd813c355fc490bf1d8eba9be410738e170a869b16cbe10dd0d36bba3fb8",
+      "configs/residual_all_finite.yaml": "4fbbdcc956bb6e954dbdc5b886479afb13a1ed60ace260ac230a2af695b54bd0",
+      "configs/residual_all_finite_specialist.yaml": "bb34b7ce3392bee92c8a2952a612056c2f228fb3e2a763ce238aafa636ecf998",
+      "configs/residual_long_proxy_specialist.yaml": "09428913081f4312276eda598290411a131c44b5dcebe08cbfbd020463aa056f",
+      "configs/residual_specialist.yaml": "c9ff764f47e7787c46523671576b44c49caaa55abe0751dae415e124a94485eb",
+      "configs/robust.yaml": "2ff57c3847d5f26d650a54e0dd15f5f8bf001175a37c411aa4ae06cb97338ed7",
+      "configs/specialist.yaml": "3efd57f1aad82e4e175af2e03db908ff5e8650d10c45caaee179472906fdad7a",
+      "pyproject.toml": "ad6d19e6d0fee90db8a21baeb454a8e88c020595d847f9bf046560e59ddc12ce",
+      "requirements.lock.txt": "75ca3d46e1d17d5d561ff3c43523a84db39e270ad796131b3bb34dc829246dc3",
+      "src/taxiout/__init__.py": "dba51ef9f396f280b0844206af4a5641c5da858f0d9c145f56bcc157f165fdfb",
+      "src/taxiout/artifacts.py": "24c12a18bf0f95cf66e87517b2d3108e1af9db0c0db1283fef7a3e9f6f3b07fe",
+      "src/taxiout/audit.py": "4180099b3c587f86806c6f5624ba9fb237414907122c1c6ed0c254000dd79060",
+      "src/taxiout/availability.py": "1945c093afcc642f618ba507f1a82aa17dfa4971cdbc301326b9353a83b040dd",
+      "src/taxiout/benchmark.py": "09f60fa0a30e18fc5c05a578341b34daee7b10444755fa34dd675adcbe0a33a9",
+      "src/taxiout/cache.py": "ec268237b573c30d1d17a481e8b2c0a7138527b307d38c403e90051ae99984e8",
+      "src/taxiout/cli.py": "fd3a05b4fde2df2888a5074f39eda1842810ff181e0c13028e82fa4279df67d3",
+      "src/taxiout/config.py": "3dd65d42dde65715de6dd9606ac0de20b9aab2b0dec95de8cda3e524448fa487",
+      "src/taxiout/features/__init__.py": "d8f53ab8b3835501842c8fb3017317614486b400a58200180ccd79c5679e9bb4",
+      "src/taxiout/features/calendar.py": "744d7841239aef50bbdc4651779e3a5905f69d1bffb39c88e0d579cb9bba79dc",
+      "src/taxiout/features/clocks.py": "8e505d163cd18f8b6b69226968df767d4a2180869d6186ce770f8c89beec9d01",
+      "src/taxiout/features/pipeline.py": "92407b2c32630c0b0c16bd15b766ea7211bda99ea5a83623f9d5c9bc1d95dc5f",
+      "src/taxiout/features/traffic.py": "af145b5ffc0bf372398eddb05d8b9bcc5fb42cbdd0783c8727718193aac1e29d",
+      "src/taxiout/io.py": "c385af739fed2dabe2811b6e2b5a32915ecb33145f5a9b562b3448e57ea3495f",
+      "src/taxiout/metrics.py": "45e5b653999abd8419cdab81f52f1a0ba5c47d118493b9dd9891c98909f12758",
+      "src/taxiout/models/__init__.py": "219f4b23e597885558d0313ed67665a2a4fd138223b727f323c8cc831f6aab7e",
+      "src/taxiout/models/baselines.py": "7b01f9a05a277ace47752517c7d5b47a1a347cacee2a1fad11a6841019213c0c",
+      "src/taxiout/models/direct.py": "6f5db66cabaaaab149e7f24875e9bd29dac5b8b6e7d5ca5d4e9648aa27d666fc",
+      "src/taxiout/models/residual.py": "0f1f793088636aa3890b0b8d9f179846eb5ed4257828bddf11a5f387bd13eb4c",
+      "src/taxiout/predict.py": "51562c177a6ba06e83822918a3ea4c283e6fdfba6f5937807fa7b032ad1f5196",
+      "src/taxiout/release.py": "e45129eb7bb8751f9654a85a0e1990849aad5f2986c4e574a0d3bf9e12561da8",
+      "src/taxiout/schema.py": "69473561078b5d45b92117e331bdf1bd57be0508b5f2450992eb4e58747d4c20",
+      "src/taxiout/splits.py": "da497fc4477b737ee2aa08298ca337f1fc7d2093197157a1534d6a1a5d56559a",
+      "src/taxiout/submission.py": "00d97f6cc40be5518a542185c3ea8406230e16b78e8b280fb88a854e0253ee30",
+      "src/taxiout/train.py": "6ee6cd86c48cd33316c1e9f3512316c3458f7999d057fb07c59ee5b9c7941066"
+    }
+  },
+  "local_technical_status": "complete",
+  "model_outputs": {
+    "bundle.json": "540e868d88180b4261acd708f549c44774f18c02cd984d0135778935d4abc5a3",
+    "direct.cbm": "c8383f92f53576209797c8f9a5a570173bd2e6030cdba761ab6fd9295aa5c3ec",
+    "missing.cbm": "22bac12d3ce38eb9a0e8a578cd9ffc6aef3404cf4553c74e8629b1caa82558ac",
+    "residual.cbm": "564c5db4f9b183a24be32bee890b44bed42d52dfae15cb86fa965fc263eeb869"
+  },
+  "pending_external_dependencies": [
+    "verified team/account identity and next version",
+    "authorized upload and acceptance",
+    "authorized public GitHub release"
+  ],
+  "prediction_rows": 344841,
+  "proxy_status": {
+    "invalid": 174,
+    "missing": 5290,
+    "present": 339377
+  },
+  "published": false,
+  "raw_inputs": {
+    "files": [
+      {
+        "bytes": 21218481,
+        "file": "training_2025-01-01_2025-02-01.parquet",
+        "rows": 307257,
+        "schema": "MVT_ID_mvt: double\nFLIGHT_ID_mvt: double\nFLIGHT_mvt: string\nFLIGHT_RULE_mvt: string\nADEP_mvt: string\nADES_mvt: string\nPHASE_mvt: string\nMVT_TIME_UTC_mvt: timestamp[us, tz=UTC]\nBLOCK_TIME_UTC_mvt: timestamp[us, tz=UTC]\nSCHED_TIME_UTC_mvt: timestamp[us, tz=UTC]\nAIRCRAFT_TYPE_mvt: string\nRUNWAY_mvt: string\nSTAND_mvt: string\nTAXITIME_SEC_mvt: int32\nLOBT_flt: timestamp[us, tz=UTC]\nCALLSIGN_flt: string\nADEP_flt: string\nADES_flt: string\nADES_FILED_flt: string\nMARKET_SEGMENT_flt: string\nIOBT_flt: timestamp[us, tz=UTC]\nFLIGHT_RULE_flt: string\nFLIGHT_TYPE_flt: string\nAIRCRAFT_TYPE_flt: string\nWK_TBL_CAT_flt: string\nAIRCRAFT_OPERATOR_flt: string\n  -- field metadata --\n  ARROW:extension:metadata: 'A\n3\n263681\n197888\n5\nUTF-8\n784\n0\n1026\n1\n26215' + 63\n  ARROW:extension:name: 'arrow.r.vctrs'\nEOBT_1_flt: timestamp[us, tz=UTC]\nARVT_1_flt: timestamp[us, tz=UTC]\nAOBT_3_flt: timestamp[us, tz=UTC]\nARVT_3_flt: timestamp[us, tz=UTC]",
+        "sha256": "a4dc8f152c082c650cd7eb745fe9c641089f34f74df127e6944a188990a0ed94"
+      },
+      {
+        "bytes": 19824510,
+        "file": "training_2025-02-01_2025-03-01.parquet",
+        "rows": 287411,
+        "schema": "MVT_ID_mvt: double\nFLIGHT_ID_mvt: double\nFLIGHT_mvt: string\nFLIGHT_RULE_mvt: string\nADEP_mvt: string\nADES_mvt: string\nPHASE_mvt: string\nMVT_TIME_UTC_mvt: timestamp[us, tz=UTC]\nBLOCK_TIME_UTC_mvt: timestamp[us, tz=UTC]\nSCHED_TIME_UTC_mvt: timestamp[us, tz=UTC]\nAIRCRAFT_TYPE_mvt: string\nRUNWAY_mvt: string\nSTAND_mvt: string\nTAXITIME_SEC_mvt: int32\nLOBT_flt: timestamp[us, tz=UTC]\nCALLSIGN_flt: string\nADEP_flt: string\nADES_flt: string\nADES_FILED_flt: string\nMARKET_SEGMENT_flt: string\nIOBT_flt: timestamp[us, tz=UTC]\nFLIGHT_RULE_flt: string\nFLIGHT_TYPE_flt: string\nAIRCRAFT_TYPE_flt: string\nWK_TBL_CAT_flt: string\nAIRCRAFT_OPERATOR_flt: string\n  -- field metadata --\n  ARROW:extension:metadata: 'A\n3\n263681\n197888\n5\nUTF-8\n784\n0\n1026\n1\n26215' + 63\n  ARROW:extension:name: 'arrow.r.vctrs'\nEOBT_1_flt: timestamp[us, tz=UTC]\nARVT_1_flt: timestamp[us, tz=UTC]\nAOBT_3_flt: timestamp[us, tz=UTC]\nARVT_3_flt: timestamp[us, tz=UTC]",
+        "sha256": "b6f9ff2cdb1cfe07c5442f4e1f11bbcdbeafe52852dcb0b8175f62ab84c6a066"
+      },
+      {
+        "bytes": 22606072,
+        "file": "training_2025-03-01_2025-04-01.parquet",
+        "rows": 328622,
+        "schema": "MVT_ID_mvt: double\nFLIGHT_ID_mvt: double\nFLIGHT_mvt: string\nFLIGHT_RULE_mvt: string\nADEP_mvt: string\nADES_mvt: string\nPHASE_mvt: string\nMVT_TIME_UTC_mvt: timestamp[us, tz=UTC]\nBLOCK_TIME_UTC_mvt: timestamp[us, tz=UTC]\nSCHED_TIME_UTC_mvt: timestamp[us, tz=UTC]\nAIRCRAFT_TYPE_mvt: string\nRUNWAY_mvt: string\nSTAND_mvt: string\nTAXITIME_SEC_mvt: int32\nLOBT_flt: timestamp[us, tz=UTC]\nCALLSIGN_flt: string\nADEP_flt: string\nADES_flt: string\nADES_FILED_flt: string\nMARKET_SEGMENT_flt: string\nIOBT_flt: timestamp[us, tz=UTC]\nFLIGHT_RULE_flt: string\nFLIGHT_TYPE_flt: string\nAIRCRAFT_TYPE_flt: string\nWK_TBL_CAT_flt: string\nAIRCRAFT_OPERATOR_flt: string\n  -- field metadata --\n  ARROW:extension:metadata: 'A\n3\n263681\n197888\n5\nUTF-8\n784\n0\n1026\n1\n26215' + 63\n  ARROW:extension:name: 'arrow.r.vctrs'\nEOBT_1_flt: timestamp[us, tz=UTC]\nARVT_1_flt: timestamp[us, tz=UTC]\nAOBT_3_flt: timestamp[us, tz=UTC]\nARVT_3_flt: timestamp[us, tz=UTC]",
+        "sha256": "58fde7e5f8b539546af63b41d7f6ec0f2884fdc3d3dd9b6bfca7c59a420dcdd3"
+      },
+      {
+        "bytes": 23840340,
+        "file": "training_2025-04-01_2025-05-01.parquet",
+        "rows": 350288,
+        "schema": "MVT_ID_mvt: double\nFLIGHT_ID_mvt: double\nFLIGHT_mvt: string\nFLIGHT_RULE_mvt: string\nADEP_mvt: string\nADES_mvt: string\nPHASE_mvt: string\nMVT_TIME_UTC_mvt: timestamp[us, tz=UTC]\nBLOCK_TIME_UTC_mvt: timestamp[us, tz=UTC]\nSCHED_TIME_UTC_mvt: timestamp[us, tz=UTC]\nAIRCRAFT_TYPE_mvt: string\nRUNWAY_mvt: string\nSTAND_mvt: string\nTAXITIME_SEC_mvt: int32\nLOBT_flt: timestamp[us, tz=UTC]\nCALLSIGN_flt: string\nADEP_flt: string\nADES_flt: string\nADES_FILED_flt: string\nMARKET_SEGMENT_flt: string\nIOBT_flt: timestamp[us, tz=UTC]\nFLIGHT_RULE_flt: string\nFLIGHT_TYPE_flt: string\nAIRCRAFT_TYPE_flt: string\nWK_TBL_CAT_flt: string\nAIRCRAFT_OPERATOR_flt: string\n  -- field metadata --\n  ARROW:extension:metadata: 'A\n3\n263681\n197888\n5\nUTF-8\n784\n0\n1026\n1\n26215' + 63\n  ARROW:extension:name: 'arrow.r.vctrs'\nEOBT_1_flt: timestamp[us, tz=UTC]\nARVT_1_flt: timestamp[us, tz=UTC]\nAOBT_3_flt: timestamp[us, tz=UTC]\nARVT_3_flt: timestamp[us, tz=UTC]",
+        "sha256": "9ffe0cf5741c4863799c41be81475dfaecedabe0ba687b8f8e4eacba992f9390"
+      },
+      {
+        "bytes": 25187756,
+        "file": "training_2025-05-01_2025-06-01.parquet",
+        "rows": 370105,
+        "schema": "MVT_ID_mvt: double\nFLIGHT_ID_mvt: double\nFLIGHT_mvt: string\nFLIGHT_RULE_mvt: string\nADEP_mvt: string\nADES_mvt: string\nPHASE_mvt: string\nMVT_TIME_UTC_mvt: timestamp[us, tz=UTC]\nBLOCK_TIME_UTC_mvt: timestamp[us, tz=UTC]\nSCHED_TIME_UTC_mvt: timestamp[us, tz=UTC]\nAIRCRAFT_TYPE_mvt: string\nRUNWAY_mvt: string\nSTAND_mvt: string\nTAXITIME_SEC_mvt: int32\nLOBT_flt: timestamp[us, tz=UTC]\nCALLSIGN_flt: string\nADEP_flt: string\nADES_flt: string\nADES_FILED_flt: string\nMARKET_SEGMENT_flt: string\nIOBT_flt: timestamp[us, tz=UTC]\nFLIGHT_RULE_flt: string\nFLIGHT_TYPE_flt: string\nAIRCRAFT_TYPE_flt: string\nWK_TBL_CAT_flt: string\nAIRCRAFT_OPERATOR_flt: string\n  -- field metadata --\n  ARROW:extension:metadata: 'A\n3\n263681\n197888\n5\nUTF-8\n784\n0\n1026\n1\n26215' + 63\n  ARROW:extension:name: 'arrow.r.vctrs'\nEOBT_1_flt: timestamp[us, tz=UTC]\nARVT_1_flt: timestamp[us, tz=UTC]\nAOBT_3_flt: timestamp[us, tz=UTC]\nARVT_3_flt: timestamp[us, tz=UTC]",
+        "sha256": "5481c0642a8fbb4dc395f93bc713c57f4cc16854fb361d404967077e1fce2ff9"
+      },
+      {
+        "bytes": 24991697,
+        "file": "training_2025-06-01_2025-07-01.parquet",
+        "rows": 365986,
+        "schema": "MVT_ID_mvt: double\nFLIGHT_ID_mvt: double\nFLIGHT_mvt: string\nFLIGHT_RULE_mvt: string\nADEP_mvt: string\nADES_mvt: string\nPHASE_mvt: string\nMVT_TIME_UTC_mvt: timestamp[us, tz=UTC]\nBLOCK_TIME_UTC_mvt: timestamp[us, tz=UTC]\nSCHED_TIME_UTC_mvt: timestamp[us, tz=UTC]\nAIRCRAFT_TYPE_mvt: string\nRUNWAY_mvt: string\nSTAND_mvt: string\nTAXITIME_SEC_mvt: int32\nLOBT_flt: timestamp[us, tz=UTC]\nCALLSIGN_flt: string\nADEP_flt: string\nADES_flt: string\nADES_FILED_flt: string\nMARKET_SEGMENT_flt: string\nIOBT_flt: timestamp[us, tz=UTC]\nFLIGHT_RULE_flt: string\nFLIGHT_TYPE_flt: string\nAIRCRAFT_TYPE_flt: string\nWK_TBL_CAT_flt: string\nAIRCRAFT_OPERATOR_flt: string\n  -- field metadata --\n  ARROW:extension:metadata: 'A\n3\n263681\n197888\n5\nUTF-8\n784\n0\n1026\n1\n26215' + 63\n  ARROW:extension:name: 'arrow.r.vctrs'\nEOBT_1_flt: timestamp[us, tz=UTC]\nARVT_1_flt: timestamp[us, tz=UTC]\nAOBT_3_flt: timestamp[us, tz=UTC]\nARVT_3_flt: timestamp[us, tz=UTC]",
+        "sha256": "c3ef5080f2cc636c3416baf1555f7d0ee3519f9046e8043c1c0c8f017a244025"
+      },
+      {
+        "bytes": 26014977,
+        "file": "training_2025-07-01_2025-08-01.parquet",
+        "rows": 381161,
+        "schema": "MVT_ID_mvt: double\nFLIGHT_ID_mvt: double\nFLIGHT_mvt: string\nFLIGHT_RULE_mvt: string\nADEP_mvt: string\nADES_mvt: string\nPHASE_mvt: string\nMVT_TIME_UTC_mvt: timestamp[us, tz=UTC]\nBLOCK_TIME_UTC_mvt: timestamp[us, tz=UTC]\nSCHED_TIME_UTC_mvt: timestamp[us, tz=UTC]\nAIRCRAFT_TYPE_mvt: string\nRUNWAY_mvt: string\nSTAND_mvt: string\nTAXITIME_SEC_mvt: int32\nLOBT_flt: timestamp[us, tz=UTC]\nCALLSIGN_flt: string\nADEP_flt: string\nADES_flt: string\nADES_FILED_flt: string\nMARKET_SEGMENT_flt: string\nIOBT_flt: timestamp[us, tz=UTC]\nFLIGHT_RULE_flt: string\nFLIGHT_TYPE_flt: string\nAIRCRAFT_TYPE_flt: string\nWK_TBL_CAT_flt: string\nAIRCRAFT_OPERATOR_flt: string\n  -- field metadata --\n  ARROW:extension:metadata: 'A\n3\n263681\n197888\n5\nUTF-8\n784\n0\n1026\n1\n26215' + 63\n  ARROW:extension:name: 'arrow.r.vctrs'\nEOBT_1_flt: timestamp[us, tz=UTC]\nARVT_1_flt: timestamp[us, tz=UTC]\nAOBT_3_flt: timestamp[us, tz=UTC]\nARVT_3_flt: timestamp[us, tz=UTC]",
+        "sha256": "34d1c5bba7c8596a1c20c09edd3cb2f63277b5a684fa801911660fe0eaf63c9d"
+      },
+      {
+        "bytes": 25969246,
+        "file": "training_2025-08-01_2025-09-01.parquet",
+        "rows": 382047,
+        "schema": "MVT_ID_mvt: double\nFLIGHT_ID_mvt: double\nFLIGHT_mvt: string\nFLIGHT_RULE_mvt: string\nADEP_mvt: string\nADES_mvt: string\nPHASE_mvt: string\nMVT_TIME_UTC_mvt: timestamp[us, tz=UTC]\nBLOCK_TIME_UTC_mvt: timestamp[us, tz=UTC]\nSCHED_TIME_UTC_mvt: timestamp[us, tz=UTC]\nAIRCRAFT_TYPE_mvt: string\nRUNWAY_mvt: string\nSTAND_mvt: string\nTAXITIME_SEC_mvt: int32\nLOBT_flt: timestamp[us, tz=UTC]\nCALLSIGN_flt: string\nADEP_flt: string\nADES_flt: string\nADES_FILED_flt: string\nMARKET_SEGMENT_flt: string\nIOBT_flt: timestamp[us, tz=UTC]\nFLIGHT_RULE_flt: string\nFLIGHT_TYPE_flt: string\nAIRCRAFT_TYPE_flt: string\nWK_TBL_CAT_flt: string\nAIRCRAFT_OPERATOR_flt: string\n  -- field metadata --\n  ARROW:extension:metadata: 'A\n3\n263681\n197888\n5\nUTF-8\n784\n0\n1026\n1\n26215' + 63\n  ARROW:extension:name: 'arrow.r.vctrs'\nEOBT_1_flt: timestamp[us, tz=UTC]\nARVT_1_flt: timestamp[us, tz=UTC]\nAOBT_3_flt: timestamp[us, tz=UTC]\nARVT_3_flt: timestamp[us, tz=UTC]",
+        "sha256": "6c8d2aa7a1b6c9dff9a0305a37eb02de1e87a68d07557264f41b77738272c540"
+      },
+      {
+        "bytes": 25102673,
+        "file": "training_2025-09-01_2025-10-01.parquet",
+        "rows": 367679,
+        "schema": "MVT_ID_mvt: double\nFLIGHT_ID_mvt: double\nFLIGHT_mvt: string\nFLIGHT_RULE_mvt: string\nADEP_mvt: string\nADES_mvt: string\nPHASE_mvt: string\nMVT_TIME_UTC_mvt: timestamp[us, tz=UTC]\nBLOCK_TIME_UTC_mvt: timestamp[us, tz=UTC]\nSCHED_TIME_UTC_mvt: timestamp[us, tz=UTC]\nAIRCRAFT_TYPE_mvt: string\nRUNWAY_mvt: string\nSTAND_mvt: string\nTAXITIME_SEC_mvt: int32\nLOBT_flt: timestamp[us, tz=UTC]\nCALLSIGN_flt: string\nADEP_flt: string\nADES_flt: string\nADES_FILED_flt: string\nMARKET_SEGMENT_flt: string\nIOBT_flt: timestamp[us, tz=UTC]\nFLIGHT_RULE_flt: string\nFLIGHT_TYPE_flt: string\nAIRCRAFT_TYPE_flt: string\nWK_TBL_CAT_flt: string\nAIRCRAFT_OPERATOR_flt: string\n  -- field metadata --\n  ARROW:extension:metadata: 'A\n3\n263681\n197888\n5\nUTF-8\n784\n0\n1026\n1\n26215' + 63\n  ARROW:extension:name: 'arrow.r.vctrs'\nEOBT_1_flt: timestamp[us, tz=UTC]\nARVT_1_flt: timestamp[us, tz=UTC]\nAOBT_3_flt: timestamp[us, tz=UTC]\nARVT_3_flt: timestamp[us, tz=UTC]",
+        "sha256": "955308a4000947e32a00586d3ee13928949d2231b67f84f6dfb0631893f3754a"
+      },
+      {
+        "bytes": 25392098,
+        "file": "training_2025-10-01_2025-11-01.parquet",
+        "rows": 371163,
+        "schema": "MVT_ID_mvt: double\nFLIGHT_ID_mvt: double\nFLIGHT_mvt: string\nFLIGHT_RULE_mvt: string\nADEP_mvt: string\nADES_mvt: string\nPHASE_mvt: string\nMVT_TIME_UTC_mvt: timestamp[us, tz=UTC]\nBLOCK_TIME_UTC_mvt: timestamp[us, tz=UTC]\nSCHED_TIME_UTC_mvt: timestamp[us, tz=UTC]\nAIRCRAFT_TYPE_mvt: string\nRUNWAY_mvt: string\nSTAND_mvt: string\nTAXITIME_SEC_mvt: int32\nLOBT_flt: timestamp[us, tz=UTC]\nCALLSIGN_flt: string\nADEP_flt: string\nADES_flt: string\nADES_FILED_flt: string\nMARKET_SEGMENT_flt: string\nIOBT_flt: timestamp[us, tz=UTC]\nFLIGHT_RULE_flt: string\nFLIGHT_TYPE_flt: string\nAIRCRAFT_TYPE_flt: string\nWK_TBL_CAT_flt: string\nAIRCRAFT_OPERATOR_flt: string\n  -- field metadata --\n  ARROW:extension:metadata: 'A\n3\n263681\n197888\n5\nUTF-8\n784\n0\n1026\n1\n26215' + 63\n  ARROW:extension:name: 'arrow.r.vctrs'\nEOBT_1_flt: timestamp[us, tz=UTC]\nARVT_1_flt: timestamp[us, tz=UTC]\nAOBT_3_flt: timestamp[us, tz=UTC]\nARVT_3_flt: timestamp[us, tz=UTC]",
+        "sha256": "4a31a35601c1bdcd74b8cd6379231ba516a48324e4c2478bf1c9360cd23e687f"
+      },
+      {
+        "bytes": 22173840,
+        "file": "training_2025-11-01_2025-12-01.parquet",
+        "rows": 324530,
+        "schema": "MVT_ID_mvt: double\nFLIGHT_ID_mvt: double\nFLIGHT_mvt: string\nFLIGHT_RULE_mvt: string\nADEP_mvt: string\nADES_mvt: string\nPHASE_mvt: string\nMVT_TIME_UTC_mvt: timestamp[us, tz=UTC]\nBLOCK_TIME_UTC_mvt: timestamp[us, tz=UTC]\nSCHED_TIME_UTC_mvt: timestamp[us, tz=UTC]\nAIRCRAFT_TYPE_mvt: string\nRUNWAY_mvt: string\nSTAND_mvt: string\nTAXITIME_SEC_mvt: int32\nLOBT_flt: timestamp[us, tz=UTC]\nCALLSIGN_flt: string\nADEP_flt: string\nADES_flt: string\nADES_FILED_flt: string\nMARKET_SEGMENT_flt: string\nIOBT_flt: timestamp[us, tz=UTC]\nFLIGHT_RULE_flt: string\nFLIGHT_TYPE_flt: string\nAIRCRAFT_TYPE_flt: string\nWK_TBL_CAT_flt: string\nAIRCRAFT_OPERATOR_flt: string\n  -- field metadata --\n  ARROW:extension:metadata: 'A\n3\n263681\n197888\n5\nUTF-8\n784\n0\n1026\n1\n26215' + 63\n  ARROW:extension:name: 'arrow.r.vctrs'\nEOBT_1_flt: timestamp[us, tz=UTC]\nARVT_1_flt: timestamp[us, tz=UTC]\nAOBT_3_flt: timestamp[us, tz=UTC]\nARVT_3_flt: timestamp[us, tz=UTC]",
+        "sha256": "ac36b17db7a537e3baeb682fa4763dacaa1fcc5d9bfa6bf32b3ee5d9f91300b0"
+      },
+      {
+        "bytes": 22653598,
+        "file": "training_2025-12-01_2026-01-01.parquet",
+        "rows": 331548,
+        "schema": "MVT_ID_mvt: double\nFLIGHT_ID_mvt: double\nFLIGHT_mvt: string\nFLIGHT_RULE_mvt: string\nADEP_mvt: string\nADES_mvt: string\nPHASE_mvt: string\nMVT_TIME_UTC_mvt: timestamp[us, tz=UTC]\nBLOCK_TIME_UTC_mvt: timestamp[us, tz=UTC]\nSCHED_TIME_UTC_mvt: timestamp[us, tz=UTC]\nAIRCRAFT_TYPE_mvt: string\nRUNWAY_mvt: string\nSTAND_mvt: string\nTAXITIME_SEC_mvt: int32\nLOBT_flt: timestamp[us, tz=UTC]\nCALLSIGN_flt: string\nADEP_flt: string\nADES_flt: string\nADES_FILED_flt: string\nMARKET_SEGMENT_flt: string\nIOBT_flt: timestamp[us, tz=UTC]\nFLIGHT_RULE_flt: string\nFLIGHT_TYPE_flt: string\nAIRCRAFT_TYPE_flt: string\nWK_TBL_CAT_flt: string\nAIRCRAFT_OPERATOR_flt: string\n  -- field metadata --\n  ARROW:extension:metadata: 'A\n3\n263681\n197888\n5\nUTF-8\n784\n0\n1026\n1\n26215' + 63\n  ARROW:extension:name: 'arrow.r.vctrs'\nEOBT_1_flt: timestamp[us, tz=UTC]\nARVT_1_flt: timestamp[us, tz=UTC]\nAOBT_3_flt: timestamp[us, tz=UTC]\nARVT_3_flt: timestamp[us, tz=UTC]",
+        "sha256": "2d357f2f403a86778a69e93f72d8754effe77f1ac0942399b3d1b7728241f724"
+      },
+      {
+        "bytes": 43564605,
+        "file": "ranking.parquet",
+        "rows": 689534,
+        "schema": "MVT_ID_mvt: double\nFLIGHT_ID_mvt: double\nFLIGHT_mvt: string\nFLIGHT_RULE_mvt: string\nADEP_mvt: string\nADES_mvt: string\nPHASE_mvt: string\nMVT_TIME_UTC_mvt: timestamp[us, tz=UTC]\nBLOCK_TIME_UTC_mvt: timestamp[us, tz=UTC]\nSCHED_TIME_UTC_mvt: timestamp[us, tz=UTC]\nAIRCRAFT_TYPE_mvt: string\nRUNWAY_mvt: string\nSTAND_mvt: string\nTAXITIME_SEC_mvt: int32\nLOBT_flt: timestamp[us, tz=UTC]\nCALLSIGN_flt: string\nADEP_flt: string\nADES_flt: string\nADES_FILED_flt: string\nMARKET_SEGMENT_flt: string\nIOBT_flt: timestamp[us, tz=UTC]\nFLIGHT_RULE_flt: string\nFLIGHT_TYPE_flt: string\nAIRCRAFT_TYPE_flt: string\nWK_TBL_CAT_flt: string\nAIRCRAFT_OPERATOR_flt: string\n  -- field metadata --\n  ARROW:extension:metadata: 'A\n3\n263424\n197888\n5\nUTF-8\n784\n0\n1026\n1\n26215' + 63\n  ARROW:extension:name: 'arrow.r.vctrs'\nEOBT_1_flt: timestamp[us, tz=UTC]\nARVT_1_flt: timestamp[us, tz=UTC]\nAOBT_3_flt: timestamp[us, tz=UTC]\nARVT_3_flt: timestamp[us, tz=UTC]",
+        "sha256": "9db75e3a56fa09b87aab72e191a53da3fe763d9887ad2b23aea9cde6a6325f86"
+      },
+      {
+        "bytes": 1677097,
+        "file": "submitting.parquet",
+        "rows": 344841,
+        "schema": "MVT_ID_mvt: double\nTAXITIME_SEC_mvt: int32",
+        "sha256": "0d383408ed5ac27bfcfd12d6b961cee77c8a6364b10dad9fe3ec81115c79652b"
+      }
+    ],
+    "ranking_departure_months": {
+      "2026-01": 152719,
+      "2026-07": 192122
+    },
+    "template_rows": 344841
+  },
+  "raw_prediction_sha256": "78b8df2a919757791ddc0a4893216692bb1c2710ac248e157e37dcaebee99333",
+  "release_levels": {
+    "competition": "pending authorized upload and acceptance",
+    "local_technical": "complete",
+    "prize_research": "pending public source release and verified eligibility"
+  },
+  "repeated_inference_max_abs_delta_sec": 0.0,
+  "reproduction": {
+    "byte_hash_equal_reference": true,
+    "offline": true,
+    "run_id": "reproduction-20260911T183112968184-6c34f3be",
+    "serialized_values_equal_reference": true,
+    "status": "complete",
+    "validation": {
+      "maximum_sec": 87035,
+      "minimum_sec": -268,
+      "passed": true,
+      "rounding": "numpy.rint, nearest even; no clipping",
+      "rows": 344841,
+      "schema": "MVT_ID_mvt: double\nTAXITIME_SEC_mvt: int32",
+      "sha256": "823408382b15b41a5b353b219ef7e5ebbfb07e81e8c3c833f3ebf66295c88e13",
+      "template_sha256": "0d383408ed5ac27bfcfd12d6b961cee77c8a6364b10dad9fe3ec81115c79652b"
+    }
+  },
+  "routes": {
+    "direct_invalid": 169,
+    "residual": 339377,
+    "residual_long_proxy": 5,
+    "specialist_missing": 5290
+  },
+  "run_id": "release-20260911T182332345949-6c34f3be",
+  "source_hashes": {
+    "configs/base.yaml": "8bc76055896116c4a31a6dd9419e96531863a59e2b2c806fa499a03ee95e5726",
+    "configs/baseline_reproduction.yaml": "17cd202bfe4b6e8bbe11f4ca973da765994b00157b941286dd11ff28b6b25763",
+    "configs/direct.yaml": "d310f67478ba16c491217ea80dd9955193fe5c54e04d89758a3e9ce3e2169fe7",
+    "configs/folds.yaml": "b71474d975157b36bdbb39e7d4b2992372f1a6d7e97a0a3bb2e0df5cf3dca59c",
+    "configs/no_clocks.yaml": "0f0978b5fa10272b204e7359c3ccbe66e86788372ff01e45d9e73c9ef207fd5e",
+    "configs/no_traffic.yaml": "e646b6aeb8f88a76183a51dbf55f4002e0434c62adcb3944323dc1253f984486",
+    "configs/quality.yaml": "a29ae729ccef490429fd4c02dd65ec2f1e5c9c3ff6281a5b20e7a71e2c258ab5",
+    "configs/release.yaml": "77530089e117fee72e718dedd782880f71ed1b01eae73786c26c7f90389faf1d",
+    "configs/residual.yaml": "4c21cd813c355fc490bf1d8eba9be410738e170a869b16cbe10dd0d36bba3fb8",
+    "configs/residual_all_finite.yaml": "4fbbdcc956bb6e954dbdc5b886479afb13a1ed60ace260ac230a2af695b54bd0",
+    "configs/residual_all_finite_specialist.yaml": "bb34b7ce3392bee92c8a2952a612056c2f228fb3e2a763ce238aafa636ecf998",
+    "configs/residual_long_proxy_specialist.yaml": "09428913081f4312276eda598290411a131c44b5dcebe08cbfbd020463aa056f",
+    "configs/residual_specialist.yaml": "c9ff764f47e7787c46523671576b44c49caaa55abe0751dae415e124a94485eb",
+    "configs/robust.yaml": "2ff57c3847d5f26d650a54e0dd15f5f8bf001175a37c411aa4ae06cb97338ed7",
+    "configs/specialist.yaml": "3efd57f1aad82e4e175af2e03db908ff5e8650d10c45caaee179472906fdad7a",
+    "pyproject.toml": "ad6d19e6d0fee90db8a21baeb454a8e88c020595d847f9bf046560e59ddc12ce",
+    "requirements.lock.txt": "75ca3d46e1d17d5d561ff3c43523a84db39e270ad796131b3bb34dc829246dc3",
+    "src/taxiout/__init__.py": "dba51ef9f396f280b0844206af4a5641c5da858f0d9c145f56bcc157f165fdfb",
+    "src/taxiout/artifacts.py": "24c12a18bf0f95cf66e87517b2d3108e1af9db0c0db1283fef7a3e9f6f3b07fe",
+    "src/taxiout/audit.py": "4180099b3c587f86806c6f5624ba9fb237414907122c1c6ed0c254000dd79060",
+    "src/taxiout/availability.py": "1945c093afcc642f618ba507f1a82aa17dfa4971cdbc301326b9353a83b040dd",
+    "src/taxiout/benchmark.py": "09f60fa0a30e18fc5c05a578341b34daee7b10444755fa34dd675adcbe0a33a9",
+    "src/taxiout/cache.py": "ec268237b573c30d1d17a481e8b2c0a7138527b307d38c403e90051ae99984e8",
+    "src/taxiout/cli.py": "fd3a05b4fde2df2888a5074f39eda1842810ff181e0c13028e82fa4279df67d3",
+    "src/taxiout/config.py": "3dd65d42dde65715de6dd9606ac0de20b9aab2b0dec95de8cda3e524448fa487",
+    "src/taxiout/features/__init__.py": "d8f53ab8b3835501842c8fb3017317614486b400a58200180ccd79c5679e9bb4",
+    "src/taxiout/features/calendar.py": "744d7841239aef50bbdc4651779e3a5905f69d1bffb39c88e0d579cb9bba79dc",
+    "src/taxiout/features/clocks.py": "8e505d163cd18f8b6b69226968df767d4a2180869d6186ce770f8c89beec9d01",
+    "src/taxiout/features/pipeline.py": "92407b2c32630c0b0c16bd15b766ea7211bda99ea5a83623f9d5c9bc1d95dc5f",
+    "src/taxiout/features/traffic.py": "af145b5ffc0bf372398eddb05d8b9bcc5fb42cbdd0783c8727718193aac1e29d",
+    "src/taxiout/io.py": "c385af739fed2dabe2811b6e2b5a32915ecb33145f5a9b562b3448e57ea3495f",
+    "src/taxiout/metrics.py": "45e5b653999abd8419cdab81f52f1a0ba5c47d118493b9dd9891c98909f12758",
+    "src/taxiout/models/__init__.py": "219f4b23e597885558d0313ed67665a2a4fd138223b727f323c8cc831f6aab7e",
+    "src/taxiout/models/baselines.py": "7b01f9a05a277ace47752517c7d5b47a1a347cacee2a1fad11a6841019213c0c",
+    "src/taxiout/models/direct.py": "6f5db66cabaaaab149e7f24875e9bd29dac5b8b6e7d5ca5d4e9648aa27d666fc",
+    "src/taxiout/models/residual.py": "0f1f793088636aa3890b0b8d9f179846eb5ed4257828bddf11a5f387bd13eb4c",
+    "src/taxiout/predict.py": "51562c177a6ba06e83822918a3ea4c283e6fdfba6f5937807fa7b032ad1f5196",
+    "src/taxiout/release.py": "e45129eb7bb8751f9654a85a0e1990849aad5f2986c4e574a0d3bf9e12561da8",
+    "src/taxiout/schema.py": "69473561078b5d45b92117e331bdf1bd57be0508b5f2450992eb4e58747d4c20",
+    "src/taxiout/splits.py": "da497fc4477b737ee2aa08298ca337f1fc7d2093197157a1534d6a1a5d56559a",
+    "src/taxiout/submission.py": "00d97f6cc40be5518a542185c3ea8406230e16b78e8b280fb88a854e0253ee30",
+    "src/taxiout/train.py": "6ee6cd86c48cd33316c1e9f3512316c3458f7999d057fb07c59ee5b9c7941066"
+  },
+  "submission": {
+    "maximum_sec": 87035,
+    "minimum_sec": -268,
+    "passed": true,
+    "rounding": "numpy.rint, nearest even; no clipping",
+    "rows": 344841,
+    "schema": "MVT_ID_mvt: double\nTAXITIME_SEC_mvt: int32",
+    "sha256": "823408382b15b41a5b353b219ef7e5ebbfb07e81e8c3c833f3ebf66295c88e13",
+    "template_sha256": "0d383408ed5ac27bfcfd12d6b961cee77c8a6364b10dad9fe3ec81115c79652b"
+  },
+  "uploaded": false
+}

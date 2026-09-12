@@ -1,0 +1,32 @@
+[
+  {
+    "url": "https://prc-data-challenge-2026.netlify.app/",
+    "checked_utc": "2026-09-11T06:23:47.658587+00:00",
+    "http_status": 200,
+    "sha256": "8b9a9219fa0acbd6be28bb430cb1f3852d8f24ae43f8421f2245829ff778aee9"
+  },
+  {
+    "url": "https://prc-data-challenge-2026.netlify.app/data.html",
+    "checked_utc": "2026-09-11T06:23:48.926257+00:00",
+    "http_status": 200,
+    "sha256": "36661ed323ef33e0bd8e42779a695b726ae56ad43d900c90b550de313667a762"
+  },
+  {
+    "url": "https://prc-data-challenge-2026.netlify.app/ranking.html",
+    "checked_utc": "2026-09-11T06:23:49.465439+00:00",
+    "http_status": 200,
+    "sha256": "8079d34529daea04779c75c25838bae42f3ac7bc6fe455721d97fa9908a8f40f"
+  },
+  {
+    "url": "https://prc-data-challenge-2026.netlify.app/eligibility.html",
+    "checked_utc": "2026-09-11T06:23:49.777399+00:00",
+    "http_status": 200,
+    "sha256": "cddd689b78def777381838c27c8b0d73b605b854d7cee732fb8b4e3598e8dec2"
+  },
+  {
+    "url": "https://prc-data-challenge-2026.netlify.app/rationale.html",
+    "checked_utc": "2026-09-11T06:23:50.273540+00:00",
+    "http_status": 200,
+    "sha256": "9b3e89a36f4a9366b65fa4d56fffe7d269956c9fdafe3f2c2443f5bb528a6e5d"
+  }
+]

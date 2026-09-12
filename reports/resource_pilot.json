@@ -1,0 +1,33 @@
+{
+  "all_rows_fit_feasible": true,
+  "available_ram_bytes": 6266753024,
+  "current_rss_bytes": 1259618304,
+  "estimated_full_fit_seconds": 848.36392336004,
+  "estimated_full_peak_rss_bytes": 3329534368,
+  "estimator": "current RSS + 8 float32 feature-pool equivalents + measured pilot incremental/fixed allocation",
+  "full_training_rows": 2085047,
+  "measurements": {
+    "operational_context": {
+      "available_ram_after": 6138675200,
+      "features": 19,
+      "iterations": 180,
+      "peak_rss_bytes": 1572130816,
+      "rows": 100000,
+      "rss_after_fit_predict": 1273266176,
+      "rss_before_fit": 1109921792,
+      "runtime_sec": 30.139999999999418
+    },
+    "with_clocks": {
+      "available_ram_after": 6156283904,
+      "features": 27,
+      "iterations": 180,
+      "peak_rss_bytes": 1572130816,
+      "rows": 100000,
+      "rss_after_fit_predict": 1307701248,
+      "rss_before_fit": 1213317120,
+      "runtime_sec": 30.51600000000144
+    }
+  },
+  "reserve_bytes": 2147483648,
+  "rows": 100000
+}

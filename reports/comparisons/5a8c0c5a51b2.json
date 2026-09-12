@@ -1,0 +1,361 @@
+{
+  "candidates": {
+    "direct": {
+      "folds": {
+        "F1": {
+          "bias_sec": 12.786579639655065,
+          "coverage": 1.0,
+          "mae_sec": 203.9974361251109,
+          "n": 190713,
+          "p95_abs_error_sec": 543.3470156550475,
+          "rmse_sec": 583.7417195908046,
+          "sse": 64986292970.02867
+        },
+        "F2": {
+          "bias_sec": -4.657582562342104,
+          "coverage": 1.0,
+          "mae_sec": 168.6161174028713,
+          "n": 185674,
+          "p95_abs_error_sec": 448.3486267561741,
+          "rmse_sec": 276.68101753232696,
+          "sse": 14213787618.405785
+        },
+        "F3": {
+          "bias_sec": -14.204432537193432,
+          "coverage": 1.0,
+          "mae_sec": 168.61335362876306,
+          "n": 162332,
+          "p95_abs_error_sec": 459.2382299659002,
+          "rmse_sec": 341.2039843973976,
+          "sse": 18898717245.70044
+        }
+      },
+      "missing_proxy": {
+        "F1": {
+          "bias_sec": 281.16085064416944,
+          "coverage": 1.0,
+          "mae_sec": 844.4941607387622,
+          "n": 3938,
+          "p95_abs_error_sec": 2831.936643245348,
+          "rmse_sec": 3186.771952072368,
+          "sse": 39992419938.640594,
+          "sse_share": 0.6153977725285067
+        },
+        "F2": {
+          "bias_sec": 62.539074771141635,
+          "coverage": 1.0,
+          "mae_sec": 465.3509019390138,
+          "n": 1913,
+          "p95_abs_error_sec": 2224.594728212307,
+          "rmse_sec": 1048.5077323529158,
+          "sse": 2103091873.1697724,
+          "sse_share": 0.14796139703441374
+        },
+        "F3": {
+          "bias_sec": -212.2861645542546,
+          "coverage": 1.0,
+          "mae_sec": 560.2839301885307,
+          "n": 1356,
+          "p95_abs_error_sec": 2061.779493701035,
+          "rmse_sec": 2606.6395516323128,
+          "sse": 9213436583.893574,
+          "sse_share": 0.48751650517389905
+        }
+      },
+      "pooled_development": {
+        "n": 538719,
+        "rmse_sec": 426.72756366620405,
+        "sse": 98098797834.13489
+      },
+      "run_ids": {
+        "F1": "direct-F1-20260910T215011113423-87c291c8",
+        "F2": "direct-F2-20260910T220419863865-87c291c8",
+        "F3": "direct-F3-20260910T220912325526-87c291c8"
+      },
+      "season_score": 491.32877920972436
+    },
+    "direct_specialist": {
+      "folds": {
+        "F1": {
+          "bias_sec": 9.354760327064508,
+          "coverage": 1.0,
+          "mae_sec": 199.3660081202185,
+          "n": 190713,
+          "p95_abs_error_sec": 539.9335352945436,
+          "rmse_sec": 423.66579471415236,
+          "sse": 34231592365.1476
+        },
+        "F2": {
+          "bias_sec": -5.82142324687184,
+          "coverage": 1.0,
+          "mae_sec": 168.32698477162356,
+          "n": 185674,
+          "p95_abs_error_sec": 447.70573982622494,
+          "rmse_sec": 272.51754572881333,
+          "sse": 13789230512.840391
+        },
+        "F3": {
+          "bias_sec": -13.9218822438673,
+          "coverage": 1.0,
+          "mae_sec": 168.0311053569857,
+          "n": 162332,
+          "p95_abs_error_sec": 458.92137780525024,
+          "rmse_sec": 284.4592280941164,
+          "sse": 13135426957.972591
+        }
+      },
+      "missing_proxy": {
+        "F1": {
+          "bias_sec": 114.96162348264538,
+          "coverage": 1.0,
+          "mae_sec": 620.199206676538,
+          "n": 3938,
+          "p95_abs_error_sec": 2853.3842123027234,
+          "rmse_sec": 1531.5970657463447,
+          "sse": 9237719333.759478,
+          "sse_share": 0.2698594688561648
+        },
+        "F2": {
+          "bias_sec": -50.42221914384747,
+          "coverage": 1.0,
+          "mae_sec": 437.2879577809859,
+          "n": 1913,
+          "p95_abs_error_sec": 1752.173776762603,
+          "rmse_sec": 936.715454645352,
+          "sse": 1678534767.604381,
+          "sse_share": 0.12172795037702405
+        },
+        "F3": {
+          "bias_sec": -178.46097707916778,
+          "coverage": 1.0,
+          "mae_sec": 490.5807395881187,
+          "n": 1356,
+          "p95_abs_error_sec": 1862.7056757094883,
+          "rmse_sec": 1595.1036567065023,
+          "sse": 3450146296.1657453,
+          "sse_share": 0.262659623261935
+        }
+      },
+      "paired_vs_direct": {
+        "F1": {
+          "blocks": 310,
+          "bootstrap_95pct_interval": [
+            -234.2073849289351,
+            -89.41423973779453
+          ],
+          "caveat": "Airport-day block stability diagnostic; extreme events limit interval reliability.",
+          "delta_rmse_second_minus_first": -160.07592487665238,
+          "largest_error_day": "2025-07-15",
+          "largest_error_day_sse_share": 0.1188959210430415,
+          "leave_one_day_out_delta_range": [
+            -178.1786254640852,
+            -141.7851216373299
+          ],
+          "repetitions": 1000,
+          "seed": 20260910
+        },
+        "F2": {
+          "blocks": 310,
+          "bootstrap_95pct_interval": [
+            -9.608125843668246,
+            0.6108763395174895
+          ],
+          "caveat": "Airport-day block stability diagnostic; extreme events limit interval reliability.",
+          "delta_rmse_second_minus_first": -4.16347180351363,
+          "largest_error_day": "2025-10-23",
+          "largest_error_day_sse_share": 0.06463057221198656,
+          "leave_one_day_out_delta_range": [
+            -5.309352267978795,
+            -2.2389809201379194
+          ],
+          "repetitions": 1000,
+          "seed": 20260910
+        },
+        "F3": {
+          "blocks": 300,
+          "bootstrap_95pct_interval": [
+            -131.13616274668672,
+            3.8729743008430026
+          ],
+          "caveat": "Airport-day block stability diagnostic; extreme events limit interval reliability.",
+          "delta_rmse_second_minus_first": -56.744756303280894,
+          "largest_error_day": "2025-11-12",
+          "largest_error_day_sse_share": 0.26066413113572157,
+          "leave_one_day_out_delta_range": [
+            -61.95654776799563,
+            -18.331274949287774
+          ],
+          "repetitions": 1000,
+          "seed": 20260910
+        }
+      },
+      "pooled_development": {
+        "n": 538719,
+        "rmse_sec": 336.929685548942,
+        "sse": 61156249835.96058
+      },
+      "promotion_gates": {
+        "gain_pass": true,
+        "minimum_gain_sec": 2.4566438960486217,
+        "missing_regression_pass": true,
+        "observed_gain_sec": 122.76845060642438,
+        "requires_review": [],
+        "seasonal_regression_pass": true
+      },
+      "run_ids": {
+        "F1": "direct_specialist-F1-20260910T222959571544-ac2b1e30",
+        "F2": "direct_specialist-F2-20260910T223217162451-ac2b1e30",
+        "F3": "direct_specialist-F3-20260910T223350573232-ac2b1e30"
+      },
+      "season_score": 368.5603286033
+    },
+    "residual": {
+      "folds": {
+        "F1": {
+          "bias_sec": 8.579182752398848,
+          "coverage": 1.0,
+          "mae_sec": 198.88273354141768,
+          "n": 190713,
+          "p95_abs_error_sec": 538.1168857615359,
+          "rmse_sec": 579.4396093788233,
+          "sse": 64031939510.27971
+        },
+        "F2": {
+          "bias_sec": -7.39307411679387,
+          "coverage": 1.0,
+          "mae_sec": 166.54224557156968,
+          "n": 185674,
+          "p95_abs_error_sec": 448.5728603402791,
+          "rmse_sec": 274.43845522705993,
+          "sse": 13984309453.75857
+        },
+        "F3": {
+          "bias_sec": -14.500151400214612,
+          "coverage": 1.0,
+          "mae_sec": 162.6759998622944,
+          "n": 162332,
+          "p95_abs_error_sec": 445.51706449047316,
+          "rmse_sec": 333.8563207299287,
+          "sse": 18093531682.634575
+        }
+      },
+      "missing_proxy": {
+        "F1": {
+          "bias_sec": 281.16085064416944,
+          "coverage": 1.0,
+          "mae_sec": 844.4941607387622,
+          "n": 3938,
+          "p95_abs_error_sec": 2831.936643245348,
+          "rmse_sec": 3186.771952072368,
+          "sse": 39992419938.640594,
+          "sse_share": 0.6245698669211823
+        },
+        "F2": {
+          "bias_sec": 62.539074771141635,
+          "coverage": 1.0,
+          "mae_sec": 465.3509019390138,
+          "n": 1913,
+          "p95_abs_error_sec": 2224.594728212307,
+          "rmse_sec": 1048.5077323529158,
+          "sse": 2103091873.1697724,
+          "sse_share": 0.15038939749753058
+        },
+        "F3": {
+          "bias_sec": -212.2861645542546,
+          "coverage": 1.0,
+          "mae_sec": 560.2839301885307,
+          "n": 1356,
+          "p95_abs_error_sec": 2061.779493701035,
+          "rmse_sec": 2606.6395516323128,
+          "sse": 9213436583.893574,
+          "sse_share": 0.509211620235327
+        }
+      },
+      "paired_vs_direct": {
+        "F1": {
+          "blocks": 310,
+          "bootstrap_95pct_interval": [
+            -6.097496649612215,
+            -2.7927965391211957
+          ],
+          "caveat": "Airport-day block stability diagnostic; extreme events limit interval reliability.",
+          "delta_rmse_second_minus_first": -4.302110211981017,
+          "largest_error_day": "2025-07-15",
+          "largest_error_day_sse_share": 0.1188959210430415,
+          "leave_one_day_out_delta_range": [
+            -4.5916829721559225,
+            -3.817397605668134
+          ],
+          "repetitions": 1000,
+          "seed": 20260910
+        },
+        "F2": {
+          "blocks": 310,
+          "bootstrap_95pct_interval": [
+            -3.5183897039444973,
+            -1.0143108457477852
+          ],
+          "caveat": "Airport-day block stability diagnostic; extreme events limit interval reliability.",
+          "delta_rmse_second_minus_first": -2.2425623052671426,
+          "largest_error_day": "2025-10-23",
+          "largest_error_day_sse_share": 0.06463057221198656,
+          "leave_one_day_out_delta_range": [
+            -2.647449712981654,
+            -2.044371248119319
+          ],
+          "repetitions": 1000,
+          "seed": 20260910
+        },
+        "F3": {
+          "blocks": 300,
+          "bootstrap_95pct_interval": [
+            -11.796471178999614,
+            -4.663860804523815
+          ],
+          "caveat": "Airport-day block stability diagnostic; extreme events limit interval reliability.",
+          "delta_rmse_second_minus_first": -7.347663667468964,
+          "largest_error_day": "2025-11-12",
+          "largest_error_day_sse_share": 0.26066413113572157,
+          "leave_one_day_out_delta_range": [
+            -8.591114671957143,
+            -6.132295055904422
+          ],
+          "repetitions": 1000,
+          "seed": 20260910
+        }
+      },
+      "pooled_development": {
+        "n": 538719,
+        "rmse_sec": 422.37931991592524,
+        "sse": 96109780646.67285
+      },
+      "promotion_gates": {
+        "gain_pass": true,
+        "minimum_gain_sec": 2.4566438960486217,
+        "missing_regression_pass": true,
+        "observed_gain_sec": 5.099070891767553,
+        "requires_review": [],
+        "seasonal_regression_pass": true
+      },
+      "run_ids": {
+        "F1": "residual-F1-20260910T221438668221-df67b7e4",
+        "F2": "residual-F2-20260910T222002193696-df67b7e4",
+        "F3": "residual-F3-20260910T222419588814-df67b7e4"
+      },
+      "season_score": 486.2297083179568
+    }
+  },
+  "created_utc": "2026-09-10T22:36:36.240750+00:00",
+  "runs": [
+    "direct-F1-20260910T215011113423-87c291c8",
+    "direct-F2-20260910T220419863865-87c291c8",
+    "direct-F3-20260910T220912325526-87c291c8",
+    "residual-F1-20260910T221438668221-df67b7e4",
+    "residual-F2-20260910T222002193696-df67b7e4",
+    "residual-F3-20260910T222419588814-df67b7e4",
+    "direct_specialist-F1-20260910T222959571544-ac2b1e30",
+    "direct_specialist-F2-20260910T223217162451-ac2b1e30",
+    "direct_specialist-F3-20260910T223350573232-ac2b1e30"
+  ],
+  "selection_policy": "Season score; >= max(2s, 0.5%) gain; seasonal and missing-proxy regression gates; inspect F2/G1 and airport-day stability."
+}

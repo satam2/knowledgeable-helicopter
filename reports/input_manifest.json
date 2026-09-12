@@ -1,0 +1,108 @@
+{
+  "created_utc": "2026-09-10T21:56:10.089562+00:00",
+  "files": [
+    {
+      "bytes": 21218481,
+      "file": "training_2025-01-01_2025-02-01.parquet",
+      "rows": 307257,
+      "schema": "MVT_ID_mvt: double\nFLIGHT_ID_mvt: double\nFLIGHT_mvt: string\nFLIGHT_RULE_mvt: string\nADEP_mvt: string\nADES_mvt: string\nPHASE_mvt: string\nMVT_TIME_UTC_mvt: timestamp[us, tz=UTC]\nBLOCK_TIME_UTC_mvt: timestamp[us, tz=UTC]\nSCHED_TIME_UTC_mvt: timestamp[us, tz=UTC]\nAIRCRAFT_TYPE_mvt: string\nRUNWAY_mvt: string\nSTAND_mvt: string\nTAXITIME_SEC_mvt: int32\nLOBT_flt: timestamp[us, tz=UTC]\nCALLSIGN_flt: string\nADEP_flt: string\nADES_flt: string\nADES_FILED_flt: string\nMARKET_SEGMENT_flt: string\nIOBT_flt: timestamp[us, tz=UTC]\nFLIGHT_RULE_flt: string\nFLIGHT_TYPE_flt: string\nAIRCRAFT_TYPE_flt: string\nWK_TBL_CAT_flt: string\nAIRCRAFT_OPERATOR_flt: string\n  -- field metadata --\n  ARROW:extension:metadata: 'A\n3\n263681\n197888\n5\nUTF-8\n784\n0\n1026\n1\n26215' + 63\n  ARROW:extension:name: 'arrow.r.vctrs'\nEOBT_1_flt: timestamp[us, tz=UTC]\nARVT_1_flt: timestamp[us, tz=UTC]\nAOBT_3_flt: timestamp[us, tz=UTC]\nARVT_3_flt: timestamp[us, tz=UTC]",
+      "sha256": "a4dc8f152c082c650cd7eb745fe9c641089f34f74df127e6944a188990a0ed94"
+    },
+    {
+      "bytes": 19824510,
+      "file": "training_2025-02-01_2025-03-01.parquet",
+      "rows": 287411,
+      "schema": "MVT_ID_mvt: double\nFLIGHT_ID_mvt: double\nFLIGHT_mvt: string\nFLIGHT_RULE_mvt: string\nADEP_mvt: string\nADES_mvt: string\nPHASE_mvt: string\nMVT_TIME_UTC_mvt: timestamp[us, tz=UTC]\nBLOCK_TIME_UTC_mvt: timestamp[us, tz=UTC]\nSCHED_TIME_UTC_mvt: timestamp[us, tz=UTC]\nAIRCRAFT_TYPE_mvt: string\nRUNWAY_mvt: string\nSTAND_mvt: string\nTAXITIME_SEC_mvt: int32\nLOBT_flt: timestamp[us, tz=UTC]\nCALLSIGN_flt: string\nADEP_flt: string\nADES_flt: string\nADES_FILED_flt: string\nMARKET_SEGMENT_flt: string\nIOBT_flt: timestamp[us, tz=UTC]\nFLIGHT_RULE_flt: string\nFLIGHT_TYPE_flt: string\nAIRCRAFT_TYPE_flt: string\nWK_TBL_CAT_flt: string\nAIRCRAFT_OPERATOR_flt: string\n  -- field metadata --\n  ARROW:extension:metadata: 'A\n3\n263681\n197888\n5\nUTF-8\n784\n0\n1026\n1\n26215' + 63\n  ARROW:extension:name: 'arrow.r.vctrs'\nEOBT_1_flt: timestamp[us, tz=UTC]\nARVT_1_flt: timestamp[us, tz=UTC]\nAOBT_3_flt: timestamp[us, tz=UTC]\nARVT_3_flt: timestamp[us, tz=UTC]",
+      "sha256": "b6f9ff2cdb1cfe07c5442f4e1f11bbcdbeafe52852dcb0b8175f62ab84c6a066"
+    },
+    {
+      "bytes": 22606072,
+      "file": "training_2025-03-01_2025-04-01.parquet",
+      "rows": 328622,
+      "schema": "MVT_ID_mvt: double\nFLIGHT_ID_mvt: double\nFLIGHT_mvt: string\nFLIGHT_RULE_mvt: string\nADEP_mvt: string\nADES_mvt: string\nPHASE_mvt: string\nMVT_TIME_UTC_mvt: timestamp[us, tz=UTC]\nBLOCK_TIME_UTC_mvt: timestamp[us, tz=UTC]\nSCHED_TIME_UTC_mvt: timestamp[us, tz=UTC]\nAIRCRAFT_TYPE_mvt: string\nRUNWAY_mvt: string\nSTAND_mvt: string\nTAXITIME_SEC_mvt: int32\nLOBT_flt: timestamp[us, tz=UTC]\nCALLSIGN_flt: string\nADEP_flt: string\nADES_flt: string\nADES_FILED_flt: string\nMARKET_SEGMENT_flt: string\nIOBT_flt: timestamp[us, tz=UTC]\nFLIGHT_RULE_flt: string\nFLIGHT_TYPE_flt: string\nAIRCRAFT_TYPE_flt: string\nWK_TBL_CAT_flt: string\nAIRCRAFT_OPERATOR_flt: string\n  -- field metadata --\n  ARROW:extension:metadata: 'A\n3\n263681\n197888\n5\nUTF-8\n784\n0\n1026\n1\n26215' + 63\n  ARROW:extension:name: 'arrow.r.vctrs'\nEOBT_1_flt: timestamp[us, tz=UTC]\nARVT_1_flt: timestamp[us, tz=UTC]\nAOBT_3_flt: timestamp[us, tz=UTC]\nARVT_3_flt: timestamp[us, tz=UTC]",
+      "sha256": "58fde7e5f8b539546af63b41d7f6ec0f2884fdc3d3dd9b6bfca7c59a420dcdd3"
+    },
+    {
+      "bytes": 23840340,
+      "file": "training_2025-04-01_2025-05-01.parquet",
+      "rows": 350288,
+      "schema": "MVT_ID_mvt: double\nFLIGHT_ID_mvt: double\nFLIGHT_mvt: string\nFLIGHT_RULE_mvt: string\nADEP_mvt: string\nADES_mvt: string\nPHASE_mvt: string\nMVT_TIME_UTC_mvt: timestamp[us, tz=UTC]\nBLOCK_TIME_UTC_mvt: timestamp[us, tz=UTC]\nSCHED_TIME_UTC_mvt: timestamp[us, tz=UTC]\nAIRCRAFT_TYPE_mvt: string\nRUNWAY_mvt: string\nSTAND_mvt: string\nTAXITIME_SEC_mvt: int32\nLOBT_flt: timestamp[us, tz=UTC]\nCALLSIGN_flt: string\nADEP_flt: string\nADES_flt: string\nADES_FILED_flt: string\nMARKET_SEGMENT_flt: string\nIOBT_flt: timestamp[us, tz=UTC]\nFLIGHT_RULE_flt: string\nFLIGHT_TYPE_flt: string\nAIRCRAFT_TYPE_flt: string\nWK_TBL_CAT_flt: string\nAIRCRAFT_OPERATOR_flt: string\n  -- field metadata --\n  ARROW:extension:metadata: 'A\n3\n263681\n197888\n5\nUTF-8\n784\n0\n1026\n1\n26215' + 63\n  ARROW:extension:name: 'arrow.r.vctrs'\nEOBT_1_flt: timestamp[us, tz=UTC]\nARVT_1_flt: timestamp[us, tz=UTC]\nAOBT_3_flt: timestamp[us, tz=UTC]\nARVT_3_flt: timestamp[us, tz=UTC]",
+      "sha256": "9ffe0cf5741c4863799c41be81475dfaecedabe0ba687b8f8e4eacba992f9390"
+    },
+    {
+      "bytes": 25187756,
+      "file": "training_2025-05-01_2025-06-01.parquet",
+      "rows": 370105,
+      "schema": "MVT_ID_mvt: double\nFLIGHT_ID_mvt: double\nFLIGHT_mvt: string\nFLIGHT_RULE_mvt: string\nADEP_mvt: string\nADES_mvt: string\nPHASE_mvt: string\nMVT_TIME_UTC_mvt: timestamp[us, tz=UTC]\nBLOCK_TIME_UTC_mvt: timestamp[us, tz=UTC]\nSCHED_TIME_UTC_mvt: timestamp[us, tz=UTC]\nAIRCRAFT_TYPE_mvt: string\nRUNWAY_mvt: string\nSTAND_mvt: string\nTAXITIME_SEC_mvt: int32\nLOBT_flt: timestamp[us, tz=UTC]\nCALLSIGN_flt: string\nADEP_flt: string\nADES_flt: string\nADES_FILED_flt: string\nMARKET_SEGMENT_flt: string\nIOBT_flt: timestamp[us, tz=UTC]\nFLIGHT_RULE_flt: string\nFLIGHT_TYPE_flt: string\nAIRCRAFT_TYPE_flt: string\nWK_TBL_CAT_flt: string\nAIRCRAFT_OPERATOR_flt: string\n  -- field metadata --\n  ARROW:extension:metadata: 'A\n3\n263681\n197888\n5\nUTF-8\n784\n0\n1026\n1\n26215' + 63\n  ARROW:extension:name: 'arrow.r.vctrs'\nEOBT_1_flt: timestamp[us, tz=UTC]\nARVT_1_flt: timestamp[us, tz=UTC]\nAOBT_3_flt: timestamp[us, tz=UTC]\nARVT_3_flt: timestamp[us, tz=UTC]",
+      "sha256": "5481c0642a8fbb4dc395f93bc713c57f4cc16854fb361d404967077e1fce2ff9"
+    },
+    {
+      "bytes": 24991697,
+      "file": "training_2025-06-01_2025-07-01.parquet",
+      "rows": 365986,
+      "schema": "MVT_ID_mvt: double\nFLIGHT_ID_mvt: double\nFLIGHT_mvt: string\nFLIGHT_RULE_mvt: string\nADEP_mvt: string\nADES_mvt: string\nPHASE_mvt: string\nMVT_TIME_UTC_mvt: timestamp[us, tz=UTC]\nBLOCK_TIME_UTC_mvt: timestamp[us, tz=UTC]\nSCHED_TIME_UTC_mvt: timestamp[us, tz=UTC]\nAIRCRAFT_TYPE_mvt: string\nRUNWAY_mvt: string\nSTAND_mvt: string\nTAXITIME_SEC_mvt: int32\nLOBT_flt: timestamp[us, tz=UTC]\nCALLSIGN_flt: string\nADEP_flt: string\nADES_flt: string\nADES_FILED_flt: string\nMARKET_SEGMENT_flt: string\nIOBT_flt: timestamp[us, tz=UTC]\nFLIGHT_RULE_flt: string\nFLIGHT_TYPE_flt: string\nAIRCRAFT_TYPE_flt: string\nWK_TBL_CAT_flt: string\nAIRCRAFT_OPERATOR_flt: string\n  -- field metadata --\n  ARROW:extension:metadata: 'A\n3\n263681\n197888\n5\nUTF-8\n784\n0\n1026\n1\n26215' + 63\n  ARROW:extension:name: 'arrow.r.vctrs'\nEOBT_1_flt: timestamp[us, tz=UTC]\nARVT_1_flt: timestamp[us, tz=UTC]\nAOBT_3_flt: timestamp[us, tz=UTC]\nARVT_3_flt: timestamp[us, tz=UTC]",
+      "sha256": "c3ef5080f2cc636c3416baf1555f7d0ee3519f9046e8043c1c0c8f017a244025"
+    },
+    {
+      "bytes": 26014977,
+      "file": "training_2025-07-01_2025-08-01.parquet",
+      "rows": 381161,
+      "schema": "MVT_ID_mvt: double\nFLIGHT_ID_mvt: double\nFLIGHT_mvt: string\nFLIGHT_RULE_mvt: string\nADEP_mvt: string\nADES_mvt: string\nPHASE_mvt: string\nMVT_TIME_UTC_mvt: timestamp[us, tz=UTC]\nBLOCK_TIME_UTC_mvt: timestamp[us, tz=UTC]\nSCHED_TIME_UTC_mvt: timestamp[us, tz=UTC]\nAIRCRAFT_TYPE_mvt: string\nRUNWAY_mvt: string\nSTAND_mvt: string\nTAXITIME_SEC_mvt: int32\nLOBT_flt: timestamp[us, tz=UTC]\nCALLSIGN_flt: string\nADEP_flt: string\nADES_flt: string\nADES_FILED_flt: string\nMARKET_SEGMENT_flt: string\nIOBT_flt: timestamp[us, tz=UTC]\nFLIGHT_RULE_flt: string\nFLIGHT_TYPE_flt: string\nAIRCRAFT_TYPE_flt: string\nWK_TBL_CAT_flt: string\nAIRCRAFT_OPERATOR_flt: string\n  -- field metadata --\n  ARROW:extension:metadata: 'A\n3\n263681\n197888\n5\nUTF-8\n784\n0\n1026\n1\n26215' + 63\n  ARROW:extension:name: 'arrow.r.vctrs'\nEOBT_1_flt: timestamp[us, tz=UTC]\nARVT_1_flt: timestamp[us, tz=UTC]\nAOBT_3_flt: timestamp[us, tz=UTC]\nARVT_3_flt: timestamp[us, tz=UTC]",
+      "sha256": "34d1c5bba7c8596a1c20c09edd3cb2f63277b5a684fa801911660fe0eaf63c9d"
+    },
+    {
+      "bytes": 25969246,
+      "file": "training_2025-08-01_2025-09-01.parquet",
+      "rows": 382047,
+      "schema": "MVT_ID_mvt: double\nFLIGHT_ID_mvt: double\nFLIGHT_mvt: string\nFLIGHT_RULE_mvt: string\nADEP_mvt: string\nADES_mvt: string\nPHASE_mvt: string\nMVT_TIME_UTC_mvt: timestamp[us, tz=UTC]\nBLOCK_TIME_UTC_mvt: timestamp[us, tz=UTC]\nSCHED_TIME_UTC_mvt: timestamp[us, tz=UTC]\nAIRCRAFT_TYPE_mvt: string\nRUNWAY_mvt: string\nSTAND_mvt: string\nTAXITIME_SEC_mvt: int32\nLOBT_flt: timestamp[us, tz=UTC]\nCALLSIGN_flt: string\nADEP_flt: string\nADES_flt: string\nADES_FILED_flt: string\nMARKET_SEGMENT_flt: string\nIOBT_flt: timestamp[us, tz=UTC]\nFLIGHT_RULE_flt: string\nFLIGHT_TYPE_flt: string\nAIRCRAFT_TYPE_flt: string\nWK_TBL_CAT_flt: string\nAIRCRAFT_OPERATOR_flt: string\n  -- field metadata --\n  ARROW:extension:metadata: 'A\n3\n263681\n197888\n5\nUTF-8\n784\n0\n1026\n1\n26215' + 63\n  ARROW:extension:name: 'arrow.r.vctrs'\nEOBT_1_flt: timestamp[us, tz=UTC]\nARVT_1_flt: timestamp[us, tz=UTC]\nAOBT_3_flt: timestamp[us, tz=UTC]\nARVT_3_flt: timestamp[us, tz=UTC]",
+      "sha256": "6c8d2aa7a1b6c9dff9a0305a37eb02de1e87a68d07557264f41b77738272c540"
+    },
+    {
+      "bytes": 25102673,
+      "file": "training_2025-09-01_2025-10-01.parquet",
+      "rows": 367679,
+      "schema": "MVT_ID_mvt: double\nFLIGHT_ID_mvt: double\nFLIGHT_mvt: string\nFLIGHT_RULE_mvt: string\nADEP_mvt: string\nADES_mvt: string\nPHASE_mvt: string\nMVT_TIME_UTC_mvt: timestamp[us, tz=UTC]\nBLOCK_TIME_UTC_mvt: timestamp[us, tz=UTC]\nSCHED_TIME_UTC_mvt: timestamp[us, tz=UTC]\nAIRCRAFT_TYPE_mvt: string\nRUNWAY_mvt: string\nSTAND_mvt: string\nTAXITIME_SEC_mvt: int32\nLOBT_flt: timestamp[us, tz=UTC]\nCALLSIGN_flt: string\nADEP_flt: string\nADES_flt: string\nADES_FILED_flt: string\nMARKET_SEGMENT_flt: string\nIOBT_flt: timestamp[us, tz=UTC]\nFLIGHT_RULE_flt: string\nFLIGHT_TYPE_flt: string\nAIRCRAFT_TYPE_flt: string\nWK_TBL_CAT_flt: string\nAIRCRAFT_OPERATOR_flt: string\n  -- field metadata --\n  ARROW:extension:metadata: 'A\n3\n263681\n197888\n5\nUTF-8\n784\n0\n1026\n1\n26215' + 63\n  ARROW:extension:name: 'arrow.r.vctrs'\nEOBT_1_flt: timestamp[us, tz=UTC]\nARVT_1_flt: timestamp[us, tz=UTC]\nAOBT_3_flt: timestamp[us, tz=UTC]\nARVT_3_flt: timestamp[us, tz=UTC]",
+      "sha256": "955308a4000947e32a00586d3ee13928949d2231b67f84f6dfb0631893f3754a"
+    },
+    {
+      "bytes": 25392098,
+      "file": "training_2025-10-01_2025-11-01.parquet",
+      "rows": 371163,
+      "schema": "MVT_ID_mvt: double\nFLIGHT_ID_mvt: double\nFLIGHT_mvt: string\nFLIGHT_RULE_mvt: string\nADEP_mvt: string\nADES_mvt: string\nPHASE_mvt: string\nMVT_TIME_UTC_mvt: timestamp[us, tz=UTC]\nBLOCK_TIME_UTC_mvt: timestamp[us, tz=UTC]\nSCHED_TIME_UTC_mvt: timestamp[us, tz=UTC]\nAIRCRAFT_TYPE_mvt: string\nRUNWAY_mvt: string\nSTAND_mvt: string\nTAXITIME_SEC_mvt: int32\nLOBT_flt: timestamp[us, tz=UTC]\nCALLSIGN_flt: string\nADEP_flt: string\nADES_flt: string\nADES_FILED_flt: string\nMARKET_SEGMENT_flt: string\nIOBT_flt: timestamp[us, tz=UTC]\nFLIGHT_RULE_flt: string\nFLIGHT_TYPE_flt: string\nAIRCRAFT_TYPE_flt: string\nWK_TBL_CAT_flt: string\nAIRCRAFT_OPERATOR_flt: string\n  -- field metadata --\n  ARROW:extension:metadata: 'A\n3\n263681\n197888\n5\nUTF-8\n784\n0\n1026\n1\n26215' + 63\n  ARROW:extension:name: 'arrow.r.vctrs'\nEOBT_1_flt: timestamp[us, tz=UTC]\nARVT_1_flt: timestamp[us, tz=UTC]\nAOBT_3_flt: timestamp[us, tz=UTC]\nARVT_3_flt: timestamp[us, tz=UTC]",
+      "sha256": "4a31a35601c1bdcd74b8cd6379231ba516a48324e4c2478bf1c9360cd23e687f"
+    },
+    {
+      "bytes": 22173840,
+      "file": "training_2025-11-01_2025-12-01.parquet",
+      "rows": 324530,
+      "schema": "MVT_ID_mvt: double\nFLIGHT_ID_mvt: double\nFLIGHT_mvt: string\nFLIGHT_RULE_mvt: string\nADEP_mvt: string\nADES_mvt: string\nPHASE_mvt: string\nMVT_TIME_UTC_mvt: timestamp[us, tz=UTC]\nBLOCK_TIME_UTC_mvt: timestamp[us, tz=UTC]\nSCHED_TIME_UTC_mvt: timestamp[us, tz=UTC]\nAIRCRAFT_TYPE_mvt: string\nRUNWAY_mvt: string\nSTAND_mvt: string\nTAXITIME_SEC_mvt: int32\nLOBT_flt: timestamp[us, tz=UTC]\nCALLSIGN_flt: string\nADEP_flt: string\nADES_flt: string\nADES_FILED_flt: string\nMARKET_SEGMENT_flt: string\nIOBT_flt: timestamp[us, tz=UTC]\nFLIGHT_RULE_flt: string\nFLIGHT_TYPE_flt: string\nAIRCRAFT_TYPE_flt: string\nWK_TBL_CAT_flt: string\nAIRCRAFT_OPERATOR_flt: string\n  -- field metadata --\n  ARROW:extension:metadata: 'A\n3\n263681\n197888\n5\nUTF-8\n784\n0\n1026\n1\n26215' + 63\n  ARROW:extension:name: 'arrow.r.vctrs'\nEOBT_1_flt: timestamp[us, tz=UTC]\nARVT_1_flt: timestamp[us, tz=UTC]\nAOBT_3_flt: timestamp[us, tz=UTC]\nARVT_3_flt: timestamp[us, tz=UTC]",
+      "sha256": "ac36b17db7a537e3baeb682fa4763dacaa1fcc5d9bfa6bf32b3ee5d9f91300b0"
+    },
+    {
+      "bytes": 22653598,
+      "file": "training_2025-12-01_2026-01-01.parquet",
+      "rows": 331548,
+      "schema": "MVT_ID_mvt: double\nFLIGHT_ID_mvt: double\nFLIGHT_mvt: string\nFLIGHT_RULE_mvt: string\nADEP_mvt: string\nADES_mvt: string\nPHASE_mvt: string\nMVT_TIME_UTC_mvt: timestamp[us, tz=UTC]\nBLOCK_TIME_UTC_mvt: timestamp[us, tz=UTC]\nSCHED_TIME_UTC_mvt: timestamp[us, tz=UTC]\nAIRCRAFT_TYPE_mvt: string\nRUNWAY_mvt: string\nSTAND_mvt: string\nTAXITIME_SEC_mvt: int32\nLOBT_flt: timestamp[us, tz=UTC]\nCALLSIGN_flt: string\nADEP_flt: string\nADES_flt: string\nADES_FILED_flt: string\nMARKET_SEGMENT_flt: string\nIOBT_flt: timestamp[us, tz=UTC]\nFLIGHT_RULE_flt: string\nFLIGHT_TYPE_flt: string\nAIRCRAFT_TYPE_flt: string\nWK_TBL_CAT_flt: string\nAIRCRAFT_OPERATOR_flt: string\n  -- field metadata --\n  ARROW:extension:metadata: 'A\n3\n263681\n197888\n5\nUTF-8\n784\n0\n1026\n1\n26215' + 63\n  ARROW:extension:name: 'arrow.r.vctrs'\nEOBT_1_flt: timestamp[us, tz=UTC]\nARVT_1_flt: timestamp[us, tz=UTC]\nAOBT_3_flt: timestamp[us, tz=UTC]\nARVT_3_flt: timestamp[us, tz=UTC]",
+      "sha256": "2d357f2f403a86778a69e93f72d8754effe77f1ac0942399b3d1b7728241f724"
+    },
+    {
+      "bytes": 43564605,
+      "file": "ranking.parquet",
+      "rows": 689534,
+      "schema": "MVT_ID_mvt: double\nFLIGHT_ID_mvt: double\nFLIGHT_mvt: string\nFLIGHT_RULE_mvt: string\nADEP_mvt: string\nADES_mvt: string\nPHASE_mvt: string\nMVT_TIME_UTC_mvt: timestamp[us, tz=UTC]\nBLOCK_TIME_UTC_mvt: timestamp[us, tz=UTC]\nSCHED_TIME_UTC_mvt: timestamp[us, tz=UTC]\nAIRCRAFT_TYPE_mvt: string\nRUNWAY_mvt: string\nSTAND_mvt: string\nTAXITIME_SEC_mvt: int32\nLOBT_flt: timestamp[us, tz=UTC]\nCALLSIGN_flt: string\nADEP_flt: string\nADES_flt: string\nADES_FILED_flt: string\nMARKET_SEGMENT_flt: string\nIOBT_flt: timestamp[us, tz=UTC]\nFLIGHT_RULE_flt: string\nFLIGHT_TYPE_flt: string\nAIRCRAFT_TYPE_flt: string\nWK_TBL_CAT_flt: string\nAIRCRAFT_OPERATOR_flt: string\n  -- field metadata --\n  ARROW:extension:metadata: 'A\n3\n263424\n197888\n5\nUTF-8\n784\n0\n1026\n1\n26215' + 63\n  ARROW:extension:name: 'arrow.r.vctrs'\nEOBT_1_flt: timestamp[us, tz=UTC]\nARVT_1_flt: timestamp[us, tz=UTC]\nAOBT_3_flt: timestamp[us, tz=UTC]\nARVT_3_flt: timestamp[us, tz=UTC]",
+      "sha256": "9db75e3a56fa09b87aab72e191a53da3fe763d9887ad2b23aea9cde6a6325f86"
+    },
+    {
+      "bytes": 1677097,
+      "file": "submitting.parquet",
+      "rows": 344841,
+      "schema": "MVT_ID_mvt: double\nTAXITIME_SEC_mvt: int32",
+      "sha256": "0d383408ed5ac27bfcfd12d6b961cee77c8a6364b10dad9fe3ec81115c79652b"
+    }
+  ],
+  "ranking_departure_months": {
+    "2026-01": 152719,
+    "2026-07": 192122
+  },
+  "template_rows": 344841
+}

@@ -1,0 +1,232 @@
+{
+  "C1": {
+    "purged_related_departures": {
+      "fit_against_score": 0,
+      "fit_against_tune": 0,
+      "refit_against_score": 0,
+      "tune_against_score": 0
+    },
+    "spec": {
+      "fit": [
+        "2025-01-01",
+        "2025-11-01"
+      ],
+      "refit": [
+        "2025-01-01",
+        "2025-12-01"
+      ],
+      "role": "reused confirmation, previously exposed in diagnostic",
+      "score": [
+        "2025-12-01",
+        "2026-01-01"
+      ],
+      "tune": [
+        "2025-11-01",
+        "2025-12-01"
+      ]
+    },
+    "split_hash": "8a6333f6a5cf6ebb497d9bc0ba8063f6465c571f991350a21b524e33920258b7",
+    "stages": {
+      "fit": {
+        "id_hash": "1fde6fcb2e5abd08463ec08a8d29df048a4bcb2328f8e54751b3f340e633ccd6",
+        "n": 1757038
+      },
+      "refit": {
+        "id_hash": "67daa964c59043e3a400267c840c3a1903310b603a3dab615bf75608d9edf3e2",
+        "n": 1919370
+      },
+      "score": {
+        "id_hash": "b91800201209aa6efc8be9c4ea358179ae0404d95deabb0e233fa7b2691205b9",
+        "n": 165677
+      },
+      "tune": {
+        "id_hash": "51878982292d66008dbcb1b71dee281e161abdf2ce8d207d0331a58ed9b9c1e3",
+        "n": 162332
+      }
+    }
+  },
+  "F1": {
+    "purged_related_departures": {
+      "fit_against_score": 0,
+      "fit_against_tune": 0,
+      "refit_against_score": 0,
+      "tune_against_score": 0
+    },
+    "spec": {
+      "fit": [
+        "2025-01-01",
+        "2025-06-01"
+      ],
+      "refit": [
+        "2025-01-01",
+        "2025-07-01"
+      ],
+      "role": "summer development",
+      "score": [
+        "2025-07-01",
+        "2025-08-01"
+      ],
+      "tune": [
+        "2025-06-01",
+        "2025-07-01"
+      ]
+    },
+    "split_hash": "e14f0516d81dd2977e2bf278ad85382bb6d1d3f027114a6b72aeef07e082eb54",
+    "stages": {
+      "fit": {
+        "id_hash": "f94136b91892f114ce1c62e68e24ab1fd467b26dca5df9e9d1c6d9910eef7e74",
+        "n": 822377
+      },
+      "refit": {
+        "id_hash": "8abd4d3ccb0ceb636334f12687ca170ba221ab5dca3010602fd460382aef5f04",
+        "n": 1005519
+      },
+      "score": {
+        "id_hash": "12c55dcb0ee810efde49ce6cdebbaa3459d100e536cd499f6c44325a56fe1f25",
+        "n": 190713
+      },
+      "tune": {
+        "id_hash": "23f154da177bc439eab9b2df8de3513b193610962fa158b7fde82b80b058efb2",
+        "n": 183142
+      }
+    }
+  },
+  "F2": {
+    "purged_related_departures": {
+      "fit_against_score": 0,
+      "fit_against_tune": 0,
+      "refit_against_score": 0,
+      "tune_against_score": 0
+    },
+    "spec": {
+      "fit": [
+        "2025-01-01",
+        "2025-09-01"
+      ],
+      "refit": [
+        "2025-01-01",
+        "2025-10-01"
+      ],
+      "role": "autumn development",
+      "score": [
+        "2025-10-01",
+        "2025-11-01"
+      ],
+      "tune": [
+        "2025-09-01",
+        "2025-10-01"
+      ]
+    },
+    "split_hash": "c29675ae4f8fde89004c2fd2523bc35d63bc76a584347c468a667d516ac295e1",
+    "stages": {
+      "fit": {
+        "id_hash": "6e986e2372fb45f59989a5fe9e5cf278a041d0126f22b06f6affd1acf2695303",
+        "n": 1387414
+      },
+      "refit": {
+        "id_hash": "eb8b42a188780f6c648317d841d5d2590aa257deac016bcf54f1c9b0a27c031e",
+        "n": 1571364
+      },
+      "score": {
+        "id_hash": "ddfaca1874d2da5cfe9cba7f611d91410e8124703f5c0cea0932a156efd66eca",
+        "n": 185674
+      },
+      "tune": {
+        "id_hash": "216a910615d5c2298815f9aba0ed295cc08e64c1a99d9cfa6be6af9b9d60651a",
+        "n": 183950
+      }
+    }
+  },
+  "F3": {
+    "purged_related_departures": {
+      "fit_against_score": 0,
+      "fit_against_tune": 0,
+      "refit_against_score": 0,
+      "tune_against_score": 0
+    },
+    "spec": {
+      "fit": [
+        "2025-01-01",
+        "2025-10-01"
+      ],
+      "refit": [
+        "2025-01-01",
+        "2025-11-01"
+      ],
+      "role": "winter development",
+      "score": [
+        "2025-11-01",
+        "2025-12-01"
+      ],
+      "tune": [
+        "2025-10-01",
+        "2025-11-01"
+      ]
+    },
+    "split_hash": "180ea2ba2c6f11fae3e6bcac91f9b7ebe053ecc9a622f72afe34d1ee5ef9ac1e",
+    "stages": {
+      "fit": {
+        "id_hash": "eb8b42a188780f6c648317d841d5d2590aa257deac016bcf54f1c9b0a27c031e",
+        "n": 1571364
+      },
+      "refit": {
+        "id_hash": "1fde6fcb2e5abd08463ec08a8d29df048a4bcb2328f8e54751b3f340e633ccd6",
+        "n": 1757038
+      },
+      "score": {
+        "id_hash": "51878982292d66008dbcb1b71dee281e161abdf2ce8d207d0331a58ed9b9c1e3",
+        "n": 162332
+      },
+      "tune": {
+        "id_hash": "ddfaca1874d2da5cfe9cba7f611d91410e8124703f5c0cea0932a156efd66eca",
+        "n": 185674
+      }
+    }
+  },
+  "G1": {
+    "purged_related_departures": {
+      "fit_against_score": 0,
+      "fit_against_tune": 0,
+      "refit_against_score": 0,
+      "tune_against_score": 0
+    },
+    "spec": {
+      "fit": [
+        "2025-01-01",
+        "2025-03-01"
+      ],
+      "refit": [
+        "2025-01-01",
+        "2025-04-01"
+      ],
+      "role": "long-gap stress, overlaps F2 score",
+      "score": [
+        "2025-10-01",
+        "2025-11-01"
+      ],
+      "tune": [
+        "2025-03-01",
+        "2025-04-01"
+      ]
+    },
+    "split_hash": "e850087a16ebd2f7bf1b3af21fec6c3bcb6ee9047c19d41aeaa38f92b58ecea3",
+    "stages": {
+      "fit": {
+        "id_hash": "ab1c65bd18689394e6af46c143a1b775dc651af644c0012b29c010b152574041",
+        "n": 297438
+      },
+      "refit": {
+        "id_hash": "66fa139bb1312b684408be1a24e13081c2176c95f0a2fcb24af2a484daf8c0d2",
+        "n": 461887
+      },
+      "score": {
+        "id_hash": "ddfaca1874d2da5cfe9cba7f611d91410e8124703f5c0cea0932a156efd66eca",
+        "n": 185674
+      },
+      "tune": {
+        "id_hash": "d25c9310b7421b1ea6500f9713111005c419efe8c247d5a0d958e9ef7890865f",
+        "n": 164449
+      }
+    }
+  }
+}

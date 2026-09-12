@@ -1,0 +1,37 @@
+{
+  "checked_date_utc": "2026-09-12",
+  "status": "complete",
+  "source": {
+    "method": "git checkout-index into an isolated ignored directory; fresh wheel built and installed into the locked verification environment",
+    "frozen_files_checked": 41,
+    "all_frozen_file_sha256_equal": true,
+    "wheel_sha256": "517b1a184ec8f237079623ca7c6ef047cc9d53f209ca8451b9ebcb698cade4b1"
+  },
+  "tests": {
+    "passed": 13,
+    "failed": 0,
+    "runtime_sec": 14.67,
+    "challenge_data_required": false
+  },
+  "reproduction": {
+    "command": "python -m taxiout.cli reproduce --config configs/release.yaml --offline",
+    "run_id": "reproduction-20260912T213307868086-6c34f3be",
+    "initial_audit_cache_present": false,
+    "initial_feature_cache_present": false,
+    "initial_model_bundle_present": false,
+    "initial_reference_prediction_present": false,
+    "private_raw_files_supplied_locally": 14,
+    "passed": true,
+    "rows": 344841,
+    "schema": "MVT_ID_mvt: double\nTAXITIME_SEC_mvt: int32",
+    "sha256": "823408382b15b41a5b353b219ef7e5ebbfb07e81e8c3c833f3ebf66295c88e13",
+    "byte_hash_equal_original_local_candidate": true
+  },
+  "publication_checks": {
+    "raw_data_and_private_artifact_paths_in_git_index": false,
+    "raw_boundary_records_in_public_audit": false,
+    "readme_relative_file_links_resolve": true,
+    "git_diff_check_passed": true
+  },
+  "note": "Local publication verification only. Competition upload and acceptance have not been performed. The final README and this aggregate record were updated after the successful run; frozen source and configuration bytes were unchanged."
+}

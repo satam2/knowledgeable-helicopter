@@ -1,0 +1,4 @@
+extends: residual_long_proxy_specialist.yaml
+candidate: residual_long_proxy_specialist_no_traffic
+features:
+  traffic: false

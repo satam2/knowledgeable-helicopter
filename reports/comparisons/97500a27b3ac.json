@@ -1,0 +1,461 @@
+{
+  "candidates": {
+    "residual_all_finite_specialist": {
+      "folds": {
+        "F1": {
+          "bias_sec": 4.519384581523552,
+          "coverage": 1.0,
+          "mae_sec": 195.20771381319452,
+          "n": 190713,
+          "p95_abs_error_sec": 538.120311875328,
+          "rmse_sec": 371.4894774352348,
+          "sse": 26319239210.47528
+        },
+        "F2": {
+          "bias_sec": -7.147791630902403,
+          "coverage": 1.0,
+          "mae_sec": 166.708712496108,
+          "n": 185674,
+          "p95_abs_error_sec": 448.780427563781,
+          "rmse_sec": 268.39663869000884,
+          "sse": 13375352570.432508
+        },
+        "F3": {
+          "bias_sec": -14.92071236631329,
+          "coverage": 1.0,
+          "mae_sec": 162.62555482220552,
+          "n": 162332,
+          "p95_abs_error_sec": 446.94791624096274,
+          "rmse_sec": 277.5609278220265,
+          "sse": 12506068424.647654
+        },
+        "G1": {
+          "bias_sec": 10.428758343410044,
+          "coverage": 1.0,
+          "mae_sec": 171.74076068435662,
+          "n": 185674,
+          "p95_abs_error_sec": 465.20319868607675,
+          "rmse_sec": 286.5405539017188,
+          "sse": 15244854570.212631
+        }
+      },
+      "missing_proxy": {
+        "F1": {
+          "bias_sec": 114.96162348264538,
+          "coverage": 1.0,
+          "mae_sec": 620.199206676538,
+          "n": 3938,
+          "p95_abs_error_sec": 2853.3842123027234,
+          "rmse_sec": 1531.5970657463447,
+          "sse": 9237719333.759478,
+          "sse_share": 0.35098732375526975
+        },
+        "F2": {
+          "bias_sec": -50.42221914384747,
+          "coverage": 1.0,
+          "mae_sec": 437.2879577809859,
+          "n": 1913,
+          "p95_abs_error_sec": 1752.173776762603,
+          "rmse_sec": 936.715454645352,
+          "sse": 1678534767.604381,
+          "sse_share": 0.12549461846074564
+        },
+        "F3": {
+          "bias_sec": -178.46097707916778,
+          "coverage": 1.0,
+          "mae_sec": 490.5807395881187,
+          "n": 1356,
+          "p95_abs_error_sec": 1862.7056757094883,
+          "rmse_sec": 1595.1036567065023,
+          "sse": 3450146296.1657453,
+          "sse_share": 0.27587777221544746
+        },
+        "G1": {
+          "bias_sec": 190.38381439630064,
+          "coverage": 1.0,
+          "mae_sec": 529.4742293075902,
+          "n": 1913,
+          "p95_abs_error_sec": 2168.5466905921658,
+          "rmse_sec": 1153.408736827875,
+          "sse": 2544962829.247142,
+          "sse_share": 0.16693913461265936
+        }
+      },
+      "paired_vs_residual_specialist": {
+        "F1": {
+          "blocks": 310,
+          "bootstrap_95pct_interval": [
+            -134.7634114971575,
+            4.127600096599732
+          ],
+          "caveat": "Airport-day block stability diagnostic; extreme events limit interval reliability.",
+          "delta_rmse_second_minus_first": -46.228814403928595,
+          "largest_error_day": "2025-07-15",
+          "largest_error_day_sse_share": 0.23189497691058586,
+          "leave_one_day_out_delta_range": [
+            -48.800344286298866,
+            1.75751574848141
+          ],
+          "repetitions": 1000,
+          "seed": 20260910
+        },
+        "F2": {
+          "blocks": 310,
+          "bootstrap_95pct_interval": [
+            -5.064015188763368,
+            0.6294155089096121
+          ],
+          "caveat": "Airport-day block stability diagnostic; extreme events limit interval reliability.",
+          "delta_rmse_second_minus_first": -1.8437968016972945,
+          "largest_error_day": "2025-10-02",
+          "largest_error_day_sse_share": 0.06590126873857055,
+          "leave_one_day_out_delta_range": [
+            -2.1645739572405205,
+            -1.0797901031628498
+          ],
+          "repetitions": 1000,
+          "seed": 20260910
+        },
+        "F3": {
+          "blocks": 300,
+          "bootstrap_95pct_interval": [
+            0.7329475304604245,
+            3.6384300191533554
+          ],
+          "caveat": "Airport-day block stability diagnostic; extreme events limit interval reliability.",
+          "delta_rmse_second_minus_first": 1.9580679483196946,
+          "largest_error_day": "2025-11-04",
+          "largest_error_day_sse_share": 0.13893856491872206,
+          "leave_one_day_out_delta_range": [
+            1.20881340150288,
+            2.163574216503889
+          ],
+          "repetitions": 1000,
+          "seed": 20260910
+        },
+        "G1": {
+          "blocks": 310,
+          "bootstrap_95pct_interval": [
+            -3.031357896854189,
+            2.642277079510836
+          ],
+          "caveat": "Airport-day block stability diagnostic; extreme events limit interval reliability.",
+          "delta_rmse_second_minus_first": 0.12755520869222892,
+          "largest_error_day": "2025-10-04",
+          "largest_error_day_sse_share": 0.07089920761222644,
+          "leave_one_day_out_delta_range": [
+            -0.28484334744860007,
+            1.0356717417354275
+          ],
+          "repetitions": 1000,
+          "seed": 20260910
+        }
+      },
+      "pooled_development": {
+        "n": 538719,
+        "rmse_sec": 311.2840379312232,
+        "sse": 52200660205.55544
+      },
+      "promotion_gates": {
+        "gain_pass": true,
+        "minimum_gain_sec": 2.0,
+        "missing_regression_pass": true,
+        "observed_gain_sec": 28.560274302920618,
+        "requires_review": [
+          "G1"
+        ],
+        "seasonal_regression_pass": true
+      },
+      "run_ids": {
+        "F1": "residual_all_finite_specialist-F1-20260910T225131876296-5b950902",
+        "F2": "residual_all_finite_specialist-F2-20260910T225232871835-5b950902",
+        "F3": "residual_all_finite_specialist-F3-20260910T225334937813-5b950902",
+        "G1": "residual_all_finite_specialist-G1-20260911T033038952596-5b950902"
+      },
+      "season_score": 333.1745398792646
+    },
+    "residual_long_proxy_specialist": {
+      "folds": {
+        "F1": {
+          "bias_sec": 5.640392194334409,
+          "coverage": 1.0,
+          "mae_sec": 193.80306376720267,
+          "n": 190713,
+          "p95_abs_error_sec": 534.613710830267,
+          "rmse_sec": 369.3702169819169,
+          "sse": 26019805563.39979
+        },
+        "F2": {
+          "bias_sec": -8.323960422766856,
+          "coverage": 1.0,
+          "mae_sec": 166.24159677694027,
+          "n": 185674,
+          "p95_abs_error_sec": 447.9054849347461,
+          "rmse_sec": 269.31320947477377,
+          "sse": 13466861841.190212
+        },
+        "F3": {
+          "bias_sec": -14.201735598294453,
+          "coverage": 1.0,
+          "mae_sec": 162.1096170991111,
+          "n": 162332,
+          "p95_abs_error_sec": 445.25434174299045,
+          "rmse_sec": 275.71215454574417,
+          "sse": 12340022838.408058
+        },
+        "G1": {
+          "bias_sec": 10.184376345803553,
+          "coverage": 1.0,
+          "mae_sec": 171.37463667182297,
+          "n": 185674,
+          "p95_abs_error_sec": 465.3398768429764,
+          "rmse_sec": 285.575395346859,
+          "sse": 15142328617.622387
+        }
+      },
+      "missing_proxy": {
+        "F1": {
+          "bias_sec": 114.96162348264538,
+          "coverage": 1.0,
+          "mae_sec": 620.199206676538,
+          "n": 3938,
+          "p95_abs_error_sec": 2853.3842123027234,
+          "rmse_sec": 1531.5970657463447,
+          "sse": 9237719333.759478,
+          "sse_share": 0.3550264551843354
+        },
+        "F2": {
+          "bias_sec": -50.42221914384747,
+          "coverage": 1.0,
+          "mae_sec": 437.2879577809859,
+          "n": 1913,
+          "p95_abs_error_sec": 1752.173776762603,
+          "rmse_sec": 936.715454645352,
+          "sse": 1678534767.604381,
+          "sse_share": 0.12464186440751596
+        },
+        "F3": {
+          "bias_sec": -178.46097707916778,
+          "coverage": 1.0,
+          "mae_sec": 490.5807395881187,
+          "n": 1356,
+          "p95_abs_error_sec": 1862.7056757094883,
+          "rmse_sec": 1595.1036567065023,
+          "sse": 3450146296.1657453,
+          "sse_share": 0.27958994414720517
+        },
+        "G1": {
+          "bias_sec": 190.38381439630064,
+          "coverage": 1.0,
+          "mae_sec": 529.4742293075902,
+          "n": 1913,
+          "p95_abs_error_sec": 2168.5466905921658,
+          "rmse_sec": 1153.408736827875,
+          "sse": 2544962829.247142,
+          "sse_share": 0.16806944912589977
+        }
+      },
+      "paired_vs_residual_specialist": {
+        "F1": {
+          "blocks": 310,
+          "bootstrap_95pct_interval": [
+            -136.05997653182433,
+            0.31294977927686457
+          ],
+          "caveat": "Airport-day block stability diagnostic; extreme events limit interval reliability.",
+          "delta_rmse_second_minus_first": -48.3480748572465,
+          "largest_error_day": "2025-07-15",
+          "largest_error_day_sse_share": 0.23189497691058586,
+          "leave_one_day_out_delta_range": [
+            -50.50169417433466,
+            -0.30831273733826947
+          ],
+          "repetitions": 1000,
+          "seed": 20260910
+        },
+        "F2": {
+          "blocks": 310,
+          "bootstrap_95pct_interval": [
+            -3.716923572295644,
+            1.069346329272252
+          ],
+          "caveat": "Airport-day block stability diagnostic; extreme events limit interval reliability.",
+          "delta_rmse_second_minus_first": -0.9272260169323658,
+          "largest_error_day": "2025-10-02",
+          "largest_error_day_sse_share": 0.06590126873857055,
+          "leave_one_day_out_delta_range": [
+            -1.1793513514307392,
+            -0.08595543076802414
+          ],
+          "repetitions": 1000,
+          "seed": 20260910
+        },
+        "F3": {
+          "blocks": 300,
+          "bootstrap_95pct_interval": [
+            0.0,
+            0.34715476259189654
+          ],
+          "caveat": "Airport-day block stability diagnostic; extreme events limit interval reliability.",
+          "delta_rmse_second_minus_first": 0.10929467203720833,
+          "largest_error_day": "2025-11-04",
+          "largest_error_day_sse_share": 0.13893856491872206,
+          "leave_one_day_out_delta_range": [
+            0.0,
+            0.1197245993767524
+          ],
+          "repetitions": 1000,
+          "seed": 20260910
+        },
+        "G1": {
+          "blocks": 310,
+          "bootstrap_95pct_interval": [
+            -3.770298359675401,
+            1.3086413216497916
+          ],
+          "caveat": "Airport-day block stability diagnostic; extreme events limit interval reliability.",
+          "delta_rmse_second_minus_first": -0.8376033461676116,
+          "largest_error_day": "2025-10-04",
+          "largest_error_day_sse_share": 0.07089920761222644,
+          "leave_one_day_out_delta_range": [
+            -1.142550708372255,
+            0.058115435784145575
+          ],
+          "repetitions": 1000,
+          "seed": 20260910
+        }
+      },
+      "pooled_development": {
+        "n": 538719,
+        "rmse_sec": 310.16700105750743,
+        "sse": 51826690242.99806
+      },
+      "promotion_gates": {
+        "gain_pass": true,
+        "minimum_gain_sec": 2.0,
+        "missing_regression_pass": true,
+        "observed_gain_sec": 30.558824928695117,
+        "requires_review": [],
+        "seasonal_regression_pass": true
+      },
+      "run_ids": {
+        "F1": "residual_long_proxy_specialist-F1-20260911T033403603272-6c34f3be",
+        "F2": "residual_long_proxy_specialist-F2-20260911T033504103868-6c34f3be",
+        "F3": "residual_long_proxy_specialist-F3-20260911T033559842712-6c34f3be",
+        "G1": "residual_long_proxy_specialist-G1-20260911T033657725286-6c34f3be"
+      },
+      "season_score": 331.1759892534901
+    },
+    "residual_specialist": {
+      "folds": {
+        "F1": {
+          "bias_sec": 5.147363439808295,
+          "coverage": 1.0,
+          "mae_sec": 194.25130553652534,
+          "n": 190713,
+          "p95_abs_error_sec": 534.6365555255394,
+          "rmse_sec": 417.71829183916344,
+          "sse": 33277238905.39872
+        },
+        "F2": {
+          "bias_sec": -8.556914801323604,
+          "coverage": 1.0,
+          "mae_sec": 166.2531129403218,
+          "n": 185674,
+          "p95_abs_error_sec": 447.88827361184593,
+          "rmse_sec": 270.24043549170614,
+          "sse": 13559752348.193172
+        },
+        "F3": {
+          "bias_sec": -14.21760110688848,
+          "coverage": 1.0,
+          "mae_sec": 162.09375159051706,
+          "n": 162332,
+          "p95_abs_error_sec": 445.25434174299045,
+          "rmse_sec": 275.602859873707,
+          "sse": 12330241394.90675
+        },
+        "G1": {
+          "bias_sec": 9.962193001083788,
+          "coverage": 1.0,
+          "mae_sec": 171.39247499852814,
+          "n": 185674,
+          "p95_abs_error_sec": 465.3555159633866,
+          "rmse_sec": 286.4129986930266,
+          "sse": 15231284918.284262
+        }
+      },
+      "missing_proxy": {
+        "F1": {
+          "bias_sec": 114.96162348264538,
+          "coverage": 1.0,
+          "mae_sec": 620.199206676538,
+          "n": 3938,
+          "p95_abs_error_sec": 2853.3842123027234,
+          "rmse_sec": 1531.5970657463447,
+          "sse": 9237719333.759478,
+          "sse_share": 0.27759873227525494
+        },
+        "F2": {
+          "bias_sec": -50.42221914384747,
+          "coverage": 1.0,
+          "mae_sec": 437.2879577809859,
+          "n": 1913,
+          "p95_abs_error_sec": 1752.173776762603,
+          "rmse_sec": 936.715454645352,
+          "sse": 1678534767.604381,
+          "sse_share": 0.12378801061422369
+        },
+        "F3": {
+          "bias_sec": -178.46097707916778,
+          "coverage": 1.0,
+          "mae_sec": 490.5807395881187,
+          "n": 1356,
+          "p95_abs_error_sec": 1862.7056757094883,
+          "rmse_sec": 1595.1036567065023,
+          "sse": 3450146296.1657453,
+          "sse_share": 0.2798117397434649
+        },
+        "G1": {
+          "bias_sec": 190.38381439630064,
+          "coverage": 1.0,
+          "mae_sec": 529.4742293075902,
+          "n": 1913,
+          "p95_abs_error_sec": 2168.5466905921658,
+          "rmse_sec": 1153.408736827875,
+          "sse": 2544962829.247142,
+          "sse_share": 0.16708786178584734
+        }
+      },
+      "pooled_development": {
+        "n": 538719,
+        "rmse_sec": 331.40532479767796,
+        "sse": 59167232648.49864
+      },
+      "run_ids": {
+        "F1": "residual_specialist-F1-20260910T223618853935-e5952f02",
+        "F2": "residual_specialist-F2-20260910T223715150513-e5952f02",
+        "F3": "residual_specialist-F3-20260910T223813126723-e5952f02",
+        "G1": "residual_specialist-G1-20260910T225840376544-e5952f02"
+      },
+      "season_score": 361.73481418218523
+    }
+  },
+  "created_utc": "2026-09-11T03:38:02.659017+00:00",
+  "reference_candidate": "residual_specialist",
+  "runs": [
+    "residual_specialist-F1-20260910T223618853935-e5952f02",
+    "residual_specialist-F2-20260910T223715150513-e5952f02",
+    "residual_specialist-F3-20260910T223813126723-e5952f02",
+    "residual_all_finite_specialist-F1-20260910T225131876296-5b950902",
+    "residual_all_finite_specialist-F2-20260910T225232871835-5b950902",
+    "residual_all_finite_specialist-F3-20260910T225334937813-5b950902",
+    "residual_specialist-G1-20260910T225840376544-e5952f02",
+    "residual_all_finite_specialist-G1-20260911T033038952596-5b950902",
+    "residual_long_proxy_specialist-F1-20260911T033403603272-6c34f3be",
+    "residual_long_proxy_specialist-F2-20260911T033504103868-6c34f3be",
+    "residual_long_proxy_specialist-F3-20260911T033559842712-6c34f3be",
+    "residual_long_proxy_specialist-G1-20260911T033657725286-6c34f3be"
+  ],
+  "selection_policy": "Season score; >= max(2s, 0.5%) gain; seasonal and missing-proxy regression gates; inspect F2/G1 and airport-day stability."
+}

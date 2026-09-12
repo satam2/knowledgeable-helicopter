@@ -1,0 +1,3 @@
+extends: residual.yaml
+candidate: residual_specialist
+missing_specialist: true

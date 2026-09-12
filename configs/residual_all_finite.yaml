@@ -1,0 +1,4 @@
+extends: residual.yaml
+candidate: residual_all_finite
+proxy_min: -1000000000000
+proxy_max: 1000000000000

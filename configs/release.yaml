@@ -1,0 +1,26 @@
+candidate: residual_long_proxy_specialist
+raw_dir: data/raw/prc
+seed: 20260910
+threads: 4
+iterations: 180
+depth: 6
+learning_rate: 0.075
+l2_leaf_reg: 8
+loss: RMSE
+early_stopping_rounds: 40
+train_sample: 250000
+features:
+  clocks: true
+  traffic: true
+  quality: false
+  local_calendar: false
+  legacy: false
+coverage: month-isolated
+proxy_min: 0
+proxy_max: 7200
+hierarchy_alpha: 30
+rounding: nearest-even-int32
+memory_reserve_gb: 2
+max_run_minutes: 30
+missing_specialist: true
+long_proxy_correction: true

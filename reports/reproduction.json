@@ -1,0 +1,17 @@
+{
+  "byte_hash_equal_reference": true,
+  "offline": true,
+  "run_id": "reproduction-20260911T183112968184-6c34f3be",
+  "serialized_values_equal_reference": true,
+  "status": "complete",
+  "validation": {
+    "maximum_sec": 87035,
+    "minimum_sec": -268,
+    "passed": true,
+    "rounding": "numpy.rint, nearest even; no clipping",
+    "rows": 344841,
+    "schema": "MVT_ID_mvt: double\nTAXITIME_SEC_mvt: int32",
+    "sha256": "823408382b15b41a5b353b219ef7e5ebbfb07e81e8c3c833f3ebf66295c88e13",
+    "template_sha256": "0d383408ed5ac27bfcfd12d6b961cee77c8a6364b10dad9fe3ec81115c79652b"
+  }
+}

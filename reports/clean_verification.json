@@ -1,0 +1,63 @@
+{
+  "commands": [
+    [
+      "C:\\Users\\hurri\\PRC\\.venv-verify\\Scripts\\python.exe",
+      "-m",
+      "pip",
+      "check"
+    ],
+    [
+      "C:\\Users\\hurri\\PRC\\.venv-verify\\Scripts\\python.exe",
+      "-m",
+      "pip",
+      "install",
+      "--no-build-isolation",
+      "--no-deps",
+      "--force-reinstall",
+      "C:\\Users\\hurri\\PRC\\data\\interim\\clean-reproduction-20260911T183003"
+    ],
+    [
+      "C:\\Users\\hurri\\PRC\\.venv-verify\\Scripts\\python.exe",
+      "-m",
+      "pytest"
+    ],
+    [
+      "C:\\Users\\hurri\\PRC\\.venv-verify\\Scripts\\python.exe",
+      "-m",
+      "taxiout.cli",
+      "reproduce",
+      "--config",
+      "configs/release.yaml",
+      "--offline"
+    ]
+  ],
+  "initial_audit_cache_present": false,
+  "initial_feature_cache_present": false,
+  "isolated_tree": "data/interim/clean-reproduction-20260911T183003",
+  "lock_sha256": "75ca3d46e1d17d5d561ff3c43523a84db39e270ad796131b3bb34dc829246dc3",
+  "logs": {
+    "step-1.log": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+    "step-2.log": "a99c0b779e59ab2f68dd16612c59175be76ca52658f35d32a2fbdac47db77535",
+    "step-3.log": "6324958f51669bda0c91aa0f4090d9a3446685f78858cf8105986de3ef453101",
+    "step-4.log": "5da75c6feb8ca1b309f482f271ae3f34cf583a7a4cc36983e967f51fb83937ab"
+  },
+  "raw_files": "local hardlinks; raw pack hashes revalidated",
+  "reproduction": {
+    "byte_hash_equal_reference": true,
+    "offline": true,
+    "run_id": "reproduction-20260911T183112968184-6c34f3be",
+    "serialized_values_equal_reference": true,
+    "status": "complete",
+    "validation": {
+      "maximum_sec": 87035,
+      "minimum_sec": -268,
+      "passed": true,
+      "rounding": "numpy.rint, nearest even; no clipping",
+      "rows": 344841,
+      "schema": "MVT_ID_mvt: double\nTAXITIME_SEC_mvt: int32",
+      "sha256": "823408382b15b41a5b353b219ef7e5ebbfb07e81e8c3c833f3ebf66295c88e13",
+      "template_sha256": "0d383408ed5ac27bfcfd12d6b961cee77c8a6364b10dad9fe3ec81115c79652b"
+    }
+  },
+  "status": "complete"
+}

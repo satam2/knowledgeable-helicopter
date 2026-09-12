@@ -1,0 +1,167 @@
+{
+  "airports": [
+    "EDDF",
+    "EDDM",
+    "EGLL",
+    "EHAM",
+    "LEBL",
+    "LEMD",
+    "LFPG",
+    "LIRF",
+    "LSZH",
+    "LTFM"
+  ],
+  "arrival_identity_max_abs_sec": 0.0,
+  "artifacts": {
+    "anomalies.parquet": "c256f1f0bf241b665087ff6178e047907ca9698eba5fcfba7bf60fcf1ac728c9",
+    "departures.parquet": "d7a9154d5711e39fa3b1318f1a861fdab181b2fe821341ad58ffca5b30bc2d4c"
+  },
+  "departure_identity_max_abs_sec": 0.0,
+  "discrepancies": [
+    "Official prose refers to 11 airports; actual table/data have 10."
+  ],
+  "environment": {
+    "available_ram_bytes": 4124860416,
+    "git_dirty": true,
+    "git_revision": "6d689b27dc0db4c264569846d6a752bd3618be3f",
+    "libraries": {
+      "catboost": "1.2.10",
+      "numpy": "1.26.4",
+      "pandas": "2.3.3",
+      "pyarrow": "14.0.2",
+      "scikit-learn": "1.7.2",
+      "tzdata": "2025.2"
+    },
+    "logical_cpus": 12,
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.12",
+    "ram_bytes": 16837148672,
+    "utc": "2026-09-10T21:58:59.892512+00:00"
+  },
+  "file_boundary_spillover_count": 6,
+  "file_boundary_spillover_note": "Individual movement IDs and timestamps are omitted from the public report. Rerunning audit with the private raw pack reconstructs the detailed local records.",
+  "input_manifest_hash": "1fcf73904ac6c791ce05a4b2b8c066c8d4fd85c6c640e7c313160b294319cc78",
+  "missing_proxy": 22470,
+  "missing_proxy_over_two_hours": 481,
+  "phases": {
+    "ARR": 2082750,
+    "DEP": 2085047
+  },
+  "prior_count_comparison": {
+    "ranking_departures": {
+      "matches": true,
+      "observed": 344841,
+      "prior": 344841
+    },
+    "ranking_rows": {
+      "matches": true,
+      "observed": 689534,
+      "prior": 689534
+    },
+    "training_departures": {
+      "matches": true,
+      "observed": 2085047,
+      "prior": 2085047
+    },
+    "training_rows": {
+      "matches": true,
+      "observed": 4167797,
+      "prior": 4167797
+    }
+  },
+  "proxy_coverage_pct": 98.92232645115435,
+  "ranking_departure_months": {
+    "2026-01": 152719,
+    "2026-07": 192122
+  },
+  "ranking_departures": 344841,
+  "ranking_proxy_coverage_pct": 98.46595967416867,
+  "ranking_rows": 689534,
+  "raw_columns": 30,
+  "raw_missing_counts": {
+    "ADEP_flt": 37919,
+    "ADEP_mvt": 84,
+    "ADES_FILED_flt": 37919,
+    "ADES_flt": 37919,
+    "ADES_mvt": 122,
+    "AIRCRAFT_OPERATOR_flt": 37919,
+    "AIRCRAFT_TYPE_flt": 37919,
+    "AIRCRAFT_TYPE_mvt": 1649,
+    "AOBT_3_flt": 37919,
+    "ARVT_1_flt": 37919,
+    "ARVT_3_flt": 37919,
+    "BLOCK_TIME_UTC_mvt": 1,
+    "CALLSIGN_flt": 37919,
+    "EOBT_1_flt": 37919,
+    "FLIGHT_ID_mvt": 30930,
+    "FLIGHT_RULE_flt": 38060,
+    "FLIGHT_RULE_mvt": 689,
+    "FLIGHT_TYPE_flt": 37919,
+    "FLIGHT_mvt": 410,
+    "IOBT_flt": 37919,
+    "LOBT_flt": 37919,
+    "MARKET_SEGMENT_flt": 37919,
+    "MVT_ID_mvt": 0,
+    "MVT_TIME_UTC_mvt": 0,
+    "PHASE_mvt": 0,
+    "RUNWAY_mvt": 0,
+    "SCHED_TIME_UTC_mvt": 0,
+    "STAND_mvt": 64,
+    "TAXITIME_SEC_mvt": 1,
+    "WK_TBL_CAT_flt": 38060
+  },
+  "target": {
+    "max": 131167,
+    "mean": 991.200707226264,
+    "median": 912.0,
+    "negative": 369,
+    "over_two_hours": 584,
+    "p95": 1684.0,
+    "p99": 2339.0,
+    "zero": 19
+  },
+  "template_ids_unique_and_match": true,
+  "template_rows": 344841,
+  "training_departures": 2085047,
+  "training_rows": 4167797,
+  "unlabelled_arrival_context": 1,
+  "unseen_ranking_airport_stand_pct": 0.4607920751882752,
+  "unseen_ranking_categories": {
+    "ADEP_mvt": {
+      "new_values": 0,
+      "row_pct": 0.0
+    },
+    "ADES_mvt": {
+      "new_values": 62,
+      "row_pct": 0.05045803718235361
+    },
+    "AIRCRAFT_OPERATOR_flt": {
+      "new_values": 30,
+      "row_pct": 0.051328003340670045
+    },
+    "AIRCRAFT_TYPE_mvt": {
+      "new_values": 8,
+      "row_pct": 0.005219796949898649
+    },
+    "FLIGHT_TYPE_flt": {
+      "new_values": 0,
+      "row_pct": 0.0
+    },
+    "MARKET_SEGMENT_flt": {
+      "new_values": 0,
+      "row_pct": 0.0
+    },
+    "RUNWAY_mvt": {
+      "new_values": 0,
+      "row_pct": 0.0
+    },
+    "STAND_mvt": {
+      "new_values": 30,
+      "row_pct": 0.08235679632062312
+    },
+    "WK_TBL_CAT_flt": {
+      "new_values": 0,
+      "row_pct": 0.0
+    }
+  }
+}

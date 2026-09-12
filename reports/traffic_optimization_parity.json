@@ -1,0 +1,8 @@
+{
+  "byte_identical": true,
+  "features": 27,
+  "fixture_tests": "exact edges, ties, phase, month and unit equivalence passed",
+  "optimized_sha256": "2e1116eb0d465439aa0ff39c244c780d19892a569e28a3fe389b3165bf7a0621",
+  "reference_sha256": "2e1116eb0d465439aa0ff39c244c780d19892a569e28a3fe389b3165bf7a0621",
+  "rows": 153706
+}

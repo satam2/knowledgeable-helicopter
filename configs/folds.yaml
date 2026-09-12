@@ -1,0 +1,30 @@
+F1:
+  fit: [2025-01-01, 2025-06-01]
+  tune: [2025-06-01, 2025-07-01]
+  refit: [2025-01-01, 2025-07-01]
+  score: [2025-07-01, 2025-08-01]
+  role: summer development
+F2:
+  fit: [2025-01-01, 2025-09-01]
+  tune: [2025-09-01, 2025-10-01]
+  refit: [2025-01-01, 2025-10-01]
+  score: [2025-10-01, 2025-11-01]
+  role: autumn development
+F3:
+  fit: [2025-01-01, 2025-10-01]
+  tune: [2025-10-01, 2025-11-01]
+  refit: [2025-01-01, 2025-11-01]
+  score: [2025-11-01, 2025-12-01]
+  role: winter development
+G1:
+  fit: [2025-01-01, 2025-03-01]
+  tune: [2025-03-01, 2025-04-01]
+  refit: [2025-01-01, 2025-04-01]
+  score: [2025-10-01, 2025-11-01]
+  role: long-gap stress, overlaps F2 score
+C1:
+  fit: [2025-01-01, 2025-11-01]
+  tune: [2025-11-01, 2025-12-01]
+  refit: [2025-01-01, 2025-12-01]
+  score: [2025-12-01, 2026-01-01]
+  role: reused confirmation, previously exposed in diagnostic

@@ -1,0 +1,3 @@
+extends: residual_all_finite.yaml
+candidate: residual_all_finite_specialist
+missing_specialist: true
