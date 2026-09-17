@@ -1,0 +1,153 @@
+"""Independent LOBT-origin replay with original raw timestamp anchor audit."""
+import os
+for key in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS'):os.environ[key]='1'
+import lightgbm as lgb
+import argparse
+from pathlib import Path
+import numpy as np
+import pandas as pd
+import pyarrow as pa
+import pyarrow.parquet as pq
+import psutil
+from threadpoolctl import threadpool_limits
+import validate_candidate as v
+
+ROOT,ID,TARGET,TIME=v.ROOT,v.ID,v.TARGET,v.common.MOVEMENT
+BASE=ROOT/'private_runs/tail240_20260916/models/lobt_anchor_tune_v1'
+pa.set_cpu_count(1)
+pa.set_io_thread_count(1)
+
+
+def guard():
+    m=psutil.Process().memory_info()
+    peak=max(m.rss,getattr(m,'peak_wset',0))
+    assert peak<2*1024**3 and psutil.virtual_memory().available>=8*1024**3
+    return peak
+
+
+def main(fold):
+    assert psutil.virtual_memory().available>=10*1024**3
+    folder=BASE/fold
+    out=ROOT/'private_runs/tail240_20260916/validation'/('lobt_anchor_'+fold)
+    out.mkdir(parents=True,exist_ok=False)
+    marker=v.read_json(folder/'manifest.json')
+    protocol=v.read_json(BASE/'protocol.json')
+    assert marker['status']=='complete' and marker['protocol_sha256']==v.sha256(BASE/'protocol.json')
+    assert marker['source_sha256']==protocol['source_sha256']==v.sha256(ROOT/'review_work/tail240_20260916/models/lobt_anchor_tune.py')
+    for name,digest in marker['outputs'].items():assert v.sha256(folder/name)==digest
+    meta_path=ROOT/'private_runs/screening_230/data/interim/audit/departures.parquet'
+    assert v.sha256(meta_path)==v.read_json(ROOT/'private_runs/screening_230/reports/data_audit.json')['artifacts'][meta_path.name]
+    meta=pd.read_parquet(meta_path,columns=[ID,'FLIGHT_ID_mvt',TIME,TARGET,'proxy_sec'])
+    idx,split,_=v.common.fold_data(meta,fold,full=True)
+    assert v.object_hash(split)==v.object_hash(marker['split'])
+    rows={s:meta.iloc[idx[s]].loc[lambda f:np.isfinite(f.proxy_sec)] for s in ['fit','tune']}
+    assert {s:dict(n=len(f),hash=v.object_hash(f[ID].tolist())) for s,f in rows.items()}==marker['ids']
+    fitids=pd.Index(rows['fit'][ID]);tune=rows['tune'];ids=pd.Index(tune[ID])
+    encoder=v.read_json(folder/'encoder.json');columns=encoder['columns']
+    assert columns==protocol['columns'] and len(columns)==387
+    matrix=np.full((len(ids),len(columns)),np.nan,dtype='float32',order='F')
+    counts=np.zeros(len(columns),dtype=int)
+    rebuilt={name:set() for name in encoder['vocab']}
+    locations={name:i for i,name in enumerate(columns)}
+    for receipt in marker['feature_receipts']:
+        path=Path(receipt['path'])
+        assert v.sha256(path)==receipt['sha256']
+        names=receipt['columns'];seen=np.zeros(len(ids),bool)
+        for batch in pq.ParquetFile(path).iter_batches(batch_size=8192,columns=[ID,*names],use_threads=False):
+            f=batch.to_pandas();p=ids.get_indexer(f[ID]);keep=p>=0;positions=p[keep]
+            assert not seen[positions].any() and len(np.unique(positions))==len(positions)
+            seen[positions]=True
+            fit=fitids.get_indexer(f[ID])>=0
+            for name in names:
+                if name in rebuilt:
+                    rebuilt[name].update(f.loc[fit,name].dropna().astype(str).tolist())
+                    mapping={word:i+2 for i,word in enumerate(encoder['vocab'][name])}
+                    values=f.loc[keep,name]
+                    values=values.astype('string').map(mapping).fillna(1).where(values.notna(),0).to_numpy('float32')
+                else:
+                    values=pd.to_numeric(f.loc[keep,name]).to_numpy(dtype='float32',na_value=np.nan)
+                    values[~np.isfinite(values)]=np.nan
+                    if 'screening_230/data/interim/features' not in path.as_posix() and 'sequence_flatten' not in path.as_posix():values[np.isnan(values)]=-999999.
+                matrix[positions,locations[name]]=values
+        for name in names:counts[locations[name]]+=int(seen.sum())
+        guard()
+    assert np.all(counts==len(ids))
+    assert {name:sorted(words) for name,words in rebuilt.items()}==encoder['vocab']
+    allids=pd.Index(pd.concat([rows['fit'][ID],rows['tune'][ID]],ignore_index=True))
+    raw_observed=np.full(len(allids),np.nan)
+    seen=np.zeros(len(allids),bool)
+    clock='takeoff_minus_LOBT_flt'
+    for path in sorted(v.common.RAW.glob('training_*.parquet')):
+        assert v.sha256(path)==v.read_json(ROOT/'private_runs/submission_v2/protocol.json')['raw_hashes'][path.name]
+        for batch in pq.ParquetFile(path).iter_batches(batch_size=8192,columns=[ID,'PHASE_mvt',TIME,'LOBT_flt'],use_threads=False):
+            f=batch.to_pandas();pos=allids.get_indexer(f[ID]);keep=pos>=0
+            f=f.loc[keep];p=pos[keep]
+            assert f.PHASE_mvt.eq('DEP').all() and not seen[p].any()
+            seen[p]=True
+            raw_observed[p]=(pd.to_datetime(f[TIME],utc=True)-pd.to_datetime(f.LOBT_flt,utc=True)).dt.total_seconds().to_numpy(dtype='float32').astype(float)
+    assert seen.all()
+    proxy=np.concatenate([rows['fit'].proxy_sec.to_numpy(float),rows['tune'].proxy_sec.to_numpy(float)])
+    anchors=np.where(np.isfinite(raw_observed),raw_observed,proxy)
+    nfit=len(fitids)
+    expected_tune=raw_observed[nfit:].astype('float32')
+    np.testing.assert_array_equal(matrix[:,columns.index(clock)],expected_tune)
+    # Independently verify the entire fit anchor column against bound base-feature sources.
+    fit_observed=np.full(nfit,np.nan);fit_seen=np.zeros(nfit,bool)
+    for source in marker['feature_receipts']:
+        if clock not in source['columns']:continue
+        assert 'screening_230/data/interim/features' in Path(source['path']).as_posix()
+        for batch in pq.ParquetFile(source['path']).iter_batches(batch_size=8192,columns=[ID,clock],use_threads=False):
+            f=batch.to_pandas();pos=fitids.get_indexer(f[ID]);keep=pos>=0
+            assert not fit_seen[pos[keep]].any();fit_seen[pos[keep]]=True
+            fit_observed[pos[keep]]=f.loc[keep,clock].to_numpy('float32').astype(float)
+    assert fit_seen.all()
+    np.testing.assert_array_equal(fit_observed,raw_observed[:nfit])
+    diagnostic=dict(lobt_finite_fit=int(np.isfinite(raw_observed[:nfit]).sum()),lobt_finite_tune=int(np.isfinite(raw_observed[nfit:]).sum()),fallback_fit=int((~np.isfinite(raw_observed[:nfit])).sum()),fallback_tune=int((~np.isfinite(raw_observed[nfit:])).sum()),anchor_min=float(anchors.min()),anchor_max=float(anchors.max()),fit_anchor_hash=v.object_hash(anchors[:nfit].tolist()),tune_anchor_hash=v.object_hash(anchors[nfit:].tolist()))
+    assert diagnostic==marker['anchor_diagnostics']==v.read_json(folder/'anchor_diagnostics.json')
+    model=lgb.Booster(model_file=str(folder/'model.txt'))
+    assert model.feature_name()==columns
+    residual=model.predict(matrix,num_threads=1)
+    pred=residual+anchors[nfit:]
+    raw_y=tune[TARGET].to_numpy(float)
+    np.testing.assert_allclose(pred-raw_y,residual-(raw_y-anchors[nfit:]),rtol=1e-10,atol=1e-8)
+    saved=pd.read_parquet(folder/'tune.parquet')
+    np.testing.assert_array_equal(saved[ID],ids)
+    np.testing.assert_array_equal(saved.prediction_sec,pred)
+    np.testing.assert_array_equal(saved.anchor_sec,anchors[nfit:])
+    old=ROOT/'private_runs/breakthrough_20260916/deeper_context_union'/f'lightgbm_leaf63_sequence_aobt_allfinite_{fold}_s20260916'
+    oldmarker=v.read_json(old/'manifest.json')
+    assert oldmarker['feature_columns']==columns[:387] and oldmarker['fit']['params']==marker['params']==protocol['params']
+    assert v.sha256(old/'tune_predictions.parquet')==oldmarker['outputs']['tune_predictions.parquet']
+    control=pd.read_parquet(old/'tune_predictions.parquet')
+    np.testing.assert_array_equal(control[ID],ids)
+    y=tune[TARGET].to_numpy(float);days=tune[TIME].dt.floor('D').to_numpy()
+    matched=v.paired(y,control.prediction_sec.to_numpy(),pred,days)
+    ordinary=tune.proxy_sec.between(0,7200).to_numpy()
+    ensemble=ROOT/'private_runs/breakthrough_20260916/models/context_gate/final_simplex9_v1'
+    prep=v.read_json(ensemble/'preparation.json')['folds'][fold]
+    alignedpath=ensemble/f'{fold}_aligned_tune.parquet'
+    assert v.sha256(alignedpath)==prep['aligned_tune_sha256']
+    w=v.read_json(ensemble/f'{fold}_weights.json')
+    assert w==prep['weights']
+    aligned=pd.read_parquet(alignedpath)
+    np.testing.assert_array_equal(aligned[ID],ids[ordinary])
+    np.testing.assert_array_equal(aligned.lgb63_union,control.prediction_sec.to_numpy()[ordinary])
+    baseline=aligned[w['experts']].to_numpy()@np.asarray(w['global'])
+    neuralroot=ROOT/'private_runs/tail240_20260916/state/neural_context'/('v1' if fold=='F1' else 'v3')/fold
+    assert v.sha256(neuralroot/'manifest.json')==protocol['neural_controls'][fold]
+    neuralmarker=v.read_json(neuralroot/'manifest.json')
+    assert v.sha256(neuralroot/'tune_predictions.parquet')==neuralmarker['outputs']['tune_predictions.parquet']
+    neural=pd.read_parquet(neuralroot/'tune_predictions.parquet').set_index(ID).loc[aligned[ID]]
+    np.testing.assert_array_equal(neural[TARGET],aligned[TARGET])
+    baseline+=w['global'][w['experts'].index('tabm_ple8')]*(neural.prediction_sec.to_numpy()-aligned.tabm_ple8.to_numpy())
+    blend=.75*baseline+.25*pred[ordinary]
+    comparison=v.paired(y[ordinary],baseline,blend,days[ordinary])
+    np.testing.assert_allclose(-comparison['delta_rmse'],marker['ordinary_fixed25']['gain'],rtol=1e-11,atol=1e-10)
+    receipt=dict(status='passed',source_sha256=v.sha256(__file__),manifest_sha256=v.sha256(folder/'manifest.json'),protocol_sha256=v.sha256(BASE/'protocol.json'),cohorts=marker['ids'],all_native_predictions_exact=True,all_fit_vocabularies_exact=True,all_fit_tune_anchors_exact_to_raw_timestamp_float32=True,anchor_diagnostics=diagnostic,current387_baseline_composition_exact=True,control_matches_original_union_and_global9=True,matched=matched,ordinary_fixed25=comparison,peak_bytes=guard(),limitation='All fit and tune LOBT anchors checked directly against original raw timestamps and exact base-feature float32 conversions; all fit vocabularies and native candidate predictions reconstructed. Original control vector hash/parity checked; control model not rerun here.')
+    v.write_json(out/'receipt.json',receipt)
+    print('VERIFIED',fold,'matched_gain',-matched['delta_rmse'],'fixed25gain',-comparison['delta_rmse'],'peak',receipt['peak_bytes'],flush=True)
+
+
+if __name__=='__main__':
+    parser=argparse.ArgumentParser();parser.add_argument('--fold',choices=['F1','F3'],required=True)
+    with threadpool_limits(1):main(parser.parse_args().fold)

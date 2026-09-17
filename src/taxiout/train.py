@@ -5,10 +5,11 @@ import numpy as np
 import pandas as pd
 import psutil
 
-from taxiout.artifacts import Run, object_hash, read_json, write_json
+from taxiout.artifacts import Run, object_hash, read_json, source_hashes, write_json
 from taxiout.availability import POLICY_VERSION
 from taxiout.cache import load_training
 from taxiout.config import ROOT, load_config
+from taxiout.paths import artifact_path
 from taxiout.features.pipeline import FeaturePipeline
 from taxiout.io import verified_manifest
 from taxiout.metrics import evaluate
@@ -31,23 +32,23 @@ def sample_positions(x, positions, size, seed):
 
 def find_run(config, fold, input_manifest):
     config_hash = object_hash(config)
-    for path in sorted((ROOT / "models").glob("*/manifest.json"), reverse=True):
+    current_sources = source_hashes()
+    for path in sorted(artifact_path("models").glob("*/manifest.json"), reverse=True):
         record = read_json(path)
         if record.get("status") == "complete" and record.get("fold") == fold and record.get("config_hash") == config_hash and record.get("input_manifest_hash") == object_hash(input_manifest):
-            return path.parent, record
+            if record.get("source_hashes") == current_sources:
+                return path.parent, record
     return None
 
 
 def append_experiment(manifest, metrics):
-    file = ROOT / "reports/experiments.csv"
-    rows = pd.read_csv(file).to_dict("records") if file.exists() else []
-    rows.append({"run_id": manifest["run_id"], "candidate": manifest["config"]["candidate"], "fold": manifest.get("fold"),
+    record = {"run_id": manifest["run_id"], "candidate": manifest["config"]["candidate"], "fold": manifest.get("fold"),
                  "config_hash": manifest["config_hash"], "training_rows": manifest["training_rows"],
                  "rmse_sec": metrics["overall"]["rmse_sec"], "serialized_rmse_sec": metrics["serialized"]["rmse_sec"],
                  "missing_rmse_sec": metrics["slices"].get("proxy_status", {}).get("missing", {}).get("rmse_sec"),
                  "n": metrics["overall"]["n"], "sse": metrics["overall"]["sse"], "runtime_sec": manifest["runtime_sec"],
-                 "peak_rss_bytes": manifest["peak_rss_bytes"]})
-    pd.DataFrame(rows).to_csv(file, index=False)
+                 "peak_rss_bytes": manifest["peak_rss_bytes"]}
+    write_json(artifact_path("reports/experiments", manifest["run_id"] + ".json"), record)
 
 
 def run_baselines(x, meta, labels, idx, config, run):
@@ -75,7 +76,7 @@ def evaluate_candidate(config, fold, confirm=False):
         raise ValueError("C1 requires confirm and a frozen release config")
     manifest = verified_manifest(config)
     if confirm:
-        freeze = read_json(ROOT / "reports/freeze.json")
+        freeze = read_json(artifact_path("reports/freeze.json"))
         if freeze["config_hash"] != object_hash(config):
             raise ValueError("Configuration differs from pre-confirmation freeze")
         if find_run(config, "C1", manifest):
@@ -96,7 +97,14 @@ def evaluate_candidate(config, fold, confirm=False):
     fallback_config = {**config, "candidate": "direct", "proxy_min": 0, "proxy_max": 7200}
     fallback_config.pop("missing_specialist", None)
     fallback_config.pop("long_proxy_correction", None)
+    fallback_config.pop("rome_schedule_residual", None)
+    base_config = dict(config)
+    base_config.pop("rome_schedule_residual", None)
+    base_run = find_run(base_config, fold, manifest) if config.get("rome_schedule_residual") else None
+    if config.get("rome_schedule_residual") and base_run is None:
+        raise ValueError("Rome screen requires a completed compatible baseline on this fold")
     existing = find_run(fallback_config, fold, manifest) if is_residual_architecture or config["candidate"] == "direct_specialist" else None
+    existing = base_run or existing
     if existing:
         pipeline, models, _ = load_bundle(existing[0])
         training["direct_reused_from"] = existing[1]["run_id"]
@@ -114,6 +122,12 @@ def evaluate_candidate(config, fold, confirm=False):
     requested_components = ["residual"] if is_residual_architecture else []
     if config["candidate"] == "direct_specialist" or config.get("missing_specialist", False):
         requested_components.append("missing")
+    if base_run:
+        if base_run[1]["split"]["split_hash"] != split["split_hash"]:
+            raise ValueError("Baseline reuse split mismatch")
+        iterations = dict(base_run[1]["iterations"])
+        training["base_reused_from"] = base_run[1]["run_id"]
+        requested_components = []
     for route in requested_components:
         status = proxy_status(meta["proxy_sec"], config)
         is_residual = route == "residual"
@@ -154,6 +168,20 @@ def evaluate_candidate(config, fold, confirm=False):
             training[route + "_refit"]["label_id_hash"] = object_hash(x.index[sr].tolist())
             if not is_residual:
                 pipeline.fit_features(x.iloc[np.union1d(refit, sr)])
+    if config.get("rome_schedule_residual"):
+        # Learn on eligible missing-clock rows; route only by observed airport and clocks.
+        subset = (proxy_status(meta["proxy_sec"], config) == "missing") & np.isfinite(meta["schedule_sec"].to_numpy())
+        sf, st, sr = [positions[subset[positions]] for positions in [idx["fit"], tune, idx["refit"]]]
+        if min(len(sf), len(st)) < 50:
+            raise ValueError("Insufficient schedule-head fit/tune support")
+        target = residual_target(y, meta["schedule_sec"])
+        tuned, training["rome_schedule_tuning"] = fit_model(x.iloc[sf], target[sf], config, tuning=(x.iloc[st], target[st]))
+        iterations["rome_schedule"] = tuned.tree_count_
+        del tuned
+        gc.collect()
+        models["rome_schedule"], training["rome_schedule_refit"] = fit_model(x.iloc[sr], target[sr], config, iterations=iterations["rome_schedule"])
+        training["rome_schedule_refit"]["label_id_hash"] = object_hash(x.index[sr].tolist())
+        training["rome_schedule_refit"]["rome_rows"] = int(meta.iloc[sr]["ADEP_mvt"].eq("LIRF").sum())
     predictions = predict_features(pipeline, models, config, x.iloc[score], meta.iloc[score])
     predictions["candidate"], predictions["fold"] = config["candidate"], fold
     metrics, errors = evaluate(predictions, labels.iloc[score])
@@ -177,7 +205,7 @@ def evaluate_candidate(config, fold, confirm=False):
         baseline_limit = min(baseline[name]["overall"]["rmse_sec"] for name in acceptance["beat_best_baseline"])
         missing_limit = baseline["airport_mean"]["slices"]["proxy_status"]["missing"]["rmse_sec"] * acceptance["missing_proxy_rmse_max_relative_to_airport_mean"]
         accepted = metrics["overall"]["rmse_sec"] < baseline_limit and metrics["slices"]["proxy_status"]["missing"]["rmse_sec"] <= missing_limit
-        write_json(ROOT / "reports/confirmation.json", {"run_id": complete["run_id"], "config_hash": object_hash(config),
+        write_json(artifact_path("reports/confirmation.json"), {"run_id": complete["run_id"], "config_hash": object_hash(config),
                    "input_manifest_hash": object_hash(manifest), "status": "complete", "metrics": metrics,
                    "accepted": accepted, "baseline_rmse_limit": baseline_limit, "missing_proxy_rmse_limit": missing_limit})
         if not accepted:
@@ -187,7 +215,9 @@ def evaluate_candidate(config, fold, confirm=False):
 
 
 def train_final(config, output_name=None):
-    freeze = read_json(ROOT / "reports/freeze.json")
+    if config.get("rome_schedule_residual"):
+        raise ValueError("Rome schedule head is screening-only until F2/G1 and seed validation")
+    freeze = read_json(artifact_path("reports/freeze.json"))
     if freeze["config_hash"] != object_hash(config):
         raise ValueError("Final config differs from freeze")
     from taxiout.artifacts import sha256
@@ -195,7 +225,7 @@ def train_final(config, output_name=None):
         if file.startswith("src/") and sha256(ROOT / file) != digest:
             raise ValueError(f"Source changed after freeze: {file}")
     manifest = verified_manifest(config)
-    confirmation = read_json(ROOT / "reports/confirmation.json")
+    confirmation = read_json(artifact_path("reports/confirmation.json"))
     if not confirmation.get("accepted") or confirmation["status"] != "complete" or confirmation["config_hash"] != object_hash(config) or confirmation["input_manifest_hash"] != object_hash(manifest):
         raise ValueError("Frozen candidate has no completed confirmation")
     run = Run(output_name or "release", config, manifest)

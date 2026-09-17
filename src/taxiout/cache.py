@@ -4,6 +4,7 @@ from importlib.metadata import version
 from taxiout.artifacts import object_hash, read_json, sha256, write_json
 from taxiout.availability import POLICY_VERSION, make_observations
 from taxiout.config import ROOT
+from taxiout.paths import artifact_path, external_path
 from taxiout.features.pipeline import FeaturePipeline
 from taxiout.io import audited_departures, concat_frames, read_raw, training_paths
 from taxiout.schema import FEATURE_INPUTS, FLIGHT_ID, ID, MOVEMENT, PHASE, TARGET, duration, unique_ids
@@ -20,7 +21,7 @@ def cache_identity(config, manifest):
 
 def prepare(config, manifest):
     identity = cache_identity(config, manifest)
-    out = ROOT / "data/interim/features" / object_hash(identity)[:16]
+    out = artifact_path("data/interim/features", object_hash(identity)[:16])
     out.mkdir(parents=True, exist_ok=True)
     paths = training_paths(config)
     pipeline = FeaturePipeline(config)
@@ -43,7 +44,8 @@ def prepare(config, manifest):
     for path in pending:
         cache = out / path.name
         marker = cache.with_suffix(".json")
-        obs, _, _ = make_observations(read_raw(path, FEATURE_INPUTS))
+        columns = [*FEATURE_INPUTS, *(["FLIGHT_mvt"] if config["features"].get("flight_prefix") else [])]
+        obs, _, _ = make_observations(read_raw(path, columns))
         local_context = context
         if context is not None and config["coverage"] == "month-isolated":
             months = (obs[MOVEMENT].dt.year * 12 + obs[MOVEMENT].dt.month).unique()
@@ -68,9 +70,11 @@ def load_training(config, manifest):
 
 
 def ranking_features(config, path, pipeline):
-    obs, _, _ = make_observations(read_raw(path, FEATURE_INPUTS))
+    columns = [*FEATURE_INPUTS, *(["FLIGHT_mvt"] if config["features"].get("flight_prefix") else [])]
+    obs, _, _ = make_observations(read_raw(external_path(path), columns))
     x = pipeline.transform(obs)
     dep = obs.loc[obs[PHASE].eq("DEP")]
     meta = dep[[ID, FLIGHT_ID, "ADEP_mvt", MOVEMENT]].copy().reset_index(drop=True)
     meta["proxy_sec"] = duration(dep[MOVEMENT], dep["AOBT_3_flt"]).to_numpy()
+    meta["schedule_sec"] = duration(dep[MOVEMENT], dep["SCHED_TIME_UTC_mvt"]).to_numpy()
     return x, meta

@@ -6,12 +6,14 @@ from taxiout.artifacts import inference_source_hashes, object_hash, read_json, s
 from taxiout.availability import POLICY_VERSION
 from taxiout.cache import ranking_features
 from taxiout.config import ROOT
+from taxiout.paths import external_path
 from taxiout.features.pipeline import FeaturePipeline
 from taxiout.models.residual import combine, proxy_status
 from taxiout.schema import ID
 
 
 def save_bundle(path, pipeline, models, config):
+    path = external_path(path)
     for name, model in models.items():
         model.save_model(str(path / (name + ".cbm")))
     state = {"policy": POLICY_VERSION, "config": config, "columns": pipeline.columns,
@@ -23,7 +25,7 @@ def save_bundle(path, pipeline, models, config):
 
 
 def load_bundle(path, allow_incomplete=False):
-    path = ROOT / path
+    path = external_path(path)
     manifest = read_json(path / "manifest.json")
     if not allow_incomplete and manifest["status"] != "complete":
         raise ValueError("Refusing incomplete model run")
@@ -73,6 +75,13 @@ def predict_features(pipeline, models, config, x, meta):
         if mask.any():
             values[mask] = models["missing"].predict(x.iloc[np.flatnonzero(mask)], thread_count=config["threads"])
             route[mask] = "specialist_missing"
+    if config.get("rome_schedule_residual", False) and "rome_schedule" in models:
+        mask = ((status == "missing") & meta["ADEP_mvt"].eq("LIRF").to_numpy()
+                & np.isfinite(meta["schedule_sec"].to_numpy()))
+        if mask.any():
+            values[mask] = (meta.loc[mask, "schedule_sec"].to_numpy()
+                            + models["rome_schedule"].predict(x.iloc[np.flatnonzero(mask)], thread_count=config["threads"]))
+            route[mask] = "rome_schedule_residual"
     if not np.isfinite(values).all():
         raise ValueError("Nonfinite model prediction")
     output = meta.copy()
@@ -86,10 +95,10 @@ def predict_features(pipeline, models, config, x, meta):
 
 def predict_candidate(bundle, input_path, output=None):
     pipeline, models, config = load_bundle(bundle)
-    x, meta = ranking_features(config, ROOT / input_path, pipeline)
+    x, meta = ranking_features(config, external_path(input_path), pipeline)
     predictions = predict_features(pipeline, models, config, x, meta)
     if output:
-        path = ROOT / output
+        path = external_path(output)
         path.parent.mkdir(parents=True, exist_ok=True)
         predictions.to_parquet(path, index=False)
     return predictions

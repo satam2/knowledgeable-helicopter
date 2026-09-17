@@ -6,6 +6,7 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 
 from taxiout.artifacts import sha256, write_json
+from taxiout.paths import external_path
 from taxiout.schema import ID, TARGET, align, unique_ids
 
 
@@ -41,7 +42,7 @@ def validate_submission(file, template, expected=None):
 
 
 def build_submission(template, predictions, output):
-    template, output = Path(template), Path(output)
+    template, output = external_path(template), external_path(output)
     schema = pq.read_schema(template).remove_metadata()
     if schema.names != [ID, TARGET] or schema.field(ID).type != pa.float64() or schema.field(TARGET).type != pa.int32():
         raise ValueError("Template schema changed; review serialization policy")

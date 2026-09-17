@@ -3,7 +3,7 @@ from pathlib import Path
 import yaml
 
 def repository_root():
-    candidates = [Path.cwd(), *Path.cwd().parents, Path(__file__).resolve().parents[2]]
+    candidates = [Path(__file__).resolve().parents[2], Path.cwd(), *Path.cwd().parents]
     for candidate in candidates:
         if (candidate / "pyproject.toml").is_file() and (candidate / "configs").is_dir():
             return candidate

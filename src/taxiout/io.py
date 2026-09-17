@@ -6,6 +6,7 @@ from pandas.api.types import union_categoricals
 
 from taxiout.artifacts import object_hash, read_json, sha256
 from taxiout.config import ROOT
+from taxiout.paths import artifact_path, raw_root
 
 
 def read_raw(path, columns=None):
@@ -25,12 +26,12 @@ def concat_frames(frames):
 
 
 def training_paths(config):
-    return sorted((ROOT / config["raw_dir"]).glob("training_*.parquet"))
+    return sorted(raw_root(config).glob("training_*.parquet"))
 
 
 def audited_departures(manifest=None, columns=None):
-    report = read_json(ROOT / "reports/data_audit.json")
-    path = ROOT / "data/interim/audit/departures.parquet"
+    report = read_json(artifact_path("reports/data_audit.json"))
+    path = artifact_path("data/interim/audit/departures.parquet")
     if report.get("artifacts", {}).get(path.name) != sha256(path):
         raise ValueError("Audited departure cache missing/corrupt; rerun audit")
     if manifest is not None and report["input_manifest_hash"] != object_hash(manifest):
@@ -39,8 +40,8 @@ def audited_departures(manifest=None, columns=None):
 
 
 def verified_manifest(config):
-    manifest = read_json(ROOT / "reports/input_manifest.json")
-    current = [*training_paths(config), ROOT / config["raw_dir"] / "ranking.parquet", ROOT / config["raw_dir"] / "submitting.parquet"]
+    manifest = read_json(artifact_path("reports/input_manifest.json"))
+    current = [*training_paths(config), raw_root(config) / "ranking.parquet", raw_root(config) / "submitting.parquet"]
     actual = {p.name: sha256(p) for p in current}
     expected = {p["file"]: p["sha256"] for p in manifest["files"]}
     if actual != expected:

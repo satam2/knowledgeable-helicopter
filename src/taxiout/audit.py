@@ -7,6 +7,7 @@ import pyarrow.parquet as pq
 from taxiout.artifacts import environment, object_hash, sha256, utc_now, write_json
 from taxiout.availability import assert_observations, make_observations
 from taxiout.config import ROOT
+from taxiout.paths import artifact_path, raw_root
 from taxiout.io import concat_frames, read_raw, training_paths
 from taxiout.schema import BLOCK, CATEGORIES, FLIGHT_ID, ID, MOVEMENT, PHASE, TARGET, duration, target_identity, unique_ids, utc_period_strings
 
@@ -17,7 +18,8 @@ def audit(config):
     expected_files = {f"training_{start:%Y-%m-%d}_{end:%Y-%m-%d}.parquet" for start, end in zip(boundaries[:-1], boundaries[1:])}
     if {p.name for p in paths} != expected_files:
         raise ValueError("Expected the twelve official 2025 training partitions; verify a changed pack before proceeding")
-    root = ROOT / config["raw_dir"]
+    root = raw_root(config)
+    artifact_path("reports").mkdir(parents=True, exist_ok=True)
     manifest = {"created_utc": utc_now(), "files": []}
     phases, missing, departure_missing, vocabulary = Counter(), Counter(), Counter(), {c: set() for c in CATEGORIES}
     frames, all_ids, anomalies = [], [], []
@@ -43,6 +45,7 @@ def audit(config):
         dep = raw.loc[raw[PHASE].eq("DEP")].copy()
         departure_missing.update(dep.isna().sum().to_dict())
         dep["proxy_sec"] = duration(dep[MOVEMENT], dep["AOBT_3_flt"])
+        dep["schedule_sec"] = duration(dep[MOVEMENT], dep["SCHED_TIME_UTC_mvt"])
         for col in vocabulary:
             vocabulary[col].update(dep[col].dropna().astype(str))
         suspect = dep[TARGET].le(0) | dep[TARGET].gt(7200) | dep["proxy_sec"].lt(0) | dep["proxy_sec"].gt(7200)
@@ -51,7 +54,7 @@ def audit(config):
         flagged["over_two_hours"] = flagged[TARGET].gt(7200)
         flagged["nm_missing"] = flagged["AOBT_3_flt"].isna()
         anomalies.append(flagged)
-        frames.append(dep[[ID, FLIGHT_ID, "ADEP_mvt", MOVEMENT, TARGET, "proxy_sec", "STAND_mvt", "RUNWAY_mvt"]])
+        frames.append(dep[[ID, FLIGHT_ID, "ADEP_mvt", MOVEMENT, TARGET, "proxy_sec", "schedule_sec", "STAND_mvt", "RUNWAY_mvt"]])
         print(f"Audited {path.name}: {len(raw):,} movements", flush=True)
     unique_ids(pd.concat(all_ids, ignore_index=True))
     dep = concat_frames(frames)
@@ -101,8 +104,8 @@ def audit(config):
                    "ranking_departure_nonnull_pct": float(rd[col].notna().mean() * 100),
                    "ranking_arrival_nonnull_pct": float(ra[col].notna().mean() * 100),
                    "training_category_unique": len(vocabulary[col]) if col in vocabulary else None}
-                  for col in ranking]).to_csv(ROOT / "reports/field_inventory.csv", index=False)
-    out = ROOT / "data/interim/audit"
+                  for col in ranking]).to_csv(artifact_path("reports/field_inventory.csv"), index=False)
+    out = artifact_path("data/interim/audit")
     out.mkdir(parents=True, exist_ok=True)
     pd.concat(anomalies, ignore_index=True).to_parquet(out / "anomalies.parquet", index=False)
     dep.drop(columns=["STAND_mvt", "RUNWAY_mvt"]).to_parquet(out / "departures.parquet", index=False)
@@ -110,6 +113,6 @@ def audit(config):
     manifest["ranking_departure_months"] = result["ranking_departure_months"]
     result["input_manifest_hash"] = object_hash({k: v for k, v in manifest.items() if k != "created_utc"})
     result["artifacts"] = {p.name: sha256(p) for p in [out / "departures.parquet", out / "anomalies.parquet"]}
-    write_json(ROOT / "reports/input_manifest.json", manifest)
-    write_json(ROOT / "reports/data_audit.json", result)
+    write_json(artifact_path("reports/input_manifest.json"), manifest)
+    write_json(artifact_path("reports/data_audit.json"), result)
     return result

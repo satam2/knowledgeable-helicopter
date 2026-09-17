@@ -1,0 +1,42 @@
+{
+  "status": "accepted_v3_reference",
+  "recorded_date": "2026-09-16",
+  "local_development_rmse_seconds": 268.662991126314,
+  "official_rmse_seconds": 278.0146,
+  "accepted_rows": 344841,
+  "submission_sha256": "a91b5f24dd4560bd0bc4f2f5297e0eac3dae529976ac57430a62c333cfd70a1f",
+  "local_validation_warning": "Repeatedly exposed July/November 2025 development cohorts; not untouched validation or an official-score forecast.",
+  "ordinary_route": {
+    "condition": "finite proxy in [0,7200] inclusive",
+    "ranking_rows": 339377,
+    "weights": {
+      "catboost_combined_225": 0.15358044180725888,
+      "lgb63_sequence8_449": 0.035463785490294546,
+      "lgb63_union_387": 0.43858699908300264,
+      "tabm_combined_225": 0.10621304389365033,
+      "tabm_ple8_387": 0.26615572972579365
+    }
+  },
+  "finite_nonordinary_route": {
+    "model": "lgb225",
+    "ranking_rows": 174
+  },
+  "missing_route": {
+    "ranking_rows": 5290,
+    "weights": {"inherited_v2": 0.5625, "extra_trees": 0.1875, "normalized": 0.25}
+  },
+  "new_finite_fit_rows": 2062577,
+  "new_missing_fit_rows": 22470,
+  "full_year_training_counts": {
+    "tabm225_epochs": 22,
+    "cat225_trees": 4594,
+    "lgb225_trees": 2117,
+    "lgb387_trees": 2250,
+    "lgb449_trees": 2256,
+    "ple387_epochs": 19,
+    "missing_normalized_trees": 111,
+    "missing_extra_trees": 300
+  },
+  "serialization": "Exact template IDs/order; nearest-even int32 rounding; no clipping.",
+  "scope": "Human-readable recipe record, not a runnable training config. Full private component protocols define preprocessing and inherited policies."
+}

@@ -1,5 +1,22 @@
 # PRC 2026 Taxi-Out Estimation
 
+## Current Research Handoff
+
+**Start with [TEAM_HANDOFF.md](TEAM_HANDOFF.md).** The accepted V3 ensemble scores
+**278.0146 seconds official RMSE** and **268.662991 seconds on exposed local
+development folds**. The later chronological robustness candidates were rejected;
+they did not replace V3. Neither result establishes an untouched local holdout.
+
+This branch includes the later research source snapshot, current model recipe,
+research decisions, dependency pins, and continuation instructions. Private data,
+fitted weights, caches, and individual predictions must be obtained separately.
+The [handoff](TEAM_HANDOFF.md) explains the required external workspace layout.
+
+**Historical baseline below:** the older scores, pending-upload statements,
+local artifact paths and reproduction commands below describe the original
+release. They do not reproduce V3 or override this branch's external-artifact
+requirements. Consult the handoff before running a command.
+
 Python and CatBoost solution for estimating departure taxi-out time in the
 [PRC 2026 Data Challenge](https://prc-data-challenge-2026.netlify.app/).
 The pipeline audits the supplied data, builds features, trains and evaluates

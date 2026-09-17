@@ -46,3 +46,29 @@ reports/rules/*.html
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Later research stays outside the checkout; only code and aggregate notes ship.
+*.joblib
+*.pickle
+*.pkl
+*.float32
+*.npy
+*.npz
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.zip
+*.7z
+/private_runs/
+/private_analysis/
+/output/
+/review_work/
+/team_handoff/
+.review-venv/
+.breakthrough-venv/
+
+# Historical source adapters live in directories named models; publish code only.
+!research_snapshot/**/
+!research_snapshot/**/*.py

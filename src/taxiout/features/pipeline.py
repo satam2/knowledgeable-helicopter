@@ -41,6 +41,10 @@ class FeaturePipeline:
         for location in ["stand", "runway"]:
             col = location.upper() + "_mvt"
             x["airport_" + location] = ((dep["ADEP_mvt"].astype(str) + "|" + dep[col].astype(str)) if legacy else token(dep["ADEP_mvt"]) + token(dep[col])).astype("category")
+        if settings.get("flight_prefix", False):
+            prefix = dep["FLIGHT_mvt"].astype("string").str.extract(r"^([A-Z]{2,3})(?=[0-9])", expand=False)
+            x["flight_prefix"] = token(prefix).astype("category")
+            x["flight_prefix_unparsed"] = prefix.isna().astype(float)
         x = pd.concat([x, calendar_features(dep[MOVEMENT], dep["ADEP_mvt"], settings["local_calendar"])], axis=1)
         if settings["clocks"]:
             clocks = clock_features(dep, settings["quality"])

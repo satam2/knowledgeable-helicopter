@@ -1,0 +1,3 @@
+extends: release.yaml
+features:
+  flight_prefix: true

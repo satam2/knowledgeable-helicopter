@@ -11,6 +11,7 @@ from pathlib import Path
 import psutil
 
 from taxiout.config import ROOT
+from taxiout.paths import artifact_path, external_path
 
 
 def sha256(path):
@@ -26,7 +27,7 @@ def object_hash(value):
 
 
 def write_json(path, value):
-    path = Path(path)
+    path = external_path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     temporary = path.with_suffix(path.suffix + ".tmp")
     temporary.write_text(json.dumps(value, indent=2, sort_keys=True, default=str, allow_nan=False) + "\n", encoding="utf-8")
@@ -50,7 +51,7 @@ def source_hashes():
 
 def inference_source_hashes():
     package = Path(__file__).resolve().parent
-    paths = [*package.glob("features/*.py"), package / "availability.py", package / "schema.py", package / "models/residual.py"]
+    paths = [*package.glob("features/*.py"), package / "availability.py", package / "schema.py", package / "models/residual.py", package / "predict.py"]
     return {"src/taxiout/" + p.relative_to(package).as_posix(): sha256(p) for p in sorted(paths)}
 
 
@@ -82,7 +83,7 @@ class Run:
         self.started = time.monotonic()
         stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%f")
         self.id = f"{name}-{stamp}-{object_hash(config)[:8]}"
-        self.path = ROOT / "models" / self.id
+        self.path = artifact_path("models", self.id)
         self.path.mkdir(parents=True)
         self.manifest = {
             "run_id": self.id, "status": "incomplete", "config": config,

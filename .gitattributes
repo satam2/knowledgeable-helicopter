@@ -10,3 +10,6 @@ pyproject.toml -text
 requirements.lock.txt -text
 # This generated configuration was frozen with CRLF endings.
 configs/release.yaml whitespace=cr-at-eol
+
+# Research manifests bind the original external source bytes exactly.
+research_snapshot/review_work/** -text

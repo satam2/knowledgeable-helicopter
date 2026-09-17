@@ -3,6 +3,7 @@ import pandas as pd
 
 from taxiout.artifacts import object_hash, write_json
 from taxiout.config import ROOT, load_config
+from taxiout.paths import artifact_path
 from taxiout.io import audited_departures
 from taxiout.schema import FLIGHT_ID, ID, MOVEMENT, unique_ids, utc
 
@@ -41,5 +42,5 @@ def make_fold(meta, spec):
 def make_splits(path="configs/folds.yaml"):
     meta = audited_departures(columns=[ID, FLIGHT_ID, MOVEMENT])
     reports = {name: make_fold(meta, spec)[1] for name, spec in load_config(path).items()}
-    write_json(ROOT / "reports/splits.json", reports)
+    write_json(artifact_path("reports/splits.json"), reports)
     return reports
