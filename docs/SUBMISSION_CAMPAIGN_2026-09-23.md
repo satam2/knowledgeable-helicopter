@@ -51,6 +51,7 @@ of a frozen candidate, not select weights, rows, rules, or the next variant.
 | Destination-context F1, September 24 | Matched July complete gain +0.008268 sec; paired-day interval crosses zero | Not submitted | Stop before F3; influence checks fail |
 | Stand-arrival missing-NM F1, September 24 | July +0.588 sec vs base, +3.260 vs airport control; June regresses | Not submitted | Stop before F3; July base interval and both top-ten checks fail |
 | Clean nine-component F1 control, September 24 | June/July/December complete RMSE 318.758/334.130/234.744; earlier Jan-Apr fit and May weights | Not submitted | Diagnostic reference only; no matched candidate gain |
+| Source-aware shared-trunk F1, September 24 | July joint 338.445 vs clean base 334.130 and rich-only 339.893; December joint 241.275 vs base 234.744 | Not submitted | Stop before F3; July robustness and December transport fail vs base |
 
 V4 already used at least one September 23 submission slot. The prior V4 bucket
 preflight counted zero same-UTC-day objects, but the official reset boundary is
@@ -143,20 +144,31 @@ F1 control passes its lineage, ID and complete-panel validity checks; only a
 subsequent candidate-versus-control comparison uses the July/December gain
 gate. Do not submit the control merely because it has a new fit date.
 
-The next source-discovery hypothesis must offer a *new observable distinction*
-for the winter missing-NM/Rome errors, not another coefficient or generic model
-size. A separate, bounded modeling question is now specified: can known-source
-labels improve a rich missing-source model through shared parameters? Its
-[source-aware design](../../review_work/lead235_20260924/source_aware_design_v1/PROTOCOL.md)
-compares identical-capacity 451-field missing models with versus without
-finite-label gradients in a shared trunk. It replaces only the 0.25 normalized
-missing component, against both the matched rich-only arm and the unchanged
-clean V3-like complete control. This is a design and synthetic canary, **not**
-a fitted model or demonstrated gain. It requires the independently verified
-nine-component clean F1/F3 reference, an executable frozen fit protocol, and a
-generalized missing-route scorer before evaluation. The five-second robust
-complete-cohort gate applies against both comparators; the previously failed
-pooled model and fragile rich-only tune gains make success uncertain.
+The source-aware shared-trunk contrast is complete at F1 and stopped. Its
+[predeclared design](../../review_work/lead235_20260924/source_aware_design_v1/PROTOCOL.md)
+compared equal-capacity 451-field missing models with and without finite-label
+gradients. Both replaced only the 0.25 normalized missing component, leaving
+all finite predictions bitwise unchanged. The first admitted run read only F1
+refit labels but stopped before an optimizer step: its schedule rejected
+overlapping source-local integer positions. The corrected second run trained
+the rich-only arm but stopped while writing manifests from a relative output
+path. Both incomplete attempts remain preserved. The third run used the same
+reviewed fit protocol with an absolute path and completed both arms; the
+[composition contract](../../review_work/lead235_20260924/source_aware_validation_v1/COMPOSITION.md),
+[independent postfit review](../../review_work/lead235_20260924/source_aware_postfit_v1/independent_postfit_v5.json)
+and [full-panel prescore review](../../review_work/lead235_20260924/source_aware_validation_v1/paired_prescore_v3.json)
+bound the complete predictions before outcomes were opened.
+
+The one-time [matched F1 result](../../private_runs/lead235_20260924/source_aware_scoring_v1/F1_score_v1/result.json)
+passed an [independent score audit](../../review_work/lead235_20260924/source_aware_score_audit_v1/receipt_F1_v1.json).
+Joint sharing gained 1.448 seconds over rich-only on July's complete cohort,
+but was 4.315 seconds worse than the unchanged clean control. December was
+6.531 seconds worse than clean control, exceeding the one-second transport
+guard; June was descriptive and regressed 3.878 seconds. July's required
+robustness failed against both comparators. This direction has no F3 fit,
+ranking inference or official upload. The next source-discovery hypothesis
+still needs a new input-supported distinction for winter missing-NM/Rome
+errors, not another coefficient or generic model size.
 
 Missing-NM grouped-slope ideas currently have only synthetic evidence, and
 the previously tested grouped-slope candidate lost to V3. Any new feed still
@@ -224,8 +236,8 @@ audit](../../review_work/lead235_20260924/clean_control_score_audit_v1/receipt_v
 replayed every label join and full/month/route arithmetic. One extreme June
 flight adds 55.976 seconds to the June RMSE, so all headline scores retain it.
 These absolute clean-prefix numbers are not comparable to historical V3's
-268.662991 seasonal local score or its 278.0146 official result. F3 and a
-source-aware real fit remain downstream of the clean-control validity gate. Use the
+268.662991 seasonal local score or its 278.0146 official result. Clean F3
+remains unrun; the source-aware F1 candidate stopped at its matched gate. Use the
 verified LOMO metadata as a separate retrospective check only when a matched
 full recipe is feasible. In parallel, seek a distinct input-supported source
 mechanism; do not retune stopped input screens on their observed failures.
