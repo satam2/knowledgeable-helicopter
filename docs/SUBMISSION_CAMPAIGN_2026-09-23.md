@@ -291,6 +291,16 @@ whole-query-flight purge and stage-specific prior contract as a bounded
 prerequisite. Do not fit or score a LOMO arm until its candidate/control recipe,
 lineage review and resource gate are frozen.
 
+The [input-only prior contract](../../review_work/lead235_20260924/lomo_prior_contract_v1/REPORT.md)
+now selects source rows separately for six query stages. Its final versioned
+receipt covers 62 month/stage banks across both origins. A [separate raw-metadata
+reconstruction](../../review_work/lead235_20260924/lomo_prior_independent_v1/REPORT.md)
+matched all 62 ordered-ID hashes, including four stop/calibration banks not
+present in the original metadata manifest. This verifies source selection only:
+actual HistoricalTemplate label access, feature alignment, supervised fits,
+matched complete-cohort scores and resource admission remain undone. No LOMO
+candidate qualifies for release.
+
 The [clean F1/F3 tail audit](../../review_work/lead235_20260924/next_tail_mechanism_v1/REPORT.md)
 found that the worst 1% of rows carries 41-60% of complete-panel SSE, but the
 Rome missing-NM mean error changes sign between July and November. These are
