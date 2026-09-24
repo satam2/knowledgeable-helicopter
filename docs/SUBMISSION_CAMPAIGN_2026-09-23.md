@@ -283,6 +283,21 @@ verified LOMO metadata as a separate retrospective check only when a matched
 full recipe is feasible. In parallel, seek a distinct input-supported source
 mechanism; do not retune stopped input screens on their observed failures.
 
+The [LOMO feasibility review](../../review_work/lead235_20260924/lomo_next_v1/REPORT.md)
+does not support committing to a complete matched July/November result by
+Sunday: at least 26 new origin-specific component jobs, a label-safe prior
+adapter and fresh resource admission are still needed. Advance the input-only
+whole-query-flight purge and stage-specific prior contract as a bounded
+prerequisite. Do not fit or score a LOMO arm until its candidate/control recipe,
+lineage review and resource gate are frozen.
+
+The [clean F1/F3 tail audit](../../review_work/lead235_20260924/next_tail_mechanism_v1/REPORT.md)
+found that the worst 1% of rows carries 41-60% of complete-panel SSE, but the
+Rome missing-NM mean error changes sign between July and November. These are
+exposed 2025 diagnostics, not an inference-time tail detector or a matched
+candidate gain. Do not turn them into a fixed Rome adjustment or an upload;
+require a new observable source distinction and its own support gate.
+
 The [independent external off-block feasibility audit](../../review_work/lead235_20260924/external_offblock_feasibility_v1/REPORT.md)
 found historical gate-out products, but no public proof of exact challenge-row
 coverage, unique identity joins or first-publication timing. Commercial
@@ -370,13 +385,15 @@ The private ledger records date/time and assumed quota day, candidate ID,
 one-line hypothesis, changed components, baseline/arm hashes, fitting IDs,
 local complete and month scores, influence/transport result, frozen ranking
 SHA-256, submission key, remote hash, official score, decision and unused
-slots. Chart **comparable complete RMSE** against experiment order, separated
-into local development and official ranking series; annotate different fit
+slots when independently verifiable (otherwise record `unknown`). Chart
+**comparable complete RMSE** against experiment order, separated into local
+development and official ranking series; annotate different fit
 history and dates. A 240 or 235 crossing requires an actual official receipt.
 Do not treat five related variants as independent confirmation.
 
-On Sunday, September 27, issue a final report with best verified local and
-official scores, every candidate and stop reason, resource/slot usage, transfer
-limits, and one justified next direction. End the recurring schedule and mark
-the goal complete only if the campaign work and final report are actually done;
+At the close of the Sunday, September 27 campaign session, issue a final report
+with best verified local and official scores, every candidate and stop reason,
+resource/slot usage, transfer limits, and one justified next direction. End the
+recurring schedule and mark the goal complete only if the campaign work and
+final report are actually done;
 do not mark the *235 target* achieved without an official score below 235.

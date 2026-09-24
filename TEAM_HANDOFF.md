@@ -4,6 +4,10 @@ This branch preserves the implementation and important research context for a
 teammate. It replaces the proposed large ZIP handoff. Start here rather than the
 historical baseline reproduction section in README.md.
 
+The [September 23-27 submission campaign guide](docs/SUBMISSION_CAMPAIGN_2026-09-23.md)
+tracks the active goal, qualification gates and daily decisions. Its linked
+private receipts require the original PRC workspace and are not in this branch.
+
 ## Current Result
 
 | Recipe | Local development RMSE | Official RMSE |
