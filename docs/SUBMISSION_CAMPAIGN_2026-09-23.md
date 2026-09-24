@@ -12,6 +12,42 @@ to local private workspace artifacts outside this Git checkout. They document
 receipts for the local campaign; the branch contains no data, fitted model,
 row-level prediction or credential needed to reproduce those private results.
 
+## Operating plan through Sunday
+
+The active `/goal` owns this campaign; the daily 8:00 AM Pacific continuation
+on September 24-27 resumes this same task. Start each session from the private
+ledger and the last frozen dependency, not from a desired number of uploads.
+The five-per-day allowance is a ceiling under an undocumented organizer reset
+timezone. Zero uploads is the correct result if no candidate clears the gates.
+
+| Day | Work to attempt, subject to the preceding gate | Release decision |
+| --- | --- | --- |
+| Thu Sep 24 | Verify the ARR auxiliary-target source audit and synthetic gradient-isolation canary; freeze a matched PLE387 candidate/control protocol only after an independent architecture, lineage and resource review. | Source or synthetic evidence alone cannot qualify. |
+| Fri Sep 25 | If admitted, fit the equal-capacity ARR-gradient and detached-gradient PLE arms at the F1 origin. Freeze complete June/July/December predictions, independently replay and score once. | Stop at F1 if July robustness or December transport fails. |
+| Sat Sep 26 | Only for an F1 pass, reproduce the matched contrast at F3 and check complete October/November/December panels and the combined seasonal gain. Then prepare a full-year candidate with unchanged other components. | A full-year fit or a good component score alone cannot qualify. |
+| Sun Sep 27 | Complete any unfinished dependency, independently verify any release, check organizer quota and credentials, and upload only a qualifying frozen candidate. Publish a final score/experiment report. | Close the goal and disable the schedule after the report; if morning work remains, continue later that day. |
+
+These are work targets, not deadlines that waive a gate. Advance a step as soon
+as it is ready, or spend the day on input-supported research if the current
+direction stops. Do not rerun a failed arm with a small parameter or weight
+change chosen from exposed scores. A new direction needs its own distinct
+observable input or mechanism, control and frozen protocol. The selected ARR
+test changes one ordinary expert's **training objective**: compare a PLE387
+shared-stem auxiliary ARR taxi-in model against an equal-capacity detached-
+gradient control, while leaving the other eight clean-ensemble components,
+route ownership and calibration weights fixed. Both must also beat the
+unchanged clean control under the declared gate. This is a low-confidence
+research hypothesis, not a forecast of 240 or 235.
+
+For every candidate, record its frozen hypothesis and input-support receipt,
+fit IDs, control/candidate hashes, complete monthly RMSE, day and top-ten
+influence, transport checks, and decision in the private ledger. Plot matched
+complete local scores separately from official results, with origin and date
+annotations; a five-second improvement is a measured step only after the
+complete matched seasonal gate. Each official submission, if any, is a
+one-use transfer check of a distinct qualifying model. Do not infer hidden
+subgroup errors or select a follow-up weight from its score.
+
 ## How to use the five daily slots
 
 Keep one frozen complete baseline and change one identifiable information or
@@ -333,6 +369,31 @@ FlightAware and OAG licenses do not satisfy the challenge's open-license rule
 for additional prize-eligible datasets. No external source is admitted for
 acquisition, fitting or upload; a future open feed needs a lawful input-only
 coverage and provenance audit before revisiting this branch.
+
+The active **ARR auxiliary taxi-in supervision** question is still prefit.
+The [input-only source audit](../../review_work/lead235_20260924/arr_aux_source_v1/REPORT.md)
+verified five PLE387-compatible phase-neutral fields and 636,403 F1 / 1,385,464
+F3 finite ARR labels in the respective fitting prefixes. The saved PLE refit
+trains on 632,463 / 1,372,327 finite DEP rows, including 198 / 630 finite-
+exceptional training rows beyond the ordinary inference subset. Same-prefix
+ARR and DEP records sometimes share a flight ID; they are not independent
+flights, even though later query-month flight-ID overlap was zero. Ranking ARR
+label availability is an input fact, not authorization to train on those
+labels. No DEP evaluation outcome or ranking DEP target was opened by this
+audit, and no model was fitted.
+
+The [synthetic gradient-isolation canary](../../review_work/lead235_20260924/arr_aux_synthetic_v1/REPORT.md)
+demonstrated separate ARR-head and DEP/shared optimizer, clipping and RNG
+domains on generated data. The current PLE387 concatenates all fields into
+one backbone and clips all parameters together; directly adding a detached
+ARR loss would invalidate the control. Freeze and independently review a new
+five-field common / 382-field DEP-private adapter, fit-only preprocessing,
+same-flight and future-month purges, matched detached and auxiliary arms,
+native PLE parity and a resource canary **before** real F1 fitting labels.
+Keep the other eight clean-control components and May mixture weights fixed.
+Neither source availability nor synthetic behavior is an RMSE gain or a
+submission candidate. If the architecture cannot meet this contract, record
+the stop and move to a newly supported hypothesis.
 
 ## Candidate qualification
 
