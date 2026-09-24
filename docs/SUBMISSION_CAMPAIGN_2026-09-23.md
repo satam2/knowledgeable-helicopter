@@ -22,9 +22,9 @@ timezone. Zero uploads is the correct result if no candidate clears the gates.
 
 | Day | Work to attempt, subject to the preceding gate | Release decision |
 | --- | --- | --- |
-| Thu Sep 24 | Close the failed ARR-supervision F1 arm; independently replay the 40-cell unfiltered-weather input screen and audit historical publication timing and reuse terms. Freeze a separate retrospective matched protocol only after source, cohort and compute review. | Input support is not a score or release qualification. |
-| Fri Sep 25 | Start from the independently verified 160-cell public archive and 40-cell input receipt. Build a source-closed paired weather matrix, run synthetic leakage and resource canaries, and freeze the six-family F1 fit protocol. Pursue a different input-supported mechanism if this branch stops. | The input gate alone does not authorize fit, ranking inference or release; source rights and timing remain holds. |
-| Sat Sep 26 | Only after prefit admission, fit the declared routine and extra-time arms at F1, freeze complete June/July/December predictions, and score once with an independent replay. F3 follows only if F1 passes; advance any other independently supported direction through the same gates. | Stop if July robustness or December transport fails; a feature-age gain alone cannot qualify. |
+| Thu Sep 24 | Close the failed ARR-supervision F1 arm; replay the 40-cell weather input screen and audit historical publication timing and reuse terms. Complete the 42 paired weather matrices and independent input review. Preserve the failed v1 LightGBM partial, isolate its native crash, and independently readmit a versioned v2 runner. | V2 admission permits serial retrospective F1 refits only. Input support, a native-runtime fix and a successful canary are not scores or release qualification. |
+| Fri Sep 25 | From the v2 exact-hash admission, run one weather F1 job at a time in the frozen routine/extra order, checking live resources and each frozen model before proceeding. Pursue another input-supported mechanism if this branch stops. | No scoring until both six-expert arms, complete predictions, fixed May-weight composition and independent prescore review are frozen. Timing and rights still block ranking/release. |
+| Sat Sep 26 | Finish any admitted F1 jobs, freeze complete June/July/December paired predictions, then score once with an independent arithmetic replay. F3 follows only if the frozen July robustness and December transport gates pass; advance any other supported direction through the same gates. | Stop if July robustness or December transport fails; feature-age coverage alone cannot qualify. |
 | Sun Sep 27 | Complete any admitted F3/full-year dependency, independently verify any release, check organizer quota and credentials, and upload only a qualifying frozen and eligible candidate. Publish the final score/experiment report. | Close the goal and disable the schedule after the report; if morning work remains, continue later that day. |
 
 These are work targets, not deadlines that waive a gate. Advance a step as soon
@@ -94,7 +94,7 @@ of a frozen candidate, not select weights, rows, rules, or the next variant.
 | Clean nine-component F3 control, September 24 | Complete October/November/December 2025 RMSE 222.200/225.324/221.754 on 185,674/162,332/165,677 rows | Not submitted | Diagnostic reference only; later origin and different population from official Jan/Jul 2026. No matched candidate gain. |
 | ARR auxiliary PLE387 F1, September 24 | July complete candidate 333.850 vs detached 333.221 and clean 334.130; December 233.736 vs detached 232.886 | Not submitted | Stop before F3; July trails matched control, July day interval crosses zero versus clean, and December trails control |
 | NM flight-rule transition input, September 24 | Input-only `Y/Z` shares 0.055-0.095% in Jan/Jul 2025/2026; no Rome day has two qualifying rows | Not submitted | Four-cell support gate failed before fit or score |
-| Unfiltered IEM weather input, September 24 | 103,426 additional station-valid times across the complete 160-cell archive (29,870 screened + 73,556 extended); independent source replay passed. All 40 January/July 2025/2026 airport-query input gates passed, with 171,301/344,419 and 171,925/344,841 changed rows in the respective years | Not submitted | Exact 2025 routine T cache parity on 2,085,047 IDs; paired input receipt says `fit_admitted: false`. Historical first-publication and organizer reuse eligibility unresolved. No matched model or RMSE |
+| Unfiltered IEM weather input and F1 preparation, September 24 | 103,426 additional station-valid times across the complete 160-cell archive; all 40 January/July 2025/2026 input gates passed. Exact 2025 routine T cache parity on 2,085,047 IDs. The 42 paired, label-free F1 matrices passed independent review; all 632,463 routine LGB225 refit rows match the clean input on 225 fields. | Not submitted | V1 routine LGB225 crashed at the native label boundary after the permitted refit target read; no model or score. Synthetic probes isolated a Windows LightGBM import-order failure. An independently reviewed v2 runner is admitted for serial retrospective F1 refits only. Historical first-publication and source-license eligibility remain unresolved. |
 
 V4 already used at least one September 23 submission slot. The prior V4 bucket
 preflight counted zero same-UTC-day objects, but the official reset boundary is
@@ -104,28 +104,29 @@ upload. Preserve V3, V4, all failed results, and unrelated dirty files.
 ## Dependency DAG
 
 ```text
-source and eligibility check ─┬─> observed-feature hypothesis ─> feature audit ─┐
-                              └─> clean V3 chronology/transfer reference ───────┤
-matched baseline, cohort and score contract ───────────────────────────────────────┤
-                                                                               F1 fit
-                                                                                  |
-                                                                           freeze/audit F1
-                                                                                  |
-                                                                            score/gate F1
-                                                                                  |
-                                                                          F3 fit if F1 passes
-                                                                                  |
-                                                                     freeze/audit/score F3
-                                                                                  |
-                                                                      full-year fit + ranking
-                                                                                  |
-                                                                  independent release check
-                                                                                  |
-                                                                   quota/credentials preflight
-                                                                                  |
-                                                                        one official upload
-                                                                                  |
-                                                                     readback/score/ledger
+public source + paired 40-cell input replay ----> 42 source-closed F1 matrices
+clean V3 recipe + F1 cohort/weights -----------> independent matrix/resource review
+native crash diagnosis + versioned v2 runner --> independent exact-hash v2 admission
+                                                              |
+                                     12 serial F1 fits (routine then extra)
+                                                              |
+                                    freeze six models/arm + full predictions
+                                                              |
+                        fixed May-weight composition + independent prescore review
+                                                              |
+                               one-time F1 score + independent arithmetic audit
+                                                              |
+                                     F1 July/December gate passes?
+                                                              |
+                              F3 matched refits/freeze/audit/score + transport gate
+                                                              |
+source publication-time and reuse eligibility ----------------+---> ranking eligible?
+                                                              |
+                  full-year ranking candidate + independent release verification
+                                                              |
+                     quota/credentials preflight -> one official upload
+                                                              |
+                                      remote readback/score/ledger
 ```
 
 Independent feature, source, review and score-contract tasks may use subagents
@@ -431,8 +432,8 @@ found no documented feed clearing timing, coverage, access and rights together.
 Neither report establishes a prize-eligible as-of-departure weather source.
 
 The [frozen retrospective F1 design](../../review_work/lead235_20260924/weather_extra_f1_protocol_v1/PROTOCOL.md)
-has an [independent conditional design pass](../../review_work/lead235_20260924/weather_protocol_independent_v1/REPORT.md),
-but **no fit admission**. Six of the nine clean experts consume the same 18
+has an [independent conditional design pass](../../review_work/lead235_20260924/weather_protocol_independent_v1/REPORT.md).
+Six of the nine clean experts consume the same 18
 `weather_T_*` fields; the paired routine-only and extra-time arms must refit
 all six on identical F1 IDs and keep the other three experts and May weights
 fixed. The complete public archive and independent replay are done. The
@@ -445,12 +446,36 @@ The [independent 2025 replay](../../review_work/lead235_20260924/weather_feature
 matched all 20 earlier-year cell counts. The [independent 2026 replay](../../review_work/lead235_20260924/weather_2026_support_independent_v1/REPORT.md)
 matched all 20 later-year cells and both complete 344,841-row T-matrix hashes;
 an [independent postrun audit](../../review_work/lead235_20260924/weather_admit_v2_postrun_review_v1/REPORT.md)
-also checked the bound source and receipt arithmetic. Before supervised
-fitting, build and audit the source-closed paired family matrices, resource
-canary and prefit lineage.
-The source timing and rights holds still prevent a ranking fit or official
-upload, even if a retrospective local score later improves. No weather
-model or RMSE has been measured here.
+also checked the bound source and receipt arithmetic. The [write-once 42-matrix
+F1 manifest](../../private_runs/lead235_20260924/weather_f1_matrix_v1/manifest.json)
+covers both arms, seven stages and three feature widths (225/387/449). Its
+[independent matrix review](../../review_work/lead235_20260924/weather_f1_prefit_review_v1/matrix_review.json)
+and largest-family label-free canaries passed.
+
+The first admitted `routine/lgb225` v1 refit read only its permitted Jan-Apr
+refit target, then failed in native LightGBM `LGBM_DatasetSetField` before
+writing a model. Preserve the [failed partial](../../private_runs/lead235_20260924/weather_f1_fit_v1/routine/lgb225/failure.json)
+and do not score or reuse it. Independent [native crash probes](../../review_work/lead235_20260924/weather_f1_lgb_crash_v1/REPORT.md)
+reproduced the fault on four synthetic rows with pandas imported before
+LightGBM; importing LightGBM first constructed the full routine and extra
+632,463-row datasets with synthetic labels. A separate [full routine input
+comparison](../../review_work/lead235_20260924/weather_f1_lgb_compare_v1/REPORT.md)
+found zero categorical/numeric mismatches to the clean 225-field refit matrix
+on identical finite IDs. This explains a runner failure, not a weather gain.
+
+The [versioned v2 runner](../../review_work/lead235_20260924/weather_f1_fit_v2/README.md)
+restores the clean LightGBM import order. Its [independent prefit review](../../review_work/lead235_20260924/weather_f1_prefit_review_v1/runner_review_v2.json)
+and [exact-SHA v2 admission](../../review_work/lead235_20260924/weather_f1_prefit_review_v1/admission_v2.json)
+passed synthetic native Dataset, immutable-source, complete matrix and
+resource canaries. That admission permits **only** one serial matched
+retrospective F1 refit at a time, routine then extra, with fresh per-job hash
+and resource checks. It does not admit composition, scoring, F3, ranking
+inference or upload. Freeze and independently review the six native models
+and four prediction stages per arm; apply unchanged May weights; independently
+freeze both complete June/July/December compositions before the one-time F1
+score. The source timing and rights holds still prevent a ranking fit or
+official upload even if a retrospective local score later improves. No
+weather model or RMSE has been measured here.
 
 ## Candidate qualification
 
