@@ -48,6 +48,7 @@ of a frozen candidate, not select weights, rows, rules, or the next variant.
 | --- | --- | ---: | --- |
 | V3, September 16 | Exposed July/November 2025, 268.662991 complete seasonal RMSE | 278.0146 | Retained official reference |
 | V4, September 23 | January/July 2025 specialist trailed full history locally | 281.7265 | Reject; 3.7119-second official regression |
+| F1 clock-cell density weighting, September 23 | Matched complete June/July/December 2025 gains -0.114/-0.231/-0.144 sec | Not submitted | Frozen F1 gate failed; no F3 or upload |
 | Destination-context F1, September 24 | Matched July complete gain +0.008268 sec; paired-day interval crosses zero | Not submitted | Stop before F3; influence checks fail |
 | Stand-arrival missing-NM F1, September 24 | July +0.588 sec vs base, +3.260 vs airport control; June regresses | Not submitted | Stop before F3; July base interval and both top-ten checks fail |
 | Clean nine-component F1 control, September 24 | June/July/December complete RMSE 318.758/334.130/234.744; earlier Jan-Apr fit and May weights | Not submitted | Diagnostic reference only; no matched candidate gain |
@@ -202,6 +203,14 @@ backlog, clock density, retrieval, shared representation, template, operator,
 prefix, arrival and fitted-selector branches remain closed unless genuinely
 new source evidence changes their premise.
 
+The earlier [clock-cell density-weighted LightGBM F1](../../output/clock_campaign_20260923/scoring/F1_RESULT.md)
+was already fully scored on frozen complete June/July/December panels. The
+matched weighted arm regressed by 0.114/0.231/0.144 seconds and failed its
+predeclared robustness and transport gates. Its score is a September 23
+chronological three-expert composition, not the later clean nine-component
+control or historical V3. Keep this weighting rule closed; do not repeat the
+fit or score to tune the density cap from exposed months.
+
 The September 24 [arrival-schedule source audit](../../review_work/lead235_20260924/source_gap_v1/REPORT.md)
 found a narrow untested distinction: recent *completed* arrivals' in-block
 minus scheduled-arrival offsets, compared with taxi-in context on the exact
@@ -307,6 +316,15 @@ Rome missing-NM mean error changes sign between July and November. These are
 exposed 2025 diagnostics, not an inference-time tail detector or a matched
 candidate gain. Do not turn them into a fixed Rome adjustment or an upload;
 require a new observable source distinction and its own support gate.
+
+The subsequent [ordinary source metadata refresh](../../review_work/lead235_20260924/ordinary_signal_next_v1/REPORT.md)
+confirmed the supplied 30-field schema and 387-feature mapping across all 13
+original files. It found no explicit per-flight source-status, event-revision
+or publication-age field; it did not inspect raw values or prove every feature
+interaction exhausted. The [missing-route mechanism review](../../review_work/lead235_20260924/missing_mechanism_next_v1/REPORT.md)
+found no supported new inference-time distinction after the failed source-aware
+and stand F1 gates and the winter ARR/runway input stops. Both are bounded
+no-go decisions, not new model scores or grounds for another upload.
 
 The [independent external off-block feasibility audit](../../review_work/lead235_20260924/external_offblock_feasibility_v1/REPORT.md)
 found historical gate-out products, but no public proof of exact challenge-row
