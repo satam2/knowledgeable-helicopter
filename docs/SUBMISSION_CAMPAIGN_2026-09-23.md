@@ -22,22 +22,23 @@ timezone. Zero uploads is the correct result if no candidate clears the gates.
 
 | Day | Work to attempt, subject to the preceding gate | Release decision |
 | --- | --- | --- |
-| Thu Sep 24 | Verify the ARR auxiliary-target source audit and synthetic gradient-isolation canary; freeze a matched PLE387 candidate/control protocol only after an independent architecture, lineage and resource review. | Source or synthetic evidence alone cannot qualify. |
-| Fri Sep 25 | If admitted, fit the equal-capacity ARR-gradient and detached-gradient PLE arms at the F1 origin. Freeze complete June/July/December predictions, independently replay and score once. | Stop at F1 if July robustness or December transport fails. |
-| Sat Sep 26 | Only for an F1 pass, reproduce the matched contrast at F3 and check complete October/November/December panels and the combined seasonal gain. Then prepare a full-year candidate with unchanged other components. | A full-year fit or a good component score alone cannot qualify. |
-| Sun Sep 27 | Complete any unfinished dependency, independently verify any release, check organizer quota and credentials, and upload only a qualifying frozen candidate. Publish a final score/experiment report. | Close the goal and disable the schedule after the report; if morning work remains, continue later that day. |
+| Thu Sep 24 | Close the failed ARR-supervision F1 arm; independently replay the 40-cell unfiltered-weather input screen and audit historical publication timing and reuse terms. Freeze a separate retrospective matched protocol only after source, cohort and compute review. | Input support is not a score or release qualification. |
+| Fri Sep 25 | Start from the independently verified 160-cell public archive and 40-cell input receipt. Build a source-closed paired weather matrix, run synthetic leakage and resource canaries, and freeze the six-family F1 fit protocol. Pursue a different input-supported mechanism if this branch stops. | The input gate alone does not authorize fit, ranking inference or release; source rights and timing remain holds. |
+| Sat Sep 26 | Only after prefit admission, fit the declared routine and extra-time arms at F1, freeze complete June/July/December predictions, and score once with an independent replay. F3 follows only if F1 passes; advance any other independently supported direction through the same gates. | Stop if July robustness or December transport fails; a feature-age gain alone cannot qualify. |
+| Sun Sep 27 | Complete any admitted F3/full-year dependency, independently verify any release, check organizer quota and credentials, and upload only a qualifying frozen and eligible candidate. Publish the final score/experiment report. | Close the goal and disable the schedule after the report; if morning work remains, continue later that day. |
 
 These are work targets, not deadlines that waive a gate. Advance a step as soon
 as it is ready, or spend the day on input-supported research if the current
 direction stops. Do not rerun a failed arm with a small parameter or weight
 change chosen from exposed scores. A new direction needs its own distinct
-observable input or mechanism, control and frozen protocol. The selected ARR
-test changes one ordinary expert's **training objective**: compare a PLE387
-shared-stem auxiliary ARR taxi-in model against an equal-capacity detached-
-gradient control, while leaving the other eight clean-ensemble components,
-route ownership and calibration weights fixed. Both must also beat the
-unchanged clean control under the declared gate. This is a low-confidence
-research hypothesis, not a forecast of 240 or 235.
+observable input or mechanism, control and frozen protocol. The ARR auxiliary
+training-objective test is closed after its matched F1 failure. The current
+input-only lead is additional unfiltered IEM observations versus the already
+used routine-only reports. Its half-hour observation-time freshness is not
+historical first-publication evidence or an RMSE gain. The retrospective
+comparison, if admitted, must hold query IDs, route ownership, model capacity
+and other ensemble predictions fixed. Source rights and historical timing
+remain release holds; do not forecast 240 or 235 from input support.
 
 For every candidate, record its frozen hypothesis and input-support receipt,
 fit IDs, control/candidate hashes, complete monthly RMSE, day and top-ten
@@ -93,6 +94,7 @@ of a frozen candidate, not select weights, rows, rules, or the next variant.
 | Clean nine-component F3 control, September 24 | Complete October/November/December 2025 RMSE 222.200/225.324/221.754 on 185,674/162,332/165,677 rows | Not submitted | Diagnostic reference only; later origin and different population from official Jan/Jul 2026. No matched candidate gain. |
 | ARR auxiliary PLE387 F1, September 24 | July complete candidate 333.850 vs detached 333.221 and clean 334.130; December 233.736 vs detached 232.886 | Not submitted | Stop before F3; July trails matched control, July day interval crosses zero versus clean, and December trails control |
 | NM flight-rule transition input, September 24 | Input-only `Y/Z` shares 0.055-0.095% in Jan/Jul 2025/2026; no Rome day has two qualifying rows | Not submitted | Four-cell support gate failed before fit or score |
+| Unfiltered IEM weather input, September 24 | 103,426 additional station-valid times across the complete 160-cell archive (29,870 screened + 73,556 extended); independent source replay passed. All 40 January/July 2025/2026 airport-query input gates passed, with 171,301/344,419 and 171,925/344,841 changed rows in the respective years | Not submitted | Exact 2025 routine T cache parity on 2,085,047 IDs; paired input receipt says `fit_admitted: false`. Historical first-publication and organizer reuse eligibility unresolved. No matched model or RMSE |
 
 V4 already used at least one September 23 submission slot. The prior V4 bucket
 preflight counted zero same-UTC-day objects, but the official reset boundary is
@@ -368,9 +370,10 @@ The [independent external off-block feasibility audit](../../review_work/lead235
 found historical gate-out products, but no public proof of exact challenge-row
 coverage, unique identity joins or first-publication timing. Commercial
 FlightAware and OAG licenses do not satisfy the challenge's open-license rule
-for additional prize-eligible datasets. No external source is admitted for
-acquisition, fitting or upload; a future open feed needs a lawful input-only
-coverage and provenance audit before revisiting this branch.
+for additional prize-eligible datasets. No external flight-linked off-block
+source is admitted for acquisition, fitting or upload; a future open feed
+needs a lawful input-only coverage and provenance audit before revisiting
+this branch.
 
 The **ARR auxiliary taxi-in supervision** question completed its F1 test.
 The [input-only source audit](../../review_work/lead235_20260924/arr_aux_source_v1/REPORT.md)
@@ -386,15 +389,13 @@ audit, and no model was fitted.
 
 The [synthetic gradient-isolation canary](../../review_work/lead235_20260924/arr_aux_synthetic_v1/REPORT.md)
 demonstrated separate ARR-head and DEP/shared optimizer, clipping and RNG
-domains on generated data. The current PLE387 concatenates all fields into
-one backbone and clips all parameters together; directly adding a detached
-ARR loss would invalidate the control. Freeze and independently review a new
-five-field common / 382-field DEP-private adapter, fit-only preprocessing,
-same-flight and future-month purges, matched detached and auxiliary arms,
-native PLE parity and a resource canary **before** real F1 fitting labels.
-Keep the other eight clean-control components and May mixture weights fixed.
-Neither source availability nor synthetic behavior is an RMSE gain or a
-submission candidate. The subsequent split-adapter comparison passed input,
+domains on generated data. The original PLE387 concatenated all fields into
+one backbone and clipped all parameters together; directly adding a detached
+ARR loss would have invalidated the control. A five-field common / 382-field
+DEP-private adapter and its fit-only preprocessing, same-flight and future-month
+purges, native PLE parity and resource gate were independently reviewed before
+real F1 fitting labels. The other eight components and May weights stayed
+fixed. The split-adapter comparison passed input,
 fit, full-prediction and independent prescore checks. Both arms used the same
 632,463 DEP and 636,403 ARR fitting-prefix rows, initial state and 2,945-step
 schedule. The [one-time F1 result](../../private_runs/lead235_20260924/arr_aux_f1_score_v1/F1/result.json)
@@ -413,6 +414,43 @@ finite-NM departures in each January/July 2025/2026 cell. An [independent
 replay](../../review_work/lead235_20260924/next_direction_input_review_v1/REVIEW.md)
 confirmed the frozen support gate failed, including Rome winter coverage.
 No target was read or model fitted for this proposed distinction.
+
+The [unfiltered IEM input screen](../../review_work/lead235_20260924/weather_special_v1/REPORT.md)
+and [independent 40-cell replay](../../review_work/lead235_20260924/weather_special_independent_v1/REPORT.md)
+found 29,870 additional station-valid times across January/July 2025 and 2026
+at all ten airports. The [full public extension](../../review_work/lead235_20260924/weather_archive_extension_v1/receipt.json)
+and [independent replay](../../review_work/lead235_20260924/weather_archive_independent_v1/REPORT.md)
+added 73,556 more distinct times across the remaining 100 full station-months
+and 20 boundary-day cells. All 160 public input cells are present; the fixed-grid
+weather-age improvement measures observation time, not when a report was
+published or whether it predicts taxi-out. An [eligibility audit](../../review_work/lead235_20260924/weather_eligibility_v1/REPORT.md)
+found no historical first-publication or revision timestamp and no confirmed
+organizer interpretation of IEM's public-domain claim under the open-source-
+license rule. A [bounded alternative-source check](../../review_work/lead235_20260924/weather_alternative_sources_v1/REPORT.md)
+found no documented feed clearing timing, coverage, access and rights together.
+Neither report establishes a prize-eligible as-of-departure weather source.
+
+The [frozen retrospective F1 design](../../review_work/lead235_20260924/weather_extra_f1_protocol_v1/PROTOCOL.md)
+has an [independent conditional design pass](../../review_work/lead235_20260924/weather_protocol_independent_v1/REPORT.md),
+but **no fit admission**. Six of the nine clean experts consume the same 18
+`weather_T_*` fields; the paired routine-only and extra-time arms must refit
+all six on identical F1 IDs and keep the other three experts and May weights
+fixed. The complete public archive and independent replay are done. The
+[write-once paired input receipt](../../review_work/lead235_20260924/weather_extra_features_v1/paired_input_v2/receipt.json)
+reports exact old routine-cache T parity on 2,085,047 IDs and 40/40 passing
+departure-query cells. It records 171,301 changed January/July 2025 queries
+out of 344,419 and 171,925 changed 2026 queries out of 344,841; the smallest
+airport-month fraction is 48.1%, with 31 changed UTC days in every cell.
+The [independent 2025 replay](../../review_work/lead235_20260924/weather_feature_parity_independent_v1/REPORT.md)
+matched all 20 earlier-year cell counts. The [independent 2026 replay](../../review_work/lead235_20260924/weather_2026_support_independent_v1/REPORT.md)
+matched all 20 later-year cells and both complete 344,841-row T-matrix hashes;
+an [independent postrun audit](../../review_work/lead235_20260924/weather_admit_v2_postrun_review_v1/REPORT.md)
+also checked the bound source and receipt arithmetic. Before supervised
+fitting, build and audit the source-closed paired family matrices, resource
+canary and prefit lineage.
+The source timing and rights holds still prevent a ranking fit or official
+upload, even if a retrospective local score later improves. No weather
+model or RMSE has been measured here.
 
 ## Candidate qualification
 
