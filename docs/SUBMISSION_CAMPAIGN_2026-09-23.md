@@ -91,6 +91,8 @@ of a frozen candidate, not select weights, rows, rules, or the next variant.
 | Source-aware shared-trunk F1, September 24 | July joint 338.445 vs clean base 334.130 and rich-only 339.893; December joint 241.275 vs base 234.744 | Not submitted | Stop before F3; July robustness and December transport fail vs base |
 | Peer-relative clock-gap rank F1, September 24 | Input-only screen passed; July candidate 334.133 vs equal-width control 334.145 and clean 334.130; December candidate 234.725 vs clean 234.744 | Not submitted | Stop before F3; July robust gain fails against both comparators |
 | Clean nine-component F3 control, September 24 | Complete October/November/December 2025 RMSE 222.200/225.324/221.754 on 185,674/162,332/165,677 rows | Not submitted | Diagnostic reference only; later origin and different population from official Jan/Jul 2026. No matched candidate gain. |
+| ARR auxiliary PLE387 F1, September 24 | July complete candidate 333.850 vs detached 333.221 and clean 334.130; December 233.736 vs detached 232.886 | Not submitted | Stop before F3; July trails matched control, July day interval crosses zero versus clean, and December trails control |
+| NM flight-rule transition input, September 24 | Input-only `Y/Z` shares 0.055-0.095% in Jan/Jul 2025/2026; no Rome day has two qualifying rows | Not submitted | Four-cell support gate failed before fit or score |
 
 V4 already used at least one September 23 submission slot. The prior V4 bucket
 preflight counted zero same-UTC-day objects, but the official reset boundary is
@@ -370,7 +372,7 @@ for additional prize-eligible datasets. No external source is admitted for
 acquisition, fitting or upload; a future open feed needs a lawful input-only
 coverage and provenance audit before revisiting this branch.
 
-The active **ARR auxiliary taxi-in supervision** question is still prefit.
+The **ARR auxiliary taxi-in supervision** question completed its F1 test.
 The [input-only source audit](../../review_work/lead235_20260924/arr_aux_source_v1/REPORT.md)
 verified five PLE387-compatible phase-neutral fields and 636,403 F1 / 1,385,464
 F3 finite ARR labels in the respective fitting prefixes. The saved PLE refit
@@ -392,8 +394,25 @@ same-flight and future-month purges, matched detached and auxiliary arms,
 native PLE parity and a resource canary **before** real F1 fitting labels.
 Keep the other eight clean-control components and May mixture weights fixed.
 Neither source availability nor synthetic behavior is an RMSE gain or a
-submission candidate. If the architecture cannot meet this contract, record
-the stop and move to a newly supported hypothesis.
+submission candidate. The subsequent split-adapter comparison passed input,
+fit, full-prediction and independent prescore checks. Both arms used the same
+632,463 DEP and 636,403 ARR fitting-prefix rows, initial state and 2,945-step
+schedule. The [one-time F1 result](../../private_runs/lead235_20260924/arr_aux_f1_score_v1/F1/result.json)
+passed [independent all-row arithmetic review](../../review_work/lead235_20260924/arr_aux_f1_postscore_review_v1/postscore_audit_receipt.json).
+The candidate gained 0.279366 seconds over clean on complete July, but lost
+0.629531 seconds to the matched detached control; its paired-day July gain
+interval against clean includes zero. December lost 0.850683 seconds to the
+detached control. The predeclared F1 gate failed, so no F3 fit, full-year
+ranking model or official upload follows. The detached arm's descriptive
+gain over clean is an architecture observation, not evidence for ARR auxiliary
+gradients or an independently qualifying submission.
+
+The separate [NM flight-rule input screen](../../review_work/lead235_20260924/next_direction_input_v1/REPORT.md)
+found that the omitted `Y/Z` transition codes cover under 0.1% of ordinary
+finite-NM departures in each January/July 2025/2026 cell. An [independent
+replay](../../review_work/lead235_20260924/next_direction_input_review_v1/REVIEW.md)
+confirmed the frozen support gate failed, including Rome winter coverage.
+No target was read or model fitted for this proposed distinction.
 
 ## Candidate qualification
 
