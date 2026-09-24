@@ -52,6 +52,7 @@ of a frozen candidate, not select weights, rows, rules, or the next variant.
 | Stand-arrival missing-NM F1, September 24 | July +0.588 sec vs base, +3.260 vs airport control; June regresses | Not submitted | Stop before F3; July base interval and both top-ten checks fail |
 | Clean nine-component F1 control, September 24 | June/July/December complete RMSE 318.758/334.130/234.744; earlier Jan-Apr fit and May weights | Not submitted | Diagnostic reference only; no matched candidate gain |
 | Source-aware shared-trunk F1, September 24 | July joint 338.445 vs clean base 334.130 and rich-only 339.893; December joint 241.275 vs base 234.744 | Not submitted | Stop before F3; July robustness and December transport fail vs base |
+| Peer-relative clock-gap rank F1, September 24 | Input-only screen passed; July candidate 334.133 vs equal-width control 334.145 and clean 334.130; December candidate 234.725 vs clean 234.744 | Not submitted | Stop before F3; July robust gain fails against both comparators |
 
 V4 already used at least one September 23 submission slot. The prior V4 bucket
 preflight counted zero same-UTC-day objects, but the official reset boundary is
@@ -169,6 +170,28 @@ robustness failed against both comparators. This direction has no F3 fit,
 ranking inference or official upload. The next source-discovery hypothesis
 still needs a new input-supported distinction for winter missing-NM/Rome
 errors, not another coefficient or generic model size.
+
+The peer-relative clock-gap rank tested a distinct ordinary-route input. The
+[input-only screen](../../output/lead235_20260924/peer_rank_candidate_v1/receipt.json)
+passed its frozen support and variation gates in January/July 2025 and 2026;
+an [independent raw-input review](../../review_work/lead235_20260924/peer_rank_validation_v1/receipt_v1.json)
+checked source identity and sampled peer arithmetic without opening outcomes.
+Matched 389-field LightGBM candidate and equal-width control fits used the
+same F1 Jan-Apr rows and fixed 1,701 trees. The first candidate attempt stopped
+on a native initialization fault after its permitted refit label read; its
+artifacts remain preserved. The versioned retry froze both models and their
+May/June/July/December predictions, independently checked native replay, and
+exchanged only the ordinary LGB387 component at its unchanged May weight.
+Finite-exceptional and missing predictions stayed unchanged. The one-time
+[complete F1 result](../../private_runs/lead235_20260924/peer_rank_scorer_v1/score_F1_v1/result.json)
+passed an [independent score audit](../../review_work/lead235_20260924/peer_rank_score_audit_v1/receipt_F1_v1.json).
+On July's 190,713 complete rows, candidate RMSE was 334.133336 versus
+334.144629 for the equal-width control and 334.129587 for clean: the 0.011292-
+second gain over the matched control did not beat clean, and July robustness
+failed against both. December gained only 0.018430 seconds over clean; June
+regressed by 0.019243 seconds. This direction stops at F1 with no F3 fit,
+ranking inference or official upload. Input novelty did not establish a useful
+score gain; do not retune this peer rule on the exposed months.
 
 Missing-NM grouped-slope ideas currently have only synthetic evidence, and
 the previously tested grouped-slope candidate lost to V3. Any new feed still
