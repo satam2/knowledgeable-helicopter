@@ -53,6 +53,7 @@ of a frozen candidate, not select weights, rows, rules, or the next variant.
 | Clean nine-component F1 control, September 24 | June/July/December complete RMSE 318.758/334.130/234.744; earlier Jan-Apr fit and May weights | Not submitted | Diagnostic reference only; no matched candidate gain |
 | Source-aware shared-trunk F1, September 24 | July joint 338.445 vs clean base 334.130 and rich-only 339.893; December joint 241.275 vs base 234.744 | Not submitted | Stop before F3; July robustness and December transport fail vs base |
 | Peer-relative clock-gap rank F1, September 24 | Input-only screen passed; July candidate 334.133 vs equal-width control 334.145 and clean 334.130; December candidate 234.725 vs clean 234.744 | Not submitted | Stop before F3; July robust gain fails against both comparators |
+| Clean nine-component F3 control, September 24 | Complete October/November/December 2025 RMSE 222.200/225.324/221.754 on 185,674/162,332/165,677 rows | Not submitted | Diagnostic reference only; later origin and different population from official Jan/Jul 2026. No matched candidate gain. |
 
 V4 already used at least one September 23 submission slot. The prior V4 bucket
 preflight counted zero same-UTC-day objects, but the official reset boundary is
@@ -260,10 +261,35 @@ replayed every label join and full/month/route arithmetic. One extreme June
 flight adds 55.976 seconds to the June RMSE, so all headline scores retain it.
 These absolute clean-prefix numbers are not comparable to historical V3's
 268.662991 seasonal local score or its 278.0146 official result. Clean F3
-remains unrun; the source-aware F1 candidate stopped at its matched gate. Use the
+is complete as a diagnostic: all nine components passed an [independent
+postfit aggregate](../../review_work/lead235_20260924/clean_f3_validation_v1/nine_component_postfit_v1.json)
+before September label access. September-only calibration and the full
+October/November/December 2025 panels passed an [independent prescore
+review](../../review_work/lead235_20260924/clean_f3_composer_validation_v1/prescore_route_review_v1.json)
+on 513,683 rows. The one-time [score](../../private_runs/lead235_20260924/clean_f3_score_v1/F3/diagnostics.json)
+was independently [replayed](../../review_work/lead235_20260924/clean_f3_score_audit_v1/receipt_v1.json):
+complete RMSE 222.200197/225.323918/221.754281 in October/November/December,
+respectively. These are exposed 2025 later-origin months; the control has no
+matched candidate gain or Jan/Jul 2026 score. Do not upload it on this basis.
+The original verifier receipts remain immutable: a versioned V2 canary check,
+CUDA TabM replays and a fold-specific 128-tree normalized replay resolved
+reviewer-only contract mismatches without changing fitted models or panels.
+The exact receipts and gates are in the [F3 producer](../../review_work/lead235_20260924/clean_f3_recipe_v1/README.md),
+[independent validation](../../review_work/lead235_20260924/clean_f3_validation_v1/README.md),
+[composer](../../review_work/lead235_20260924/clean_f3_composer_v1/README.md),
+and [score audit](../../review_work/lead235_20260924/clean_f3_score_audit_v1/README.md)
+runbooks. The source-aware F1 candidate stopped at its matched gate. Use the
 verified LOMO metadata as a separate retrospective check only when a matched
 full recipe is feasible. In parallel, seek a distinct input-supported source
 mechanism; do not retune stopped input screens on their observed failures.
+
+The [independent external off-block feasibility audit](../../review_work/lead235_20260924/external_offblock_feasibility_v1/REPORT.md)
+found historical gate-out products, but no public proof of exact challenge-row
+coverage, unique identity joins or first-publication timing. Commercial
+FlightAware and OAG licenses do not satisfy the challenge's open-license rule
+for additional prize-eligible datasets. No external source is admitted for
+acquisition, fitting or upload; a future open feed needs a lawful input-only
+coverage and provenance audit before revisiting this branch.
 
 ## Candidate qualification
 
