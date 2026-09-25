@@ -5,6 +5,7 @@ from __future__ import annotations
 import csv
 import hashlib
 import json
+import math
 from pathlib import Path
 
 import matplotlib
@@ -84,6 +85,14 @@ SOURCES = [
         "942ea22b606d24b1a06bb0550d6c540bc6ea681209064795b5dab41bdcf07c07",
         "route_duration",
     ),
+    (
+        "Scheduled inbound density", "same-peer landed density",
+        "private_runs/lead235_20260925/scheduled_f1_score_v5/F1/result.json",
+        "b70208d48cc4e29e8e838affaabdfa876ba7b701d610490ea1d13b909eeb8e52",
+        "private_runs/lead235_20260925/scheduled_f1_score_v5/F1/POSTSCORE_AUDIT.json",
+        "33f1a78c6a261fa0cfd271a4f744213f2808b6707e87441ae8f06a751f01e764",
+        "scheduled",
+    ),
 ]
 
 OFFICIAL = [
@@ -129,6 +138,9 @@ def complete_comparison(data: dict, kind: str, month: str) -> tuple[float, float
     if kind == "rank":
         part = data["months"][month]["comparisons"]["control"]["complete"]
         return part["comparator_rmse"], part["candidate_rmse"], part["gain_sec"], part["rows"]
+    if kind == "scheduled":
+        part = data["months"][month]["comparisons"]["landed"]
+        return part["comparator_rmse"], part["candidate_rmse"], part["gain_sec"], part["rows"]
     if kind == "arr_aux":
         part = data["months"][month]["comparisons"]["detached"]
     elif kind == "weather":
@@ -151,7 +163,7 @@ def aggregate_rows() -> list[dict]:
             review = json.loads(audited)
             audit_result_hash = review.get("score_sha256", review.get("f1_result_sha256", review.get("score_result_sha256", review.get("result_sha256"))))
             assert audit_result_hash == src_hash, (kind, "independent audit did not bind score")
-            gate = data["f1_gate"] if kind in ("source_aware", "rank", "arr_aux", "weather", "route_duration") else data["gate"]
+            gate = data["f1_gate"] if kind in ("source_aware", "rank", "arr_aux", "weather", "route_duration", "scheduled") else data["gate"]
             assert gate["passed"] is False, (kind, "gate changed")
             assert review.get("f1_gate_passed", review.get("gate_passed", False)) is False
             if kind == "route_duration":
@@ -162,6 +174,32 @@ def aggregate_rows() -> list[dict]:
                     assert part["comparisons"]["raw"] == part["comparisons"]["clean"], (kind, month, "raw/clean comparisons differ")
                     hashes = review["months"][month]["panels_sha256"]
                     assert hashes["raw"] == hashes["clean"], (kind, month, "raw/clean panels differ")
+            if kind == "scheduled":
+                assert data["status"] == review["decision"] == "stopped_after_F1"
+                assert review["complete_panel_rmse_count"] == 9 and review["paired_comparison_count"] == 6
+                assert review["maximum_absolute_reported_numeric_delta"] == 0
+                assert review["admission_sha256"] == data["prescore_admission_sha256"]
+                assert review["target_source_sha256"] == data["pins"]["target_source_sha256"]
+                assert data["ranking_prediction"] is False and data["upload"] is False
+                assert review["ranking_prediction"] is False and review["upload"] is False
+                for matched_arm in ("landed", "clean"):
+                    checks = gate["checks"][matched_arm]
+                    assert all(checks[key] is False for key in (
+                        "july_complete_gain_at_least_5_sec", "july_paired_day_ci95_lower_positive",
+                        "july_each_day_removal_positive", "july_top10_beneficial_removal_positive"))
+                    assert checks["december_regression_at_most_1_sec"] is True
+                for monthly in data["months"].values():
+                    assert set(monthly["arms"]) == {"scheduled", "landed", "clean"}
+                    assert set(monthly["comparisons"]) == {"landed", "clean"}
+                    for arm in monthly["arms"].values():
+                        assert arm["rows"] == monthly["rows"]
+                        assert math.isclose(arm["rmse"], math.sqrt(arm["sse"] / arm["rows"]),
+                                            abs_tol=1e-7, rel_tol=0)
+                    for matched_arm, comparison in monthly["comparisons"].items():
+                        assert comparison["rows"] == monthly["rows"]
+                        assert abs(comparison["candidate_rmse"] - monthly["arms"]["scheduled"]["rmse"]) < 1e-7
+                        assert abs(comparison["comparator_rmse"] - monthly["arms"][matched_arm]["rmse"]) < 1e-7
+                        assert abs((comparison["comparator_rmse"] - comparison["candidate_rmse"]) - comparison["gain_sec"]) < 1e-7
         for month in ROWS:
             control, candidate, gain, count = complete_comparison(data, kind, month)
             assert count == ROWS[month], (kind, month, count)
@@ -185,7 +223,7 @@ def aggregate_rows() -> list[dict]:
 def draw(rows: list[dict]) -> None:
     plt.rcParams.update({"font.size": 10, "font.family": "DejaVu Sans", "axes.spines.top": False,
                          "axes.spines.right": False, "savefig.facecolor": "white"})
-    fig = plt.figure(figsize=(12.6, 8.9), constrained_layout=False)
+    fig = plt.figure(figsize=(12.6, 9.5), constrained_layout=False)
     outer = fig.add_gridspec(nrows=2, ncols=2, height_ratios=[6.5, 2.3],
                              width_ratios=[1, 1], left=.30, right=.965, top=.84,
                              bottom=.088, hspace=.65, wspace=.18)

@@ -23,8 +23,8 @@ timezone. Zero uploads is the correct result if no candidate clears the gates.
 | Day | Work to attempt, subject to the preceding gate | Release decision |
 | --- | --- | --- |
 | Thu Sep 24 | Close the failed ARR-supervision F1 arm and complete the paired weather input, twelve matched refits, independent prediction review and one-time F1 score. Preserve the v1 native crash and the separate v2 CPU/v3 GPU recovery receipts. | Extra-time weather lost 0.212 seconds to its matched routine control in complete July; stop before F3, ranking fit or upload. |
-| Fri Sep 25 | The filed route/type duration arm completed its one-time F1 score and stopped. The scheduled-inbound arm completed a separately versioned generated-only 24 GiB postfit canary and independent replay. Its next step is a prospective, independently reviewed local-fit policy and fresh fit admission; the frozen v4 production runner still requires >=26 GiB. Keep target-month ARR-label training held. | Route-duration centered gained only 0.026834 seconds in complete July versus byte-identical raw/clean controls, with a paired-day interval crossing zero; stop before F3, ranking inference or upload. The generated canary measured resources, not RMSE or fit eligibility. Future-ARR-membership release remains held for organizer clarification. |
-| Sat Sep 26 | Only for an admitted direction, freeze matched capacity and chronological cohorts, fit one heavy job at a time, audit complete predictions before scoring and test July robustness plus December transport. | Stop a failed F1 arm without tuning on exposed rows; F3 and full-season qualification require their own receipts. |
+| Fri Sep 25 | The route/type duration and scheduled-inbound arms completed separate one-time F1 scores and independent arithmetic replays. The scheduled arm used a reviewed local-only 24 GiB policy, four serial fits, independent postfit and May calibration, and nine complete frozen panels. Keep target-month ARR-label training held. | Route-duration gained 0.026834 seconds in complete July versus raw/clean. Scheduled-inbound lost 0.006124 seconds to its landed control and 0.013206 to clean in July. Both failed their F1 gates; no F3, ranking inference or upload. Future-ARR-membership release remains held for organizer clarification. |
+| Sat Sep 26 | Screen a distinct per-flight event-source/revision-age observation for documented provenance, open licensing, first-publication timing, unique joins and January/July 2025/2026 support. Only for an admitted direction, freeze matched capacity and chronological cohorts before fitting. | No reviewed source is fit-ready yet. Stop at the metadata gate if those conditions fail; any qualified F1 direction still needs independent full-panel and transport checks. |
 | Sun Sep 27 | Finish any eligible, qualified F3/full-year dependency, independently verify release, check organizer quota and credentials, and upload only a frozen complete candidate. Publish the final experiment and score report. | Close the goal and disable the schedule after the report; if morning work remains, continue later that day. |
 
 Each daily continuation follows this order: inspect the private ledger, goal and
@@ -49,9 +49,9 @@ observations lost to a matched routine-only refit in complete July 2025.
 The same-target-month ARR availability screen passed all four January/July
 2025/2026 support cells, but organizer permission for training on ranking-month
 ARR labels remains unresolved. Neither a different disclosed phase nor input
-coverage alone authorizes that fit. A distinct label-free scheduled-inbound
-input screen passed independently; source timing and matched-fit feasibility
-remain under review. A new direction must preserve its own
+coverage alone authorizes that fit. The distinct scheduled-inbound input
+screen passed, but its audited matched F1 score failed the July gate. A new
+direction must preserve its own
 matched control, query IDs, route ownership and chronological access rules.
 Do not forecast 240 or 235 from an input or earlier-origin result.
 
@@ -117,6 +117,7 @@ of a frozen candidate, not select weights, rows, rules, or the next variant.
 | NM flight-rule transition input, September 24 | Input-only `Y/Z` shares 0.055-0.095% in Jan/Jul 2025/2026; no Rome day has two qualifying rows | Not submitted | Four-cell support gate failed before fit or score |
 | Unfiltered IEM extra-time weather versus matched routine, September 24 | Twelve matched F1 experts and 539,532 complete June/July/December rows. July RMSE: extra 333.7258, routine 333.5139, clean 334.1296. June extra/routine 318.8461/318.6100; December 233.2101/234.4017. | Not submitted | Independent arithmetic audit reproduced the one-time result. July extra lost 0.2119 seconds to routine and failed all four matched robustness checks. Stop before F3/ranking/upload; historical first-publication and source-license eligibility also remain unresolved. |
 | Filed route/type duration centering F1, September 25 | On complete June/July/December 2025 rows, centered RMSE 318.766899/334.102752/234.701302 versus raw and clean 318.758152/334.129587/234.743663. Raw and clean panel bytes match in all three months. July gain +0.026834 sec, paired-day CI [-0.011951, 0.066614]. | Not submitted | One-time F1 gate failed; independent nine-panel postscore replay has zero arithmetic delta. No F3, ranking fit or upload. |
+| Scheduled versus landed inbound density F1, September 25 | Complete June/July/December scheduled RMSE 318.782435/334.142793/234.667814 versus landed 318.781897/334.136668/234.717976 and clean 318.758152/334.129587/234.743663. July gains -0.006124 versus landed, -0.013206 versus clean; both paired-day intervals cross zero. | Not submitted | One-time F1 gate failed against both controls; independent nine-panel postscore arithmetic delta 0. No F3, ranking fit or upload. |
 
 V4 already used at least one September 23 submission slot. The prior V4 bucket
 preflight counted zero same-UTC-day objects, but the official reset boundary is
@@ -140,13 +141,11 @@ scheduled-inbound label-free source review -> four-cell input gate passed
        -> four synthetic-label capacity fits + independent resource replay passed
        -> v4 static science review passed; v4 26 GiB canary remains unrun
        -> separate v5 24 GiB generated-only full postfit canary + independent
-          native/four-panel replay passed; no production fit admission follows
-       -> prospective local-fit policy/runner + renewed exact-hash admission
-          (v4 production still needs >=26 GiB and its hardcoded receipt paths)
-       -> serial F1 fit -> prescore audit -> one-time F1 gate
-       -> only if F1 passes: F3/transport and full-season gate
-       -> release eligibility + independent ranking verification
-       -> quota/credentials -> one upload -> readback/ledger
+          native/four-panel replay passed; v4 production gate unchanged
+       -> local-only policy and independent admission -> four serial F1 fits
+       -> postfit/May calibration -> nine frozen panels -> prescore audit
+       -> one-time F1 score + independent arithmetic replay
+       -> July lost to landed and clean: STOP; no F3/ranking/upload
 
 filed M1 duration already in union387 -> target-blind route/type centering
        -> Jan-Mar/Jan-Apr banks + four-cell support independently replayed
@@ -610,9 +609,38 @@ The v5 producer and reviewer generated tests passed 11/11 and 10/10. This is
 resource and byte-integrity evidence only: no real labels, RMSE, ranking
 prediction, upload or v4 `FIT_ADMISSION` exists. The v4 runner still hardcodes
 its original receipt/audit paths and >=26 GiB fit launch floor. A real local
-fit needs a separately versioned policy, exact-source runner and independent
-fit admission; official release remains held for the future-ARR-membership
-organizer ruling.
+fit required a separately versioned policy, exact-source runner and independent
+fit admission. Those later local-only steps and the stopped F1 result are
+recorded below; official use of future ARR peer membership remains unresolved.
+
+The [scheduled/landed one-time F1 result](../../private_runs/lead235_20260925/scheduled_f1_score_v5/F1/result.json)
+SHA-256 `b70208d48cc4e29e8e838affaabdfa876ba7b701d610490ea1d13b909eeb8e52`
+used the independently reviewed [nine-panel admission](../../review_work/lead235_20260925/scheduled_f1_score_v5/PRESCORE_ADMISSION.json)
+SHA-256 `2c804b6d1cff7471129cdca65787cb90ba0cd4c33c466fa831bf3851c74a2a5f`.
+On all 190,713 July rows, scheduled RMSE was 334.142793 versus landed
+334.136668 and clean 334.129587. Gains were -0.006124 and -0.013206 seconds;
+both paired-day intervals cross zero and the day/top-ten removal checks fail.
+June also regressed against both; December gains were only 0.050162/0.075849
+seconds. The [independent postscore replay](../../private_runs/lead235_20260925/scheduled_f1_score_v5/F1/POSTSCORE_AUDIT.json)
+SHA-256 `33f1a78c6a261fa0cfd271a4f744213f2808b6707e87441ae8f06a751f01e764`
+verified all nine RMSEs, six paired comparisons and the failed gate with zero
+reported arithmetic delta. Stop this exact direction before F3, ranking
+inference or upload; the earlier-origin F1 scores are not comparable in level
+to V3's 268.662991 historical local or 278.0146 official score.
+
+The next conditional research direction is a **documented per-flight NM event
+source or revision/publication-age observation**, compared at equal information
+and capacity to a pooled clock context and the unchanged clean model. The
+[frozen input gate](../../review_work/lead235_20260924/ordinary_signal_next_v1/PROTOCOL.md)
+requires an explicit field with as-of semantics and support in all 2025 packs
+and January/July 2026 before any value statistics or fitting. The supplied
+30-field schema has no such field; the reviewed
+[external feed audit](../../review_work/lead235_20260924/external_offblock_feasibility_v1/REPORT.md)
+found no source with proven open license, publication timing, unique flight
+join and winter coverage. First seek and verify a named eligible source's
+metadata; if none exists, stop this branch at input screening. Do not infer a
+source state from existing timestamps or fit a minor variant of the stopped
+scheduled arm.
 
 The [prior same-runway landing-age input](../../review_work/lead235_20260924/past_event_direction_v1/REPORT.md)
 stopped at its predeclared breadth gate: January/July 2025/2026 same-runway
@@ -743,12 +771,10 @@ SHA-256 `942ea22b606d24b1a06bb0550d6c540bc6ea681209064795b5dab41bdcf07c07`
 reproduced all nine panel metrics and the failed gate with zero maximum delta.
 Close this exact direction at F1. Do not retune a weight or route switch from
 exposed rows; do not pursue its v4 production build, F3, ranking fit or upload.
-The next distinct local candidate is scheduled-inbound versus same-peer
-landed-inbound density. Its separate v5 generated-only canary passed, but
-supervised local fitting still needs a reviewed policy and admission; the
-unchanged v4 production runner retains its >=26 GiB gate and fixed v4 paths.
-Official release of a feature using future ARR peer membership needs a dated
-organizer ruling even if its local test eventually passes.
+The scheduled-inbound versus same-peer landed-inbound density arm has now
+stopped at its audited F1 July gate. No small weight or route adjustment from
+its exposed errors is authorized. Official release of any separate feature
+using future ARR peer membership still needs a dated organizer ruling.
 
 ## Candidate qualification
 
