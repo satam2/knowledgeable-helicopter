@@ -26,7 +26,7 @@ timezone. Zero uploads is the correct result if no candidate clears the gates.
 | --- | --- | --- |
 | Thu Sep 24 | Close the failed ARR-supervision F1 arm and complete the paired weather input, twelve matched refits, independent prediction review and one-time F1 score. Preserve the v1 native crash and the separate v2 CPU/v3 GPU recovery receipts. | Extra-time weather lost 0.212 seconds to its matched routine control in complete July; stop before F3, ranking fit or upload. |
 | Fri Sep 25 | The route/type duration, scheduled-inbound and current-expert contextual gate arms completed separate one-time F1 scores and independent arithmetic replays. A target-blind EOBT-channel shift screen completed its independent input replay. Keep target-month ARR-label training held. | Route-duration gained 0.026834 seconds in complete July versus raw/clean; scheduled-inbound lost 0.006124 seconds to landed and 0.013206 to clean; contextual weighting gained 0.069855 seconds versus each control. All missed their frozen F1 advancement gates. The EOBT input screen failed January and both chronological analogues. No F3, ranking inference or upload. Future-ARR-membership release remains held for organizer clarification. |
-| Sat Sep 26 | Friday's OPDI, airport-operator traffic, CAMS, ADSB.lol and VDL IQ source screens stopped; the EOBT gate and queue/join/internal audits also stopped. Seek a distinct documented observation with January/July 2025/2026 coverage and prize-use rights; freeze identity, timing, support, matched control and resource gates before accessing rows. | Do not reopen stopped sources or supplied-data screens by relaxing their gates. The exact OOF shared-input variant is untested but lacks a credible five-second case and has a large chronology/fit cost. If no independently eligible source passes, record the negative result and do not manufacture a minor variant. |
+| Sat Sep 26 | Friday's OPDI, airport-operator traffic, CAMS, ADSB.lol and VDL IQ source screens stopped; the EOBT gate and queue/join/internal audits also stopped. Seek a distinct documented observation with January/July 2025/2026 coverage and prize-use rights; freeze identity, timing, support, matched control and resource gates before accessing rows. A separately frozen, label-free V3 categorical-unknown audit may test the only unresolved broad input question; a 2025-only November ARR availability screen is a bounded research fallback, not fit admission. | Do not reopen stopped sources or supplied-data screens by relaxing their gates. The exact OOF shared-input variant lacks a credible five-second case and has a large chronology/fit cost. An unknown-category or ARR-availability finding alone cannot qualify a model. If no independently eligible mechanism passes, record the negative result and do not manufacture a minor variant. |
 | Sun Sep 27 | If Saturday yields an eligible direction that clears F1, finish its matched F3/full-year dependency, independently verify release, check organizer quota and credentials, and upload only a frozen complete candidate. Otherwise publish the final experiment and score report with the stopped directions and next research question. | No new candidate has cleared F1 as of Friday. Close the goal and disable both schedules after the report; the one-time 5:00 PM backup checks for unfinished work if the morning run ends early. |
 
 Each daily continuation follows this order: inspect the private ledger, goal and
@@ -39,6 +39,20 @@ Record even a stopped or resource-blocked direction in the ledger, and report
 the current best official result separately from historical local scores.
 One-factor differences make a matched comparison interpretable; they do not
 make five tiny variants independently qualified submissions.
+
+Friday's read-only [V3 release audit](../../review_work/lead235_20260925/v3_release_gap_audit_v1/REPORT.md)
+rehashed the submitted payload, ten model artifacts and the 344,841-row
+composition; it found no local serialization, route or upload-receipt mismatch.
+The independent [ranking-input audit](../../review_work/lead235_20260925/v3_input_gap_audit_v1/REPORT.md)
+found no demonstrated broad time-unit, schema, identifier, source-order or
+categorical-coding error. The 9.3516-second difference between the historical
+268.662991 local V3 and 278.0146 official V3 is therefore **not explained by
+a demonstrated payload bug**; the two scores use different years and cohorts.
+January missing-NM prevalence and July LFPG clock shifts are observable
+transfer risks, not measurements of hidden error. These audits do not prove
+the remote object is unchanged today or that every feature is semantically
+correct. Retain V3; do not make a corrective upload without a new matched
+candidate and release proof.
 
 These are work targets, not deadlines that waive a gate. Advance a step as soon
 as it is ready, or spend the day on input-supported research if the current
@@ -206,6 +220,21 @@ Saturday distinct-source discovery -> named license + eligible observation
        -> freeze identity/timing/support and matched-control protocol
        -> bounded input-only four-cell audit only if source gate clears
        -> matched F1, then F3/season/release only after their frozen gates
+
+V3 input-gap audit -> 15 fit-vocabulary unseen-category rates unmeasured
+       -> optional exact-hash, label-free aggregate protocol and independent
+          review before any 2026 input projection
+       -> freeze materiality threshold before read; count by field, airport,
+          month and V3 route with unchanged encoding and full ID coverage
+       -> source-semantics and 2025 analogue review only if material; no
+          category merger, fit, hidden-error inference or upload from counts
+
+2025-only same-month ARR adaptation -> November input support not checked
+       -> optional exact-month, flight-purged screen and independent replay
+       -> strictly earlier-trained clean April/August OOF residuals absent
+       -> only then freeze ARR-innovation vs same-information control test
+       -> only a positive diagnostic can justify paired F1/F3 fit admission;
+          ranking-month 2026 ARR-label training stays held
 
 supplied-data fallback audit -> absent event/revision field + failed ratio gate
        -> no new internal input or defensible historical analogue: STOP
