@@ -26,7 +26,7 @@ timezone. Zero uploads is the correct result if no candidate clears the gates.
 | --- | --- | --- |
 | Thu Sep 24 | Close the failed ARR-supervision F1 arm and complete the paired weather input, twelve matched refits, independent prediction review and one-time F1 score. Preserve the v1 native crash and the separate v2 CPU/v3 GPU recovery receipts. | Extra-time weather lost 0.212 seconds to its matched routine control in complete July; stop before F3, ranking fit or upload. |
 | Fri Sep 25 | The route/type duration, scheduled-inbound and current-expert contextual gate arms completed separate one-time F1 scores and independent arithmetic replays. A target-blind EOBT-channel shift screen completed its independent input replay. Keep target-month ARR-label training held. | Route-duration gained 0.026834 seconds in complete July versus raw/clean; scheduled-inbound lost 0.006124 seconds to landed and 0.013206 to clean; contextual weighting gained 0.069855 seconds versus each control. All missed their frozen F1 advancement gates. The EOBT input screen failed January and both chronological analogues. No F3, ranking inference or upload. Future-ARR-membership release remains held for organizer clarification. |
-| Sat Sep 26 | Friday's OPDI, airport-operator traffic, CAMS, ADSB.lol and VDL IQ source screens stopped; the EOBT gate and queue/join/internal audits also stopped. Seek a distinct documented observation with January/July 2025/2026 coverage and prize-use rights; freeze identity, timing, support, matched control and resource gates before accessing rows. A separately frozen, label-free V3 categorical-unknown audit may test the only unresolved broad input question; a 2025-only November ARR availability screen is a bounded research fallback, not fit admission. | Do not reopen stopped sources or supplied-data screens by relaxing their gates. The exact OOF shared-input variant lacks a credible five-second case and has a large chronology/fit cost. An unknown-category or ARR-availability finding alone cannot qualify a model. If no independently eligible mechanism passes, record the negative result and do not manufacture a minor variant. |
+| Sat Sep 26 | Friday's OPDI, airport-operator traffic, CAMS, ADSB.lol, VDL IQ and EAD NOTAM source screens stopped; the EOBT gate and queue/join/internal audits also stopped. The category census found one July EDDM stand-pair shift, but its chronological July 2025 analogue has only two OOV rows, so no supervised stand correction is admitted. Seek a distinct documented observation with January/July 2025/2026 coverage and prize-use rights; freeze identity, timing, support, matched control and resource gates before accessing rows. November 2025 ARR availability passed independently; its chronological clean OOF residual dependency is not built. | Do not reopen stopped sources or supplied-data screens by relaxing their gates. The exact OOF shared-input variant lacks a credible five-second case and has a large chronology/fit cost. An unknown-category or ARR-availability finding alone cannot qualify a model. If no independently eligible mechanism passes, record the negative result and do not manufacture a minor variant. |
 | Sun Sep 27 | If Saturday yields an eligible direction that clears F1, finish its matched F3/full-year dependency, independently verify release, check organizer quota and credentials, and upload only a frozen complete candidate. Otherwise publish the final experiment and score report with the stopped directions and next research question. | No new candidate has cleared F1 as of Friday. Close the goal and disable both schedules after the report; the one-time 5:00 PM backup checks for unfinished work if the morning run ends early. |
 
 Each daily continuation follows this order: inspect the private ledger, goal and
@@ -53,6 +53,35 @@ transfer risks, not measurements of hidden error. These audits do not prove
 the remote object is unchanged today or that every feature is semantically
 correct. Retain V3; do not make a corrective upload without a new matched
 candidate and release proof.
+
+The distinct [EAD NOTAM source triage](source-reviews/2026-09-25-next-source-triage.md)
+stopped at documentation: no prize-compatible event-dataset license, public
+immutable 2025/2026 notice archive or historical first-publication receipt
+was established. No event bodies or challenge rows were acquired.
+The one-use [November 2025 ARR input screen](../../review_work/lead235_20260925/arr_november_support_v1/receipt.json)
+retained 135,368/162,198 eligible ARR rows (83.4585%) after the frozen
+same-flight and clock exclusions. Its [independent postread replay](../../review_work/lead235_20260925/arr_november_support_review_v1/POSTREAD_REVIEW.md)
+matched every aggregate and confirmed all ten airport/day gates. This
+establishes retrospective input support, not a complementary signal or a
+transferable supervised model. The clean April/August OOF predictions and
+matched negative-control residual test remain prerequisites; ranking-month
+2026 ARR-label training stays held.
+
+The versioned [V3 category census](../../review_work/lead235_20260925/v3_category_oov_gate_v2/RECEIPT.json)
+and [independent replay](../../review_work/lead235_20260925/v3_category_oov_postread_v2/REPORT.md)
+found one frozen input-threshold crossing: July 2026 EDDM ordinary
+`airport_stand` is unknown to the full-2025 fit on 1,162/14,893 rows
+(7.8023%). The first v1 input attempt stopped because its audit compared
+raw airport codes to intentionally tokenized features; an independent
+344,841-row source check found no residual mismatch after applying the
+frozen tokenization. The separate [stand-source audit](../../review_work/lead235_20260925/eddm_stand_semantics_review_v1/REPORT.md)
+reproduced the ten unseen airport/stand pairs and ruled out missing, blank,
+trim and case differences in the supplied values. Its preregistered
+Jan-Jun-fit/July-2025 EDDM analogue had only **2/15,649** unseen pairs.
+This confirms an input distribution shift but leaves no adequately supported
+2025 OOV stratum for a targeted error estimate or matched five-second claim.
+V3 also retains separate airport and stand features. Do not fit a 2026
+stand-pair correction or submit a variant based on these label-free counts.
 
 These are work targets, not deadlines that waive a gate. Advance a step as soon
 as it is ready, or spend the day on input-supported research if the current
@@ -221,16 +250,15 @@ Saturday distinct-source discovery -> named license + eligible observation
        -> bounded input-only four-cell audit only if source gate clears
        -> matched F1, then F3/season/release only after their frozen gates
 
-V3 input-gap audit -> 15 fit-vocabulary unseen-category rates unmeasured
-       -> optional exact-hash, label-free aggregate protocol and independent
-          review before any 2026 input projection
-       -> freeze materiality threshold before read; count by field, airport,
-          month and V3 route with unchanged encoding and full ID coverage
-       -> source-semantics and 2025 analogue review only if material; no
-          category merger, fit, hidden-error inference or upload from counts
+V3 input-gap audit -> v1 raw/token diagnostic failed, independently explained
+       -> v2 frozen 15-field input screen + independent all-cell replay PASSED
+       -> July EDDM airport_stand 1162/14893 exceeds 5% cell threshold
+       -> source semantics independently replayed; 2025 analogue 2/15649
+       -> STOP targeted supervised correction at insufficient analogue support;
+          no category merger, hidden-error inference or upload from counts
 
-2025-only same-month ARR adaptation -> November input support not checked
-       -> optional exact-month, flight-purged screen and independent replay
+2025-only same-month ARR adaptation -> November input support PASSED
+       -> 83.4585% retained; ten airports pass independent input replay
        -> strictly earlier-trained clean April/August OOF residuals absent
        -> only then freeze ARR-innovation vs same-information control test
        -> only a positive diagnostic can justify paired F1/F3 fit admission;
