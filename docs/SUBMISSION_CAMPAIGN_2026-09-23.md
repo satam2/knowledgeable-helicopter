@@ -148,7 +148,8 @@ scheduled-inbound label-free source review -> four-cell input gate passed
 filed M1 duration already in union387 -> target-blind route/type centering
        -> Jan-Mar/Jan-Apr banks + four-cell support independently replayed
        -> full-fidelity probe + independent replay passed; v3 build NOT admitted
-       -> separately reviewed builder policy/admission + matched matrix audit
+       -> v4 policy static review passed; await >=26 GiB + one-use admission
+       -> v4 build + independent matched matrix/resource audit
        -> separate supervised fit admission
        -> serial F1 fit and complete-prediction/May/prescore reviews
        -> only if F1 passes: F3, full-season and release gates
@@ -644,6 +645,20 @@ admitted v3 outputs. A separately reviewed, versioned builder policy and
 exact-hash admission must account for those margins before production build,
 followed by its own postbuild audit and supervised fit admission. No label,
 model, score or upload exists from this direction.
+
+The separately versioned [v4 builder policy](../../review_work/lead235_20260925/route_duration_stage_builder_v4/PROTOCOL.md)
+keeps v3's stage, flight-purge, median and 387-slot logic while proposing a
+fresh >=26 GiB launch floor, strict <10 GiB lifetime process peak and >=8 GiB
+host/disk reserves. Its [independent prebuild review](../../review_work/lead235_20260925/route_duration_stage_builder_review_v4/REVIEW.md)
+replayed 27 pinned hashes and v3 science bodies; 36 combined synthetic tests
+passed, including threshold and late-lock fail-stop canaries. The reviewer
+withheld `BUILD_ADMISSION.json`: available host memory was 24.554 GiB at its
+fresh sample, below the 26 GiB floor. Recheck memory, disk, locks and exact
+bytes before a one-use admission. A v4 build and independent all-stage
+parity/resource audit remain required before any supervised fit. The separately
+studied faster bank kernel passed generated differential tests but has a
+mutable-input cache risk and no full-size resource/parity result; it is not
+part of v4.
 
 ## Candidate qualification
 
