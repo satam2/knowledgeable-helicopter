@@ -23,6 +23,12 @@ identity and four-cell support. The November 2025 ARR availability screen
 passed, but its earlier-trained clean April/August out-of-fold residuals and
 matched negative control are still missing. The July EDDM stand-category shift
 has insufficient historical analogue support for supervised correction.
+The [April/August ID audit](../../review_work/lead235_20260925/arr_oof_dependency_audit_v1/REPORT.md)
+now binds both chronological cohorts without labels; it does not build the
+clean OOF ensembles, screen their ARR support or admit a fit. A separate
+[NOAA GFS forecast review](source-reviews/2026-09-25-noaa-gfs-forecast-triage.md)
+stopped at historical publication-time evidence and unresolved prize-use
+license interpretation. No GFS files or challenge rows were acquired.
 
 For a new direction, follow the [dependency DAG](#dependency-dag): source and
 input gate -> frozen matched control -> F1 -> F3 and full-season robustness ->
@@ -280,8 +286,10 @@ V3 input-gap audit -> v1 raw/token diagnostic failed, independently explained
 
 2025-only same-month ARR adaptation -> November input support PASSED
        -> 83.4585% retained; ten airports pass independent input replay
-       -> strictly earlier-trained clean April/August OOF residuals absent
-       -> only then freeze ARR-innovation vs same-information control test
+       -> April/August chronological DEP ID receipt/replay PASSED, no labels
+       -> April/August ARR support and earlier-trained clean OOF panels absent
+       -> frozen ARR-innovation/negative-control diagnostic remains HELD
+       -> test only after source, OOF and resource admissions
        -> only a positive diagnostic can justify paired F1/F3 fit admission;
           ranking-month 2026 ARR-label training stays held
 
