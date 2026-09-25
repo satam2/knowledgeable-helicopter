@@ -25,8 +25,8 @@ timezone. Zero uploads is the correct result if no candidate clears the gates.
 | Day | Work to attempt, subject to the preceding gate | Release decision |
 | --- | --- | --- |
 | Thu Sep 24 | Close the failed ARR-supervision F1 arm and complete the paired weather input, twelve matched refits, independent prediction review and one-time F1 score. Preserve the v1 native crash and the separate v2 CPU/v3 GPU recovery receipts. | Extra-time weather lost 0.212 seconds to its matched routine control in complete July; stop before F3, ranking fit or upload. |
-| Fri Sep 25 | The route/type duration, scheduled-inbound and current-expert contextual gate arms completed separate one-time F1 scores and independent arithmetic replays. The contextual gate used an admitted May fit, an intercept-only comparator and the original unchanged clean F1 panels. Keep target-month ARR-label training held. | Route-duration gained 0.026834 seconds in complete July versus raw/clean; scheduled-inbound lost 0.006124 seconds to landed and 0.013206 to clean; contextual weighting gained 0.069855 seconds versus each control. All missed their frozen F1 advancement gates; no F3, ranking inference or upload. Future-ARR-membership release remains held for organizer clarification. |
-| Sat Sep 26 | OPDI rights and as-of audits completed early on Friday and stopped this input direction. Search for one distinct, documented, openly licensed observation with January/July 2025/2026 coverage; freeze its identity, timing, support, matched control and resource gates before accessing rows. The supplied-data source-status and direct same-month density-ratio branches are also stopped. | No further OPDI event acquisition, fit or upload without a dataset-specific grant and organizer prize-use interpretation. Its archive does not establish historical real-time availability; a retrospective proposal would need a separate frozen protocol. If no source passes, record the negative result and do not manufacture a minor model variant. |
+| Fri Sep 25 | The route/type duration, scheduled-inbound and current-expert contextual gate arms completed separate one-time F1 scores and independent arithmetic replays. A target-blind EOBT-channel shift screen completed its independent input replay. Keep target-month ARR-label training held. | Route-duration gained 0.026834 seconds in complete July versus raw/clean; scheduled-inbound lost 0.006124 seconds to landed and 0.013206 to clean; contextual weighting gained 0.069855 seconds versus each control. All missed their frozen F1 advancement gates. The EOBT input screen failed January and both chronological analogues. No F3, ranking inference or upload. Future-ARR-membership release remains held for organizer clarification. |
+| Sat Sep 26 | Friday's OPDI, airport-operator traffic and CAMS documentation screens stopped before source acquisition; the EOBT input gate and internal fallback also stopped. Search for one distinct, documented, eligible observation with January/July 2025/2026 coverage; freeze identity, timing, support, matched control and resource gates before accessing rows. | Do not reopen the stopped sources or supplied-data screens by relaxing their gates. If no independently eligible source passes, record the negative result and do not manufacture a minor model variant. |
 | Sun Sep 27 | If Saturday yields an eligible direction that clears F1, finish its matched F3/full-year dependency, independently verify release, check organizer quota and credentials, and upload only a frozen complete candidate. Otherwise publish the final experiment and score report with the stopped directions and next research question. | No new candidate has cleared F1 as of Friday. Close the goal and disable both schedules after the report; the one-time 5:00 PM backup checks for unfinished work if the morning run ends early. |
 
 Each daily continuation follows this order: inspect the private ledger, goal and
@@ -121,6 +121,9 @@ of a frozen candidate, not select weights, rows, rules, or the next variant.
 | Filed route/type duration centering F1, September 25 | On complete June/July/December 2025 rows, centered RMSE 318.766899/334.102752/234.701302 versus raw and clean 318.758152/334.129587/234.743663. Raw and clean panel bytes match in all three months. July gain +0.026834 sec, paired-day CI [-0.011951, 0.066614]. | Not submitted | One-time F1 gate failed; independent nine-panel postscore replay has zero arithmetic delta. No F3, ranking fit or upload. |
 | Scheduled versus landed inbound density F1, September 25 | Complete June/July/December scheduled RMSE 318.782435/334.142793/234.667814 versus landed 318.781897/334.136668/234.717976 and clean 318.758152/334.129587/234.743663. July gains -0.006124 versus landed, -0.013206 versus clean; both paired-day intervals cross zero. | Not submitted | One-time F1 gate failed against both controls; independent nine-panel postscore arithmetic delta 0. No F3, ranking fit or upload. |
 | Current-expert contextual convex gate F1, September 25 | Complete June/July/December contextual RMSE 318.703112/334.059731/235.098745 versus May-fitted intercept 318.758152/334.129586/234.743662 and original clean 318.758152/334.129587/234.743663. July gains +0.069855 sec against each control; paired-day lower bounds positive. | Not submitted | One-use score and independent nine-panel/six-comparison replay agree exactly. July misses predeclared >=5 sec gain against both controls; stop before F3, ranking fit or upload. |
+| EOBT-descendant 55-slot ablation, input only, September 25 | July 2025-to-2026 LFPG meets the clock-separation gate: EOBT-AOBT TV 0.3685 versus proxy 0.1186, median shift +480 sec, 29 aligned day pairs. January has no qualifying airport; both 2025 chronological F1/F3 analogues fail. No model or RMSE. | Not submitted | Producer and independent source/aggregate replay agree (`STOP_input_gate`). The predeclared four-comparison gate fails January, F1 and F3. Do not fit, score, infer ranking predictions or upload this mixed-composite block ablation. |
+| Airport-operator daily traffic, source documents, September 25 | EUROCONTROL advertises an airport/operator IFR departure-count archive covering 2025 and 2026, but no ten-airport cells or joins were measured. No model or RMSE. | Not submitted | [Source review](source-reviews/2026-09-25-airport-operator-daily-traffic.md): published reuse restrictions do not establish the required open license; historical publication time is unknown. Stop before data acquisition. |
+| CAMS PM2.5 forecast, source documents, September 25 | Global hourly forecast catalogue spans 2015-present with CC-BY-4.0; no airport-month values or joins were read. No model or RMSE. | Not submitted | [Source review](source-reviews/cams_pm25_forecast_2026-09-25.md): historical release/version timing and licensed airport coordinates remain unverified, as does organizer acceptance of the data license. Stop before data acquisition. |
 
 V4 already used at least one September 23 submission slot. The prior V4 bucket
 preflight counted zero same-UTC-day objects, but the official reset boundary is
@@ -170,6 +173,11 @@ four positive-weight clean F1 experts -> fixed contextual convex gate recipe
        -> July +0.069855 sec vs both controls, below >=5 sec: STOP
        -> no F3/ranking/upload or postscore coefficient adjustment
 
+frozen 55-slot EOBT-descendant mask -> static lineage/source admission
+       -> all-month target-blind input screen + independent aggregate replay
+       -> July LFPG separation passed; January and F1/F3 analogues failed
+       -> STOP before supervised fit, scoring, ranking inference or upload
+
 OPDI prior-flight entry-runway/take-off occupancy, input-only proposal
        -> first-party dataset license/prize-use evidence: FAIL; stop this arm
        -> historical real-time availability: UNKNOWN; event time is insufficient
@@ -179,6 +187,9 @@ Saturday distinct-source discovery -> named license + eligible observation
        -> freeze identity/timing/support and matched-control protocol
        -> bounded input-only four-cell audit only if source gate clears
        -> matched F1, then F3/season/release only after their frozen gates
+
+supplied-data fallback audit -> absent event/revision field + failed ratio gate
+       -> no new internal input or defensible historical analogue: STOP
 ```
 
 Independent feature, source, review and score-contract tasks may use subagents
