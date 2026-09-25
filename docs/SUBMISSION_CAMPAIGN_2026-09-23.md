@@ -15,8 +15,10 @@ row-level prediction or credential needed to reproduce those private results.
 ## Operating plan through Sunday
 
 The active `/goal` owns this campaign; the daily 8:00 AM Pacific continuation
-on September 24-27 resumes this same task. Start each session from the private
-ledger and the last frozen dependency, not from a desired number of uploads.
+on September 24-27 resumes this same task. A one-time Sunday 5:00 PM Pacific
+backup checks whether the final report is complete and continues this task if
+needed. Start each session from the private ledger and the last frozen
+dependency, not from a desired number of uploads.
 The five-per-day allowance is a ceiling under an undocumented organizer reset
 timezone. Zero uploads is the correct result if no candidate clears the gates.
 
@@ -25,7 +27,7 @@ timezone. Zero uploads is the correct result if no candidate clears the gates.
 | Thu Sep 24 | Close the failed ARR-supervision F1 arm and complete the paired weather input, twelve matched refits, independent prediction review and one-time F1 score. Preserve the v1 native crash and the separate v2 CPU/v3 GPU recovery receipts. | Extra-time weather lost 0.212 seconds to its matched routine control in complete July; stop before F3, ranking fit or upload. |
 | Fri Sep 25 | The route/type duration, scheduled-inbound and current-expert contextual gate arms completed separate one-time F1 scores and independent arithmetic replays. The contextual gate used an admitted May fit, an intercept-only comparator and the original unchanged clean F1 panels. Keep target-month ARR-label training held. | Route-duration gained 0.026834 seconds in complete July versus raw/clean; scheduled-inbound lost 0.006124 seconds to landed and 0.013206 to clean; contextual weighting gained 0.069855 seconds versus each control. All missed their frozen F1 advancement gates; no F3, ranking inference or upload. Future-ARR-membership release remains held for organizer clarification. |
 | Sat Sep 26 | OPDI rights and as-of audits completed early on Friday and stopped this input direction. Search for one distinct, documented, openly licensed observation with January/July 2025/2026 coverage; freeze its identity, timing, support, matched control and resource gates before accessing rows. The supplied-data source-status and direct same-month density-ratio branches are also stopped. | No further OPDI event acquisition, fit or upload without a dataset-specific grant and organizer prize-use interpretation. Its archive does not establish historical real-time availability; a retrospective proposal would need a separate frozen protocol. If no source passes, record the negative result and do not manufacture a minor model variant. |
-| Sun Sep 27 | If Saturday yields an eligible direction that clears F1, finish its matched F3/full-year dependency, independently verify release, check organizer quota and credentials, and upload only a frozen complete candidate. Otherwise publish the final experiment and score report with the stopped directions and next research question. | No new candidate has cleared F1 as of Friday. Close the goal and disable the schedule after the report; if the morning run cannot finish, arrange a later same-day continuation before it ends. |
+| Sun Sep 27 | If Saturday yields an eligible direction that clears F1, finish its matched F3/full-year dependency, independently verify release, check organizer quota and credentials, and upload only a frozen complete candidate. Otherwise publish the final experiment and score report with the stopped directions and next research question. | No new candidate has cleared F1 as of Friday. Close the goal and disable both schedules after the report; the one-time 5:00 PM backup checks for unfinished work if the morning run ends early. |
 
 Each daily continuation follows this order: inspect the private ledger, goal and
 active jobs; resume the earliest incomplete DAG node; independently check its
@@ -900,6 +902,6 @@ Do not treat five related variants as independent confirmation.
 At the close of the Sunday, September 27 campaign session, issue a final report
 with best verified local and official scores, every candidate and stop reason,
 resource/slot usage, transfer limits, and one justified next direction. End the
-recurring schedule and mark the goal complete only if the campaign work and
-final report are actually done;
+recurring schedule and one-time Sunday backup, and mark the goal complete only
+if the campaign work and final report are actually done;
 do not mark the *235 target* achieved without an official score below 235.
