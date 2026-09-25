@@ -134,6 +134,15 @@ and [public-method](../../review_work/lead235_20260925/public_method_gap_v1/REPO
 audits found no fit-ready candidate. Their bounded negative decisions and source
 limitations are in the private ledger. No new local RMSE or official score was
 measured by these documentation and existing-receipt reviews.
+The [targeted OPDI rights follow-up](../../review_work/lead235_20260925/opdi_license_targeted_v2/REPORT.md)
+also found no EVENT-dataset grant in first-party portal/package material or
+one asset's metadata-only Parquet footer; the prior rights stop remains. A
+[separate Aena/NATS source review](../../review_work/lead235_20260925/open_surface_source_targeted_v1/REPORT.md)
+found neither an openly licensed full-period surface archive nor a documented
+unique join. The [2025-only ARR adaptation audit](../../review_work/lead235_20260925/arr_adaptation_feasibility_v1/REPORT.md)
+stopped before fitting: November ARR support and earlier-trained clean ensemble
+residuals are missing prerequisites. It does not change the hold on training
+with ranking-month ARR labels. None of these reviews used a submission slot.
 
 V4 already used at least one September 23 submission slot. The prior V4 bucket
 preflight counted zero same-UTC-day objects, but the official reset boundary is
