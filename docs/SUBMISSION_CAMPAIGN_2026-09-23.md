@@ -23,9 +23,20 @@ timezone. Zero uploads is the correct result if no candidate clears the gates.
 | Day | Work to attempt, subject to the preceding gate | Release decision |
 | --- | --- | --- |
 | Thu Sep 24 | Close the failed ARR-supervision F1 arm and complete the paired weather input, twelve matched refits, independent prediction review and one-time F1 score. Preserve the v1 native crash and the separate v2 CPU/v3 GPU recovery receipts. | Extra-time weather lost 0.212 seconds to its matched routine control in complete July; stop before F3, ranking fit or upload. |
-| Fri Sep 25 | Recheck the frozen scheduled-inbound matrix prebuild and host memory. Only at >=28 GiB available, issue independent build admission, build the two label-free 388-field F1 matrices and audit ID/column parity. Keep ranking-month ARR-label training held. | No training label or fit until matrix audit and separate fit admission. Official release depending on future ARR membership remains held for organizer clarification. |
+| Fri Sep 25 | Continue the scheduled-inbound matched F1 experiment from fourteen independently audited 388-field matrices. At a fresh >=26 GiB host-memory reading, admit and run the one-use v4 target-blind postfit canary; independently audit its native reload, four prediction vectors and resource trace. Only then consider a separate supervised fit admission and four serial arm/phase jobs. Keep ranking-month ARR-label training held. | No real label access until the independent postfit audit and fit admission. No evaluation label, F3, ranking inference or upload until the frozen F1 and release gates. Official release depending on future ARR membership remains held for organizer clarification. |
 | Sat Sep 26 | Only for an admitted direction, freeze matched capacity and chronological cohorts, fit one heavy job at a time, audit complete predictions before scoring and test July robustness plus December transport. | Stop a failed F1 arm without tuning on exposed rows; F3 and full-season qualification require their own receipts. |
 | Sun Sep 27 | Finish any eligible, qualified F3/full-year dependency, independently verify release, check organizer quota and credentials, and upload only a frozen complete candidate. Publish the final experiment and score report. | Close the goal and disable the schedule after the report; if morning work remains, continue later that day. |
+
+Each daily continuation follows this order: inspect the private ledger, goal and
+active jobs; resume the earliest incomplete DAG node; independently check its
+inputs and resource ticket; fit paired arms one heavy job at a time; freeze
+predictions and audit them before opening evaluation targets; score once on
+complete cohorts and apply the predeclared stop rule. Only a direction that
+survives F1, F3, full-season and release review may use an official slot.
+Record even a stopped or resource-blocked direction in the ledger, and report
+the current best official result separately from historical local scores.
+One-factor differences make a matched comparison interpretable; they do not
+make five tiny variants independently qualified submissions.
 
 These are work targets, not deadlines that waive a gate. Advance a step as soon
 as it is ready, or spend the day on input-supported research if the current
@@ -118,9 +129,11 @@ ARR four-cell input screen passed + independent replay
 
 scheduled-inbound label-free source review -> four-cell input gate passed
        -> all-month paired cache + independent full replay passed
-       -> matrix prebuild passed; >=28 GiB resource gate currently blocks build
-       -> build admission -> two 388-field matrices -> independent parity audit
-       -> separate fit admission and matched control/cohort/stop rules
+       -> resource-only v2 build admitted -> fourteen 388-field matrices audited
+       -> four synthetic-label capacity fits + independent resource replay passed
+       -> v4 static science review passed; one-use end-to-end postfit canary
+          awaits >=26 GiB host availability, admission and independent replay
+       -> separate exact-hash supervised FIT_ADMISSION
        -> serial F1 fit -> prescore audit -> one-time F1 gate
        -> only if F1 passes: F3/transport and full-season gate
        -> release eligibility + independent ranking verification
@@ -180,11 +193,11 @@ confusing the original expert/calibration history. The
 fixed origins are F1: Jan-Mar train, April stop, Jan-Apr refit, May calibration,
 June/July/December evaluation; F3: Jan-Jul train, August stop, Jan-Aug refit,
 September calibration, October/November/December evaluation. Preserve the
-original route ownership and all rows. This is a diagnostic, not an arm that
-can pass a five-second *matched candidate* gate by itself. Finish F3 when the
-F1 control passes its lineage, ID and complete-panel validity checks; only a
-subsequent candidate-versus-control comparison uses the July/December gain
-gate. Do not submit the control merely because it has a new fit date.
+original route ownership and all rows. Both clean diagnostic controls are
+complete; F3 October/November/December scores appear below. Neither control
+can pass a five-second *matched candidate* gate by itself. Only a subsequent
+candidate-versus-control comparison uses the July/December gain gate. Do not
+submit a control merely because it has a new fit date.
 
 The source-aware shared-trunk contrast is complete at F1 and stopped. Its
 [predeclared design](../../review_work/lead235_20260924/source_aware_design_v1/PROTOCOL.md)
@@ -534,12 +547,36 @@ replayed every paired count and missing mask, all fourteen aggregate gates and
 916 scalar peer samples. The [matched F1 feasibility review](../../review_work/lead235_20260924/scheduled_fit_bridge_v1/REPORT.md)
 specifies one equal-width 388-field LightGBM slot per arm and unchanged other
 experts. The [matrix prebuild review](../../review_work/lead235_20260924/scheduled_matrix_review_v1/REPORT.md)
-verified source hashes, schema and all seven F1 ID/proxy subsets; its tests
-passed. It withheld `BUILD_ADMISSION.json` because available host memory was
-26.084 GiB against the frozen 28 GiB launch floor. Tomorrow: rerun the
-preflight, admit/build only if that floor clears, then independently audit both
-matrices before any training-label read. No real matrix, fit, score or upload
-exists from this direction.
+verified source hashes, schema and all seven F1 ID/proxy subsets. At 26 GiB
+available host memory, a separate [full-refit resource probe](../../review_work/lead235_20260924/scheduled_matrix_resource_review_v2/REPORT.md)
+and independent replay measured a 5.116 GiB lifetime peak, supporting a
+versioned matrix-build-only 26 GiB launch/8 GiB process cap with the existing
+8 GiB host reserve. The original 28 GiB v1 build and v2/v3 fit policies remain
+frozen; a separate v4 fit amendment proposes a 26 GiB launch floor only after
+end-to-end resource replay. One exact-hash v2 admission produced [fourteen matrices](../../review_work/lead235_20260924/scheduled_matched_f1_v2/matrices_v2/manifest.json)
+covering both 388-field arms; the [independent audit](../../review_work/lead235_20260924/scheduled_matched_f1_v2_review/MATRIX_AUDIT.json)
+replayed every finite ID, original 387 fields, fit-only category vocabulary,
+paired count and missing mask. The [v2 composer](../../review_work/lead235_20260924/scheduled_f1_composition_v2/PROTOCOL.md)
+has synthetic-only guarded May and complete-panel modes. Four serial
+synthetic-label capacity fits on the frozen matrices passed [independent
+resource replay](../../review_work/lead235_20260924/scheduled_fit_resource_review_v1/AUDIT_REFIT_v3.json),
+with a maximum 6.871 GiB process peak; they did not exercise all postfit
+prediction writes. The [v4 independent static review](../../review_work/lead235_20260924/scheduled_fit_admission_v4/REPORT.md)
+rehashed all fourteen matrices and verified the fit chronology and science
+against v3. Its 16 producer and seven independent reviewer synthetic tests
+passed on those exact bytes. A later canary review found that a fresh resource
+sample recorded in the receipt had not been checked against the gate. The
+corrected canary and exact hashes passed 17 producer and three independent
+reviewer tests, plus a rehash of the fourteen matrices. The earlier static
+report binds the prior bytes; renewed supervised fit review is still required
+after the postfit audit. The latest reported host reading was 25.572 GiB,
+below the proposed 26 GiB launch floor. No `POSTFIT_CANARY_ADMISSION`,
+end-to-end canary audit or `FIT_ADMISSION` exists. The next owner must admit
+and run one target-blind
+end-to-end canary only after the fresh resource check, independently replay
+native reload, IDs, four predictions and resource trace, then seek a separate
+supervised admission. No real training label, production model, score or
+upload exists from this direction.
 
 ## Candidate qualification
 
