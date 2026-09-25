@@ -23,7 +23,7 @@ timezone. Zero uploads is the correct result if no candidate clears the gates.
 | Day | Work to attempt, subject to the preceding gate | Release decision |
 | --- | --- | --- |
 | Thu Sep 24 | Close the failed ARR-supervision F1 arm and complete the paired weather input, twelve matched refits, independent prediction review and one-time F1 score. Preserve the v1 native crash and the separate v2 CPU/v3 GPU recovery receipts. | Extra-time weather lost 0.212 seconds to its matched routine control in complete July; stop before F3, ranking fit or upload. |
-| Fri Sep 25 | Continue the scheduled-inbound matched F1 experiment from fourteen independently audited 388-field matrices. At a fresh >=26 GiB host-memory reading, admit and run the one-use v4 target-blind postfit canary; independently audit its native reload, four prediction vectors and resource trace. Only then consider a separate supervised fit admission and four serial arm/phase jobs. Keep ranking-month ARR-label training held. | No real label access until the independent postfit audit and fit admission. No evaluation label, F3, ranking inference or upload until the frozen F1 and release gates. Official release depending on future ARR membership remains held for organizer clarification. |
+| Fri Sep 25 | Continue the scheduled-inbound matched F1 experiment from fourteen independently audited 388-field matrices. At a fresh >=26 GiB host-memory reading, admit and run the one-use v4 target-blind postfit canary; independently audit its native reload, four prediction vectors and resource trace. Only then consider a separate supervised fit admission and four serial arm/phase jobs. While memory blocks that canary, advance the separately audited route/type filed-duration input toward stage-purged F1 banks and a matched control without opening targets. Keep ranking-month ARR-label training held. | No real label access until independent postfit audit and fit admission for the scheduled arm, or separate label-safe bank and fit admission for the filed-duration arm. No evaluation label, F3, ranking inference or upload until frozen F1 and release gates. Official release depending on future ARR membership remains held for organizer clarification. |
 | Sat Sep 26 | Only for an admitted direction, freeze matched capacity and chronological cohorts, fit one heavy job at a time, audit complete predictions before scoring and test July robustness plus December transport. | Stop a failed F1 arm without tuning on exposed rows; F3 and full-season qualification require their own receipts. |
 | Sun Sep 27 | Finish any eligible, qualified F3/full-year dependency, independently verify release, check organizer quota and credentials, and upload only a frozen complete candidate. Publish the final experiment and score report. | Close the goal and disable the schedule after the report; if morning work remains, continue later that day. |
 
@@ -63,6 +63,12 @@ annotations; a five-second improvement is a measured step only after the
 complete matched seasonal gate. Each official submission, if any, is a
 one-use transfer check of a distinct qualifying model. Do not infer hidden
 subgroup errors or select a follow-up weight from its score.
+
+The current [aggregate score chart](campaign-evidence/REPORT.md)
+separates seven audited F1 July/December matched gains from the two official
+2026 scores. All seven local directions stopped at F1. The chart's source
+receipt hashes and arithmetic are checked by its reproducible script; it
+cannot turn earlier-origin F1 gains into a comparable historical V3 score.
 
 ## How to use the five daily slots
 
@@ -138,6 +144,14 @@ scheduled-inbound label-free source review -> four-cell input gate passed
        -> only if F1 passes: F3/transport and full-season gate
        -> release eligibility + independent ranking verification
        -> quota/credentials -> one upload -> readback/ledger
+
+filed M1 duration already in union387 -> target-blind route/type centering
+       -> Jan-Mar/Jan-Apr banks + four-cell support independently replayed
+       -> full-fidelity probe + independent replay passed; v3 build NOT admitted
+       -> separately reviewed builder policy/admission + matched matrix audit
+       -> separate supervised fit admission
+       -> serial F1 fit and complete-prediction/May/prescore reviews
+       -> only if F1 passes: F3, full-season and release gates
 ```
 
 Independent feature, source, review and score-contract tasks may use subagents
@@ -577,6 +591,59 @@ end-to-end canary only after the fresh resource check, independently replay
 native reload, IDs, four predictions and resource trace, then seek a separate
 supervised admission. No real training label, production model, score or
 upload exists from this direction.
+
+The [prior same-runway landing-age input](../../review_work/lead235_20260924/past_event_direction_v1/REPORT.md)
+stopped at its predeclared breadth gate: January/July 2025/2026 same-runway
+support was 12.77/17.03/12.08/14.21% versus 40% required, with only one of
+ten airports clearing the airport support threshold versus six required. Its
+[independent audit](../../review_work/lead235_20260924/past_event_direction_review_v1/AUDIT.json)
+replayed source hashes, query IDs and aggregate stop arithmetic. Do not fit an
+airport-only variant chosen from those exposed support cells.
+
+The separate [target-blind filed-duration screen](../../review_work/lead235_20260924/route_duration_centering_v1/REPORT.md)
+centers the existing `retro_own_planned_duration_sec` by a historical
+airport/destination/aircraft-type median with route/airport/global fallback.
+Its [independent input audit](../../review_work/lead235_20260924/route_duration_centering_review_v1/AUDIT.json)
+passed all 80 airport/arm cells in July 2025 and January/July 2026; January
+2025 correctly has no earlier bank. The worst noncold airport exact-key
+coverage was 66.55% and same-raw diverse centering was 50.94%. This is input
+variation only, not RMSE. Raw-month bank rows are not yet the F1 model's
+stage-purged fit rows. A prospective matched 387-slot trial must cross-fit
+training rows from strictly earlier months, purge whole query flights, bind
+the exact stage IDs and preserve the other eight experts before any label
+reader is admitted. A [public-method refresh](../../review_work/lead235_20260924/public_method_refresh_v1/REPORT.md)
+identified this representation but its author's target-dependent median
+selection is excluded from our input-only and prospective fit rules.
+The [prospective F1 contract](../../review_work/lead235_20260924/route_duration_f1_design_v1/PROTOCOL.md)
+replaces the existing raw filed-duration slot at index 32, preserving all
+other 386 fields. Its versioned v2 amendment and [independent static audit](../../review_work/lead235_20260924/route_duration_f1_design_review_v1/AUDIT_v2.json)
+corrected null-duration support, same-ID flight inventory consistency and
+exact slot position. The [label-free stage builder](../../review_work/lead235_20260924/route_duration_stage_builder_v3/PROTOCOL.md)
+is still preparatory: independent review rejected v1 for a missing ADEP
+projection, end-sample fail-stop and incomplete lock set, then rejected v2
+because a foreground memory breach did not take the fail-stop path. The
+versioned v3 corrected both; [independent static/synthetic review](../../review_work/lead235_20260924/route_duration_stage_builder_review_v3/AUDIT_v3.md)
+passed 26 producer, four inherited and three reviewer resource canaries.
+Preserve both earlier red receipts. The live host had 25.421 GiB available
+against v3's frozen 28 GiB launch floor. A separately admitted [full-size
+target-blind resource probe](../../review_work/lead235_20260924/route_duration_stage_resource_review_v1/AUDIT.json)
+independently replayed fourteen Parquets and measured 7.078 GiB parent peak
+from 25.164 GiB launch, with 18.806 GiB minimum host available. It omitted
+the full query-month inventory, flight purges and route/type medians, leaving
+only 0.922 GiB margin to its 8 GiB cap. A [separately admitted full-fidelity
+probe](../../review_work/lead235_20260924/route_duration_full_build_review_v2/AUDIT.json)
+then ran the unchanged v3 source closure and built all fourteen 387-field
+Parquets under its own one-use output and resource policy. Independent replay
+checked 1,979,966 rows per arm, whole-month inventory, stage-specific
+prior-month flight-purged medians, centered slots and unchanged non-slot
+columns. It measured 7.731 GiB lifetime process peak and 17.431 GiB minimum
+host availability (9,279 watchdog samples). That leaves only 0.269 GiB below
+v3's strict 8 GiB process cap; the probe's launch reading also fell below
+v3's unchanged 28 GiB floor. Its Parquets remain probe artifacts, not
+admitted v3 outputs. A separately reviewed, versioned builder policy and
+exact-hash admission must account for those margins before production build,
+followed by its own postbuild audit and supervised fit admission. No label,
+model, score or upload exists from this direction.
 
 ## Candidate qualification
 
