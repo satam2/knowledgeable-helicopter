@@ -148,6 +148,7 @@ scheduled-inbound label-free source review -> four-cell input gate passed
 filed M1 duration already in union387 -> target-blind route/type centering
        -> Jan-Mar/Jan-Apr banks + four-cell support independently replayed
        -> full-fidelity probe + independent replay passed; v3 build NOT admitted
+       -> exact F1 post-purge Jan/Jul 2025/2026 support independently passed
        -> v4 policy static review passed; await >=26 GiB + one-use admission
        -> v4 build + independent matched matrix/resource audit
        -> separate supervised fit admission
@@ -659,6 +660,21 @@ parity/resource audit remain required before any supervised fit. The separately
 studied faster bank kernel passed generated differential tests but has a
 mutable-input cache risk and no full-size resource/parity result; it is not
 part of v4.
+
+The separate [post-purge 2026 input screen](../../review_work/lead235_20260925/route_duration_2026_support_review_v3/POST_SOURCE_AUDIT.md)
+has now passed an independent nine-field source replay. It verified all 13
+original source hashes, the 458,260/632,463 canonical select/refit ID sets,
+all whole-month flight inventories and all 80 airport/month/bank support
+cells. July 2025 and January/July 2026 retain full supported coverage of
+finite raw durations at every airport; January 2025 remains cold. The
+independent replay found zero query-flight purges for these exact banks and
+months, explaining why the earlier raw-bank screen and post-purge aggregates
+agree. The one-use scan stayed under its 1.5 GiB process cap and read no taxi
+target. It establishes input variation, not lower RMSE. The full-fidelity
+probe Parquets are still forbidden as fit inputs by their original protocol;
+any prospective exact-byte reuse needs a separate explicit policy decision,
+generated-target full-resident canary and independent fit admission. A v4
+production build remains an alternative when its 26 GiB launch gate opens.
 
 ## Candidate qualification
 
