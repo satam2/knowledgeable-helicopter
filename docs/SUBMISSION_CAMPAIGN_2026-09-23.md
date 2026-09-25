@@ -12,6 +12,25 @@ to local private workspace artifacts outside this Git checkout. They document
 receipts for the local campaign; the branch contains no data, fitted model,
 row-level prediction or credential needed to reproduce those private results.
 
+## Current checkpoint (Friday, September 25)
+
+V3 remains the best verified official submission at **278.0146 seconds**; the
+historical 268.662991-second local V3 score uses different 2025 cohorts. V4
+scored 281.7265, and no later candidate has qualified for an upload. All new
+scored directions stopped at their frozen F1 gate. Saturday's first dependency
+is an eligible, distinct observation with documented prize-use rights, timing,
+identity and four-cell support. The November 2025 ARR availability screen
+passed, but its earlier-trained clean April/August out-of-fold residuals and
+matched negative control are still missing. The July EDDM stand-category shift
+has insufficient historical analogue support for supervised correction.
+
+For a new direction, follow the [dependency DAG](#dependency-dag): source and
+input gate -> frozen matched control -> F1 -> F3 and full-season robustness ->
+independent release review -> quota preflight and one-use upload. Log every
+stop in the [private ledger](../../output/submission_campaign_20260923/LEDGER.md).
+Five official submissions per organizer day are available only as a ceiling
+for distinct qualified candidates, never as a target for small variants.
+
 ## Operating plan through Sunday
 
 The active `/goal` owns this campaign; the daily 8:00 AM Pacific continuation
@@ -183,8 +202,10 @@ one asset's metadata-only Parquet footer; the prior rights stop remains. A
 [separate Aena/NATS source review](../../review_work/lead235_20260925/open_surface_source_targeted_v1/REPORT.md)
 found neither an openly licensed full-period surface archive nor a documented
 unique join. The [2025-only ARR adaptation audit](../../review_work/lead235_20260925/arr_adaptation_feasibility_v1/REPORT.md)
-stopped before fitting: November ARR support and earlier-trained clean ensemble
-residuals are missing prerequisites. It does not change the hold on training
+originally stopped before fitting because November ARR support and earlier-trained
+clean ensemble residuals were missing. November input support has since passed
+its independent screen; the clean out-of-fold residuals and matched negative
+control are still missing. It does not change the hold on training
 with ranking-month ARR labels. None of these reviews used a submission slot.
 
 V4 already used at least one September 23 submission slot. The prior V4 bucket
