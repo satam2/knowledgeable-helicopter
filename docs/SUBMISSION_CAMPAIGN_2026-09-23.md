@@ -23,7 +23,7 @@ timezone. Zero uploads is the correct result if no candidate clears the gates.
 | Day | Work to attempt, subject to the preceding gate | Release decision |
 | --- | --- | --- |
 | Thu Sep 24 | Close the failed ARR-supervision F1 arm and complete the paired weather input, twelve matched refits, independent prediction review and one-time F1 score. Preserve the v1 native crash and the separate v2 CPU/v3 GPU recovery receipts. | Extra-time weather lost 0.212 seconds to its matched routine control in complete July; stop before F3, ranking fit or upload. |
-| Fri Sep 25 | Screen the same-target-month ARR adaptation idea for source/competition eligibility and four-cell input support without opening a hidden DEP target. In parallel, look for a distinct inference-observable, eligible source mechanism if this screen fails. | An input pass authorizes only a frozen matched experiment, never a ranking fit or upload. Keep the prior failed ARR-supervision test separate. |
+| Fri Sep 25 | Keep ranking-month ARR-label training held pending organizer clarification. Review the independently passed label-free scheduled-inbound input screen for full-month feature feasibility and a matched F1 protocol. | Input variation is not a model gain. Official release depending on future ARR membership is separately held pending organizer clarification. |
 | Sat Sep 26 | Only for an admitted direction, freeze matched capacity and chronological cohorts, fit one heavy job at a time, audit complete predictions before scoring and test July robustness plus December transport. | Stop a failed F1 arm without tuning on exposed rows; F3 and full-season qualification require their own receipts. |
 | Sun Sep 27 | Finish any eligible, qualified F3/full-year dependency, independently verify release, check organizer quota and credentials, and upload only a frozen complete candidate. Publish the final experiment and score report. | Close the goal and disable the schedule after the report; if morning work remains, continue later that day. |
 
@@ -35,10 +35,12 @@ observable input or mechanism, control and frozen protocol. The ARR auxiliary
 training-objective test is closed after its matched F1 failure. The current
 weather source-selection arm is also closed: additional unfiltered IEM
 observations lost to a matched routine-only refit in complete July 2025.
-The next input-only screen tests whether same-target-month arrival context
-has an eligible, uniquely joined source and enough support in January/July
-2025 and 2026. Neither a different disclosed phase nor input coverage alone
-authorizes ranking-month label use. A new direction must preserve its own
+The same-target-month ARR availability screen passed all four January/July
+2025/2026 support cells, but organizer permission for training on ranking-month
+ARR labels remains unresolved. Neither a different disclosed phase nor input
+coverage alone authorizes that fit. A distinct label-free scheduled-inbound
+input screen passed independently; source timing and matched-fit feasibility
+remain under review. A new direction must preserve its own
 matched control, query IDs, route ownership and chronological access rules.
 Do not forecast 240 or 235 from an input or earlier-origin result.
 
@@ -110,19 +112,17 @@ weather input -> 42 matrices -> 12 paired F1 fits -> independent replay
        -> frozen full panels -> one-time score + independent audit
        -> July matched gate failed: stop weather; no F3/ranking/upload
 
-ARR source/eligibility review + four-cell input-only support screen
-      |                         |
-      +-- failed/unclear ------> seek a distinct eligible observed source
-      |
-      +-- passed -------------> freeze matched control, cohort and stop rules
-                                  |
-                             serial F1 fit -> prescore audit -> one-time F1 gate
-                                  |
-                             F3/transport and full-season gate, only if F1 passes
-                                  |
-                             release eligibility + independent ranking verification
-                                  |
-                             quota/credentials -> one upload -> readback/ledger
+ARR four-cell input screen passed + independent replay
+       -> organizer permission unresolved: HOLD before fit/ranking/upload
+       -> only a dated ruling can start a separately frozen matched protocol
+
+scheduled-inbound label-free source review -> four-cell input gate passed
+       -> source-time/resource/matched-fit feasibility review
+       -> only if eligible, freeze matched control/cohort/stop rules
+       -> serial F1 fit -> prescore audit -> one-time F1 gate
+       -> only if F1 passes: F3/transport and full-season gate
+       -> release eligibility + independent ranking verification
+       -> quota/credentials -> one upload -> readback/ledger
 ```
 
 Independent feature, source, review and score-contract tasks may use subagents
@@ -489,6 +489,41 @@ arm before F3, full-year ranking inference or upload. The
 explains the comparison; the [source-eligibility refresh](../../review_work/lead235_20260924/weather_eligibility_refresh_v1/REPORT.md)
 still lacks historical first-publication/revision evidence and an organizer
 interpretation of IEM's public-domain status under its open-license rule.
+
+## September 24 ARR input decision
+
+The [versioned ARR target-month input review](../../review_work/lead235_20260924/arr_target_month_screen_review_v2/REPORT.md)
+records a v1 metadata abort on one July-source ARR row four seconds before the
+UTC month boundary. V2 froze an adjacent-boundary exclusion before reading
+ARR taxi or block values. Its [producer receipt](../../review_work/lead235_20260924/arr_target_month_screen_v2/receipt.json)
+and [independent postread receipt](../../review_work/lead235_20260924/arr_target_month_screen_review_v2/postread_audit_receipt.json)
+passed all four January/July 2025/2026 airport-day and 75% retention gates,
+with zero aggregate difference. Eligible counts were 128,526/163,085 in 2025
+and 128,545/163,817 in 2026. This is retrospective full-month ARR
+availability, not a prior-event departure feature or evidence of predictive
+gain. The [organizer-rule audit](../../review_work/lead235_20260924/arr_target_month_eligibility_v1/REPORT.md)
+still holds ranking-month ARR-label adaptation pending clarification. No
+departure target, model fit, score, ranking prediction or upload was authorized.
+
+## September 24 scheduled-inbound input decision
+
+The [independent review](../../review_work/lead235_20260924/scheduled_inbound_review_v1/REPORT.md)
+rejected a frozen v1 input receipt: Parquet microsecond timestamps were compared
+to a nanosecond hour and month boundary, inflating peer counts and suppressing
+month-end censoring. The versioned v2 conversion passed fresh synthetic tests,
+source admission and an independent replay of all four January/July 2025/2026
+cells and 40 airport cells. Its [producer receipt](../../review_work/lead235_20260924/scheduled_inbound_screen_v2/RECEIPT.json)
+and [audit](../../review_work/lead235_20260924/scheduled_inbound_review_v1/AUDIT.json)
+show 70.06/74.25% of ordinary noncensored 2025 queries and 71.63/73.10% of
+their 2026 counterparts have scheduled and landed future-hour peer counts
+differing by at least two. This measures input variation, not target
+association or RMSE. The supplied final-month schedule and arrival membership
+are retrospective; publication/revision timing is unknown. The
+[source and rule audit](../../review_work/lead235_20260924/schedule_eligibility_v1/REPORT.md)
+finds a supplied-batch rationale but no express organizer decision about using
+future observed ARR membership. Hold official release of a model depending on
+this feature until that interpretation is clarified. No label read, fit,
+score, ranking prediction or upload follows from this input gate alone.
 
 ## Candidate qualification
 
