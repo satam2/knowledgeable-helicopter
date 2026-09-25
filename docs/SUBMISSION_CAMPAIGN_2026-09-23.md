@@ -23,8 +23,8 @@ timezone. Zero uploads is the correct result if no candidate clears the gates.
 | Day | Work to attempt, subject to the preceding gate | Release decision |
 | --- | --- | --- |
 | Thu Sep 24 | Close the failed ARR-supervision F1 arm and complete the paired weather input, twelve matched refits, independent prediction review and one-time F1 score. Preserve the v1 native crash and the separate v2 CPU/v3 GPU recovery receipts. | Extra-time weather lost 0.212 seconds to its matched routine control in complete July; stop before F3, ranking fit or upload. |
-| Fri Sep 25 | The route/type duration and scheduled-inbound arms completed separate one-time F1 scores and independent arithmetic replays. The scheduled arm used a reviewed local-only 24 GiB policy, four serial fits, independent postfit and May calibration, and nine complete frozen panels. Keep target-month ARR-label training held. | Route-duration gained 0.026834 seconds in complete July versus raw/clean. Scheduled-inbound lost 0.006124 seconds to its landed control and 0.013206 to clean in July. Both failed their F1 gates; no F3, ranking inference or upload. Future-ARR-membership release remains held for organizer clarification. |
-| Sat Sep 26 | Screen a distinct per-flight event-source/revision-age observation for documented provenance, open licensing, first-publication timing, unique joins and January/July 2025/2026 support. Only for an admitted direction, freeze matched capacity and chronological cohorts before fitting. | No reviewed source is fit-ready yet. Stop at the metadata gate if those conditions fail; any qualified F1 direction still needs independent full-panel and transport checks. |
+| Fri Sep 25 | The route/type duration, scheduled-inbound and current-expert contextual gate arms completed separate one-time F1 scores and independent arithmetic replays. The contextual gate used an admitted May fit, an intercept-only comparator and the original unchanged clean F1 panels. Keep target-month ARR-label training held. | Route-duration gained 0.026834 seconds in complete July versus raw/clean; scheduled-inbound lost 0.006124 seconds to landed and 0.013206 to clean; contextual weighting gained 0.069855 seconds versus each control. All missed their frozen F1 advancement gates; no F3, ranking inference or upload. Future-ARR-membership release remains held for organizer clarification. |
+| Sat Sep 26 | Start with the OPDI peer-runway input-only report's first unresolved node: confirm prize-use rights and first-publication/as-of-query semantics from primary sources. Only if those clear, freeze a unique/tie/same-flight policy and bounded ten-airport January/July 2025/2026 event-support screen. A different direction needs its own observable input and frozen matched protocol. | OPDI archive index dates alone do not admit a fit. Stop before acquisition, labels or fitting while rights, timing and unique four-cell joins remain unproved; any later qualified F1 direction still needs independent full-panel and transport checks. |
 | Sun Sep 27 | Finish any eligible, qualified F3/full-year dependency, independently verify release, check organizer quota and credentials, and upload only a frozen complete candidate. Publish the final experiment and score report. | Close the goal and disable the schedule after the report; if morning work remains, continue later that day. |
 
 Each daily continuation follows this order: inspect the private ledger, goal and
@@ -118,6 +118,7 @@ of a frozen candidate, not select weights, rows, rules, or the next variant.
 | Unfiltered IEM extra-time weather versus matched routine, September 24 | Twelve matched F1 experts and 539,532 complete June/July/December rows. July RMSE: extra 333.7258, routine 333.5139, clean 334.1296. June extra/routine 318.8461/318.6100; December 233.2101/234.4017. | Not submitted | Independent arithmetic audit reproduced the one-time result. July extra lost 0.2119 seconds to routine and failed all four matched robustness checks. Stop before F3/ranking/upload; historical first-publication and source-license eligibility also remain unresolved. |
 | Filed route/type duration centering F1, September 25 | On complete June/July/December 2025 rows, centered RMSE 318.766899/334.102752/234.701302 versus raw and clean 318.758152/334.129587/234.743663. Raw and clean panel bytes match in all three months. July gain +0.026834 sec, paired-day CI [-0.011951, 0.066614]. | Not submitted | One-time F1 gate failed; independent nine-panel postscore replay has zero arithmetic delta. No F3, ranking fit or upload. |
 | Scheduled versus landed inbound density F1, September 25 | Complete June/July/December scheduled RMSE 318.782435/334.142793/234.667814 versus landed 318.781897/334.136668/234.717976 and clean 318.758152/334.129587/234.743663. July gains -0.006124 versus landed, -0.013206 versus clean; both paired-day intervals cross zero. | Not submitted | One-time F1 gate failed against both controls; independent nine-panel postscore arithmetic delta 0. No F3, ranking fit or upload. |
+| Current-expert contextual convex gate F1, September 25 | Complete June/July/December contextual RMSE 318.703112/334.059731/235.098745 versus May-fitted intercept 318.758152/334.129586/234.743662 and original clean 318.758152/334.129587/234.743663. July gains +0.069855 sec against each control; paired-day lower bounds positive. | Not submitted | One-use score and independent nine-panel/six-comparison replay agree exactly. July misses predeclared >=5 sec gain against both controls; stop before F3, ranking fit or upload. |
 
 V4 already used at least one September 23 submission slot. The prior V4 bucket
 preflight counted zero same-UTC-day objects, but the official reset boundary is
@@ -158,6 +159,19 @@ filed M1 duration already in union387 -> target-blind route/type centering
        -> May calibration + independent review -> six complete prediction panels
        -> independent prescore -> one-time score + independent postscore replay
        -> July +0.026834 sec, CI crosses zero: STOP; no F3/ranking/upload
+
+four positive-weight clean F1 experts -> fixed contextual convex gate recipe
+       -> target-free 95-pin input preflight + independent source admission
+       -> one-use May ordinary fit + independent optimizer replay
+       -> six frozen full panels + independent nine-panel prescore review
+       -> one-use F1 score + independent nine-RMSE/six-comparison replay
+       -> July +0.069855 sec vs both controls, below >=5 sec: STOP
+       -> no F3/ranking/upload or postscore coefficient adjustment
+
+OPDI prior-flight entry-runway/take-off occupancy, input-only proposal
+       -> first-party prize-use rights and publication/as-of semantics: HOLD
+       -> only if cleared, freeze unique joins and four-cell support audit
+       -> only if supported, matched-capacity F1 protocol and independent gates
 ```
 
 Independent feature, source, review and score-contract tasks may use subagents

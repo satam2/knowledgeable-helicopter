@@ -93,6 +93,14 @@ SOURCES = [
         "33f1a78c6a261fa0cfd271a4f744213f2808b6707e87441ae8f06a751f01e764",
         "scheduled",
     ),
+    (
+        "Current-expert context gate", "May-fitted intercept gate",
+        "private_runs/lead235_20260925/current_gate_score_v1/F1/result.json",
+        "de5cb8142f5b0270b2101687d61b12609d95cbd3b942a30d6a9d999d8f47ac65",
+        "private_runs/lead235_20260925/current_gate_score_v1/F1/POSTSCORE_AUDIT.json",
+        "6431af709db34ad7b525306969571d58947711bade3ff08afe8ace8ff8b3f2bd",
+        "current_gate",
+    ),
 ]
 
 OFFICIAL = [
@@ -141,6 +149,9 @@ def complete_comparison(data: dict, kind: str, month: str) -> tuple[float, float
     if kind == "scheduled":
         part = data["months"][month]["comparisons"]["landed"]
         return part["comparator_rmse"], part["candidate_rmse"], part["gain_sec"], part["rows"]
+    if kind == "current_gate":
+        part = data["months"][month]["comparisons"]["intercept"]
+        return part["comparator_rmse"], part["candidate_rmse"], part["gain_sec"], part["rows"]
     if kind == "arr_aux":
         part = data["months"][month]["comparisons"]["detached"]
     elif kind == "weather":
@@ -163,7 +174,7 @@ def aggregate_rows() -> list[dict]:
             review = json.loads(audited)
             audit_result_hash = review.get("score_sha256", review.get("f1_result_sha256", review.get("score_result_sha256", review.get("result_sha256"))))
             assert audit_result_hash == src_hash, (kind, "independent audit did not bind score")
-            gate = data["f1_gate"] if kind in ("source_aware", "rank", "arr_aux", "weather", "route_duration", "scheduled") else data["gate"]
+            gate = data["f1_gate"] if kind in ("source_aware", "rank", "arr_aux", "weather", "route_duration", "scheduled", "current_gate") else data["gate"]
             assert gate["passed"] is False, (kind, "gate changed")
             assert review.get("f1_gate_passed", review.get("gate_passed", False)) is False
             if kind == "route_duration":
@@ -198,6 +209,33 @@ def aggregate_rows() -> list[dict]:
                     for matched_arm, comparison in monthly["comparisons"].items():
                         assert comparison["rows"] == monthly["rows"]
                         assert abs(comparison["candidate_rmse"] - monthly["arms"]["scheduled"]["rmse"]) < 1e-7
+                        assert abs(comparison["comparator_rmse"] - monthly["arms"][matched_arm]["rmse"]) < 1e-7
+                        assert abs((comparison["comparator_rmse"] - comparison["candidate_rmse"]) - comparison["gain_sec"]) < 1e-7
+            if kind == "current_gate":
+                assert data["status"] == review["decision"] == "stopped_after_F1"
+                assert review["status"] == "independent_current_gate_f1_postscore_arithmetic_replayed_v1"
+                assert review["complete_panel_rmse_count"] == 9 and review["paired_comparison_count"] == 6
+                assert review["maximum_absolute_reported_numeric_delta"] == 0
+                assert review["admission_sha256"] == data["prescore_admission_sha256"]
+                assert review["target_source_sha256"] == data["pins"]["target_source_sha256"]
+                assert data["ranking_prediction"] is False and data["upload"] is False
+                assert review["ranking_prediction"] is False and review["upload"] is False
+                for matched_arm in ("intercept", "clean"):
+                    checks = gate["checks"][matched_arm]
+                    assert checks["july_complete_gain_at_least_5_sec"] is False
+                    assert all(checks[key] is True for key in (
+                        "july_paired_day_ci95_lower_positive", "july_each_day_removal_positive",
+                        "july_top10_beneficial_removal_positive", "december_regression_at_most_1_sec"))
+                for monthly in data["months"].values():
+                    assert set(monthly["arms"]) == {"contextual", "intercept", "clean"}
+                    assert set(monthly["comparisons"]) == {"intercept", "clean"}
+                    for arm in monthly["arms"].values():
+                        assert arm["rows"] == monthly["rows"]
+                        assert math.isclose(arm["rmse"], math.sqrt(arm["sse"] / arm["rows"]),
+                                            abs_tol=1e-7, rel_tol=0)
+                    for matched_arm, comparison in monthly["comparisons"].items():
+                        assert comparison["rows"] == monthly["rows"]
+                        assert abs(comparison["candidate_rmse"] - monthly["arms"]["contextual"]["rmse"]) < 1e-7
                         assert abs(comparison["comparator_rmse"] - monthly["arms"][matched_arm]["rmse"]) < 1e-7
                         assert abs((comparison["comparator_rmse"] - comparison["candidate_rmse"]) - comparison["gain_sec"]) < 1e-7
         for month in ROWS:
