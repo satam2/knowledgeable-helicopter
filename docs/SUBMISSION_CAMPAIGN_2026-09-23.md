@@ -23,7 +23,7 @@ timezone. Zero uploads is the correct result if no candidate clears the gates.
 | Day | Work to attempt, subject to the preceding gate | Release decision |
 | --- | --- | --- |
 | Thu Sep 24 | Close the failed ARR-supervision F1 arm and complete the paired weather input, twelve matched refits, independent prediction review and one-time F1 score. Preserve the v1 native crash and the separate v2 CPU/v3 GPU recovery receipts. | Extra-time weather lost 0.212 seconds to its matched routine control in complete July; stop before F3, ranking fit or upload. |
-| Fri Sep 25 | The filed route/type duration arm completed four serial supervised jobs, independent native and panel review, May calibration, full June/July/December composition and one-time matched F1 score with independent arithmetic replay. The scheduled-inbound matched F1 arm is the next distinct local test: its v4 target-blind postfit canary needs >=26 GiB, followed by independent review and its own fit admission. Keep ranking-month ARR-label training held. | Route-duration centered gained only 0.026834 seconds in complete July versus byte-identical raw/clean controls, with a paired-day interval crossing zero; stop before F3, ranking inference or upload. Future-ARR-membership release remains held for organizer clarification. |
+| Fri Sep 25 | The filed route/type duration arm completed its one-time F1 score and stopped. The scheduled-inbound arm completed a separately versioned generated-only 24 GiB postfit canary and independent replay. Its next step is a prospective, independently reviewed local-fit policy and fresh fit admission; the frozen v4 production runner still requires >=26 GiB. Keep target-month ARR-label training held. | Route-duration centered gained only 0.026834 seconds in complete July versus byte-identical raw/clean controls, with a paired-day interval crossing zero; stop before F3, ranking inference or upload. The generated canary measured resources, not RMSE or fit eligibility. Future-ARR-membership release remains held for organizer clarification. |
 | Sat Sep 26 | Only for an admitted direction, freeze matched capacity and chronological cohorts, fit one heavy job at a time, audit complete predictions before scoring and test July robustness plus December transport. | Stop a failed F1 arm without tuning on exposed rows; F3 and full-season qualification require their own receipts. |
 | Sun Sep 27 | Finish any eligible, qualified F3/full-year dependency, independently verify release, check organizer quota and credentials, and upload only a frozen complete candidate. Publish the final experiment and score report. | Close the goal and disable the schedule after the report; if morning work remains, continue later that day. |
 
@@ -138,9 +138,11 @@ scheduled-inbound label-free source review -> four-cell input gate passed
        -> all-month paired cache + independent full replay passed
        -> resource-only v2 build admitted -> fourteen 388-field matrices audited
        -> four synthetic-label capacity fits + independent resource replay passed
-       -> v4 static science review passed; one-use end-to-end postfit canary
-          awaits >=26 GiB host availability, admission and independent replay
-       -> separate exact-hash supervised FIT_ADMISSION
+       -> v4 static science review passed; v4 26 GiB canary remains unrun
+       -> separate v5 24 GiB generated-only full postfit canary + independent
+          native/four-panel replay passed; no production fit admission follows
+       -> prospective local-fit policy/runner + renewed exact-hash admission
+          (v4 production still needs >=26 GiB and its hardcoded receipt paths)
        -> serial F1 fit -> prescore audit -> one-time F1 gate
        -> only if F1 passes: F3/transport and full-season gate
        -> release eligibility + independent ranking verification
@@ -588,14 +590,29 @@ sample recorded in the receipt had not been checked against the gate. The
 corrected canary and exact hashes passed 17 producer and three independent
 reviewer tests, plus a rehash of the fourteen matrices. The earlier static
 report binds the prior bytes; renewed supervised fit review is still required
-after the postfit audit. The latest reported host reading was 25.572 GiB,
-below the proposed 26 GiB launch floor. No `POSTFIT_CANARY_ADMISSION`,
-end-to-end canary audit or `FIT_ADMISSION` exists. The next owner must admit
-and run one target-blind
-end-to-end canary only after the fresh resource check, independently replay
-native reload, IDs, four predictions and resource trace, then seek a separate
-supervised admission. No real training label, production model, score or
-upload exists from this direction.
+after a production-compatible postfit audit. The frozen v4 canary was not run
+because its >=26 GiB launch floor was unavailable; no v4 canary admission,
+postfit audit or `FIT_ADMISSION` exists.
+
+On September 25, a separately versioned [v5 generated-only canary](../../review_work/lead235_20260925/scheduled_postfit_canary_v5/synthetic_postfit_v5/receipt.json)
+passed its one-use 24 GiB launch check and completed the full five-resident-stage
+landed workload: 632,463 generated-target fit rows, 2,500 native trees, saved
+model reload, and four complete May/June/July/December prediction Parquets.
+The terminal receipt SHA-256 is
+`34531173fe68dc0397d923287db6695fbe472b7fb2ef5c9929b17edf07c3d5fd`.
+Its sampled lifetime process peak was 7.157 GiB, minimum host availability
+17.557 GiB, minimum free disk 1,898.961 GiB, and watchdog count 666 over
+340.81 seconds. The [independent v5 audit](../../review_work/lead235_20260925/scheduled_postfit_canary_review_v5/POSTFIT_AUDIT.json)
+pinned 30 source files and fourteen matrices, checked the one-use admission
+and every native/proxy prediction, and wrote `POSTFIT_AUDIT.json` SHA-256
+`ee5203ee465b59733b75b259c26916b6767200141f974917978e91f1b9f40d5e`.
+The v5 producer and reviewer generated tests passed 11/11 and 10/10. This is
+resource and byte-integrity evidence only: no real labels, RMSE, ranking
+prediction, upload or v4 `FIT_ADMISSION` exists. The v4 runner still hardcodes
+its original receipt/audit paths and >=26 GiB fit launch floor. A real local
+fit needs a separately versioned policy, exact-source runner and independent
+fit admission; official release remains held for the future-ARR-membership
+organizer ruling.
 
 The [prior same-runway landing-age input](../../review_work/lead235_20260924/past_event_direction_v1/REPORT.md)
 stopped at its predeclared breadth gate: January/July 2025/2026 same-runway
@@ -727,7 +744,9 @@ reproduced all nine panel metrics and the failed gate with zero maximum delta.
 Close this exact direction at F1. Do not retune a weight or route switch from
 exposed rows; do not pursue its v4 production build, F3, ranking fit or upload.
 The next distinct local candidate is scheduled-inbound versus same-peer
-landed-inbound density, subject to its >=26 GiB canary and separate admission.
+landed-inbound density. Its separate v5 generated-only canary passed, but
+supervised local fitting still needs a reviewed policy and admission; the
+unchanged v4 production runner retains its >=26 GiB gate and fixed v4 paths.
 Official release of a feature using future ARR peer membership needs a dated
 organizer ruling even if its local test eventually passes.
 
