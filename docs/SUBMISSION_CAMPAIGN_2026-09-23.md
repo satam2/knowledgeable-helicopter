@@ -24,8 +24,8 @@ timezone. Zero uploads is the correct result if no candidate clears the gates.
 | --- | --- | --- |
 | Thu Sep 24 | Close the failed ARR-supervision F1 arm and complete the paired weather input, twelve matched refits, independent prediction review and one-time F1 score. Preserve the v1 native crash and the separate v2 CPU/v3 GPU recovery receipts. | Extra-time weather lost 0.212 seconds to its matched routine control in complete July; stop before F3, ranking fit or upload. |
 | Fri Sep 25 | The route/type duration, scheduled-inbound and current-expert contextual gate arms completed separate one-time F1 scores and independent arithmetic replays. The contextual gate used an admitted May fit, an intercept-only comparator and the original unchanged clean F1 panels. Keep target-month ARR-label training held. | Route-duration gained 0.026834 seconds in complete July versus raw/clean; scheduled-inbound lost 0.006124 seconds to landed and 0.013206 to clean; contextual weighting gained 0.069855 seconds versus each control. All missed their frozen F1 advancement gates; no F3, ranking inference or upload. Future-ARR-membership release remains held for organizer clarification. |
-| Sat Sep 26 | Start with the OPDI peer-runway input-only report's first unresolved node: confirm prize-use rights and first-publication/as-of-query semantics from primary sources. Only if those clear, freeze a unique/tie/same-flight policy and bounded ten-airport January/July 2025/2026 event-support screen. A different direction needs its own observable input and frozen matched protocol. | OPDI archive index dates alone do not admit a fit. Stop before acquisition, labels or fitting while rights, timing and unique four-cell joins remain unproved; any later qualified F1 direction still needs independent full-panel and transport checks. |
-| Sun Sep 27 | Finish any eligible, qualified F3/full-year dependency, independently verify release, check organizer quota and credentials, and upload only a frozen complete candidate. Publish the final experiment and score report. | Close the goal and disable the schedule after the report; if morning work remains, continue later that day. |
+| Sat Sep 26 | OPDI rights and as-of audits completed early on Friday and stopped this input direction. Search for one distinct, documented, openly licensed observation with January/July 2025/2026 coverage; freeze its identity, timing, support, matched control and resource gates before accessing rows. The supplied-data source-status and direct same-month density-ratio branches are also stopped. | No further OPDI event acquisition, fit or upload without a dataset-specific grant and organizer prize-use interpretation. Its archive does not establish historical real-time availability; a retrospective proposal would need a separate frozen protocol. If no source passes, record the negative result and do not manufacture a minor model variant. |
+| Sun Sep 27 | If Saturday yields an eligible direction that clears F1, finish its matched F3/full-year dependency, independently verify release, check organizer quota and credentials, and upload only a frozen complete candidate. Otherwise publish the final experiment and score report with the stopped directions and next research question. | No new candidate has cleared F1 as of Friday. Close the goal and disable the schedule after the report; if the morning run cannot finish, arrange a later same-day continuation before it ends. |
 
 Each daily continuation follows this order: inspect the private ledger, goal and
 active jobs; resume the earliest incomplete DAG node; independently check its
@@ -169,9 +169,14 @@ four positive-weight clean F1 experts -> fixed contextual convex gate recipe
        -> no F3/ranking/upload or postscore coefficient adjustment
 
 OPDI prior-flight entry-runway/take-off occupancy, input-only proposal
-       -> first-party prize-use rights and publication/as-of semantics: HOLD
-       -> only if cleared, freeze unique joins and four-cell support audit
-       -> only if supported, matched-capacity F1 protocol and independent gates
+       -> first-party dataset license/prize-use evidence: FAIL; stop this arm
+       -> historical real-time availability: UNKNOWN; event time is insufficient
+       -> retrospective eligibility and four-cell unique joins: UNPROVED
+
+Saturday distinct-source discovery -> named license + eligible observation
+       -> freeze identity/timing/support and matched-control protocol
+       -> bounded input-only four-cell audit only if source gate clears
+       -> matched F1, then F3/season/release only after their frozen gates
 ```
 
 Independent feature, source, review and score-contract tasks may use subagents
@@ -642,7 +647,7 @@ reported arithmetic delta. Stop this exact direction before F3, ranking
 inference or upload; the earlier-origin F1 scores are not comparable in level
 to V3's 268.662991 historical local or 278.0146 official score.
 
-The next conditional research direction is a **documented per-flight NM event
+The separate, currently held source-status direction is a **documented per-flight NM event
 source or revision/publication-age observation**, compared at equal information
 and capacity to a pooled clock context and the unchanged clean model. The
 [frozen input gate](../../review_work/lead235_20260924/ordinary_signal_next_v1/PROTOCOL.md)
@@ -655,6 +660,23 @@ join and winter coverage. First seek and verify a named eligible source's
 metadata; if none exists, stop this branch at input screening. Do not infer a
 source state from existing timestamps or fit a minor variant of the stopped
 scheduled arm.
+
+The [OPDI prize-use audit](../../review_work/lead235_20260925/opdi_rights_v1/REPORT.md)
+found no named license for its event Parquet data or organizer exception under
+the additional-dataset rule. The linked portal disclaimer discusses attributed
+noncommercial copying; the GitHub package's MIT declaration applies to code,
+not demonstrably to the data. OpenSky's direct-data terms may not govern OPDI's
+separate release. The [as-of audit](../../review_work/lead235_20260925/opdi_asof_v1/REPORT.md)
+found observation times but no first-publication/revision clock or historical
+snapshot. This fails our real-time prior-peer policy, **not an express organizer
+ban on retrospective external features**. A retrospective OPDI study would
+need resolved rights, a separately frozen input/join/leakage protocol and
+organizer interpretation before this campaign treats it as prize-eligible.
+The [supplied-data fallback review](../../review_work/lead235_20260925/internal_candidate_audit_v1/REPORT.md)
+found no new source-status field; the existing same-month density-ratio screen
+missed its frozen July LFPG support gate (49.1640% ESS versus 50%). Neither
+source licenses a model fit or ranking submission. As of Friday every scored
+new direction has stopped at F1; clean F3 is a diagnostic control only.
 
 The [prior same-runway landing-age input](../../review_work/lead235_20260924/past_event_direction_v1/REPORT.md)
 stopped at its predeclared breadth gate: January/July 2025/2026 same-runway
