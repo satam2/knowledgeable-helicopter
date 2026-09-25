@@ -150,7 +150,8 @@ filed M1 duration already in union387 -> target-blind route/type centering
        -> full-fidelity probe + independent replay passed; v3 build NOT admitted
        -> exact F1 post-purge Jan/Jul 2025/2026 support independently passed
        -> v4 policy static review passed; await >=26 GiB + one-use admission
-       -> v4 build + independent matched matrix/resource audit
+       -> either v4 build/postbuild audit OR exact-byte probe reuse decision
+       -> generated-label full-resident four-job canary + independent audit
        -> separate supervised fit admission
        -> serial F1 fit and complete-prediction/May/prescore reviews
        -> only if F1 passes: F3, full-season and release gates
@@ -670,11 +671,16 @@ finite raw durations at every airport; January 2025 remains cold. The
 independent replay found zero query-flight purges for these exact banks and
 months, explaining why the earlier raw-bank screen and post-purge aggregates
 agree. The one-use scan stayed under its 1.5 GiB process cap and read no taxi
-target. It establishes input variation, not lower RMSE. The full-fidelity
-probe Parquets are still forbidden as fit inputs by their original protocol;
-any prospective exact-byte reuse needs a separate explicit policy decision,
-generated-target full-resident canary and independent fit admission. A v4
-production build remains an alternative when its 26 GiB launch gate opens.
+target. It establishes input variation, not lower RMSE. The original probe
+protocol forbade fitting from its artifacts. A [new exact-byte policy decision](../../review_work/lead235_20260925/route_duration_probe_reuse_decision_v1/REPORT.md)
+prospectively permits those fourteen original Parquets as **candidate local
+F1 inputs only**, after rehashing their bytes, thirteen source files and the
+independent post-purge audit. It does not relabel them as v3/v4 production
+outputs or authorize a generated-label canary, target read, fit, score,
+ranking inference or upload. The frozen supervised fit resource floor remains
+>=28 GiB; a separate full-resident four-job canary and its independent audit
+must precede any exact-hash fit admission. A v4 production build remains an
+alternative when its 26 GiB launch gate opens.
 
 ## Candidate qualification
 
