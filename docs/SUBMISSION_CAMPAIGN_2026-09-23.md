@@ -23,7 +23,7 @@ timezone. Zero uploads is the correct result if no candidate clears the gates.
 | Day | Work to attempt, subject to the preceding gate | Release decision |
 | --- | --- | --- |
 | Thu Sep 24 | Close the failed ARR-supervision F1 arm and complete the paired weather input, twelve matched refits, independent prediction review and one-time F1 score. Preserve the v1 native crash and the separate v2 CPU/v3 GPU recovery receipts. | Extra-time weather lost 0.212 seconds to its matched routine control in complete July; stop before F3, ranking fit or upload. |
-| Fri Sep 25 | The route/type filed-duration post-purge input audit, exact-byte local F1 probe reuse decision, generated-target four-job canary and independent native/panel/resource replay are complete. The separately versioned v2 supervised runner passed generated-only and independent read-only review under the prospective >=24 GiB local-F1 resource policy; issue a one-use fit admission only after its independent prefit review and a fresh resource/lock check. The scheduled-inbound matched F1 arm remains an alternative: its v4 target-blind postfit canary needs >=26 GiB, followed by independent review and its own fit admission. Keep ranking-month ARR-label training held. | The passed canary and resource decision grant no real label access, supervised fit, evaluation scoring, F3, ranking inference or upload. Those require separate frozen admissions and F1/release gates. Probe-reused filed-duration matrices are local F1 inputs only; official release needs independently qualified production artifacts. Official release depending on future ARR membership remains held for organizer clarification. |
+| Fri Sep 25 | The filed route/type duration arm completed four serial supervised jobs, independent native and panel review, May calibration, full June/July/December composition and one-time matched F1 score with independent arithmetic replay. The scheduled-inbound matched F1 arm is the next distinct local test: its v4 target-blind postfit canary needs >=26 GiB, followed by independent review and its own fit admission. Keep ranking-month ARR-label training held. | Route-duration centered gained only 0.026834 seconds in complete July versus byte-identical raw/clean controls, with a paired-day interval crossing zero; stop before F3, ranking inference or upload. Future-ARR-membership release remains held for organizer clarification. |
 | Sat Sep 26 | Only for an admitted direction, freeze matched capacity and chronological cohorts, fit one heavy job at a time, audit complete predictions before scoring and test July robustness plus December transport. | Stop a failed F1 arm without tuning on exposed rows; F3 and full-season qualification require their own receipts. |
 | Sun Sep 27 | Finish any eligible, qualified F3/full-year dependency, independently verify release, check organizer quota and credentials, and upload only a frozen complete candidate. Publish the final experiment and score report. | Close the goal and disable the schedule after the report; if morning work remains, continue later that day. |
 
@@ -64,9 +64,9 @@ complete matched seasonal gate. Each official submission, if any, is a
 one-use transfer check of a distinct qualifying model. Do not infer hidden
 subgroup errors or select a follow-up weight from its score.
 
-The current [aggregate score chart](campaign-evidence/REPORT.md)
-separates seven audited F1 July/December matched gains from the two official
-2026 scores. All seven local directions stopped at F1. The chart's source
+The [aggregate score chart](campaign-evidence/REPORT.md)
+separates audited F1 July/December matched gains from the two official
+2026 scores. All scored local directions stopped at F1. The chart's source
 receipt hashes and arithmetic are checked by its reproducible script; it
 cannot turn earlier-origin F1 gains into a comparable historical V3 score.
 
@@ -116,6 +116,7 @@ of a frozen candidate, not select weights, rows, rules, or the next variant.
 | ARR auxiliary PLE387 F1, September 24 | July complete candidate 333.850 vs detached 333.221 and clean 334.130; December 233.736 vs detached 232.886 | Not submitted | Stop before F3; July trails matched control, July day interval crosses zero versus clean, and December trails control |
 | NM flight-rule transition input, September 24 | Input-only `Y/Z` shares 0.055-0.095% in Jan/Jul 2025/2026; no Rome day has two qualifying rows | Not submitted | Four-cell support gate failed before fit or score |
 | Unfiltered IEM extra-time weather versus matched routine, September 24 | Twelve matched F1 experts and 539,532 complete June/July/December rows. July RMSE: extra 333.7258, routine 333.5139, clean 334.1296. June extra/routine 318.8461/318.6100; December 233.2101/234.4017. | Not submitted | Independent arithmetic audit reproduced the one-time result. July extra lost 0.2119 seconds to routine and failed all four matched robustness checks. Stop before F3/ranking/upload; historical first-publication and source-license eligibility also remain unresolved. |
+| Filed route/type duration centering F1, September 25 | On complete June/July/December 2025 rows, centered RMSE 318.766899/334.102752/234.701302 versus raw and clean 318.758152/334.129587/234.743663. Raw and clean panel bytes match in all three months. July gain +0.026834 sec, paired-day CI [-0.011951, 0.066614]. | Not submitted | One-time F1 gate failed; independent nine-panel postscore replay has zero arithmetic delta. No F3, ranking fit or upload. |
 
 V4 already used at least one September 23 submission slot. The prior V4 bucket
 preflight counted zero same-UTC-day objects, but the official reset boundary is
@@ -152,9 +153,10 @@ filed M1 duration already in union387 -> target-blind route/type centering
        -> v4 policy static review passed; await >=26 GiB + one-use admission
        -> either v4 build/postbuild audit OR exact-byte probe reuse decision
        -> generated-label full-resident four-job canary + independent audit
-       -> separate supervised fit admission
-       -> serial F1 fit and complete-prediction/May/prescore reviews
-       -> only if F1 passes: F3, full-season and release gates
+       -> separate supervised fit admission -> four serial real F1 jobs
+       -> May calibration + independent review -> six complete prediction panels
+       -> independent prescore -> one-time score + independent postscore replay
+       -> July +0.026834 sec, CI crosses zero: STOP; no F3/ranking/upload
 ```
 
 Independent feature, source, review and score-contract tasks may use subagents
@@ -690,9 +692,10 @@ and 2,486 watchdog samples. The independent full-panel native/proxy replay
 passed with zero maximum prediction delta and wrote
 `../../review_work/lead235_20260925/route_duration_fit_resource_canary_review_v1/POSTFIT_AUDIT.json`
 SHA-256 `0a78a4209b379e2be414050f0a23a5a734e5f35f45d4840c44707de1d0c396d0`.
-This is a resource and integrity result, not an RMSE or fit admission. The
-supervised runners have no `FIT_ADMISSION.json` or real-label fit. The original
-v1 runner retains its >=28 GiB launch floor.
+This was a resource and integrity result, not an RMSE or fit admission. At
+that checkpoint neither runner had a real-label fit; the later admitted v2
+local-F1 run is recorded below. The original v1 runner retains its >=28 GiB
+launch floor.
 
 An independent [resource decision](../../review_work/lead235_20260925/route_duration_fit_resource_policy_v2/ACCEPTANCE.json)
 has since accepted a **prospective >=24 GiB launch floor for a separate v2
@@ -702,8 +705,31 @@ The acceptance retains the <10 GiB sampled process cap, >=8 GiB host/disk
 reserves, 0.5-second watchdog, exclusive jobs and one-use failure behavior.
 It is not a supervised fit admission or proof that real stop-label allocation
 fits the same peak. The separate v2 runner passed 12 generated tests and two
-independent read-only code/science reviews; it still needs an independent
-prefit admission review, exact-hash one-use ticket and fresh launch check.
+independent read-only code/science reviews. The subsequent one-use supervised
+fit admission, four jobs and independent postfit replay have now completed.
+
+The [route-duration F1 composition](../../review_work/lead235_20260925/route_duration_f1_composition_v2/outputs/F1/manifest.json)
+froze six complete unscored panels on June/July/December 2025 rows; manifest
+SHA-256 `354141038c0876afe97907152b8cc953ff045842f3f3ca8bb0b25368bef3142b`.
+Independent May calibration reviewed 183,518 ordinary rows, and the target-free
+[prescore review](../../review_work/lead235_20260925/route_duration_f1_prescore_v2/PRESCORE_REVIEW.json)
+replayed all nine candidate/control panels exactly (SHA-256
+`806d4e064a6e48385eb54a2a28931636a9df96eeb23775651d28865e2004ebb1`).
+The one-time [F1 score](../../private_runs/lead235_20260925/route_duration_f1_score_v2/F1/result.json)
+SHA-256 `ce4176f4d86010d4cfbc3e10c0723d38304ab701ab85592bd5c93fc9cbbfed30`
+found only +0.026834 seconds in July against both raw and clean, which are
+byte-identical in all three months. June was -0.008747 and December +0.042361
+seconds. July's paired-day 95% interval [-0.011951, 0.066614] crosses zero;
+its worst one-day and top-ten-benefit removals retain only +0.016836 and
++0.008601 seconds. The independent [postscore audit](../../review_work/lead235_20260925/route_duration_f1_postscore_audit_v1/POSTSCORE_AUDIT.json)
+SHA-256 `942ea22b606d24b1a06bb0550d6c540bc6ea681209064795b5dab41bdcf07c07`
+reproduced all nine panel metrics and the failed gate with zero maximum delta.
+Close this exact direction at F1. Do not retune a weight or route switch from
+exposed rows; do not pursue its v4 production build, F3, ranking fit or upload.
+The next distinct local candidate is scheduled-inbound versus same-peer
+landed-inbound density, subject to its >=26 GiB canary and separate admission.
+Official release of a feature using future ARR peer membership needs a dated
+organizer ruling even if its local test eventually passes.
 
 ## Candidate qualification
 

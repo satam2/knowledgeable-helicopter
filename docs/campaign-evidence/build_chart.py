@@ -76,6 +76,14 @@ SOURCES = [
         "7393000d7e226f24a8b6f36d0fc24215b39c4dbf12634ce174929fda4e7bafc4",
         "weather",
     ),
+    (
+        "Route-duration centering", "byte-identical raw/clean",
+        "private_runs/lead235_20260925/route_duration_f1_score_v2/F1/result.json",
+        "ce4176f4d86010d4cfbc3e10c0723d38304ab701ab85592bd5c93fc9cbbfed30",
+        "review_work/lead235_20260925/route_duration_f1_postscore_audit_v1/POSTSCORE_AUDIT.json",
+        "942ea22b606d24b1a06bb0550d6c540bc6ea681209064795b5dab41bdcf07c07",
+        "route_duration",
+    ),
 ]
 
 OFFICIAL = [
@@ -125,6 +133,8 @@ def complete_comparison(data: dict, kind: str, month: str) -> tuple[float, float
         part = data["months"][month]["comparisons"]["detached"]
     elif kind == "weather":
         part = data["months"][month]["comparisons"]["routine"]
+    elif kind == "route_duration":
+        part = data["months"][month]["comparisons"]["raw"]
     else:
         raise ValueError(f"Unknown source kind: {kind}")
     return part["comparator_rmse"], part["candidate_rmse"], part["gain_sec"], part["rows"]
@@ -141,9 +151,17 @@ def aggregate_rows() -> list[dict]:
             review = json.loads(audited)
             audit_result_hash = review.get("score_sha256", review.get("f1_result_sha256", review.get("score_result_sha256", review.get("result_sha256"))))
             assert audit_result_hash == src_hash, (kind, "independent audit did not bind score")
-            gate = data["f1_gate"] if kind in ("source_aware", "rank", "arr_aux", "weather") else data["gate"]
+            gate = data["f1_gate"] if kind in ("source_aware", "rank", "arr_aux", "weather", "route_duration") else data["gate"]
             assert gate["passed"] is False, (kind, "gate changed")
             assert review.get("f1_gate_passed", review.get("gate_passed", False)) is False
+            if kind == "route_duration":
+                assert review["reported_gate_reproduced"] and review["maximum_metric_absolute_delta"] == 0
+                assert review["verified_panel_count"] == 9
+                for month, part in data["months"].items():
+                    assert part["arms"]["raw"] == part["arms"]["clean"], (kind, month, "raw/clean scores differ")
+                    assert part["comparisons"]["raw"] == part["comparisons"]["clean"], (kind, month, "raw/clean comparisons differ")
+                    hashes = review["months"][month]["panels_sha256"]
+                    assert hashes["raw"] == hashes["clean"], (kind, month, "raw/clean panels differ")
         for month in ROWS:
             control, candidate, gain, count = complete_comparison(data, kind, month)
             assert count == ROWS[month], (kind, month, count)
@@ -172,7 +190,7 @@ def draw(rows: list[dict]) -> None:
                              width_ratios=[1, 1], left=.30, right=.965, top=.84,
                              bottom=.088, hspace=.65, wspace=.18)
     fig.text(.045, .963, "Campaign score evidence", fontsize=19, weight="bold", color="#172d39")
-    fig.text(.045, .927, "Every matched F1 direction stopped before F3 or release. Positive peer gain is not qualification.",
+    fig.text(.045, .927, "Every matched F1 direction stopped before F3 or release. Positive paired gain is not qualification.",
              fontsize=10.1, color="#53626b")
     names = [source[0] for source in SOURCES]
     panel = [row for row in rows if row["panel"] == "matched_local_F1"]
@@ -216,7 +234,7 @@ def draw(rows: list[dict]) -> None:
     ax.grid(axis="x", color="#dde3e7", linewidth=.7)
     ax.spines["left"].set_visible(False)
     ax.spines["bottom"].set_color("#bdc8ce")
-    fig.text(.045, .024, "Local bars: same-origin control minus candidate. All 7 F1 gates failed."
+    fig.text(.045, .024, f"Local bars: same-origin control minus candidate. All {len(SOURCES)} F1 gates failed."
              "  |  Source SHA-256s and comparator names: aggregate_scores.csv", fontsize=8.3, color="#53626b")
     fig.savefig(OUT / "campaign_scores.png", dpi=155)
     plt.close(fig)
