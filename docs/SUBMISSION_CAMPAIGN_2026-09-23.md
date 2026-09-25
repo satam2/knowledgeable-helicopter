@@ -23,7 +23,7 @@ timezone. Zero uploads is the correct result if no candidate clears the gates.
 | Day | Work to attempt, subject to the preceding gate | Release decision |
 | --- | --- | --- |
 | Thu Sep 24 | Close the failed ARR-supervision F1 arm and complete the paired weather input, twelve matched refits, independent prediction review and one-time F1 score. Preserve the v1 native crash and the separate v2 CPU/v3 GPU recovery receipts. | Extra-time weather lost 0.212 seconds to its matched routine control in complete July; stop before F3, ranking fit or upload. |
-| Fri Sep 25 | Keep ranking-month ARR-label training held pending organizer clarification. Review the independently passed label-free scheduled-inbound input screen for full-month feature feasibility and a matched F1 protocol. | Input variation is not a model gain. Official release depending on future ARR membership is separately held pending organizer clarification. |
+| Fri Sep 25 | Recheck the frozen scheduled-inbound matrix prebuild and host memory. Only at >=28 GiB available, issue independent build admission, build the two label-free 388-field F1 matrices and audit ID/column parity. Keep ranking-month ARR-label training held. | No training label or fit until matrix audit and separate fit admission. Official release depending on future ARR membership remains held for organizer clarification. |
 | Sat Sep 26 | Only for an admitted direction, freeze matched capacity and chronological cohorts, fit one heavy job at a time, audit complete predictions before scoring and test July robustness plus December transport. | Stop a failed F1 arm without tuning on exposed rows; F3 and full-season qualification require their own receipts. |
 | Sun Sep 27 | Finish any eligible, qualified F3/full-year dependency, independently verify release, check organizer quota and credentials, and upload only a frozen complete candidate. Publish the final experiment and score report. | Close the goal and disable the schedule after the report; if morning work remains, continue later that day. |
 
@@ -117,8 +117,10 @@ ARR four-cell input screen passed + independent replay
        -> only a dated ruling can start a separately frozen matched protocol
 
 scheduled-inbound label-free source review -> four-cell input gate passed
-       -> source-time/resource/matched-fit feasibility review
-       -> only if eligible, freeze matched control/cohort/stop rules
+       -> all-month paired cache + independent full replay passed
+       -> matrix prebuild passed; >=28 GiB resource gate currently blocks build
+       -> build admission -> two 388-field matrices -> independent parity audit
+       -> separate fit admission and matched control/cohort/stop rules
        -> serial F1 fit -> prescore audit -> one-time F1 gate
        -> only if F1 passes: F3/transport and full-season gate
        -> release eligibility + independent ranking verification
@@ -524,6 +526,20 @@ finds a supplied-batch rationale but no express organizer decision about using
 future observed ARR membership. Hold official release of a model depending on
 this feature until that interpretation is clarified. No label read, fit,
 score, ranking prediction or upload follows from this input gate alone.
+
+The [all-month cache](../../review_work/lead235_20260924/scheduled_inbound_feature_design_v1/RECEIPT.json)
+preserves all 2,085,047 training and 344,841 ranking DEP IDs across fourteen
+UTC months. Its [independent audit](../../review_work/lead235_20260924/scheduled_all_month_review_v1/AUDIT.json)
+replayed every paired count and missing mask, all fourteen aggregate gates and
+916 scalar peer samples. The [matched F1 feasibility review](../../review_work/lead235_20260924/scheduled_fit_bridge_v1/REPORT.md)
+specifies one equal-width 388-field LightGBM slot per arm and unchanged other
+experts. The [matrix prebuild review](../../review_work/lead235_20260924/scheduled_matrix_review_v1/REPORT.md)
+verified source hashes, schema and all seven F1 ID/proxy subsets; its tests
+passed. It withheld `BUILD_ADMISSION.json` because available host memory was
+26.084 GiB against the frozen 28 GiB launch floor. Tomorrow: rerun the
+preflight, admit/build only if that floor clears, then independently audit both
+matrices before any training-label read. No real matrix, fit, score or upload
+exists from this direction.
 
 ## Candidate qualification
 
