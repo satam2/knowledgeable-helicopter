@@ -20,15 +20,21 @@ scored 281.7265, and no later candidate has qualified for an upload. All new
 scored directions stopped at their frozen F1 gate. Saturday's first dependency
 is an eligible, distinct observation with documented prize-use rights, timing,
 identity and four-cell support. The November 2025 ARR availability screen
-passed, but its earlier-trained clean April/August out-of-fold residuals and
-matched negative control are still missing. The July EDDM stand-category shift
-has insufficient historical analogue support for supervised correction.
-The [April/August ID audit](../../review_work/lead235_20260925/arr_oof_dependency_audit_v1/REPORT.md)
-now binds both chronological cohorts without labels; it does not build the
-clean OOF ensembles, screen their ARR support or admit a fit. A separate
-[NOAA GFS forecast review](source-reviews/2026-09-25-noaa-gfs-forecast-triage.md)
+passed. The [April/August ARR screen](../../review_work/lead235_20260925/arr_apr_aug_support_review_v2/POSTREAD_REVIEW.md)
+also passed independent input replay at 147,302/175,000 and 163,432/190,865
+eligible 2025 arrivals on complete chronological DEP cohorts. Its v1
+single-file read [stopped before values](../../review_work/lead235_20260925/arr_apr_aug_support_failure_review_v1/REPORT.md)
+because one August-UTC DEP query was stored in the September raw file; v2
+used all twelve source files for UTC-month closure without changing the
+support gates. Earlier-trained clean April/August nine-expert OOF predictions,
+matched negative control, resource admission and ranking-month ARR-label
+eligibility remain missing; **no ARR model gain was measured**. The July EDDM
+stand-category shift has insufficient 2025 analogue support for correction.
+The separate [NOAA GFS forecast review](source-reviews/2026-09-25-noaa-gfs-forecast-triage.md)
 stopped at historical publication-time evidence and unresolved prize-use
-license interpretation. No GFS files or challenge rows were acquired.
+license interpretation. [Airport Corner events](source-reviews/2026-09-25-airport-corner-events.md)
+also stopped at source rights, historical archive and publication evidence.
+No event or forecast files or challenge rows were acquired from either.
 
 For a new direction, follow the [dependency DAG](#dependency-dag): source and
 input gate -> frozen matched control -> F1 -> F3 and full-season robustness ->
@@ -287,9 +293,11 @@ V3 input-gap audit -> v1 raw/token diagnostic failed, independently explained
 2025-only same-month ARR adaptation -> November input support PASSED
        -> 83.4585% retained; ten airports pass independent input replay
        -> April/August chronological DEP ID receipt/replay PASSED, no labels
-       -> April/August ARR support and earlier-trained clean OOF panels absent
+       -> v1 single-file screen aborted before values on Aug/Sep boundary DEP
+       -> v2 complete UTC-month April/August ARR input support PASSED/replayed
+       -> earlier-trained clean nine-expert OOF panels remain absent
        -> frozen ARR-innovation/negative-control diagnostic remains HELD
-       -> test only after source, OOF and resource admissions
+       -> test only after OOF and resource admissions
        -> only a positive diagnostic can justify paired F1/F3 fit admission;
           ranking-month 2026 ARR-label training stays held
 
