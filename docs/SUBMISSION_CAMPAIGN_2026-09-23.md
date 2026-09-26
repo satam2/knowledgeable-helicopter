@@ -15,7 +15,8 @@ row-level prediction or credential needed to reproduce those private results.
 ## Current checkpoint (Friday, September 25)
 
 V3 remains the best verified official submission at **278.0146 seconds**; the
-historical 268.662991-second local V3 score uses different 2025 cohorts. V4
+historical 268.662991-second local V3 score weights July/November 2025 monthly
+MSE by the 2026 ranking-month mix; it is not pooled 2025 RMSE. V4
 scored 281.7265, and no later candidate has qualified for an upload. All new
 scored directions stopped at their frozen F1 gate. Saturday's first dependency
 is an eligible, distinct observation with documented prize-use rights, timing,
@@ -54,6 +55,17 @@ It failed the frozen gate and stops before F1/F3, ranking inference or upload.
 September's native weights used September labels and were excluded from the
 OOF residual fit; October and November labels had already been exposed in
 prior work. Ranking-month 2026 ARR-label training remains held.
+
+A late-Friday [live organizer data comparison](source-reviews/2026-09-25-official-data-delta.md)
+found no newly documented field or file; authenticated bucket bytes were not
+rechecked. [International SIGMET](source-reviews/2026-09-25-noaa-sigmet-gate.md)
+stopped on historical publication and reuse proof, while eight leading-team
+[public profiles](source-reviews/2026-09-25-leading-method-disclosures.md)
+disclosed no implemented challenge-specific method in the inspected text.
+Earlier seasonal weighting and the Jan/Jul-only V4 specialist remain rejected
+under their separate frozen comparisons. None of these checks generated a fit,
+score, ranking candidate or official upload.
+
 The separate [NOAA GFS forecast review](source-reviews/2026-09-25-noaa-gfs-forecast-triage.md)
 stopped at historical publication-time evidence and unresolved prize-use
 license interpretation. [Airport Corner events](source-reviews/2026-09-25-airport-corner-events.md)
