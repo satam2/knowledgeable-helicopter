@@ -38,3 +38,35 @@ and variation beyond METAR thunder/rain. This would establish input support,
 not predictive gain; complete matched F1/F3 and independent release gates
 would remain separate. No LI observation file, challenge row/label, prediction,
 model, or official result was read or produced for this source review.
+
+## Follow-up gates
+
+The [first-party LI L2 guide and AF BODY format](https://user.eumetsat.int/resources/user-guides/mtg-li-level-2-data-guide#ID-Accumulated-gridded-data)
+describe **sparse** contributing lightning pixels, not a dense observed-zero
+image. The [independent decoder audit](../../../review_work/lead235_20260925/li_zero_semantics_v1/REPORT.md)
+found no regional valid-zero/pixel mask or first-party rule that an unlisted
+pixel means a valid no-lightning observation. Positive projected-cell presence
+may be usable; treating every empty airport disk as zero is not admitted.
+This blocks the proposed 96-product value screen pending a documented zero,
+quality and coverage rule for the actual baseline.
+
+The [archive API audit](../../../review_work/lead235_20260925/li_archive_versions_v1/REPORT.md)
+found current ingestion-like clocks and `original` version labels, but no
+public immutable first-availability/hash or replacement history for strict
+takeoff-time use. A separate, explicitly retrospective
+[protocol](../../../review_work/lead235_20260925/li_retrospective_protocol_v1/PROTOCOL.md)
+was independently [reviewed](../../../review_work/lead235_20260925/li_protocol_review_v2/REPORT.md)
+as a conditional design; it still requires organizer rulings on CC BY 4.0 and
+post-takeoff publication and does not admit observation bodies or fitting.
+An unsent [clarification draft](../../../review_work/lead235_20260925/li_organizer_query_v1/DRAFT.md)
+asks those two questions separately.
+
+An [input-only monthly catalogue screen](../../../review_work/lead235_20260925/li_month_counts_v1/REPORT.md)
+found records in all twelve 2025 months, but March and October overlap hits
+were 295 and 502 below nominal ten-minute slot counts. Search hits are not
+unique-slot, airport-pixel or outage receipts; exact interval enumeration is
+needed before any full-year matrix. A pinned, pre-2025
+[OurAirports coordinate source](../../../review_work/lead235_20260925/licensed_airport_points_v1/REPORT.md)
+covers all ten ICAOs under public-domain/Unlicense terms, but its point datum,
+within-airport definition and numerical accuracy are unspecified. It can
+anchor a coarse input audit, not certify an individual 2-km pixel.

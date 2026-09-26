@@ -84,6 +84,33 @@ BY 4.0 grant and the one-record inclusive month-boundary count difference;
 could not establish valid ten-airport pixels from catalogue geometry. A
 separate [supplied-data novelty audit](../../review_work/lead235_20260925/internal_novelty_audit_sep25b/REPORT.md)
 found no new fit-ready observation or supported 2025 analogue.
+The subsequent [LI archive audit](../../review_work/lead235_20260925/li_archive_versions_v1/REPORT.md)
+found no public immutable history of original product bytes and publication
+times. The [AF decoder review](../../review_work/lead235_20260925/li_zero_semantics_v1/REPORT.md)
+found sparse contributing pixels with no documented regional valid-zero mask;
+empty airport cells cannot be called measured zero. A 2025
+[month-presence screen](../../review_work/lead235_20260925/li_month_counts_v1/REPORT.md)
+has records in all twelve months, but March/October overlap hits fall 295/502
+below nominal slots; this is not a unique-interval or airport-support count.
+A pre-2025 [licensed coordinate source](../../review_work/lead235_20260925/licensed_airport_points_v1/REPORT.md)
+covers the ten ICAOs as coarse locations, without fine-grid accuracy bounds.
+The separate retrospective-only [protocol](../../review_work/lead235_20260925/li_retrospective_protocol_v1/PROTOCOL.md)
+passed [independent design re-review](../../review_work/lead235_20260925/li_protocol_review_v2/REPORT.md)
+after the cohort/fit/snapshot corrections, but **does not admit any LI value
+read, fit or release**. The [organizer clarification draft](../../review_work/lead235_20260925/li_organizer_query_v1/DRAFT.md)
+is unsent. The published rules do not resolve CC BY 4.0 as an accepted
+additional-data license or retrospective use of a post-takeoff-public archive.
+The separate [MSG Cloud Mask source review](source-reviews/2026-09-25-eumetsat-msg-cloud-mask.md)
+found a denser, nominally 15-minute regional clear/cloud/no-data observation
+under its own CC BY 4.0 grant. Four target-month catalogue hits are
+2,976/2,976/2,974/2,976, with two January 2026 scans absent; 2025 has
+34,998 hits against 35,040 nominal slots. Independent
+[rights/metadata](../../review_work/lead235_20260925/msg_cloud_rights_v1/REPORT.md)
+and [format/materiality](../../review_work/lead235_20260925/msg_cloud_semantics_v1/REPORT.md)
+reviews confirm the categorical valid-clear versus no-data distinction but
+do not establish airport pixels, historical first-publication versions,
+organizer prize admission or a five-second gain. It remains before bodies,
+fit and upload; the unsent organizer query now names both EUMETSAT sources.
 The [aggregate evidence chart](campaign-evidence/REPORT.md) now plots the
 failed ARR October/November diagnostic separately from matched F1 comparisons
 and official 2026 results; its 24 aggregate rows passed an independent
@@ -110,7 +137,7 @@ timezone. Zero uploads is the correct result if no candidate clears the gates.
 | --- | --- | --- |
 | Thu Sep 24 | Close the failed ARR-supervision F1 arm and complete the paired weather input, twelve matched refits, independent prediction review and one-time F1 score. Preserve the v1 native crash and the separate v2 CPU/v3 GPU recovery receipts. | Extra-time weather lost 0.212 seconds to its matched routine control in complete July; stop before F3, ranking fit or upload. |
 | Fri Sep 25 | The route/type duration, scheduled-inbound and current-expert contextual gate arms completed separate one-time F1 scores and independent arithmetic replays. A target-blind EOBT-channel shift screen completed its independent input replay. Keep target-month ARR-label training held. | Route-duration gained 0.026834 seconds in complete July versus raw/clean; scheduled-inbound lost 0.006124 seconds to landed and 0.013206 to clean; contextual weighting gained 0.069855 seconds versus each control. All missed their frozen F1 advancement gates. The EOBT input screen failed January and both chronological analogues. No F3, ranking inference or upload. Future-ARR-membership release remains held for organizer clarification. |
-| Sat Sep 26 | Friday's OPDI, airport-operator traffic, CAMS, ADSB.lol, VDL IQ and EAD NOTAM source screens stopped; the EOBT gate and queue/join/internal audits also stopped. The category census found one July EDDM stand-pair shift, but its chronological July 2025 analogue has only two OOV rows, so no supervised stand correction is admitted. The cheaper September-to-October/November 2025 ARR residual diagnostic failed its complete-cohort gate. Resolve the distinct Lightning Imager source's historical version/publication and organizer-license questions; only then freeze airport-pixel support and a bounded input audit. IMERG remains held at its own source gate. | Do not reopen stopped sources or supplied-data screens by relaxing their gates. The exact April/August OOF shared-input variant remains resource-held and requires a distinct five-second case; the failed September correction is not evidence to retune it. If no independently eligible mechanism passes, record the negative result and do not manufacture a minor variant or upload. |
+| Sat Sep 26 | Friday's OPDI, airport-operator traffic, CAMS, ADSB.lol, VDL IQ and EAD NOTAM source screens stopped; the EOBT gate and queue/join/internal audits also stopped. The category census found one July EDDM stand-pair shift, but its chronological July 2025 analogue has only two OOV rows, so no supervised stand correction is admitted. The cheaper September-to-October/November 2025 ARR residual diagnostic failed its complete-cohort gate. MSG Cloud Mask is the most concrete continuous new observation: published clear/cloud/no-data codes and nearly complete 2025/2026 target-month index, but no organizer license ruling, original publication history or airport-pixel proof. Resolve those source gates first; preserve LI's sparse-zero hold and IMERG's separate rights/version hold. | Do not reopen stopped sources or supplied-data screens by relaxing their gates. The exact April/August OOF shared-input variant remains resource-held and requires a distinct five-second case; the failed September correction is not evidence to retune it. If no independently eligible mechanism passes, record the negative result and do not manufacture a minor variant or upload. |
 | Sun Sep 27 | If Saturday yields an eligible direction that clears F1, finish its matched F3/full-year dependency, independently verify release, check organizer quota and credentials, and upload only a frozen complete candidate. Otherwise publish the final experiment and score report with the stopped directions and next research question. | No new candidate has cleared F1 as of Friday. Close the goal and disable both schedules after the report; the one-time 5:00 PM backup checks for unfinished work if the morning run ends early. |
 
 The requirement to prove an external observation was published by takeoff is
