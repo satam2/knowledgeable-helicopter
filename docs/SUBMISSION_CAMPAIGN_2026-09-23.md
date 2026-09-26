@@ -185,6 +185,33 @@ stop in the [private ledger](../../output/submission_campaign_20260923/LEDGER.md
 Five official submissions per organizer day are available only as a ceiling
 for distinct qualified candidates, never as a target for small variants.
 
+### Early Saturday source checkpoint
+
+A [separate MSG history review](source-reviews/2026-09-26-msg-history-followup.md)
+found a live EUMETSAT publication-notification feed, but no documented public
+retrospective replay tying first dissemination to the exact original CLM bytes
+and later replacements. MSG Cloud Mask moved from Data Centre user access to
+Data Store in June 2024; today's best-quality catalogue cannot reconstruct a
+historical as-of version. The strict source gate, organizer prize-license
+interpretation and authorized airport-pixel check remain independent holds.
+No observation body, model fit or submission was admitted by this review.
+The proposed historical OSM taxiway-network distance is already present in
+V3's Rome/Paris `geometry_v2` fields. Its other-eight-airport extension is a
+separate coverage question, not a new observation; do not fit it from the
+duplicate proposal. A field-by-field supplied-data novelty recheck found no
+new source/revision witness beyond the already stopped directions.
+An exploratory [missing-route transfer audit](../../review_work/lead235_20260926/transfer_audit_v1/REPORT.md)
+found 59/209 July 2026 EDDF missing-NM rows with stand pairs absent from the
+22,470-row missing-specialist 2025 fit vocabulary. Its threshold was written
+after the observation, as the [erratum](../../review_work/lead235_20260926/transfer_audit_v1/ERRATA.md)
+clarifies. A separately frozen, target-blind [raw-source check](../../review_work/lead235_20260926/missing_stand_semantics_v1/REPORT.md)
+then matched all cached stand and airport tokens to the raw records and found
+that 48 of the 59 affected rows have pairs already present in the larger
+finite-2025 ordinary vocabulary. An independent replay reproduced the counts.
+The 59 rows are 0.0171% of ranking; neither their hidden errors nor a
+complete-cohort model gain is known. This is missing-specialist support, not
+an admitted correction, fit or upload.
+
 ## Operating plan through Sunday
 
 The active `/goal` owns this campaign; the daily 8:00 AM Pacific continuation
