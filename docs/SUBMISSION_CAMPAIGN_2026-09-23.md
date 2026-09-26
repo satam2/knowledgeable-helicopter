@@ -69,6 +69,10 @@ A subsequent [public-code delta](source-reviews/2026-09-25-public-code-delta-fol
 found a newer runway-context feature set but no independent new observation or
 demonstrated material complete-cohort gain. It did not reopen the stopped queue
 direction.
+The [MSG publication-history check](source-reviews/2026-09-25-msg-publication-history-gate.md)
+found no original public-dissemination time or predecessor-byte history in the
+inspected public endpoints. Another current-index scan cannot clear strict
+as-of use; the organizer's retrospective-use and license rulings remain separate.
 
 The separate [NOAA GFS forecast review](source-reviews/2026-09-25-noaa-gfs-forecast-triage.md)
 stopped at historical publication-time evidence and unresolved prize-use
