@@ -71,6 +71,11 @@ The [IMERG follow-up](../../review_work/lead235_20260925/imerg_rights_followup_v
 confirmed 1,488 indexed intervals in each month, but sampled granule insertion
 and revision timestamps do not establish first-publication bytes at takeoff;
 the precise derived-product grant and organizer interpretation remain open.
+The [collection-level check](source-reviews/2026-09-25-imerg-product-grant-followup.md)
+found neither an explicit IMERG Early V07 CC0 declaration nor an affirmative
+restriction. Three sampled older granules have unavailable first metadata
+revisions, so their original publication and value history remain unproved.
+No granule-body audit or model fit is admitted by this check.
 The distinct [EUMETSAT Lightning Imager screen](source-reviews/2026-09-25-eumetsat-lightning.md)
 found a product-specific CC BY 4.0 policy and public ten-minute catalogue
 records in all four months. Its current metadata does not establish immutable
@@ -136,6 +141,18 @@ reviews confirm the categorical valid-clear versus no-data distinction but
 do not establish airport pixels, historical first-publication versions,
 organizer prize admission or a five-second gain. It remains before bodies,
 fit and upload; the unsent organizer query now names both EUMETSAT sources.
+The [NOAA GFS archive follow-up](source-reviews/2026-09-25-noaa-gfs-archive-followup.md)
+found sampled 2025/2026 forecast objects but no original-publication versions;
+the current 2025 Grid-004 paths also have a missing July 9 catalogue and a
+Grid-4/`gfs_3` identity discrepancy. Its rights and archive coverage are held
+before forecast bodies. A [fresh public organizer-page check](source-reviews/2026-09-25-organizer-external-data-clarification-search.md)
+found no published interpretation of CC BY 4.0, retrospective publication, or
+ranking-month ARR-label training. The three independent policy holds remain.
+The separate proposed pure-EOBT mask shares the [already failed raw-clock
+source gate](../../review_work/lead235_20260925/shift_clock_gate_review_v1/REVIEW_v2.md):
+January and both F1/F3 analogues failed despite July LFPG passing. Recomputing
+features without EOBT cannot change that prerequisite; no duplicate fit is
+admitted.
 The [aggregate evidence chart](campaign-evidence/REPORT.md) now plots the
 failed ARR October/November diagnostic separately from matched F1 comparisons
 and official 2026 results; its 24 aggregate rows passed an independent
@@ -162,7 +179,7 @@ timezone. Zero uploads is the correct result if no candidate clears the gates.
 | --- | --- | --- |
 | Thu Sep 24 | Close the failed ARR-supervision F1 arm and complete the paired weather input, twelve matched refits, independent prediction review and one-time F1 score. Preserve the v1 native crash and the separate v2 CPU/v3 GPU recovery receipts. | Extra-time weather lost 0.212 seconds to its matched routine control in complete July; stop before F3, ranking fit or upload. |
 | Fri Sep 25 | The route/type duration, scheduled-inbound and current-expert contextual gate arms completed separate one-time F1 scores and independent arithmetic replays. A target-blind EOBT-channel shift screen completed its independent input replay. Keep target-month ARR-label training held. | Route-duration gained 0.026834 seconds in complete July versus raw/clean; scheduled-inbound lost 0.006124 seconds to landed and 0.013206 to clean; contextual weighting gained 0.069855 seconds versus each control. All missed their frozen F1 advancement gates. The EOBT input screen failed January and both chronological analogues. No F3, ranking inference or upload. Future-ARR-membership release remains held for organizer clarification. |
-| Sat Sep 26 | Friday's OPDI, airport-operator traffic, CAMS, ADSB.lol, VDL IQ and EAD NOTAM source screens stopped; the EOBT gate and queue/join/internal audits also stopped. The category census found one July EDDM stand-pair shift, but its chronological July 2025 analogue has only two OOV rows, so no supervised stand correction is admitted. The cheaper September-to-October/November 2025 ARR residual diagnostic failed its complete-cohort gate. MSG Cloud Mask is the most concrete continuous new observation: published clear/cloud/no-data codes and nearly complete 2025/2026 target-month index, but no organizer license ruling, original publication history or airport-pixel proof. Resolve those source gates first; preserve LI's sparse-zero hold and IMERG's separate rights/version hold. | Do not reopen stopped sources or supplied-data screens by relaxing their gates. The exact April/August OOF shared-input variant remains resource-held and requires a distinct five-second case; the failed September correction is not evidence to retune it. If no independently eligible mechanism passes, record the negative result and do not manufacture a minor variant or upload. |
+| Sat Sep 26 | Friday's OPDI, airport-operator traffic, CAMS, ADSB.lol, VDL IQ and EAD NOTAM source screens stopped; the EOBT gate and queue/join/internal audits also stopped. The category census found one July EDDM stand-pair shift, but its chronological July 2025 analogue has only two OOV rows, so no supervised stand correction is admitted. The cheaper September-to-October/November 2025 ARR residual diagnostic failed its complete-cohort gate. MSG Cloud Mask is the most concrete continuous new observation: published clear/cloud/no-data codes and nearly complete 2025/2026 target-month index, but no organizer license ruling, original publication history or airport-pixel proof. Resolve those source gates first; preserve LI's sparse-zero hold, IMERG's separate rights/version hold and GFS's archive-identity hold. | Do not reopen stopped sources or supplied-data screens by relaxing their gates. The exact April/August OOF shared-input variant remains resource-held and requires a distinct five-second case; the failed September correction is not evidence to retune it. If no independently eligible mechanism passes, record the negative result and do not manufacture a minor variant or upload. |
 | Sun Sep 27 | If Saturday yields an eligible direction that clears F1, finish its matched F3/full-year dependency, independently verify release, check organizer quota and credentials, and upload only a frozen complete candidate. Otherwise publish the final experiment and score report with the stopped directions and next research question. | No new candidate has cleared F1 as of Friday. Close the goal and disable both schedules after the report; the one-time 5:00 PM backup checks for unfinished work if the morning run ends early. |
 
 The requirement to prove an external observation was published by takeoff is
