@@ -40,9 +40,14 @@ ARR input screen passed independent replay: **156,583/183,729, 156,934/185,488
 and 135,366/162,199** eligible 2025 arrivals after one union query-flight
 purge, with all ten airport/day gates in each cell. The separate 183,950-row
 September panel using May weights also passed an independent full-row
-prediction replay (maximum arithmetic difference below 1e-12 seconds). A
-frozen ARR expectation and matched context/shifted-placebo correction remain
-unbuilt; no residual model or score exists. September's native weights
+prediction replay (maximum arithmetic difference below 1e-12 seconds). The
+2025-only ARR expectation and all three September-November airport/day grids
+have now passed [independent value replay](../../review_work/lead235_20260925/arr_innovation_review_v1/POSTREAD_RECEIPT.json):
+1,379,679 valid January-August history arrivals, then 156,583, 156,934 and
+135,366 eligible arrivals in September, October and November. Every nonmissing
+grid mean agreed within 1e-9 seconds, with no DEP target read. The residual
+fit, matched context/shifted-placebo correction and score remain pending.
+September's native weights
 used September labels and cannot construct its OOF residuals; October and
 November labels have already been exposed in prior work. Even a positive
 retrospective diagnostic would not clear F1/F3 or authorize use of 2026
@@ -55,6 +60,11 @@ The [historical TAF review](source-reviews/2026-09-25-taf-source-triage.md)
 stopped at ten-airport archive support, first-receipt/revision evidence and
 foreign-origin reuse rights. No event or forecast files or challenge rows
 were acquired from these source reviews.
+The [NASA IMERG Early review](source-reviews/2026-09-25-nasa-imerg-early-precipitation.md)
+found complete product-level half-hour granule indexes for January/July 2025
+and 2026, but has not established airport-pixel coverage, historical versions,
+prize-use terms or incremental value over the existing weather fields. It is
+held before granule-body acquisition, model fitting or release.
 
 For a new direction, follow the [dependency DAG](#dependency-dag): source and
 input gate -> frozen matched control -> F1 -> F3 and full-season robustness ->
