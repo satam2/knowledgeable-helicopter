@@ -67,6 +67,27 @@ found complete product-level half-hour granule indexes for January/July 2025
 and 2026, but has not established airport-pixel coverage, historical versions,
 prize-use terms or incremental value over the existing weather fields. It is
 held before granule-body acquisition, model fitting or release.
+The [IMERG follow-up](../../review_work/lead235_20260925/imerg_rights_followup_v1/REPORT.md)
+confirmed 1,488 indexed intervals in each month, but sampled granule insertion
+and revision timestamps do not establish first-publication bytes at takeoff;
+the precise derived-product grant and organizer interpretation remain open.
+The distinct [EUMETSAT Lightning Imager screen](source-reviews/2026-09-25-eumetsat-lightning.md)
+found a product-specific CC BY 4.0 policy and public ten-minute catalogue
+records in all four months. Its current metadata does not establish immutable
+historical versions, valid airport pixels or measured zero-lightning values;
+organizer acceptance of CC BY under the prize rule is unconfirmed. It remains
+at the source gate, before observation files, model fitting or release. A
+[rights and metadata cross-check](../../review_work/lead235_20260925/li_rights_crosscheck_v1/REPORT.md)
+independently reconciled the publisher's `NoConditions` policy ID with its CC
+BY 4.0 grant and the one-record inclusive month-boundary count difference;
+[footprint checks](../../review_work/lead235_20260925/li_footprint_check_v1/REPORT.md)
+could not establish valid ten-airport pixels from catalogue geometry. A
+separate [supplied-data novelty audit](../../review_work/lead235_20260925/internal_novelty_audit_sep25b/REPORT.md)
+found no new fit-ready observation or supported 2025 analogue.
+The [aggregate evidence chart](campaign-evidence/REPORT.md) now plots the
+failed ARR October/November diagnostic separately from matched F1 comparisons
+and official 2026 results; its 24 aggregate rows passed an independent
+[receipt review](../../review_work/lead235_20260925/arr_campaign_chart_review_v1/REPORT.md).
 
 For a new direction, follow the [dependency DAG](#dependency-dag): source and
 input gate -> frozen matched control -> F1 -> F3 and full-season robustness ->
@@ -89,7 +110,7 @@ timezone. Zero uploads is the correct result if no candidate clears the gates.
 | --- | --- | --- |
 | Thu Sep 24 | Close the failed ARR-supervision F1 arm and complete the paired weather input, twelve matched refits, independent prediction review and one-time F1 score. Preserve the v1 native crash and the separate v2 CPU/v3 GPU recovery receipts. | Extra-time weather lost 0.212 seconds to its matched routine control in complete July; stop before F3, ranking fit or upload. |
 | Fri Sep 25 | The route/type duration, scheduled-inbound and current-expert contextual gate arms completed separate one-time F1 scores and independent arithmetic replays. A target-blind EOBT-channel shift screen completed its independent input replay. Keep target-month ARR-label training held. | Route-duration gained 0.026834 seconds in complete July versus raw/clean; scheduled-inbound lost 0.006124 seconds to landed and 0.013206 to clean; contextual weighting gained 0.069855 seconds versus each control. All missed their frozen F1 advancement gates. The EOBT input screen failed January and both chronological analogues. No F3, ranking inference or upload. Future-ARR-membership release remains held for organizer clarification. |
-| Sat Sep 26 | Friday's OPDI, airport-operator traffic, CAMS, ADSB.lol, VDL IQ and EAD NOTAM source screens stopped; the EOBT gate and queue/join/internal audits also stopped. The category census found one July EDDM stand-pair shift, but its chronological July 2025 analogue has only two OOV rows, so no supervised stand correction is admitted. Seek a distinct documented observation with January/July 2025/2026 coverage and prize-use rights; freeze identity, timing, support, matched control and resource gates before accessing rows. The cheaper September-to-October/November 2025 ARR residual diagnostic has now failed its complete-cohort gate. | Do not reopen stopped sources or supplied-data screens by relaxing their gates. The exact April/August OOF shared-input variant remains resource-held and requires a distinct five-second case; the failed September correction is not evidence to retune it. An unknown-category or ARR-availability finding alone cannot qualify a model. If no independently eligible mechanism passes, record the negative result and do not manufacture a minor variant. |
+| Sat Sep 26 | Friday's OPDI, airport-operator traffic, CAMS, ADSB.lol, VDL IQ and EAD NOTAM source screens stopped; the EOBT gate and queue/join/internal audits also stopped. The category census found one July EDDM stand-pair shift, but its chronological July 2025 analogue has only two OOV rows, so no supervised stand correction is admitted. The cheaper September-to-October/November 2025 ARR residual diagnostic failed its complete-cohort gate. Resolve the distinct Lightning Imager source's historical version/publication and organizer-license questions; only then freeze airport-pixel support and a bounded input audit. IMERG remains held at its own source gate. | Do not reopen stopped sources or supplied-data screens by relaxing their gates. The exact April/August OOF shared-input variant remains resource-held and requires a distinct five-second case; the failed September correction is not evidence to retune it. If no independently eligible mechanism passes, record the negative result and do not manufacture a minor variant or upload. |
 | Sun Sep 27 | If Saturday yields an eligible direction that clears F1, finish its matched F3/full-year dependency, independently verify release, check organizer quota and credentials, and upload only a frozen complete candidate. Otherwise publish the final experiment and score report with the stopped directions and next research question. | No new candidate has cleared F1 as of Friday. Close the goal and disable both schedules after the report; the one-time 5:00 PM backup checks for unfinished work if the morning run ends early. |
 
 The requirement to prove an external observation was published by takeoff is

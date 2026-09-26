@@ -114,6 +114,14 @@ OFFICIAL = [
     ),
 ]
 
+ARR_DIAGNOSTIC = (
+    "review_work/lead235_20260925/arr_residual_fit_v1/SCORE_REPORT.json",
+    "d3ad55d4803d26d7c6ab932580522665663869d0215c4780123c47ff916efb87",
+    "review_work/lead235_20260925/arr_residual_postscore_review_v1/POSTSCORE_RECEIPT.json",
+    "704100a02eb04d3b5d1b2021ebad000dfc09859515a423c6fd0adff5e86202a9",
+)
+ARR_ROWS = {"october": ("2025-10", 185674), "november": ("2025-11", 162332)}
+
 HEADERS = [
     "panel", "direction", "month", "comparator", "control_rmse_s",
     "candidate_rmse_s", "gain_s", "rows", "gate", "source", "source_sha256",
@@ -255,6 +263,28 @@ def aggregate_rows() -> list[dict]:
                            comparator="", control_rmse_s="", candidate_rmse_s=f"{data['score']:.4f}",
                            gain_s="", rows=data["used_pairs"], gate="Succeeded", source=src,
                            source_sha256=src_hash, audit="", audit_sha256=""))
+    src, src_hash, audit, audit_hash = ARR_DIAGNOSTIC
+    data = json.loads(verified_bytes(src, src_hash))
+    review = json.loads(verified_bytes(audit, audit_hash))
+    assert data["status"] == "complete_october_november_diagnostic_scored"
+    assert data["all_gates_pass"] is False
+    assert review["score_report_sha256"] == src_hash
+    assert review["status"] == "independent_complete_diagnostic_score_replay_pass"
+    assert review["all_gates_pass"] is False
+    assert review["ranking_target_read"] is False and review["uploaded"] is False
+    for key, (month, count) in ARR_ROWS.items():
+        part = data["months"][key]["comparisons"]["clean"]
+        audited = review["months"][key]["comparisons"]["clean"]
+        assert part == audited and part["rows"] == count
+        assert part["passes_one_second_gate"] is False
+        assert abs(part["control_rmse"] - part["candidate_rmse"] - part["gain_sec"]) < 1e-7
+        result.append(dict(panel="retrospective_ARR_2025", direction="ARR innovation residual",
+                           month=month, comparator="unchanged clean",
+                           control_rmse_s=f"{part['control_rmse']:.9f}",
+                           candidate_rmse_s=f"{part['candidate_rmse']:.9f}",
+                           gain_s=f"{part['gain_sec']:.9f}", rows=count,
+                           gate="DIAGNOSTIC_STOP", source=src, source_sha256=src_hash,
+                           audit=audit, audit_sha256=audit_hash))
     return result
 
 
@@ -316,6 +346,37 @@ def draw(rows: list[dict]) -> None:
     plt.close(fig)
 
 
+def draw_arr() -> None:
+    src, src_hash, _, _ = ARR_DIAGNOSTIC
+    data = json.loads(verified_bytes(src, src_hash))
+    fig, ax = plt.subplots(figsize=(8.0, 3.3))
+    fig.subplots_adjust(left=.21, right=.94, top=.72, bottom=.25)
+    ax.axvline(0, color="#77838b", linewidth=1)
+    for y, (key, _) in enumerate(ARR_ROWS.items()):
+        part = data["months"][key]["comparisons"]["clean"]
+        gain = part["gain_sec"]
+        lower, upper = part["paired_utc_day_bootstrap_ci95"]
+        ax.barh(y, gain, color="#bd663c", height=.45, zorder=2)
+        ax.errorbar(gain, y, xerr=[[gain - lower], [upper - gain]], fmt="none",
+                    capsize=4, color="#172d39", linewidth=1.2, zorder=3)
+        ax.text(.04, y, f"{gain:+.3f} s", ha="left", va="center",
+                fontsize=10, color="#172d39")
+    ax.set(yticks=[0, 1], yticklabels=["October 2025", "November 2025"],
+           xlim=(-1.5, .25), ylim=(-.6, 1.6),
+           xlabel="Unchanged clean minus ARR-corrected RMSE (seconds)")
+    ax.invert_yaxis()
+    ax.grid(axis="x", color="#dde3e7", linewidth=.7, zorder=0)
+    ax.spines[["top", "right", "left"]].set_visible(False)
+    fig.text(.035, .94, "ARR innovation residual: stopped diagnostic", fontsize=14,
+             weight="bold", color="#172d39")
+    fig.text(.035, .85, "Complete 2025 cohorts; whiskers are paired-day 95% intervals.",
+             fontsize=9.6, color="#53626b")
+    fig.text(.035, .055, "Separate fit history from the F1 and official panels. Negative gain means worse RMSE.",
+             fontsize=8.7, color="#53626b")
+    fig.savefig(OUT / "arr_diagnostic.png", dpi=155, facecolor="white")
+    plt.close(fig)
+
+
 def main() -> None:
     rows = aggregate_rows()
     with (OUT / "aggregate_scores.csv").open("w", encoding="ascii", newline="") as handle:
@@ -323,7 +384,9 @@ def main() -> None:
         writer.writeheader()
         writer.writerows(rows)
     draw(rows)
-    print(f"Verified {len(SOURCES)} matched F1 directions and {len(OFFICIAL)} official receipts; wrote {len(rows)} aggregate rows.")
+    draw_arr()
+    print(f"Verified {len(SOURCES)} matched F1 directions, {len(OFFICIAL)} official receipts, "
+          f"and {len(ARR_ROWS)} ARR diagnostic months; wrote {len(rows)} aggregate rows.")
 
 
 if __name__ == "__main__":
