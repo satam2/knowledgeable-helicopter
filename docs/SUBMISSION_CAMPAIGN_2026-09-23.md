@@ -104,7 +104,18 @@ The separate [MSG Cloud Mask source review](source-reviews/2026-09-25-eumetsat-m
 found a denser, nominally 15-minute regional clear/cloud/no-data observation
 under its own CC BY 4.0 grant. Four target-month catalogue hits are
 2,976/2,976/2,974/2,976, with two January 2026 scans absent; 2025 has
-34,998 hits against 35,040 nominal slots. Independent
+34,998 hits against 35,040 nominal slots. A repeated, bounded 14-month
+exact-slot census found **34,997 unique 2025 starts**, 43 absent, and one
+MSG3/MSG4 conflict at 12 November 13:45 UTC; the 42-hit deficit is not a
+42-slot deficit. The January 12, 2026 gaps are **18:15/18:30 UTC**, not the
+earlier reported 10:15/10:30. Across 14 calendar months there are 40,947
+unique starts and 45 absent from 40,992 nominal; the two runs agree on
+missing starts and conflict IDs ([independent receipt replay](../../review_work/lead235_20260925/msg_cloud_census_review_v1/REPORT.md)).
+This is catalogue evidence only: the page
+bytes changed between runs, and neither supplies a stable version manifest
+or valid airport pixels. The separate [input-audit protocol](../../review_work/lead235_20260925/msg_input_protocol_v1/PROTOCOL.md)
+includes ten prior-month boundary slots and remains held before bodies.
+Independent
 [rights/metadata](../../review_work/lead235_20260925/msg_cloud_rights_v1/REPORT.md)
 and [format/materiality](../../review_work/lead235_20260925/msg_cloud_semantics_v1/REPORT.md)
 reviews confirm the categorical valid-clear versus no-data distinction but

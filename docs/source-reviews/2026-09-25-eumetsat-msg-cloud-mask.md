@@ -22,11 +22,22 @@ calling it a prize-eligible input.
 Public [OpenSearch metadata](https://api.eumetsat.int/data/search-products/1.0.0/osdd?pi=EO:EUM:DAT:MSG:CLM)
 shows all 2025 months, with **34,998 hits versus 35,040 nominal** 15-minute
 slots. January/July 2025 and 2026 have **2,976 / 2,976 / 2,974 / 2,976**
-hits versus 2,976 nominal in each month. The January 2026 catalogue lacks
-the 12 January 10:15 and 10:30 UTC scans. Search hits are not a unique-ID,
-file-integrity or valid-airport-pixel audit; next-month midnight is an
-inclusive boundary and inflates a broad query by one. The collection's
-full-disc envelope and airport-area `bbox` search do not show per-pixel
+hits versus 2,976 nominal in each month. A later exact-slot census found
+the 12 January **18:15 and 18:30 UTC** scans absent; the earlier 10:15/10:30
+UTC claim was incorrect. Exact [10:15](https://api.eumetsat.int/data/search-products/1.0.0/os?pi=EO%3AEUM%3ADAT%3AMSG%3ACLM&dtstart=2026-01-12T10:15:00Z&dtend=2026-01-12T10:15:00Z&c=10&format=json)
+and [10:30](https://api.eumetsat.int/data/search-products/1.0.0/os?pi=EO%3AEUM%3ADAT%3AMSG%3ACLM&dtstart=2026-01-12T10:30:00Z&dtend=2026-01-12T10:30:00Z&c=10&format=json)
+queries each return one scan; [18:15](https://api.eumetsat.int/data/search-products/1.0.0/os?pi=EO%3AEUM%3ADAT%3AMSG%3ACLM&dtstart=2026-01-12T18:15:00Z&dtend=2026-01-12T18:15:00Z&c=10&format=json)
+and [18:30](https://api.eumetsat.int/data/search-products/1.0.0/os?pi=EO%3AEUM%3ADAT%3AMSG%3ACLM&dtstart=2026-01-12T18:30:00Z&dtend=2026-01-12T18:30:00Z&c=10&format=json)
+return zero. Across 2025 there are 34,998 hits for 34,997 unique
+15-minute starts: **43 missing starts**, offset in the hit count by one excess
+hit where MSG3 and MSG4 share 12 November 13:45 UTC. Across all 14 enumerated
+calendar months there are 40,948 hits, 40,947 unique starts, 45 missing
+starts and one conflicting start out of 40,992 nominal slots. The
+[independently reviewed census](../../../review_work/lead235_20260925/msg_cloud_census_review_v1/REPORT.md)
+repeated these exact-slot results; neither run preserves a complete item-
+version inventory, file integrity or valid-airport-pixel evidence. Next-month
+midnight is an inclusive boundary and inflates a broad query by one. The
+collection's full-disc envelope and airport-area `bbox` search do not show per-pixel
 validity; even an off-disc box returns the same indexed product.
 
 Current item `updated` values in four sampled months follow 12:00 sensing
