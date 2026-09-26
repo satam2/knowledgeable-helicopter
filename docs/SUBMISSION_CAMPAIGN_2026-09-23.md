@@ -307,6 +307,10 @@ or subgroup errors. A submission must be a genuine, independently motivated
 complete model candidate. The official aggregate score may confirm transfer
 of a frozen candidate, not select weights, rows, rules, or the next variant.
 
+The compact table below is selective; the [private ledger](../../output/submission_campaign_20260923/LEDGER.md)
+also records the July-only backlog test, the separate ARR residual diagnostic,
+source-only screens and resource stops.
+
 | Submission | Local evidence | Official RMSE | Decision |
 | --- | --- | ---: | --- |
 | V3, September 16 | Exposed July/November 2025, 268.662991 complete seasonal RMSE | 278.0146 | Retained official reference |
@@ -1171,3 +1175,7 @@ resource/slot usage, transfer limits, and one justified next direction. End the
 recurring schedule and one-time Sunday backup, and mark the goal complete only
 if the campaign work and final report are actually done;
 do not mark the *235 target* achieved without an official score below 235.
+An interim [Sunday report draft](../../output/submission_campaign_20260923/SUNDAY_REPORT_DRAFT.md)
+records the Friday receipt checkpoint and explicit completion checks; update it
+from Saturday/Sunday evidence before publishing, rather than treating the draft
+as a completed campaign report.
