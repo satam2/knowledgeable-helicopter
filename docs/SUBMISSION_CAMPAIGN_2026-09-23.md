@@ -224,6 +224,20 @@ cleared the 8 GiB reserve. A primary-source taxi-out model review found that
 the queue/road-link methods require actual pushback, surface tracks or
 assigned taxi routes not supplied here; it admitted no model fit.
 
+The corrected Saturday 08:00 Pacific continuation fired at 08:01:39. Its
+[live MSG prize/history recheck](../../review_work/lead235_20260926/msg_policy_am_v1/REPORT.md)
+found no new organizer ruling or public historical exact-version selector;
+source eligibility remains held. A distinct D-ATIS [runway-configuration
+archive screen](../../review_work/lead235_20260926/novel_source_am_v1/REPORT.md)
+stopped at zero European target airports, absent qualifying data rights and
+historical version proof. A [same-input model audit](../../review_work/lead235_20260926/model_gap_am_v1/REPORT.md)
+found no independently justified five-second complete-cohort architecture
+case beyond already tested weak or negative mechanisms. These are source and
+protocol decisions, not fitted or scored gains. Host RAM remained about
+15.2-15.4 GiB available, below the frozen 24/26 GiB fit floors; no new F1/F3
+fit or submission was admitted. Sunday's 08:00 Pacific continuation and final
+campaign report remain outstanding.
+
 ## Operating plan through Sunday
 
 The active `/goal` owns this campaign; the daily 8:00 AM Pacific continuation
