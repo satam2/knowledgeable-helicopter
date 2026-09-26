@@ -211,6 +211,18 @@ finite-2025 ordinary vocabulary. An independent replay reproduced the counts.
 The 59 rows are 0.0171% of ranking; neither their hidden errors nor a
 complete-cohort model gain is known. This is missing-specialist support, not
 an admitted correction, fit or upload.
+A [public organizer-channel check](../../review_work/lead235_20260926/organizer_contact_v1/REPORT.md)
+found that the official site directs participants to OpenSky's
+`#prc-data-competition` Discord channel for discussion and updates. No ruling
+on the three prepared source/training questions was found on the inspected
+public challenge pages; the channel itself was not joined or read. The
+[corrected clarification draft](../../review_work/lead235_20260925/li_organizer_query_v1/DRAFT.md)
+remains unsent pending explicit authorization for third-party contact.
+The current 15.4-15.9 GiB available RAM remains below the frozen 24/26 GiB
+full-fit launch floors, and no tested exact-semantics low-memory path has
+cleared the 8 GiB reserve. A primary-source taxi-out model review found that
+the queue/road-link methods require actual pushback, surface tracks or
+assigned taxi routes not supplied here; it admitted no model fit.
 
 ## Operating plan through Sunday
 
