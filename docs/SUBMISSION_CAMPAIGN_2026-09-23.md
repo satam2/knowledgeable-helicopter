@@ -45,13 +45,15 @@ prediction replay (maximum arithmetic difference below 1e-12 seconds). The
 have now passed [independent value replay](../../review_work/lead235_20260925/arr_innovation_review_v1/POSTREAD_RECEIPT.json):
 1,379,679 valid January-August history arrivals, then 156,583, 156,934 and
 135,366 eligible arrivals in September, October and November. Every nonmissing
-grid mean agreed within 1e-9 seconds, with no DEP target read. The residual
-fit, matched context/shifted-placebo correction and score remain pending.
-September's native weights
-used September labels and cannot construct its OOF residuals; October and
-November labels have already been exposed in prior work. Even a positive
-retrospective diagnostic would not clear F1/F3 or authorize use of 2026
-ranking-month ARR labels. No such correction has been fitted or scored.
+grid mean agreed within 1e-9 seconds. The subsequent September-only ridge
+residual fit and independent [October/November postscore replay](../../review_work/lead235_20260925/arr_residual_postscore_review_v1/POSTSCORE_RECEIPT.json)
+completed on all 185,674/162,332 departures. The aligned correction **lost**
+0.244839/0.849403 seconds to unchanged clean predictions; its gains over
+context-only and seven-day shifted controls were at most 0.065892 seconds.
+It failed the frozen gate and stops before F1/F3, ranking inference or upload.
+September's native weights used September labels and were excluded from the
+OOF residual fit; October and November labels had already been exposed in
+prior work. Ranking-month 2026 ARR-label training remains held.
 The separate [NOAA GFS forecast review](source-reviews/2026-09-25-noaa-gfs-forecast-triage.md)
 stopped at historical publication-time evidence and unresolved prize-use
 license interpretation. [Airport Corner events](source-reviews/2026-09-25-airport-corner-events.md)
@@ -87,7 +89,7 @@ timezone. Zero uploads is the correct result if no candidate clears the gates.
 | --- | --- | --- |
 | Thu Sep 24 | Close the failed ARR-supervision F1 arm and complete the paired weather input, twelve matched refits, independent prediction review and one-time F1 score. Preserve the v1 native crash and the separate v2 CPU/v3 GPU recovery receipts. | Extra-time weather lost 0.212 seconds to its matched routine control in complete July; stop before F3, ranking fit or upload. |
 | Fri Sep 25 | The route/type duration, scheduled-inbound and current-expert contextual gate arms completed separate one-time F1 scores and independent arithmetic replays. A target-blind EOBT-channel shift screen completed its independent input replay. Keep target-month ARR-label training held. | Route-duration gained 0.026834 seconds in complete July versus raw/clean; scheduled-inbound lost 0.006124 seconds to landed and 0.013206 to clean; contextual weighting gained 0.069855 seconds versus each control. All missed their frozen F1 advancement gates. The EOBT input screen failed January and both chronological analogues. No F3, ranking inference or upload. Future-ARR-membership release remains held for organizer clarification. |
-| Sat Sep 26 | Friday's OPDI, airport-operator traffic, CAMS, ADSB.lol, VDL IQ and EAD NOTAM source screens stopped; the EOBT gate and queue/join/internal audits also stopped. The category census found one July EDDM stand-pair shift, but its chronological July 2025 analogue has only two OOV rows, so no supervised stand correction is admitted. Seek a distinct documented observation with January/July 2025/2026 coverage and prize-use rights; freeze identity, timing, support, matched control and resource gates before accessing rows. November 2025 ARR availability passed independently; its chronological clean OOF residual dependency is not built. | Do not reopen stopped sources or supplied-data screens by relaxing their gates. The exact OOF shared-input variant lacks a credible five-second case and has a large chronology/fit cost. An unknown-category or ARR-availability finding alone cannot qualify a model. If no independently eligible mechanism passes, record the negative result and do not manufacture a minor variant. |
+| Sat Sep 26 | Friday's OPDI, airport-operator traffic, CAMS, ADSB.lol, VDL IQ and EAD NOTAM source screens stopped; the EOBT gate and queue/join/internal audits also stopped. The category census found one July EDDM stand-pair shift, but its chronological July 2025 analogue has only two OOV rows, so no supervised stand correction is admitted. Seek a distinct documented observation with January/July 2025/2026 coverage and prize-use rights; freeze identity, timing, support, matched control and resource gates before accessing rows. The cheaper September-to-October/November 2025 ARR residual diagnostic has now failed its complete-cohort gate. | Do not reopen stopped sources or supplied-data screens by relaxing their gates. The exact April/August OOF shared-input variant remains resource-held and requires a distinct five-second case; the failed September correction is not evidence to retune it. An unknown-category or ARR-availability finding alone cannot qualify a model. If no independently eligible mechanism passes, record the negative result and do not manufacture a minor variant. |
 | Sun Sep 27 | If Saturday yields an eligible direction that clears F1, finish its matched F3/full-year dependency, independently verify release, check organizer quota and credentials, and upload only a frozen complete candidate. Otherwise publish the final experiment and score report with the stopped directions and next research question. | No new candidate has cleared F1 as of Friday. Close the goal and disable both schedules after the report; the one-time 5:00 PM backup checks for unfinished work if the morning run ends early. |
 
 The requirement to prove an external observation was published by takeoff is
@@ -343,9 +345,12 @@ separate saved-expert 2025 ARR diagnostic -> nine F3 September components
        -> Sep/Oct/Nov exact-month ARR support + independent union-purge replay
           PASSED (retrospective input availability only)
        -> independent 183950-row September composition PASSED (unscored)
-       -> frozen ARR expectation and matched context/placebo PENDING
-       -> one-time October/November exploratory score only if inputs pass
-       -> prior-exposed months cannot count as F1/F3 or authorize 2026 labels
+       -> Jan-Aug expectation and all three airport/day grids PASSED postread
+       -> Sep-only fit and six Oct/Nov panels PASSED target-free prescore
+       -> one-time complete Oct/Nov score independently replayed: aligned
+          regressed vs clean by 0.245/0.849 sec; context/placebo gains tiny
+       -> STOP before F1/F3/ranking/upload; prior-exposed months do not
+          authorize 2026 ARR-label training
 
 supplied-data fallback audit -> absent event/revision field + failed ratio gate
        -> no new internal input or defensible historical analogue: STOP
