@@ -30,11 +30,31 @@ support gates. Earlier-trained clean April/August nine-expert OOF predictions,
 matched negative control, resource admission and ranking-month ARR-label
 eligibility remain missing; **no ARR model gain was measured**. The July EDDM
 stand-category shift has insufficient 2025 analogue support for correction.
+The exact April/August nine-expert build requires 30 serial training
+invocations (32 full-capacity fits); a September 25 snapshot of 22.489 GiB
+available host RAM was below the frozen 24/26 GiB launch floors, so it remains
+held. A separate, cheaper 2025-only diagnostic can compose the already fitted
+F3 September experts with **earlier May F1 weights** and check a correction on
+the saved October/November F3 panels. A separate September-October-November
+ARR input screen passed independent replay: **156,583/183,729, 156,934/185,488
+and 135,366/162,199** eligible 2025 arrivals after one union query-flight
+purge, with all ten airport/day gates in each cell. The separate 183,950-row
+September panel using May weights also passed an independent full-row
+prediction replay (maximum arithmetic difference below 1e-12 seconds). A
+frozen ARR expectation and matched context/shifted-placebo correction remain
+unbuilt; no residual model or score exists. September's native weights
+used September labels and cannot construct its OOF residuals; October and
+November labels have already been exposed in prior work. Even a positive
+retrospective diagnostic would not clear F1/F3 or authorize use of 2026
+ranking-month ARR labels. No such correction has been fitted or scored.
 The separate [NOAA GFS forecast review](source-reviews/2026-09-25-noaa-gfs-forecast-triage.md)
 stopped at historical publication-time evidence and unresolved prize-use
 license interpretation. [Airport Corner events](source-reviews/2026-09-25-airport-corner-events.md)
 also stopped at source rights, historical archive and publication evidence.
-No event or forecast files or challenge rows were acquired from either.
+The [historical TAF review](source-reviews/2026-09-25-taf-source-triage.md)
+stopped at ten-airport archive support, first-receipt/revision evidence and
+foreign-origin reuse rights. No event or forecast files or challenge rows
+were acquired from these source reviews.
 
 For a new direction, follow the [dependency DAG](#dependency-dag): source and
 input gate -> frozen matched control -> F1 -> F3 and full-season robustness ->
@@ -59,6 +79,13 @@ timezone. Zero uploads is the correct result if no candidate clears the gates.
 | Fri Sep 25 | The route/type duration, scheduled-inbound and current-expert contextual gate arms completed separate one-time F1 scores and independent arithmetic replays. A target-blind EOBT-channel shift screen completed its independent input replay. Keep target-month ARR-label training held. | Route-duration gained 0.026834 seconds in complete July versus raw/clean; scheduled-inbound lost 0.006124 seconds to landed and 0.013206 to clean; contextual weighting gained 0.069855 seconds versus each control. All missed their frozen F1 advancement gates. The EOBT input screen failed January and both chronological analogues. No F3, ranking inference or upload. Future-ARR-membership release remains held for organizer clarification. |
 | Sat Sep 26 | Friday's OPDI, airport-operator traffic, CAMS, ADSB.lol, VDL IQ and EAD NOTAM source screens stopped; the EOBT gate and queue/join/internal audits also stopped. The category census found one July EDDM stand-pair shift, but its chronological July 2025 analogue has only two OOV rows, so no supervised stand correction is admitted. Seek a distinct documented observation with January/July 2025/2026 coverage and prize-use rights; freeze identity, timing, support, matched control and resource gates before accessing rows. November 2025 ARR availability passed independently; its chronological clean OOF residual dependency is not built. | Do not reopen stopped sources or supplied-data screens by relaxing their gates. The exact OOF shared-input variant lacks a credible five-second case and has a large chronology/fit cost. An unknown-category or ARR-availability finding alone cannot qualify a model. If no independently eligible mechanism passes, record the negative result and do not manufacture a minor variant. |
 | Sun Sep 27 | If Saturday yields an eligible direction that clears F1, finish its matched F3/full-year dependency, independently verify release, check organizer quota and credentials, and upload only a frozen complete candidate. Otherwise publish the final experiment and score report with the stopped directions and next research question. | No new candidate has cleared F1 as of Friday. Close the goal and disable both schedules after the report; the one-time 5:00 PM backup checks for unfinished work if the morning run ends early. |
+
+The requirement to prove an external observation was published by takeoff is
+our stricter as-of prediction policy, not an express organizer rule for this
+retrospective challenge. External-data rights, target leakage and exact
+flight joins remain independent gates. A future retrospective external-source
+experiment needs a separately frozen policy; it does not reopen a stopped
+as-of arm or clear a source's unresolved prize-use rights.
 
 Each daily continuation follows this order: inspect the private ledger, goal and
 active jobs; resume the earliest incomplete DAG node; independently check its
@@ -300,6 +327,15 @@ V3 input-gap audit -> v1 raw/token diagnostic failed, independently explained
        -> test only after OOF and resource admissions
        -> only a positive diagnostic can justify paired F1/F3 fit admission;
           ranking-month 2026 ARR-label training stays held
+
+separate saved-expert 2025 ARR diagnostic -> nine F3 September components
+       + earlier May F1 weights are available (not native September weights)
+       -> Sep/Oct/Nov exact-month ARR support + independent union-purge replay
+          PASSED (retrospective input availability only)
+       -> independent 183950-row September composition PASSED (unscored)
+       -> frozen ARR expectation and matched context/placebo PENDING
+       -> one-time October/November exploratory score only if inputs pass
+       -> prior-exposed months cannot count as F1/F3 or authorize 2026 labels
 
 supplied-data fallback audit -> absent event/revision field + failed ratio gate
        -> no new internal input or defensible historical analogue: STOP
@@ -773,8 +809,9 @@ reported arithmetic delta. Stop this exact direction before F3, ranking
 inference or upload; the earlier-origin F1 scores are not comparable in level
 to V3's 268.662991 historical local or 278.0146 official score.
 
-The separate, currently held source-status direction is a **documented per-flight NM event
-source or revision/publication-age observation**, compared at equal information
+The separate, currently held source-status direction (distinct from Saturday's
+new-source search) is a **documented per-flight NM event source or
+revision/publication-age observation**, compared at equal information
 and capacity to a pooled clock context and the unchanged clean model. The
 [frozen input gate](../../review_work/lead235_20260924/ordinary_signal_next_v1/PROTOCOL.md)
 requires an explicit field with as-of semantics and support in all 2025 packs
