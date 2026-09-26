@@ -65,6 +65,10 @@ disclosed no implemented challenge-specific method in the inspected text.
 Earlier seasonal weighting and the Jan/Jul-only V4 specialist remain rejected
 under their separate frozen comparisons. None of these checks generated a fit,
 score, ranking candidate or official upload.
+A subsequent [public-code delta](source-reviews/2026-09-25-public-code-delta-followup.md)
+found a newer runway-context feature set but no independent new observation or
+demonstrated material complete-cohort gain. It did not reopen the stopped queue
+direction.
 
 The separate [NOAA GFS forecast review](source-reviews/2026-09-25-noaa-gfs-forecast-triage.md)
 stopped at historical publication-time evidence and unresolved prize-use

@@ -16,14 +16,17 @@ not attribute performance to any method.
 | [gentle-igloo](https://ansperformance.eu/study/data-challenge/dc2026/teams/gentle-igloo.html) | 236.32 | Describes an unrelated aviation-occurrence corpus and views airport-state reconstruction as data engineering; no challenge-specific implementation disclosed. |
 | [jovial-uniform](https://ansperformance.eu/study/data-challenge/dc2026/teams/jovial-uniform.html) | 237.55 | General ML and reproducibility aspiration; no specific feature, target-safe procedure, or validation design. |
 | [upstanding-firefly](https://ansperformance.eu/study/data-challenge/dc2026/teams/upstanding-firefly.html) | 240.55 | Mentions past OpenSky/noise work, gradient boosting, and an intention to publish GitHub code and a JOAS write-up; no challenge code or write-up linked in its profile. |
-| [enthusiastic-daisy](https://ansperformance.eu/study/data-challenge/dc2026/teams/enthusiastic-daisy.html) | 243.01 | Trajectory/deep-learning research background and interest in applying it; no specific challenge model shown in the inspected excerpt. |
-| [gentle-lemon](https://ansperformance.eu/study/data-challenge/dc2026/teams/gentle-lemon.html) | 243.87 | General interest in experimenting with the dataset; no specific challenge method shown in the inspected excerpt. |
+| [enthusiastic-daisy](https://ansperformance.eu/study/data-challenge/dc2026/teams/enthusiastic-daisy.html) | 243.01 | Trajectory/deep-learning research background and intent to explore airport-surface factors; no implemented challenge method in the full rationale. |
+| [gentle-lemon](https://ansperformance.eu/study/data-challenge/dc2026/teams/gentle-lemon.html) | 243.87 | General interest in experimenting and comparing approaches; no implemented challenge method in the full rationale. |
 | [youthful-giraffe](https://ansperformance.eu/study/data-challenge/dc2026/teams/youthful-giraffe.html) | 244.12 | Brief participation rationale; no method stated. |
 
 The team pages' main-content links were checked and supplied no external
-repository, paper, or write-up URL. The text extraction printed only the first
-950 characters of each profile's main content, so this check does not certify
-the remainder of the two longer rationales. The live [ranking page](https://prc-data-challenge-2026.netlify.app/ranking.html)
+repository, paper, or write-up URL. The initial extraction printed only the
+first 950 characters; a subsequent read through the closing `main` tag checked
+the two longer [enthusiastic-daisy](https://prc-data-challenge-2026.netlify.app/teams/enthusiastic-daisy.html)
+and [gentle-lemon](https://prc-data-challenge-2026.netlify.app/teams/gentle-lemon.html)
+rationales in full. Neither gave a challenge-specific method or linked code.
+The live [ranking page](https://prc-data-challenge-2026.netlify.app/ranking.html)
 embeds a separate leaderboard display; a team's aggregate result is not a
 disclosure of its model or evidence of an isolated feature gain. No competitor
 source was downloaded or executed, and no private row, label, prediction,
