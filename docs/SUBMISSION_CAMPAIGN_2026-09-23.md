@@ -115,6 +115,20 @@ This is catalogue evidence only: the page
 bytes changed between runs, and neither supplies a stable version manifest
 or valid airport pixels. The separate [input-audit protocol](../../review_work/lead235_20260925/msg_input_protocol_v1/PROTOCOL.md)
 includes ten prior-month boundary slots and remains held before bodies.
+Two bounded full-JSON metadata passes subsequently covered all **41,002**
+nominal slots, including those ten boundary starts. Both preserved **40,958**
+current item IDs and MD5s at **40,957** distinct times, 45 absent starts and
+one MSG3/MSG4 conflict; their ordered ID/MD5 inventory hashes match. Twelve
+February 6 items use an unusual suffix of undocumented meaning, and 878
+current catalogue `updated` timestamps are more than a day after sensing.
+This proves only short-term stability of parsed *current* IDs/MD5s, not the
+bytes or their first publication at historical takeoff. Raw page hashes differ
+between runs. [Full-manifest audit](../../review_work/lead235_20260925/msg_full_manifest_review_v1/REPORT.md)
+and [ID-shape screen](../../review_work/lead235_20260925/msg_id_shape_v1/REPORT.md)
+retain the private evidence. A separate local research-only pixel sample
+could be considered under CC BY 4.0 with attribution and an authorized
+EUMETSAT account, but no such access is established; prize use remains held
+for organizer license/retrospective interpretation and source-version proof.
 Independent
 [rights/metadata](../../review_work/lead235_20260925/msg_cloud_rights_v1/REPORT.md)
 and [format/materiality](../../review_work/lead235_20260925/msg_cloud_semantics_v1/REPORT.md)

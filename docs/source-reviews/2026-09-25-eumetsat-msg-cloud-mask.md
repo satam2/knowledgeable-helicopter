@@ -40,6 +40,18 @@ midnight is an inclusive boundary and inflates a broad query by one. The
 collection's full-disc envelope and airport-area `bbox` search do not show per-pixel
 validity; even an off-disc box returns the same indexed product.
 
+A later [full-JSON metadata audit](../../../review_work/lead235_20260925/msg_full_manifest_review_v1/REPORT.md)
+covered 41,002 nominal 2025 and January/July 2026 slots including ten
+month-boundary starts. Two current-index inventories retained 40,958 IDs and
+MD5s at 40,957 distinct starts, 45 gaps and one November conflict, with the
+same ordered ID/MD5 hash in both. Twelve consecutive 6 February 2025 items
+have a non-`NA` suffix whose meaning is not documented by the inspected
+product metadata; preserve the exact IDs without assigning revision or
+publication semantics. Across the current items, 878 catalogue `updated`
+timestamps lag sensing by more than a day, with a maximum near 26 days.
+Different raw response hashes and a matching present-day MD5 inventory do
+not establish immutable original versions or historical first availability.
+
 Current item `updated` values in four sampled months follow 12:00 sensing
 by about 34-39 minutes, while detail `processingDate` says 12:15 and
 `productVersion=1`. The inspected public APIs do not supply an immutable
@@ -55,7 +67,8 @@ The released V3 representation already includes METAR cloud, visibility,
 rain/thunder and report-age fields. It lacks this 15-minute regional cloud
 mask, so there is a distinct input hypothesis, but no measured conditional
 variation or RMSE gain. A five-second local gain requires a roughly 3.69%
-reduction in V3's separate 2025 complete-cohort squared error; this source
+reduction in V3's separate, seasonally weighted 2025 complete-cohort squared
+error, or 917,839,120 fewer units in its weighted numerator; this source
 has not been scored. The earlier extra-time METAR candidate failed F1 July,
 and is not a test of this satellite product.
 
