@@ -1,5 +1,10 @@
 # PRC 2026 submission campaign, September 23-27
 
+Sunday closeout: [final campaign report](CAMPAIGN_CLOSEOUT_2026-09-27.md).
+V3 remains the best verified official result at 278.0146 seconds; no V5+
+candidate qualified under the frozen gates. This document preserves the
+operating protocol and chronological decisions.
+
 This guide governs the active Codex goal through Sunday, September 27, 2026
 (America/Los_Angeles). Aim for 240 and then 235 official RMSE, but report
 measured scores rather than promising either. Work on model quality every day;
